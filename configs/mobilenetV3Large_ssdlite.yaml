@@ -1,0 +1,26 @@
+# Data
+recall_steps: 11
+image_mean: [123.675 , 116.28, 103.53]
+image_stddev: [58.395, 57.12, 57.375]
+
+# Model
+model: SSDLite
+backbone:
+  name: MobileNetV3Large
+  width_mult: 1.0
+input_size: 320
+anchor_scales: [0.1, 0.2, 0.375, 0.55, 0.725, 0.9]
+anchor_aspect_ratios: [[1, 2], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2], [1, 2]]
+
+# Training
+batch_size: 32
+epochs: 20
+optim:
+  name: SGD
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.00004
+scheduler:
+  name: MultiStepLR
+  milestones: [15, 17]
+  gamma: 0.1
