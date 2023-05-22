@@ -163,9 +163,9 @@ if __name__ == '__main__':
 
     tmp = []
     nb_taken = 0
-    while nb_taken != 9:
+    while nb_taken != 16:
         image = random.choice(images_path_list)
-        if image not in tmp:
+        if image not in tmp and not image.__contains__('@'):
             tmp.append(image)
             nb_taken += 1
     images_path_list = tmp
@@ -207,8 +207,8 @@ if __name__ == '__main__':
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
             #calulate_mAP(model, dataloader, cfg, class_names, device)
             #detect_from_test_images(model, dataloader, cfg, class_names, device)
-            video_path = "https://www.youtube.com/watch?v=QGtPj10K3aA"
-            detect_from_video(video_path, model, model_name, threshold)
+            #video_path = "https://www.youtube.com/watch?v=QGtPj10K3aA"
+            #detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
             START = False
@@ -229,7 +229,7 @@ if __name__ == '__main__':
                     detectImages.append(image)
                             
                 cpt = 0
-                NB_COLUMN = 3
+                NB_COLUMN = 4
                 NB_LINE = len(detectImages)//NB_COLUMN
                 plt.figure(figsize=(16, 8))
                 
