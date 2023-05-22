@@ -6,11 +6,11 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Training: 07+12 trainval
 * Evaluation: 07 test
 
-| Model                | Input size | mAP<sub>0.5</sub> | Configuration                                                                |
-|----------------------|:----------:|:-----------------:|------------------------------------------------------------------------------|
-| SSD300               | 300        | 77.1              | [configs/voc/ssd300.yaml](configs/voc/ssd300.yaml)                           |
-| SSD512               | 512        | 79.4              | [configs/voc/ssd512.yaml](configs/voc/ssd512.yaml)                           |
-| MobileNetV2 SSDLite  | 320        | 70.7              | [configs/voc/mobilenetV2_ssdlite.yaml](configs/voc/mobilenetV2_ssdlite.yaml) |
+| Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                                |
+|----------------------------|:----------:|:-----------------:|------------------------------------------------------------------------------|
+| MobileNetV2 SSDLite        | 320        | 80.5              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
+| MobileNetV3 Small SSDLite  | 320        | 82.7              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
+| MobileNetV3 Large SSDLite  | 320        | 50.9              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 
 ## Requirements
 * Python ≥ 3.6
@@ -28,23 +28,10 @@ You can modify the settings as needed.
 
 ## Training
 ```bash
-python train.py --cfg <CONFIG_FILE> --logdir <LOG_DIRECTORY>
-
-# For example, to train SSD300 on PASCAL VOC:
-python train.py --cfg configs/voc/ssd300.yaml --logdir runs/voc_ssd300/exp0/
+python train.py
 ```
+
 To visualize training progress using TensorBoard:
 ```bash
 tensorboard --logdir <LOG_DIRECTORY>
-```
-An interrupted training can be resumed by:
-```bash
-# Run train.py with --resume to restore the latest saved checkpoint file in the log directory.
-python train.py --cfg <CONFIG_FILE> --logdir <LOG_DIRECTORY> --resume
-```
-
-## Evaluation
-### PASCAL VOC
-```bash
-python eval.py --cfg <CONFIG_FILE> --pth <LOG_DIRECTORY>/best.pth --dataset datasets/voc/val.json
 ```
