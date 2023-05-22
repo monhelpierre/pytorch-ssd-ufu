@@ -124,10 +124,10 @@ def detect_from_video(video_path, model, model_name, threshold, show=False, no_a
     cap.release()
     cv2.destroyAllWindows()
 
-def make_images_list(testing_file):
-    with open(testing_file) as f:
+def make_images_list(dataset_path, testing_file):
+    with open(dataset_path + testing_file) as f:
         ids = [line.strip() for line in f.readlines()]
-    return [root + 'datasets/images/' + id + '.png' for id in ids]       
+    return [dataset_path + '/images/' + id + '.png' for id in ids]       
 
 def convert_to_onnx(model, size, path):
     model.eval()
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     root = os.getcwd() + '/'
     results_path = root + 'results/'
     config_path = root + 'configs/'
-    dataset_path = root + 'datasets/'
+    dataset_path = 'C:/datasets/'
     test_path = root + 'test/images/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
@@ -158,9 +158,10 @@ if __name__ == '__main__':
     video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
-    
-    images_path_list = make_images_list(dataset_path + 'divide/test.txt')
+    images_path_list = make_images_list(dataset_path, 'divide/test.txt')
 
+    workers = 4
+    
     tmp = []
     nb_taken = 0
     while nb_taken != 16:
@@ -171,15 +172,11 @@ if __name__ == '__main__':
     images_path_list = tmp
                 
     for model_name in model_names:
-
         cfg = config_path + f'{model_name}.yaml'
         pth = results_path + f'{model_name}/best.pth'
 
         if os.path.exists(cfg):
-            workers = 4
-            device = 'cpu'
             cfg = load_config(cfg)
-
             model = build_model(cfg, class_names)
             model.to(device)
             model.eval()
@@ -211,7 +208,7 @@ if __name__ == '__main__':
             #detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
-            START = False
+            START = True
 
             if START:
                 save = True
@@ -220,11 +217,10 @@ if __name__ == '__main__':
                 detectImages = []
                 #images_path_list = os.listdir(test_path)
                     
-                for image_name in images_path_list[0:30]:
-                    if os.path.exists(test_path + image_name):
-                        image_path = test_path + image_name
-                    else:
-                        image_path = image_name     
+                for image_path in images_path_list:
+                    if not os.path.exists(image_path):
+                        image_path = test_path + image_path
+                    
                     image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
                     detectImages.append(image)
                             

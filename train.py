@@ -14,42 +14,54 @@ import datetime
 import matplotlib.pyplot as plt
 from utils.data.dataloader import create_dataloader
 from utils.misc import load_config, unnormalize
+import argparse
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+args = vars(ap.parse_args())
+
+if int(args['model']) < 0 or int(args['model']) > 2:
+    raise ValueError("Model index should be 0, 1 or 2")
 
 class CheckDataset():
-    def __init__(self, cfg, split='train'):#['train', 'val']
-        self.start(cfg, split)
+    def __init__(self, cfg, dataset_link, splits=['train', 'val', 'test']):
+        self.dataset_link = dataset_link
+        self.splits = splits
+        self.cfg = cfg
+        self.start()
 
-    def start(self, cfg, split):        
+    def start(self):        
         seed = random.randint(0, 9999)
-        dataloader_0 = create_dataloader(cfg[split + '_json'],
-            batch_size = cfg.batch_size,
-            image_size = cfg.input_size,
-            image_mean = cfg.image_mean,
-            image_stddev = cfg.image_stddev,
-            augment = False,
-            shuffle = True,
-            seed = seed)
-        dataloader_1 = create_dataloader(cfg[split + '_json'],
-            batch_size = cfg.batch_size,
-            image_size = cfg.input_size,
-            image_mean = cfg.image_mean,
-            image_stddev = cfg.image_stddev,
-            augment = True,
-            shuffle = True,
-            seed = seed)
-        dataiter_0 = iter(dataloader_0)
-        dataiter_1 = iter(dataloader_1)
+        for split in self.splits:
+            dataloader_0 = create_dataloader(self.dataset_link + split + '.json',
+                batch_size = self.cfg.batch_size,
+                image_size = self.cfg.input_size,
+                image_mean = self.cfg.image_mean,
+                image_stddev = self.cfg.image_stddev,
+                augment = False,
+                shuffle = True,
+                seed = seed)
+            dataloader_1 = create_dataloader(self.dataset_link + split + '.json',
+                batch_size = self. cfg.batch_size,
+                image_size = self.cfg.input_size,
+                image_mean = self.cfg.image_mean,
+                image_stddev = self.cfg.image_stddev,
+                augment = True,
+                shuffle = True,
+                seed = seed)
+            dataiter_0 = iter(dataloader_0)
+            dataiter_1 = iter(dataloader_1)
 
         while True:
             plt.figure(figsize=(15, 7))
             images, boxes, classes, _ = next(dataiter_0)
-            image = unnormalize(images[0], cfg.image_mean, cfg.image_stddev)
+            image = unnormalize(images[0], self.cfg.image_mean, self.cfg.image_stddev)
             plt.subplot(1, 2, 1)
             plt.title("w/o augmentation")
             plt.imshow(image.permute([1, 2, 0]))
 
             images, boxes, classes, _ = next(dataiter_1)
-            image = unnormalize(images[0], cfg.image_mean, cfg.image_stddev)
+            image = unnormalize(images[0], self.cfg.image_mean, self.cfg.image_stddev)
             plt.subplot(1, 2, 2)
             plt.title("w/ augmentation")
             plt.imshow(image.permute([1, 2, 0]))
@@ -351,7 +363,7 @@ if __name__ == '__main__':
         '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
     ]
     for model_name in model_names:
-        if model_name != "mobilenetV2_ssdlite":
+        if model_name != model_names[int(args['model'])]:
             continue
 
         train_model(

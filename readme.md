@@ -31,6 +31,13 @@ You can modify the settings as needed.
 python train.py
 ```
 
+## For example
+```bash
+python train.py -mi 0 (mobilenetv2_ssdlite)
+python train.py -mi 1 (mobilenetv3large_ssdlite)
+python train.py -mi 2 (mobilenetv3small_ssdlite)
+```
+
 To visualize training progress using TensorBoard:
 ```bash
 tensorboard --logdir <LOG_DIRECTORY>
