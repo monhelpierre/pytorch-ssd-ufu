@@ -18,7 +18,7 @@ import pafy
 import argparse
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 args = vars(ap.parse_args())
 
 def calulate_mAP(model, dataloader, cfg, class_names, device, no_amp=True):
@@ -177,8 +177,9 @@ if __name__ == '__main__':
     images_path_list = tmp
                 
     for model_name in model_names:
-        if model_name != model_names[int(args['model'])]:
-            continue
+        if args['model']:
+            if model_name != model_names[int(args['model'])]:
+                continue
 
         cfg = config_path + f'{model_name}.yaml'
         pth = results_path + f'{model_name}/best.pth'
@@ -243,6 +244,7 @@ if __name__ == '__main__':
                 for image in detectImages:
                     ax = plt.subplot(NB_LINE, NB_COLUMN, cpt+1)
                     image = cv2.resize(image, (800, 800))
+                    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                     plt.imshow(image)
                     plt.title('Image ' + str(cpt+1))
                     plt.axis("off")
