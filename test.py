@@ -14,7 +14,6 @@ from utils.misc import load_config, build_model, nms
 from utils.constants import HEX_COLORS
 import datetime
 from utils.metrics import AveragePrecision
-import pafy
 import argparse
 
 ap = argparse.ArgumentParser()
@@ -85,7 +84,7 @@ def detection(image, model, model_name, threshold, show, no_amp):
         if show:
             print(f'No object found in image with {model_name}.')
             
-    return image, nb_found
+    return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), nb_found
     
 def detect_from_single_image(image_path, model_name, model, threshold, show=True, no_amp=True):
     image = read_image(path=image_path)
@@ -105,10 +104,6 @@ def read_image(path=None, frame=None):
     return image
 
 def detect_from_video(video_path, model, model_name, threshold, show=False, no_amp=True, desired_fps = 200):
-    if not video_path.__contains__('mp4'):
-        video = pafy.new(video_path)
-        video_path = video.getbest(preftype="mp4")
-    
     cap = cv2.VideoCapture(video_path)
     fps = desired_fps if desired_fps > 0 else cap.get(cv2.CAP_PROP_FPS)
     while cap.isOpened():
@@ -132,17 +127,37 @@ def detect_from_video(video_path, model, model_name, threshold, show=False, no_a
 def make_images_list(dataset_path, testing_file):
     with open(dataset_path + testing_file) as f:
         ids = [line.strip() for line in f.readlines()]
-    return [dataset_path + '/images/' + id + '.png' for id in ids]       
+    return [dataset_path + 'images/' + id + '.png' for id in ids]       
 
 def convert_to_onnx(model, size, path):
     model.eval()
     dummy_input = torch.randn(1, 3, size, size) 
     onnx_path = path + "/model.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
+    
+def show_selected_class(path='C:/Users/monhe/OneDrive/Desktop/signs/'):
+    cpt = 0
+    NB_COLUMN = 4
+    images = [x for x in os.listdir(path) if x.__contains__('png')]
+    NB_LINE = len(images)//NB_COLUMN
+                
+    plt.figure(figsize=(16, 8))
+    for image_name in images:
+        image_path = path + image_name
+        image = cv2.imread(image_path)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        plt.subplot(NB_LINE, NB_COLUMN, cpt+1)
+        image = cv2.resize(image, (32, 32))
+        plt.imshow(image)
+        plt.title(image_name.split('.')[0])
+        plt.axis("off")
+        cpt += 1
+    plt.show()
         
 #=========================================================================================================
 
 if __name__ == '__main__':
+    workers = 4
     device = 'cpu'
     root = os.getcwd() + '/'
     results_path = root + 'results/'
@@ -156,6 +171,8 @@ if __name__ == '__main__':
         '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
     ]
     
+    #show_selected_class()
+    
     threshold = 0.5
     test_json = dataset_path + 'test.json'
     images_path_list = os.listdir(test_path)
@@ -164,92 +181,106 @@ if __name__ == '__main__':
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
     images_path_list = make_images_list(dataset_path, 'divide/test.txt')
-
-    workers = 4
+   
+    if len(images_path_list) < 0:   
+        tmp = []
+        nb_taken = 0
+        print('Loading 1 image for every class...')
+        while nb_taken != 8:
+            image = random.choice(images_path_list)
+            if image not in tmp and not image.__contains__('@'):
+                tmp.append(image)
+                nb_taken += 1
+        images_path_list = tmp
+        print('Done Loading.')
+        print(f'{len(images_path_list)} images for testing...')
     
-    tmp = []
-    nb_taken = 0
-    while nb_taken != 16:
-        image = random.choice(images_path_list)
-        if image not in tmp and not image.__contains__('@'):
-            tmp.append(image)
-            nb_taken += 1
-    images_path_list = tmp
+    save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/test/'
                 
     for model_name in model_names:
         if args['model']:
             if model_name != model_names[int(args['model'])]:
                 continue
-
+            
         cfg = config_path + f'{model_name}.yaml'
-        pth = results_path + f'{model_name}/best.pth'
 
-        if os.path.exists(cfg):
+        if os.path.exists(cfg):   
+            pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
             model = build_model(cfg, class_names)
             model.to(device)
-            print(model)
-            print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
-            print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))  
             model.eval()
-
-            #pth = pth.replace('pytorch-ssd-ufu', 'backup')
+            
             if os.path.exists(pth):
                 print('Loading pretrained model...')
                 model.load_state_dict(torch.load(pth)['model_state_dict'])
-
-            dataloader = create_dataloader(
-                test_json,
-                batch_size=cfg.batch_size,
-                image_size=cfg.input_size,
-                image_mean=cfg.image_mean,
-                image_stddev=cfg.image_stddev,
-                num_workers=workers
-            )
-
-            lenght = 70
-            print("=" * lenght)
-            print(f"Testing with {model_name} ({str(datetime.datetime.now()).split('.')[0]})")
-            print("=" * lenght)
-            
+                         
             #--------------------------------------------------------
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
             #calulate_mAP(model, dataloader, cfg, class_names, device)
             #detect_from_test_images(model, dataloader, cfg, class_names, device)
-            #video_path = "https://www.youtube.com/watch?v=QGtPj10K3aA"
             #detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
             START = True
 
             if START:
+                #print(model)
+                #print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
+                #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
+                #pth = pth.replace('pytorch-ssd-ufu', 'backup')
+                
+                dataloader = create_dataloader(
+                    test_json,
+                    batch_size=cfg.batch_size,
+                    image_size=cfg.input_size,
+                    image_mean=cfg.image_mean,
+                    image_stddev=cfg.image_stddev,
+                    num_workers=workers
+                )
+
+                length = 70
+                print("=" * length)
+                print(f"Testing with {model_name} ({str(datetime.datetime.now()).split('.')[0]})")
+                print("=" * length)
                 save = True
                 show = False
                 no_amp = True
                 detectImages = []
-                #images_path_list = os.listdir(test_path)
-                    
-                for image_path in images_path_list:
-                    if not os.path.exists(image_path):
-                        image_path = test_path + image_path
-                    
-                    image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
-                    detectImages.append(image)
-                            
-                cpt = 0
-                NB_COLUMN = 4
-                NB_LINE = len(detectImages)//NB_COLUMN
-                plt.figure(figsize=(16, 8))
                 
-                for image in detectImages:
-                    ax = plt.subplot(NB_LINE, NB_COLUMN, cpt+1)
-                    image = cv2.resize(image, (800, 800))
-                    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-                    plt.imshow(image)
-                    plt.title('Image ' + str(cpt+1))
-                    plt.axis("off")
-                    cpt += 1
-                plt.show()
+                #images_path_list = os.listdir(test_path)
+                
+                save_path_file = save_path + model_name + '/'
+                if not os.path.exists(save_path_file):
+                    os.mkdir(save_path_file)
+                    
+                for image_name in images_path_list:
+                    if os.path.exists(test_path + image_name):
+                        image_path = test_path + image_name
+                    else:
+                        image_path = image_name     
+                    image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
+                    #detectImages.append(image)
+                    
+                    filename = save_path_file + image_name.split('/')[-1]
+                    if nb_found > 0:
+                        image = cv2.convertScaleAbs(image, alpha=(255.0))
+                        cv2.imwrite(filename, image)
+                
+                if len(detectImages) > 0:         
+                    cpt = 0
+                    NB_COLUMN = 4
+                    NB_LINE = len(detectImages)//NB_COLUMN
+                    plt.figure(figsize=(16, 8))
+                    
+                    for image in detectImages:
+                        ax = plt.subplot(NB_LINE, NB_COLUMN, cpt+1)
+                        image = cv2.resize(image, (800, 800))
+                        plt.imshow(image)
+                        plt.title('Image ' + str(cpt+1))
+                        plt.axis("off")
+                        cpt += 1
+                    plt.show()
             
         else:
             print(f"Please check if conf file exist for {model_name}")
