@@ -15,6 +15,11 @@ from utils.constants import HEX_COLORS
 import datetime
 from utils.metrics import AveragePrecision
 import pafy
+import argparse
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+args = vars(ap.parse_args())
 
 def calulate_mAP(model, dataloader, cfg, class_names, device, no_amp=True):
     metric = AveragePrecision(len(class_names), cfg.recall_steps)
@@ -172,6 +177,9 @@ if __name__ == '__main__':
     images_path_list = tmp
                 
     for model_name in model_names:
+        if model_name != model_names[int(args['model'])]:
+            continue
+
         cfg = config_path + f'{model_name}.yaml'
         pth = results_path + f'{model_name}/best.pth'
 
@@ -179,6 +187,9 @@ if __name__ == '__main__':
             cfg = load_config(cfg)
             model = build_model(cfg, class_names)
             model.to(device)
+            print(model)
+            print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
+            print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))  
             model.eval()
 
             #pth = pth.replace('pytorch-ssd-ufu', 'backup')
