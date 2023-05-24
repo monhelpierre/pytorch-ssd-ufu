@@ -19,7 +19,7 @@ optim:
   name: SGD
   lr: 0.001
   momentum: 0.9
-  weight_decay: 0.4
+  weight_decay: 0.00004
 scheduler:
   name: MultiStepLR
   milestones: [15, 17]
