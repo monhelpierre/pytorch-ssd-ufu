@@ -4,11 +4,13 @@ import torch.nn.functional as F
 from numpy import mgrid
 from functools import partial
 from torch import nn
+from math import floor
+from torch.cuda.amp import autocast
 from utils.models.ops import get_output_shapes, xavier_init
 from utils.models.layers import ConvBNReLU
-from utils.constants import BACKGROUND_INDEX
+from utils.constants import BACKGROUND_INDEX, COLOR
 from utils.boxes import cxcywh2xyxy, xyxy2cxcywh, calculate_ious
-
+import cv2
 
 class _Heads(nn.Module):
     def __init__(self, module, layer_channels, num_anchor_shapes, num_classes):
@@ -264,7 +266,32 @@ class SSD(nn.Sequential):
         scores = torch.reshape(scores, [bs, num_anchors * num_classes])
         classes = torch.reshape(classes, [bs, num_anchors * num_classes])
         return boxes, scores, classes
-
+    
+    def detect(self, image_name, image, label_names, threshold=0.5, no_amp=True):
+        from utils.misc import nms
+        nb_found = 0
+        with torch.no_grad():
+            with autocast(enabled=(not no_amp)):
+                preds = self(image)
+        
+        det_boxes, det_scores, det_classes = nms(*self.decode(preds))
+        image = cv2.cvtColor(image[0].permute(1, 2, 0).cpu().numpy(), cv2.COLOR_RGB2BGR)
+        
+        print(f'IMAGE : {image_name.split("/")[-1]}')
+        for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
+            if score > threshold:
+                x1, y1, x2, y2 = box.cpu().numpy().astype(int)
+                score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
+                label =  label_names[cls.cpu().numpy()] + '-' + score_value
+                cv2.rectangle(image, (x1, y1), (x2, y2), COLOR, 1)
+                (w, h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.3, -1)
+                image = cv2.rectangle(image, (x1, y1 - 15), (x1 + w, y1), COLOR, -1)
+                cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1)
+                nb_found += 1
+                print(f'{nb_found} => {label}')
+        print('------------\n')
+             
+        return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), nb_found
 
 class _SSDLiteHead(nn.Sequential):
     def __init__(self, in_channels, out_channels):
@@ -278,7 +305,6 @@ class _SSDLiteHead(nn.Sequential):
                       out_channels,
                       kernel_size=1),
         )
-
 
 class SSDLite(SSD):
     def _define_heads(self, layer_channels, num_anchor_shapes, num_classes):

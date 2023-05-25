@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from torch.cuda.amp import autocast
 from utils.data.dataloader import create_dataloader
 from utils.misc import load_config, build_model, nms
-from utils.constants import HEX_COLORS
+from utils.constants import COLOR
 import datetime
 from utils.metrics import AveragePrecision
 import argparse
@@ -43,59 +43,6 @@ def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
         print("%-5d%-20s%-13.3f%.3f" % (i, name, ap[0], ap.mean()))
     print("mAP@[0.5]: %.3f" % APs[:, 0].mean())
     print("mAP@[0.5:0.95]: %.3f" % APs.mean())
-   
-def get_color(cls=None):
-    if cls:
-        return tuple(int(HEX_COLORS[cls.cpu().numpy()][i:i+2], 16) for i in (1, 3, 5))
-    else:
-        return (0, 255, 0)
-    
-def get_label(cls, score):
-    score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
-    label =  label_names[cls.cpu().numpy()] + '-' + score_value
-    return label, get_color()
- 
-def detection(image_name, image, model, model_name, threshold, show, no_amp):
-    nb_found = 0
-    with torch.no_grad():
-        with autocast(enabled=(not no_amp)):
-            preds = model(image)
-    
-    det_boxes, det_scores, det_classes = nms(*model.decode(preds))
-    image = cv2.cvtColor(image[0].permute(1, 2, 0).cpu().numpy(), cv2.COLOR_RGB2BGR)
-    
-    found = False
-    
-    print(f'IMAGE : {image_name.split("/")[-1]}')
-    
-    for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
-        if score > threshold:
-            x1, y1, x2, y2 = box.cpu().numpy().astype(int)
-            label, color =  get_label(cls, score)
-            cv2.rectangle(image, (x1, y1), (x2, y2), color, 1)
-            (w, h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.3, -1)
-            image = cv2.rectangle(image, (x1, y1 - 15), (x1 + w, y1), color, -1)
-            cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1)
-            found = True
-            nb_found += 1
-            print(f'{nb_found} => {label}')
-            
-    if found:
-        if show:
-            plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-            plt.title(f"Detection with {model_name}")
-            plt.show()
-    else:
-        if show:
-            print(f'No object found in image with {model_name}.')
-            
-    print('--------------------------------\n')
-            
-    return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), nb_found
-    
-def detect_from_single_image(image_path, model_name, model, threshold, show=True, no_amp=True):
-    image = read_image(path=image_path)
-    return detection(image_path.split('/')[-1], image, model, model_name, threshold, show, no_amp)
 
 def read_image(path=None, frame=None):
     size = (cfg.input_size, cfg.input_size)
@@ -119,8 +66,8 @@ def detect_from_video(video_path, model, model_name, threshold, show=False, no_a
             break
 
         image = read_image(frame=frame)
-        frame = detection('Video frame', image, model, model_name, threshold, show, no_amp)[0]
-        cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, get_color(), 2)
+        frame = model.detect('Video frame', image, label_names, threshold, no_amp)[0]
+        cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2)
         cv2.imshow('Video', frame)
         
         # Exit if 'q' key is pressed
@@ -228,11 +175,10 @@ if __name__ == '__main__':
             #--------------------------------------------------------
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
             #calulate_mAP(model, dataloader, cfg, label_names, device)
-            #detect_from_test_images(model, dataloader, cfg, label_names, device)
-            #detect_from_video(video_path, model, model_name, threshold)
+            detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
-            START = True
+            START = False
 
             if START:
                 #print(model)
@@ -270,10 +216,9 @@ if __name__ == '__main__':
                         image_path = test_path + image_name
                     else:
                         image_path = image_name 
-                    
-                     
-                       
-                    image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
+                        
+                    image = read_image(image_path)
+                    image, nb_found = model.detect(image_name, image, label_names)
                     #detectImages.append(image)
                     
                     filename = save_path_file + image_name.split('/')[-1]
