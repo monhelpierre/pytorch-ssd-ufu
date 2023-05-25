@@ -20,8 +20,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 args = vars(ap.parse_args())
 
-def calulate_mAP(model, dataloader, cfg, class_names, device, no_amp=True):
-    metric = AveragePrecision(len(class_names), cfg.recall_steps)
+def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
+    metric = AveragePrecision(len(label_names), cfg.recall_steps)
     metric.reset()
     pbar = tqdm(dataloader, bar_format="{l_bar}{bar:30}{r_bar}")
     
@@ -39,7 +39,7 @@ def calulate_mAP(model, dataloader, cfg, class_names, device, no_amp=True):
             
     APs, recalls = metric.result
     print("ID   Class            AP@[0.5]     AP@[0.5:0.95]")
-    for i, (ap, name) in enumerate(zip(APs, class_names)):
+    for i, (ap, name) in enumerate(zip(APs, label_names)):
         print("%-5d%-20s%-13.3f%.3f" % (i, name, ap[0], ap.mean()))
     print("mAP@[0.5]: %.3f" % APs[:, 0].mean())
     print("mAP@[0.5:0.95]: %.3f" % APs.mean())
@@ -52,7 +52,7 @@ def get_color(cls=None):
     
 def get_label(cls, score):
     score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
-    label =  class_names[cls.cpu().numpy()] + '-' + score_value
+    label =  label_names[cls.cpu().numpy()] + '-' + score_value
     return label, get_color()
  
 def detection(image, model, model_name, threshold, show, no_amp):
@@ -163,22 +163,17 @@ if __name__ == '__main__':
     results_path = root + 'results/'
     config_path = root + 'configs/'
     dataset_path = 'C:/datasets/'
-    test_path = root + 'test/images/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
-    class_names = [
-        '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
-        '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
+    label_names = [
+        '000', '001', '003', '004', '007', '008','009','023', 
+        '025', '028', '035', '040', '042', '051', '052', '053'
     ]
     
     #show_selected_class()
     
     threshold = 0.5
     test_json = dataset_path + 'test.json'
-    images_path_list = os.listdir(test_path)
-    image_path = dataset_path + 'images/000010.png' 
-    video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
-    video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
     images_path_list = make_images_list(dataset_path, 'divide/test.txt')
    
@@ -207,7 +202,7 @@ if __name__ == '__main__':
         if os.path.exists(cfg):   
             pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
-            model = build_model(cfg, class_names)
+            model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
             
@@ -217,8 +212,8 @@ if __name__ == '__main__':
                          
             #--------------------------------------------------------
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
-            #calulate_mAP(model, dataloader, cfg, class_names, device)
-            #detect_from_test_images(model, dataloader, cfg, class_names, device)
+            #calulate_mAP(model, dataloader, cfg, label_names, device)
+            #detect_from_test_images(model, dataloader, cfg, label_names, device)
             #detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
@@ -248,17 +243,12 @@ if __name__ == '__main__':
                 no_amp = True
                 detectImages = []
                 
-                #images_path_list = os.listdir(test_path)
-                
                 save_path_file = save_path + model_name + '/'
                 if not os.path.exists(save_path_file):
                     os.mkdir(save_path_file)
                     
                 for image_name in images_path_list:
-                    if os.path.exists(test_path + image_name):
-                        image_path = test_path + image_name
-                    else:
-                        image_path = image_name     
+                    image_path = image_name     
                     image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
                     #detectImages.append(image)
                     

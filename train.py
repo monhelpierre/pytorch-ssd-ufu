@@ -73,7 +73,7 @@ class PrepareDataset():
     def __init__(self, dataset_path):
         self.root = dataset_path
         self.splits = ['train', 'val', 'test']
-        self.class_names = [
+        self.label_names = [
             '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
             '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
         ]
@@ -118,7 +118,7 @@ class PrepareDataset():
                     image_path = os.path.join(self.root, 'images', id + '.png')
                     annotation_path = os.path.join(self.root, 'annotations', id + '.xml')
                     boxes, classes, difficulties = self.parse_annotation(annotation_path)
-                    classes = [self.class_names.index(c) for c in classes]
+                    classes = [self.label_names.index(c) for c in classes]
                     dataset.append(
                         {
                             'image': os.path.abspath(image_path),
@@ -204,7 +204,7 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp,
     metrics['APs'].update(det_boxes, det_scores, det_classes,
                           true_boxes, true_classes, difficulties)
 
-def train_model(config_path, results_path, model_name, device, train_json, val_json, class_names):
+def train_model(config_path, results_path, model_name, device, train_json, val_json, label_names):
     cfg = config_path + f'{model_name}.yaml'
     logdir = results_path + f'{model_name}/'
     workers = 4
@@ -222,7 +222,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
                          "in command line if you want to resume the training."
                          % logdir)
 
-    model = build_model(cfg, class_names)
+    model = build_model(cfg, label_names)
     model.to(device)
 
     train_loader = create_dataloader(
@@ -252,7 +252,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
     )
     metrics = {
         'loss': Mean(),
-        'APs': AveragePrecision(len(class_names), cfg.recall_steps)
+        'APs': AveragePrecision(len(label_names), cfg.recall_steps)
     }
 
 
@@ -358,10 +358,11 @@ if __name__ == '__main__':
     results_path = 'results/'
     train_json = dataset_path + 'train.json'
     val_json = dataset_path + 'val.json'
-    class_names = [
-        '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
-        '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
+    label_names = [
+        '000', '001', '003', '004', '007', '008','009','023', 
+        '025', '028', '035', '040', '042', '051', '052', '053'
     ]
+    
     for model_name in model_names:
         if model_name != model_names[int(args['model'])]:
             continue
@@ -373,5 +374,5 @@ if __name__ == '__main__':
             device, 
             train_json, 
             val_json, 
-            class_names
+            label_names
         )
