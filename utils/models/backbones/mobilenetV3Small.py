@@ -35,20 +35,12 @@ class MobileNetV3Small(nn.Module):
             }
         )
 
-        """
-        _ExtraBlock(96, 512),
-        _ExtraBlock(256, 128),
-        _ExtraBlock(128, 64),
-        _ExtraBlock(64, 32),
-
-        """
-
         self.extra_layers = nn.ModuleList(
             [
                 _ExtraBlock(576, 288),
                 _ExtraBlock(288, 144),
                 _ExtraBlock(144, 144),
-                _ExtraBlock(144, 72),
+                _ExtraBlock(144, 72)
             ]
         )
 
