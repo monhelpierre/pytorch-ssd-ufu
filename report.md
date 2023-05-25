@@ -84,8 +84,6 @@ ssh-keygen -t rsa -C "monhelmaudoonypierre@gmail.com"
 https://github.com/settings/keys
 ssh -T git@github.com
 
-git add .
-git commit -m 'Best version'
-git push --set-upstream origin main  (git push --force origin main)
+git add . ; git status ; git commit -m 'Last version' ; git push --set-upstream origin main
 
 
