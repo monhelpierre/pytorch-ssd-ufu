@@ -69,8 +69,10 @@ def detection(image, model, model_name, threshold, show, no_amp):
         if score > threshold:
             x1, y1, x2, y2 = box.cpu().numpy().astype(int)
             label, color =  get_label(cls, score)
-            cv2.rectangle(image, (x1, y1), (x2, y2), color, 2)
-            cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+            cv2.rectangle(image, (x1, y1), (x2, y2), color, 1)
+            (w, h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.3, -1)
+            image = cv2.rectangle(image, (x1, y1 - 15), (x1 + w, y1), color, -1)
+            cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1)
             found = True
             nb_found += 1
     
@@ -163,6 +165,7 @@ if __name__ == '__main__':
     results_path = root + 'results/'
     config_path = root + 'configs/'
     dataset_path = 'C:/datasets/'
+    test_path = root + 'test/images/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
     label_names = [
@@ -174,6 +177,10 @@ if __name__ == '__main__':
     
     threshold = 0.5
     test_json = dataset_path + 'test.json'
+    #images_path_list = os.listdir(test_path)
+    image_path = dataset_path + 'images/000010.png' 
+    video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
+    video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
     images_path_list = make_images_list(dataset_path, 'divide/test.txt')
    
@@ -191,6 +198,9 @@ if __name__ == '__main__':
         print(f'{len(images_path_list)} images for testing...')
     
     save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/test/'
+    
+    #extracted_images = [x for x in os.listdir('C:/datasets/images/') if not x.__contains__('@')]
+    #print('Number of extracted images : ' + str(len(extracted_images)))
                 
     for model_name in model_names:
         if args['model']:
@@ -239,23 +249,35 @@ if __name__ == '__main__':
                 print(f"Testing with {model_name} ({str(datetime.datetime.now()).split('.')[0]})")
                 print("=" * length)
                 save = True
-                show = False
+                show = not save
                 no_amp = True
                 detectImages = []
+                
+                #images_path_list = os.listdir(test_path)
                 
                 save_path_file = save_path + model_name + '/'
                 if not os.path.exists(save_path_file):
                     os.mkdir(save_path_file)
-                    
+                
+                cpt = 1
                 for image_name in images_path_list:
-                    image_path = image_name     
+                    if os.path.exists(test_path + image_name):
+                        image_path = test_path + image_name
+                    else:
+                        image_path = image_name 
+                    
+                    print(f'# {cpt} >= {image_name.split("/")[-1]}') 
+                       
                     image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
                     #detectImages.append(image)
                     
                     filename = save_path_file + image_name.split('/')[-1]
-                    if nb_found > 0:
+                    if nb_found > 0 and save:
                         image = cv2.convertScaleAbs(image, alpha=(255.0))
                         cv2.imwrite(filename, image)
+               
+                    print('--------------------------------\n')
+                    cpt += 1
                 
                 if len(detectImages) > 0:         
                     cpt = 0
