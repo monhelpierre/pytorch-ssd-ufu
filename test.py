@@ -55,7 +55,7 @@ def get_label(cls, score):
     label =  label_names[cls.cpu().numpy()] + '-' + score_value
     return label, get_color()
  
-def detection(image, model, model_name, threshold, show, no_amp):
+def detection(image_name, image, model, model_name, threshold, show, no_amp):
     nb_found = 0
     with torch.no_grad():
         with autocast(enabled=(not no_amp)):
@@ -65,6 +65,9 @@ def detection(image, model, model_name, threshold, show, no_amp):
     image = cv2.cvtColor(image[0].permute(1, 2, 0).cpu().numpy(), cv2.COLOR_RGB2BGR)
     
     found = False
+    
+    print(f'IMAGE : {image_name.split("/")[-1]}')
+    
     for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
         if score > threshold:
             x1, y1, x2, y2 = box.cpu().numpy().astype(int)
@@ -75,22 +78,24 @@ def detection(image, model, model_name, threshold, show, no_amp):
             cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1)
             found = True
             nb_found += 1
-    
+            print(f'{nb_found} => {label}')
+            
     if found:
         if show:
             plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
             plt.title(f"Detection with {model_name}")
             plt.show()
-        print(label)
     else:
         if show:
             print(f'No object found in image with {model_name}.')
+            
+    print('--------------------------------\n')
             
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), nb_found
     
 def detect_from_single_image(image_path, model_name, model, threshold, show=True, no_amp=True):
     image = read_image(path=image_path)
-    return detection(image, model, model_name, threshold, show, no_amp)
+    return detection(image_path.split('/')[-1], image, model, model_name, threshold, show, no_amp)
 
 def read_image(path=None, frame=None):
     size = (cfg.input_size, cfg.input_size)
@@ -114,7 +119,7 @@ def detect_from_video(video_path, model, model_name, threshold, show=False, no_a
             break
 
         image = read_image(frame=frame)
-        frame = detection(image, model, model_name, threshold, show, no_amp)[0]
+        frame = detection('Video frame', image, model, model_name, threshold, show, no_amp)[0]
         cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, get_color(), 2)
         cv2.imshow('Video', frame)
         
@@ -266,7 +271,7 @@ if __name__ == '__main__':
                     else:
                         image_path = image_name 
                     
-                    print(f'# {cpt} >= {image_name.split("/")[-1]}') 
+                     
                        
                     image, nb_found = detect_from_single_image(image_path, model_name, model, threshold, show=show, no_amp=no_amp)
                     #detectImages.append(image)
@@ -275,10 +280,7 @@ if __name__ == '__main__':
                     if nb_found > 0 and save:
                         image = cv2.convertScaleAbs(image, alpha=(255.0))
                         cv2.imwrite(filename, image)
-               
-                    print('--------------------------------\n')
-                    cpt += 1
-                
+                               
                 if len(detectImages) > 0:         
                     cpt = 0
                     NB_COLUMN = 4
