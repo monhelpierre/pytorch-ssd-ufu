@@ -78,7 +78,7 @@ def detect_from_video(video_path, model, model_name, threshold, show=False, no_a
     cap.release()
     cv2.destroyAllWindows()
 
-def make_images_list(dataset_path, testing_file):
+def get_split_test(dataset_path, testing_file):
     with open(dataset_path + testing_file) as f:
         ids = [line.strip() for line in f.readlines()]
     return [dataset_path + 'images/' + id + '.png' for id in ids]       
@@ -134,7 +134,7 @@ if __name__ == '__main__':
     video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
-    images_path_list = make_images_list(dataset_path, 'divide/test.txt')
+    images_path_list = get_split_test(dataset_path, 'divide/test.txt')
    
     if len(images_path_list) < 0:   
         tmp = []
@@ -203,8 +203,6 @@ if __name__ == '__main__':
                 show = not save
                 no_amp = True
                 detectImages = []
-                
-                #images_path_list = os.listdir(test_path)
                 
                 save_path_file = save_path + model_name + '/'
                 if not os.path.exists(save_path_file):
