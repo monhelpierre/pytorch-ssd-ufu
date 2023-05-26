@@ -144,8 +144,19 @@ if __name__ == '__main__':
     image_path = dataset_path + 'images/000010.png' 
     video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Campinas-SP to Tocos de Moji.mp4'
+    save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/test/'
+    video_save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/video/'
     images_path_list = get_split_test(dataset_path, 'divide/test.txt')
-   
+    filename = log_path + 'testing_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
+    
+    logging.basicConfig(
+        filename=filename,
+        filemode='a',
+        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+        datefmt='%H:%M:%S',
+        level=logging.INFO
+    )
+
     if len(images_path_list) < 0:   
         tmp = []
         nb_taken = 0
@@ -159,21 +170,8 @@ if __name__ == '__main__':
         print('Done Loading.')
         print(f'{len(images_path_list)} images for testing...')
     
-    save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/test/'
-    video_save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/video/'
-    
     #extracted_images = [x for x in os.listdir('C:/datasets/images/') if not x.__contains__('@')]
     #print('Number of extracted images : ' + str(len(extracted_images)))
-    
-    filename = log_path + 'testing_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
-        
-    logging.basicConfig(
-        filename=filename,
-        filemode='a',
-        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-        datefmt='%H:%M:%S',
-        level=logging.INFO
-    )
                  
     for model_name in model_names:
         if args['model']:
@@ -183,12 +181,14 @@ if __name__ == '__main__':
         cfg = config_path + f'{model_name}.yaml'
 
         if os.path.exists(cfg): 
-              
             pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
             model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
+
+            if os.path.exists(pth):
+                model.load_state_dict(torch.load(pth)['model_state_dict'])
             
             logging.info("=-------------------")
             logging.info(model_name)
@@ -198,10 +198,6 @@ if __name__ == '__main__':
             #print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
             #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
             #pth = pth.replace('pytorch-ssd-ufu', 'backup')
-                
-            if os.path.exists(pth):
-                print('Loading pretrained model...')
-                model.load_state_dict(torch.load(pth)['model_state_dict'])
             
             FROM_IMAGES = False
             
@@ -256,7 +252,6 @@ if __name__ == '__main__':
                         plt.title('Image ' + str(cpt+1))
                         plt.axis("off")
                         cpt += 1
-                    plt.show()
-            
+                    plt.show()    
         else:
             print(f"Please check if conf file exist for {model_name}")
