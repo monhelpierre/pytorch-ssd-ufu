@@ -15,13 +15,13 @@ from utils.constants import COLOR
 import datetime
 from utils.metrics import AveragePrecision
 import argparse
-
 import logging
+import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 args = vars(ap.parse_args())
-
+       
 def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
     metric = AveragePrecision(len(label_names), cfg.recall_steps)
     metric.reset()
@@ -136,10 +136,11 @@ if __name__ == '__main__':
     ]
     
     #show_selected_class()
-    
+    save = True
+    show = False
+    no_amp = True
     threshold = 0.5
     test_json = dataset_path + 'test.json'
-    #images_path_list = os.listdir(test_path)
     image_path = dataset_path + 'images/000010.png' 
     video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
     video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Campinas-SP to Tocos de Moji.mp4'
@@ -181,7 +182,8 @@ if __name__ == '__main__':
             
         cfg = config_path + f'{model_name}.yaml'
 
-        if os.path.exists(cfg):   
+        if os.path.exists(cfg): 
+              
             pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
             model = build_model(cfg, label_names)
@@ -191,26 +193,25 @@ if __name__ == '__main__':
             logging.info("=-------------------")
             logging.info(model_name)
             logging.info("=-------------------\n")
-                
             
+            #print(model)
+            #print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
+            #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
+            #pth = pth.replace('pytorch-ssd-ufu', 'backup')
+                
             if os.path.exists(pth):
                 print('Loading pretrained model...')
                 model.load_state_dict(torch.load(pth)['model_state_dict'])
-                         
-            #--------------------------------------------------------
-            #convert_to_onnx(model, cfg.input_size, results_path + model_name)
-            #calulate_mAP(model, dataloader, cfg, label_names, device)
-            detect_from_video(video_path, video_save_path, model, logging, threshold)
-            #--------------------------------------------------------
-
-            START = False
-
-            if START:
-                #print(model)
-                #print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
-                #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
-                #pth = pth.replace('pytorch-ssd-ufu', 'backup')
-                
+            
+            FROM_IMAGES = False
+            
+            if not FROM_IMAGES:        
+                #--------------------------------------------------------
+                #convert_to_onnx(model, cfg.input_size, results_path + model_name)
+                #calulate_mAP(model, dataloader, cfg, label_names, device)
+                detect_from_video(video_path, video_save_path, model, logging, threshold, no_amp)
+                #--------------------------------------------------------
+            else:                
                 dataloader = create_dataloader(
                     test_json,
                     batch_size=cfg.batch_size,
@@ -220,9 +221,6 @@ if __name__ == '__main__':
                     num_workers=workers
                 )
 
-                save = True
-                show = False
-                no_amp = True
                 detectImages = []
                 
                 save_path_file = save_path + model_name + '/'
