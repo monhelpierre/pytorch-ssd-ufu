@@ -159,8 +159,10 @@ if __name__ == '__main__':
                 
     for model_name in model_names:
         
+        filename = log_path + model_name + '_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
+        
         logging.basicConfig(
-            filename=log_path + model_name + '_' + str(datetime.datetime.now()).split('.')[0],
+            filename=filename,
             filemode='a',
             format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
             datefmt='%H:%M:%S',
