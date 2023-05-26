@@ -26,15 +26,15 @@ class _SSDLiteHead(nn.Sequential):
         )
 
 class _Heads(nn.Module):
-    def __init__(self, module, layer_channels, num_anchor_shapes, num_classes):
+    def __init__(self, layer_channels, num_anchor_shapes, num_classes):
         super().__init__()
         self.num_classes = num_classes
 
         self.classifincation_heads = nn.ModuleList([])
         self.regression_heads = nn.ModuleList([])
         for cin, n in zip(layer_channels, num_anchor_shapes):
-            self.classifincation_heads.append(module(cin, (num_classes + 1) * n))
-            self.regression_heads.append(module(cin, 4 * n))
+            self.classifincation_heads.append(_SSDLiteHead(cin, (num_classes + 1) * n))
+            self.regression_heads.append(_SSDLiteHead(cin, 4 * n))
 
         self.apply(xavier_init)
 
@@ -55,14 +55,14 @@ class _Heads(nn.Module):
 class SSDLite(nn.Sequential): 
     def __init__(self, backbone, num_classes, input_size, anchor_scales, anchor_aspect_ratios,):
         feature_shapes = get_output_shapes(backbone, input_size)   # [num_stages, [3]]
-        heads = self._define_heads(
-            layer_channels=[shape[0] for shape in feature_shapes],
-            num_anchor_shapes=[len(ar) * 2 for ar in anchor_aspect_ratios],
-            num_classes=num_classes,
+        heads = _Heads(
+            layer_channels=[shape[0] for shape in feature_shapes], 
+            num_anchor_shapes=[len(ar) * 2 for ar in anchor_aspect_ratios], 
+            num_classes=num_classes
         )
         super().__init__(backbone, heads)
 
-        anchors = self._define_anchors(    # pixel coordinates; cxcywh; [num_anchors, 4]
+        anchors = self._define_anchors(# pixel coordinates; cxcywh; [num_anchors, 4]
             input_size,
             feature_sizes=[shape[1] for shape in feature_shapes],
             scales=anchor_scales,
@@ -107,9 +107,6 @@ class SSDLite(nn.Sequential):
         anchors = anchors.T                     # [num_anchors, 4]
         anchors *= input_size
         return anchors
-    
-    def _define_heads(self, layer_channels, num_anchor_shapes, num_classes):
-        return _Heads(_SSDLiteHead, layer_channels, num_anchor_shapes, num_classes)
 
     def compute_loss(self, preds, true_boxes, true_classes, neg_pos_ratio=3):
         positive_mask, regression_target, classification_target = (
