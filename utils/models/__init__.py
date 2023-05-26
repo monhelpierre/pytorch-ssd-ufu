@@ -1,1 +1,1 @@
-from utils.models.ssd import SSD, SSDLite
+from utils.models.ssdlite import SSDLite

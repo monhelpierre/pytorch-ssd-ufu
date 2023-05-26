@@ -59,16 +59,23 @@ def read_image(path=None, frame=None):
     image = image.unsqueeze(0).to(device)
     return image
 
-def detect_from_video(video_path, model, model_name, threshold, show=False, no_amp=True, desired_fps = 200):
+def detect_from_video(video_path, save_path, model, logging, threshold, no_amp=True, fps = 300):
     cap = cv2.VideoCapture(video_path)
-    fps = desired_fps if desired_fps > 0 else cap.get(cv2.CAP_PROP_FPS)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    cpt = 0
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
 
         image = read_image(frame=frame)
-        frame = model.detect('Video frame', image, label_names, threshold, no_amp)[0]
+        frame, nb_found, detection = model.detect('Video frame', image, label_names, logging, threshold, no_amp)
+        
+        if save_path and nb_found > 0:
+            frame = cv2.convertScaleAbs(frame, alpha=(255.0))
+            cv2.imwrite(save_path + str(cpt) + '.png', frame)
+            cpt += 1
+        
         cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2)
         cv2.imshow('Video', frame)
         
@@ -135,8 +142,7 @@ if __name__ == '__main__':
     #images_path_list = os.listdir(test_path)
     image_path = dataset_path + 'images/000010.png' 
     video_path = root + 'test/videos/DRIVING IN BRAZIL_ Curitiba(PR) to São Paulo(SP).mp4'
-    video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Paranagua-PR to Curitiba.mp4'
-    video_path = 'C:/Users/monhe/Videos/4K Video Downloader/Brazilian Traffic Signs.mp4'
+    video_path = 'C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Campinas-SP to Tocos de Moji.mp4'
     images_path_list = get_split_test(dataset_path, 'divide/test.txt')
    
     if len(images_path_list) < 0:   
@@ -153,22 +159,22 @@ if __name__ == '__main__':
         print(f'{len(images_path_list)} images for testing...')
     
     save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/test/'
+    video_save_path = 'C:/Users/monhe/OneDrive/Desktop/signs/video/'
     
     #extracted_images = [x for x in os.listdir('C:/datasets/images/') if not x.__contains__('@')]
     #print('Number of extracted images : ' + str(len(extracted_images)))
-                
+    
+    filename = log_path + 'testing_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
+        
+    logging.basicConfig(
+        filename=filename,
+        filemode='a',
+        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+        datefmt='%H:%M:%S',
+        level=logging.INFO
+    )
+                 
     for model_name in model_names:
-        
-        filename = log_path + model_name + '_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
-        
-        logging.basicConfig(
-            filename=filename,
-            filemode='a',
-            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-            datefmt='%H:%M:%S',
-            level=logging.INFO
-        )
-
         if args['model']:
             if model_name != model_names[int(args['model'])]:
                 continue
@@ -182,6 +188,11 @@ if __name__ == '__main__':
             model.to(device)
             model.eval()
             
+            logging.info("=-------------------")
+            logging.info(model_name)
+            logging.info("=-------------------\n")
+                
+            
             if os.path.exists(pth):
                 print('Loading pretrained model...')
                 model.load_state_dict(torch.load(pth)['model_state_dict'])
@@ -189,10 +200,10 @@ if __name__ == '__main__':
             #--------------------------------------------------------
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
             #calulate_mAP(model, dataloader, cfg, label_names, device)
-            #detect_from_video(video_path, model, model_name, threshold)
+            detect_from_video(video_path, video_save_path, model, logging, threshold)
             #--------------------------------------------------------
 
-            START = True
+            START = False
 
             if START:
                 #print(model)
@@ -209,12 +220,8 @@ if __name__ == '__main__':
                     num_workers=workers
                 )
 
-                length = 70
-                print("=" * length)
-                print(f"Testing with {model_name} ({str(datetime.datetime.now()).split('.')[0]})")
-                print("=" * length)
                 save = True
-                show = not save
+                show = False
                 no_amp = True
                 detectImages = []
                 
@@ -230,7 +237,7 @@ if __name__ == '__main__':
                         image_path = image_name 
                         
                     image = read_image(image_path)
-                    image, nb_found = model.detect(image_name, image, label_names, logging)
+                    image, nb_found, detection = model.detect(image_name, image, label_names, logging)
                     #detectImages.append(image)
                     
                     filename = save_path_file + image_name.split('/')[-1]
