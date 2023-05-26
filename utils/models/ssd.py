@@ -267,7 +267,7 @@ class SSD(nn.Sequential):
         classes = torch.reshape(classes, [bs, num_anchors * num_classes])
         return boxes, scores, classes
     
-    def detect(self, image_name, image, label_names, threshold=0.5, no_amp=True):
+    def detect(self, image_name, image, label_names, logging, threshold=0.5, no_amp=True):
         from utils.misc import nms
         nb_found = 0
         with torch.no_grad():
@@ -277,7 +277,8 @@ class SSD(nn.Sequential):
         det_boxes, det_scores, det_classes = nms(*self.decode(preds))
         image = cv2.cvtColor(image[0].permute(1, 2, 0).cpu().numpy(), cv2.COLOR_RGB2BGR)
         
-        print(f'IMAGE : {image_name.split("/")[-1]}')
+        logging.info(f'IMAGE : {image_name.split("/")[-1]}')
+        
         for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
             if score > threshold:
                 x1, y1, x2, y2 = box.cpu().numpy().astype(int)
@@ -288,8 +289,8 @@ class SSD(nn.Sequential):
                 image = cv2.rectangle(image, (x1, y1 - 15), (x1 + w, y1), COLOR, -1)
                 cv2.putText(image, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1)
                 nb_found += 1
-                print(f'{nb_found} => {label}')
-        print('------------\n')
+                logging.info(f'{nb_found} => {label}')
+        logging.info('------------\n')
              
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), nb_found
 

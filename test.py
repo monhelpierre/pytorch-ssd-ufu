@@ -16,6 +16,8 @@ import datetime
 from utils.metrics import AveragePrecision
 import argparse
 
+import logging
+
 ap = argparse.ArgumentParser()
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 args = vars(ap.parse_args())
@@ -118,6 +120,7 @@ if __name__ == '__main__':
     config_path = root + 'configs/'
     dataset_path = 'C:/datasets/'
     test_path = root + 'test/images/'
+    log_path = root + 'logs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
     label_names = [
@@ -155,6 +158,14 @@ if __name__ == '__main__':
     #print('Number of extracted images : ' + str(len(extracted_images)))
                 
     for model_name in model_names:
+        
+        logging.basicConfig(filename=log_path + model_name + '.md',
+            filemode='a',
+            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+            datefmt='%H:%M:%S',
+            level=logging.INFO
+        )
+
         if args['model']:
             if model_name != model_names[int(args['model'])]:
                 continue
@@ -175,10 +186,10 @@ if __name__ == '__main__':
             #--------------------------------------------------------
             #convert_to_onnx(model, cfg.input_size, results_path + model_name)
             #calulate_mAP(model, dataloader, cfg, label_names, device)
-            detect_from_video(video_path, model, model_name, threshold)
+            #detect_from_video(video_path, model, model_name, threshold)
             #--------------------------------------------------------
 
-            START = False
+            START = True
 
             if START:
                 #print(model)
@@ -216,7 +227,7 @@ if __name__ == '__main__':
                         image_path = image_name 
                         
                     image = read_image(image_path)
-                    image, nb_found = model.detect(image_name, image, label_names)
+                    image, nb_found = model.detect(image_name, image, label_names, logging)
                     #detectImages.append(image)
                     
                     filename = save_path_file + image_name.split('/')[-1]
