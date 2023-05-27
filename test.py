@@ -19,8 +19,9 @@ import logging
 import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser()
+ap.add_argument("-db", "--dataset", required=False, default="C:/datasets/", help="Link to database")
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
-ap.add_argument("-vp", "--video", required=False, help="VIdeo path to make detection")
+ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
 ap.add_argument("-sp", "--save", required=False, help="Path to save detection")
 args = ap.parse_args()
@@ -91,18 +92,20 @@ def convert_to_onnx(model, size, path):
     onnx_path = path + "/model.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
         
-def process_image(cfg, image_path, save_path, label_names, logging):
+def process_image(cfg, image_path, save_path, label_names, logging, log_path=None):
     image_name = image_path.split('/')[-1]
     image, nb_found, detection = model.detect(image_name, read_image(cfg, image_path), label_names, logging)        
     if nb_found > 0:
-        if save_path:
+        if save_path or log_path:
+            save_path = save_path if save_path else log_path
             if not os.path.exists(save_path):
                 os.mkdir(save_path)
             filename = save_path + image_name.split('/')[-1]
             image = cv2.convertScaleAbs(image, alpha=(255.0))
             cv2.imwrite(filename, image)
     else:
-        print('No object detected in the image')
+        if not log_path:
+            print('No object detected in the image')
     
 #=========================================================================================================
 
@@ -115,7 +118,6 @@ if __name__ == '__main__':
     root = os.getcwd() + '/'
     results_path = root + 'results/'
     config_path = root + 'configs/'
-    dataset_path = 'C:/datasets/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
@@ -124,8 +126,8 @@ if __name__ == '__main__':
         '025', '028', '035', '040', '042', '051', '052', '053'
     ]
     
-    test_json = dataset_path + 'test.json'
-    images_path_list = get_split_test(dataset_path, 'divide/test.txt')
+    test_json = args.dataset + 'test.json'
+    images_path_list = get_split_test(args.dataset, 'divide/test.txt')
     filename = log_path + 'testing_' + (str(datetime.datetime.now()).split('.')[0]).replace(':', '_')
     
     logging.basicConfig(
@@ -178,12 +180,12 @@ if __name__ == '__main__':
                     image_stddev=cfg.image_stddev,
                     num_workers=workers
                 )
-                calulate_mAP(model, dataloader, cfg, label_names, device)
+                #calulate_mAP(model, dataloader, cfg, label_names, device)
                 for image_path in images_path_list:
-                    process_image(cfg, image_path, save_path, label_names, logging)
+                    process_image(cfg, image_path, save_path, label_names, logging, log_path + model_name + '/')
         else:
             print(f"Please check if conf file and save path exist for {model_name}")
             
-#python test.py -mi 0
+#python test.py -mi 0 -dataset "C:/datasets/"
 #python test.py -mi 0 --video "C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Corupá-SC to São Francisco do Sul-SC.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Pictures/test6.jpg" --save "C:/Users/monhe/OneDrive/Desktop"
