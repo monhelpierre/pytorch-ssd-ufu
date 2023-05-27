@@ -192,6 +192,7 @@ if __name__ == '__main__':
             
             logging.info("=-------------------")
             logging.info(model_name)
+            print(model_name)
             logging.info("=-------------------\n")
             
             #print(model)
@@ -199,7 +200,7 @@ if __name__ == '__main__':
             #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
             #pth = pth.replace('pytorch-ssd-ufu', 'backup')
             
-            FROM_IMAGES = False
+            FROM_IMAGES = True
             
             if not FROM_IMAGES:        
                 #--------------------------------------------------------
