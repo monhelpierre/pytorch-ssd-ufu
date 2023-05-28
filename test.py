@@ -71,7 +71,7 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
             break
         image = read_image(cfg, frame=frame)
         frame, nb_found, detection = model.detect('Video frame', image, label_names, logging, threshold, no_amp)
-        if save_path and nb_found > 0:
+        if nb_found > 0:
             frame = cv2.convertScaleAbs(frame, alpha=(255.0))
             cv2.imwrite(save_path + str(cpt) + '.png', frame)
             cpt += 1
@@ -96,12 +96,11 @@ def convert_to_onnx(model, size, path):
     onnx_path = path + "/model.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
         
-def process_image(cfg, image_path, save_path, label_names, logging, log_path=None):
+def process_image(cfg, image_path, save_path, label_names, logging):
     image_name = image_path.split('/')[-1]
     image, nb_found, detection = model.detect(image_name, read_image(cfg, image_path), label_names, logging)        
     if nb_found > 0:
-        if save_path or log_path:
-            save_path = save_path if save_path else log_path
+        if save_path:
             filename = save_path + image_name.split('/')[-1]
             image = cv2.convertScaleAbs(image, alpha=(255.0))
             cv2.imwrite(filename, image)
@@ -167,15 +166,27 @@ if __name__ == '__main__':
             logging.info(model_name)
             print(model_name)
             logging.info("=-------------------\n")
-            save_path = (args.save + '/' + model_name + '/') if args.save else args.save
-            if save_path and not os.path.exists(save_path):
+
+            if args.save:
+                save_path = args.save + '/' + model_name + '/'
+            else:
+                save_path = results_path + 'test/image/' + model_name + '/' 
+
+            if not os.path.exists(save_path):
                 os.mkdir(save_path)
                 
             if args.video:
-                detect_from_video(cfg, args.video, save_path, model, logging, threshold, no_amp)
+                if os.path.exists(args.video):
+                    print('Detection from video.')
+                    save_path = save_path.replace('/image/', '/video/')
+                    if not os.path.exists(save_path):
+                        os.mkdir(save_path)
+                    detect_from_video(cfg, args.video, save_path, model, logging, threshold, no_amp)
             elif args.image:
+                print('Detection from single image.')
                 process_image(cfg, args.image, save_path, label_names, logging)
-            else:     
+            else:
+                print('Detection from test set images.')
                 dataloader = create_dataloader(
                     test_json,
                     batch_size=cfg.batch_size,
@@ -186,7 +197,7 @@ if __name__ == '__main__':
                 )
                 #calulate_mAP(model, dataloader, cfg, label_names, device)
                 for image_path in images_path_list:
-                    process_image(cfg, image_path, save_path, label_names, logging, log_path + model_name + '/')
+                    process_image(cfg, image_path, save_path, label_names, logging)
         else:
             print(f"Please check if conf file and save path exist for {model_name}")
             
@@ -194,3 +205,4 @@ if __name__ == '__main__':
 #python test.py -mi 0 --video "C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Corupá-SC to São Francisco do Sul-SC.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Pictures/test6.jpg" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Desktop/videos/01 Brazilian traffic laws and signs. My Brazilian Friends driving in São Paulo City SP.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
+#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4"
