@@ -61,9 +61,10 @@ def read_image(cfg, image_path=None, frame=None):
     return image
 
 def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_amp=True, fps = 300):
+    cpt = 0
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
-    cpt = 0
+    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -74,8 +75,12 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
             frame = cv2.convertScaleAbs(frame, alpha=(255.0))
             cv2.imwrite(save_path + str(cpt) + '.png', frame)
             cpt += 1
-        cv2.putText(frame, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2)
+        frame_count -= 1
+        seconds = round(frame_count / fps)
+        video_time = datetime.timedelta(seconds=seconds)
+        cv2.putText(frame, f'FPS: {int(fps)}   {video_time}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
         cv2.imshow('Video', frame)
+        
         if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
             break
     cap.release()
@@ -98,8 +103,6 @@ def process_image(cfg, image_path, save_path, label_names, logging, log_path=Non
     if nb_found > 0:
         if save_path or log_path:
             save_path = save_path if save_path else log_path
-            if not os.path.exists(save_path):
-                os.mkdir(save_path)
             filename = save_path + image_name.split('/')[-1]
             image = cv2.convertScaleAbs(image, alpha=(255.0))
             cv2.imwrite(filename, image)
@@ -165,8 +168,10 @@ if __name__ == '__main__':
             logging.info(model_name)
             print(model_name)
             logging.info("=-------------------\n")
-            save_path = args.save + '/' + model_name + '/' if args.save else args.save
-            
+            save_path = (args.save + '/' + model_name + '/') if args.save else args.save
+            if save_path and not os.path.exists(save_path):
+                os.mkdir(save_path)
+                
             if args.video:
                 detect_from_video(cfg, args.video, save_path, model, logging, threshold, no_amp)
             elif args.image:
@@ -189,3 +194,4 @@ if __name__ == '__main__':
 #python test.py -mi 0 -dataset "C:/datasets/"
 #python test.py -mi 0 --video "C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Corupá-SC to São Francisco do Sul-SC.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Pictures/test6.jpg" --save "C:/Users/monhe/OneDrive/Desktop"
+#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Desktop/videos/01 Brazilian traffic laws and signs. My Brazilian Friends driving in São Paulo City SP.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
