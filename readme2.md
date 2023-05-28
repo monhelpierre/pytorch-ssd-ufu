@@ -93,7 +93,7 @@ python eval.py
 
 You can specify the parameters listed in the `eval.py` file by flagging them or manually changing them.  
 
-<img align="center" src= "https://github.com/monhelpierre/pythorch-ssd-ufu/tree/main/results/test.png">
+<img align="center" src= "https://github.com/monhelpierre/pythorch-ssd-ufu/blob/main/results/test.png">
 
 ## Performance
 
@@ -101,7 +101,7 @@ You can specify the parameters listed in the `eval.py` file by flagging them or 
 
 ##### mAP
 
-<img align="center" src= "https://github.com/monhelpierre/pythorch-ssd-ufu/tree/main/results/MAP0.5.png">
+<img align="center" src= "https://github.com/monhelpierre/pythorch-ssd-ufu/blob/main/results/MAP0.5.png">
 
 ##### FPS
 **GTX 1060:** ~45.45 FPS
