@@ -440,3 +440,2616 @@
 13:04:30,203 root INFO IMAGE : Video frame
 13:04:30,203 root INFO 1 => 009-74%
 13:04:30,203 root INFO ------------
+13:04:34,940 root INFO IMAGE : Video frame
+13:04:34,940 root INFO 1 => 009-51%
+13:04:34,940 root INFO ------------
+13:04:59,897 root INFO IMAGE : Video frame
+13:04:59,898 root INFO 1 => 051-59%
+13:04:59,898 root INFO ------------
+13:05:09,837 root INFO IMAGE : Video frame
+13:05:09,837 root INFO 1 => 023-51%
+13:05:09,837 root INFO ------------
+13:05:10,361 root INFO IMAGE : Video frame
+13:05:10,361 root INFO 1 => 023-51%
+13:05:10,361 root INFO ------------
+13:05:11,578 root INFO IMAGE : Video frame
+13:05:11,578 root INFO 1 => 023-57%
+13:05:11,578 root INFO ------------
+13:05:12,245 root INFO IMAGE : Video frame
+13:05:12,245 root INFO 1 => 023-51%
+13:05:12,245 root INFO ------------
+13:05:12,575 root INFO IMAGE : Video frame
+13:05:12,575 root INFO 1 => 023-72%
+13:05:12,575 root INFO ------------
+13:05:12,748 root INFO IMAGE : Video frame
+13:05:12,748 root INFO 1 => 023-81%
+13:05:12,749 root INFO ------------
+13:05:13,84 root INFO IMAGE : Video frame
+13:05:13,84 root INFO 1 => 023-56%
+13:05:13,84 root INFO ------------
+13:05:13,256 root INFO IMAGE : Video frame
+13:05:13,256 root INFO 1 => 023-91%
+13:05:13,256 root INFO ------------
+13:05:13,433 root INFO IMAGE : Video frame
+13:05:13,433 root INFO 1 => 023-61%
+13:05:13,433 root INFO ------------
+13:05:13,604 root INFO IMAGE : Video frame
+13:05:13,604 root INFO 1 => 023-60%
+13:05:13,604 root INFO ------------
+13:05:13,764 root INFO IMAGE : Video frame
+13:05:13,764 root INFO 1 => 042-59%
+13:05:13,764 root INFO ------------
+13:05:14,110 root INFO IMAGE : Video frame
+13:05:14,110 root INFO 1 => 023-85%
+2 => 042-79%
+13:05:14,111 root INFO ------------
+13:05:14,287 root INFO IMAGE : Video frame
+13:05:14,288 root INFO 1 => 023-75%
+2 => 042-62%
+13:05:14,288 root INFO ------------
+13:05:14,464 root INFO IMAGE : Video frame
+13:05:14,464 root INFO 1 => 023-88%
+13:05:14,464 root INFO ------------
+13:05:14,636 root INFO IMAGE : Video frame
+13:05:14,636 root INFO 1 => 023-87%
+13:05:14,636 root INFO ------------
+13:05:14,808 root INFO IMAGE : Video frame
+13:05:14,808 root INFO 1 => 023-78%
+2 => 042-57%
+13:05:14,808 root INFO ------------
+13:05:14,974 root INFO IMAGE : Video frame
+13:05:14,975 root INFO 1 => 023-79%
+13:05:14,975 root INFO ------------
+13:05:15,163 root INFO IMAGE : Video frame
+13:05:15,163 root INFO 1 => 023-57%
+13:05:15,163 root INFO ------------
+13:05:27,89 root INFO IMAGE : Video frame
+13:05:27,89 root INFO 1 => 009-56%
+13:05:27,89 root INFO ------------
+13:05:39,910 root INFO IMAGE : Video frame
+13:05:39,910 root INFO 1 => 051-64%
+13:05:39,911 root INFO ------------
+13:05:40,943 root INFO IMAGE : Video frame
+13:05:40,943 root INFO 1 => 023-50%
+13:05:40,943 root INFO ------------
+13:05:41,268 root INFO IMAGE : Video frame
+13:05:41,268 root INFO 1 => 003-52%
+13:05:41,268 root INFO ------------
+13:05:41,442 root INFO IMAGE : Video frame
+13:05:41,442 root INFO 1 => 023-52%
+13:05:41,442 root INFO ------------
+13:05:41,610 root INFO IMAGE : Video frame
+13:05:41,610 root INFO 1 => 023-52%
+13:05:41,610 root INFO ------------
+13:05:42,109 root INFO IMAGE : Video frame
+13:05:42,109 root INFO 1 => 023-59%
+13:05:42,109 root INFO ------------
+13:06:40,280 root INFO IMAGE : Video frame
+13:06:40,280 root INFO 1 => 023-54%
+13:06:40,280 root INFO ------------
+13:09:18,195 root INFO IMAGE : Video frame
+13:09:18,195 root INFO 1 => 007-71%
+13:09:18,195 root INFO ------------
+13:09:18,693 root INFO IMAGE : Video frame
+13:09:18,693 root INFO 1 => 053-57%
+13:09:18,693 root INFO ------------
+13:09:20,259 root INFO IMAGE : Video frame
+13:09:20,259 root INFO 1 => 053-62%
+13:09:20,259 root INFO ------------
+13:09:20,794 root INFO IMAGE : Video frame
+13:09:20,795 root INFO 1 => 053-74%
+13:09:20,795 root INFO ------------
+13:09:20,963 root INFO IMAGE : Video frame
+13:09:20,963 root INFO 1 => 053-71%
+13:09:20,964 root INFO ------------
+13:09:21,144 root INFO IMAGE : Video frame
+13:09:21,144 root INFO 1 => 053-76%
+13:09:21,144 root INFO ------------
+13:09:21,337 root INFO IMAGE : Video frame
+13:09:21,337 root INFO 1 => 053-96%
+13:09:21,337 root INFO ------------
+13:09:21,517 root INFO IMAGE : Video frame
+13:09:21,517 root INFO 1 => 053-86%
+13:09:21,517 root INFO ------------
+13:09:21,687 root INFO IMAGE : Video frame
+13:09:21,687 root INFO 1 => 053-73%
+13:09:21,687 root INFO ------------
+13:09:22,180 root INFO IMAGE : Video frame
+13:09:22,181 root INFO 1 => 042-63%
+13:09:22,181 root INFO ------------
+13:09:22,353 root INFO IMAGE : Video frame
+13:09:22,353 root INFO 1 => 053-63%
+2 => 042-51%
+13:09:22,353 root INFO ------------
+13:09:22,522 root INFO IMAGE : Video frame
+13:09:22,522 root INFO 1 => 053-98%
+13:09:22,522 root INFO ------------
+13:09:22,695 root INFO IMAGE : Video frame
+13:09:22,695 root INFO 1 => 053-98%
+2 => 042-66%
+13:09:22,695 root INFO ------------
+13:09:22,870 root INFO IMAGE : Video frame
+13:09:22,870 root INFO 1 => 053-98%
+2 => 042-68%
+13:09:22,870 root INFO ------------
+13:09:23,42 root INFO IMAGE : Video frame
+13:09:23,42 root INFO 1 => 042-56%
+13:09:23,42 root INFO ------------
+13:09:23,392 root INFO IMAGE : Video frame
+13:09:23,392 root INFO 1 => 053-82%
+13:09:23,392 root INFO ------------
+13:09:23,562 root INFO IMAGE : Video frame
+13:09:23,562 root INFO 1 => 053-94%
+2 => 042-64%
+13:09:23,562 root INFO ------------
+13:09:23,756 root INFO IMAGE : Video frame
+13:09:23,756 root INFO 1 => 053-95%
+13:09:23,756 root INFO ------------
+13:09:23,925 root INFO IMAGE : Video frame
+13:09:23,925 root INFO 1 => 053-51%
+13:09:23,925 root INFO ------------
+13:09:24,96 root INFO IMAGE : Video frame
+13:09:24,97 root INFO 1 => 053-73%
+13:09:24,97 root INFO ------------
+13:09:24,267 root INFO IMAGE : Video frame
+13:09:24,267 root INFO 1 => 053-85%
+13:09:24,268 root INFO ------------
+13:09:24,466 root INFO IMAGE : Video frame
+13:09:24,466 root INFO 1 => 053-89%
+2 => 042-65%
+13:09:24,467 root INFO ------------
+13:09:24,640 root INFO IMAGE : Video frame
+13:09:24,640 root INFO 1 => 053-66%
+2 => 042-53%
+13:09:24,640 root INFO ------------
+13:09:24,823 root INFO IMAGE : Video frame
+13:09:24,823 root INFO 1 => 042-89%
+2 => 053-75%
+13:09:24,823 root INFO ------------
+13:09:24,998 root INFO IMAGE : Video frame
+13:09:24,999 root INFO 1 => 053-56%
+13:09:24,999 root INFO ------------
+13:09:25,167 root INFO IMAGE : Video frame
+13:09:25,167 root INFO 1 => 053-55%
+13:09:25,167 root INFO ------------
+13:09:25,521 root INFO IMAGE : Video frame
+13:09:25,521 root INFO 1 => 053-86%
+13:09:25,521 root INFO ------------
+13:09:34,957 root INFO IMAGE : Video frame
+13:09:34,957 root INFO 1 => 007-54%
+13:09:34,957 root INFO ------------
+13:09:48,344 root INFO IMAGE : Video frame
+13:09:48,344 root INFO 1 => 028-54%
+13:09:48,344 root INFO ------------
+13:09:48,537 root INFO IMAGE : Video frame
+13:09:48,537 root INFO 1 => 028-65%
+13:09:48,537 root INFO ------------
+13:09:49,916 root INFO IMAGE : Video frame
+13:09:49,916 root INFO 1 => 028-75%
+2 => 023-63%
+13:09:49,916 root INFO ------------
+13:09:50,95 root INFO IMAGE : Video frame
+13:09:50,95 root INFO 1 => 023-92%
+13:09:50,95 root INFO ------------
+13:09:50,433 root INFO IMAGE : Video frame
+13:09:50,434 root INFO 1 => 023-76%
+2 => 028-66%
+13:09:50,434 root INFO ------------
+13:09:50,607 root INFO IMAGE : Video frame
+13:09:50,607 root INFO 1 => 023-82%
+2 => 028-75%
+13:09:50,607 root INFO ------------
+13:09:50,781 root INFO IMAGE : Video frame
+13:09:50,781 root INFO 1 => 028-64%
+2 => 023-60%
+13:09:50,781 root INFO ------------
+13:09:50,952 root INFO IMAGE : Video frame
+13:09:50,953 root INFO 1 => 028-72%
+2 => 023-55%
+13:09:50,953 root INFO ------------
+13:09:51,141 root INFO IMAGE : Video frame
+13:09:51,141 root INFO 1 => 023-60%
+13:09:51,141 root INFO ------------
+13:09:51,317 root INFO IMAGE : Video frame
+13:09:51,317 root INFO 1 => 028-97%
+2 => 023-72%
+13:09:51,317 root INFO ------------
+13:09:51,487 root INFO IMAGE : Video frame
+13:09:51,487 root INFO 1 => 028-74%
+13:09:51,487 root INFO ------------
+13:09:51,660 root INFO IMAGE : Video frame
+13:09:51,660 root INFO 1 => 028-94%
+13:09:51,660 root INFO ------------
+13:10:17,408 root INFO IMAGE : Video frame
+13:10:17,408 root INFO 1 => 053-51%
+13:10:17,408 root INFO ------------
+13:10:17,572 root INFO IMAGE : Video frame
+13:10:17,572 root INFO 1 => 053-62%
+13:10:17,572 root INFO ------------
+13:10:17,853 root INFO IMAGE : Video frame
+13:10:17,854 root INFO 1 => 053-91%
+13:10:17,854 root INFO ------------
+13:10:18,49 root INFO IMAGE : Video frame
+13:10:18,49 root INFO 1 => 053-96%
+13:10:18,49 root INFO ------------
+13:10:18,219 root INFO IMAGE : Video frame
+13:10:18,219 root INFO 1 => 053-98%
+13:10:18,219 root INFO ------------
+13:10:18,395 root INFO IMAGE : Video frame
+13:10:18,395 root INFO 1 => 053-97%
+13:10:18,395 root INFO ------------
+13:10:18,574 root INFO IMAGE : Video frame
+13:10:18,575 root INFO 1 => 053-97%
+13:10:18,575 root INFO ------------
+13:10:18,746 root INFO IMAGE : Video frame
+13:10:18,746 root INFO 1 => 053-76%
+13:10:18,746 root INFO ------------
+13:10:19,88 root INFO IMAGE : Video frame
+13:10:19,88 root INFO 1 => 053-67%
+13:10:19,88 root INFO ------------
+13:10:19,259 root INFO IMAGE : Video frame
+13:10:19,260 root INFO 1 => 053-94%
+13:10:19,260 root INFO ------------
+13:10:19,426 root INFO IMAGE : Video frame
+13:10:19,426 root INFO 1 => 053-98%
+2 => 042-79%
+13:10:19,426 root INFO ------------
+13:10:19,581 root INFO IMAGE : Video frame
+13:10:19,582 root INFO 1 => 053-94%
+13:10:19,582 root INFO ------------
+13:10:19,908 root INFO IMAGE : Video frame
+13:10:19,908 root INFO 1 => 053-75%
+13:10:19,908 root INFO ------------
+13:10:20,79 root INFO IMAGE : Video frame
+13:10:20,79 root INFO 1 => 053-69%
+2 => 042-65%
+13:10:20,79 root INFO ------------
+13:10:20,247 root INFO IMAGE : Video frame
+13:10:20,247 root INFO 1 => 053-96%
+13:10:20,247 root INFO ------------
+13:10:20,587 root INFO IMAGE : Video frame
+13:10:20,587 root INFO 1 => 053-65%
+2 => 042-55%
+13:10:20,587 root INFO ------------
+13:10:20,756 root INFO IMAGE : Video frame
+13:10:20,756 root INFO 1 => 053-96%
+2 => 042-69%
+13:10:20,756 root INFO ------------
+13:10:21,87 root INFO IMAGE : Video frame
+13:10:21,87 root INFO 1 => 042-75%
+2 => 053-63%
+13:10:21,87 root INFO ------------
+13:10:21,408 root INFO IMAGE : Video frame
+13:10:21,408 root INFO 1 => 053-55%
+13:10:21,408 root INFO ------------
+13:10:35,749 root INFO IMAGE : Video frame
+13:10:35,749 root INFO 1 => 028-50%
+13:10:35,749 root INFO ------------
+13:10:36,78 root INFO IMAGE : Video frame
+13:10:36,78 root INFO 1 => 028-58%
+13:10:36,78 root INFO ------------
+13:10:36,239 root INFO IMAGE : Video frame
+13:10:36,240 root INFO 1 => 028-63%
+13:10:36,240 root INFO ------------
+13:10:36,410 root INFO IMAGE : Video frame
+13:10:36,410 root INFO 1 => 028-59%
+13:10:36,410 root INFO ------------
+13:10:36,583 root INFO IMAGE : Video frame
+13:10:36,584 root INFO 1 => 028-81%
+13:10:36,584 root INFO ------------
+13:10:36,763 root INFO IMAGE : Video frame
+13:10:36,763 root INFO 1 => 028-83%
+13:10:36,763 root INFO ------------
+13:10:36,937 root INFO IMAGE : Video frame
+13:10:36,937 root INFO 1 => 028-77%
+13:10:36,937 root INFO ------------
+13:10:37,114 root INFO IMAGE : Video frame
+13:10:37,115 root INFO 1 => 028-57%
+13:10:37,115 root INFO ------------
+13:10:37,286 root INFO IMAGE : Video frame
+13:10:37,286 root INFO 1 => 028-50%
+13:10:37,286 root INFO ------------
+13:10:37,596 root INFO IMAGE : Video frame
+13:10:37,596 root INFO 1 => 004-58%
+13:10:37,596 root INFO ------------
+13:10:38,216 root INFO IMAGE : Video frame
+13:10:38,216 root INFO 1 => 003-56%
+13:10:38,216 root INFO ------------
+13:10:51,148 root INFO IMAGE : Video frame
+13:10:51,148 root INFO 1 => 053-62%
+13:10:51,148 root INFO ------------
+13:10:51,311 root INFO IMAGE : Video frame
+13:10:51,312 root INFO 1 => 053-76%
+13:10:51,312 root INFO ------------
+13:10:51,629 root INFO IMAGE : Video frame
+13:10:51,629 root INFO 1 => 023-87%
+13:10:51,630 root INFO ------------
+13:10:52,95 root INFO IMAGE : Video frame
+13:10:52,95 root INFO 1 => 003-74%
+13:10:52,96 root INFO ------------
+13:10:52,418 root INFO IMAGE : Video frame
+13:10:52,418 root INFO 1 => 003-87%
+13:10:52,418 root INFO ------------
+13:10:52,572 root INFO IMAGE : Video frame
+13:10:52,572 root INFO 1 => 023-65%
+13:10:52,572 root INFO ------------
+13:10:52,726 root INFO IMAGE : Video frame
+13:10:52,726 root INFO 1 => 003-76%
+13:10:52,727 root INFO ------------
+13:10:52,887 root INFO IMAGE : Video frame
+13:10:52,887 root INFO 1 => 003-94%
+2 => 023-93%
+13:10:52,888 root INFO ------------
+13:10:53,42 root INFO IMAGE : Video frame
+13:10:53,43 root INFO 1 => 003-80%
+2 => 023-79%
+13:10:53,43 root INFO ------------
+13:10:53,204 root INFO IMAGE : Video frame
+13:10:53,204 root INFO 1 => 003-71%
+13:10:53,204 root INFO ------------
+13:10:53,363 root INFO IMAGE : Video frame
+13:10:53,363 root INFO 1 => 003-90%
+13:10:53,363 root INFO ------------
+13:11:01,368 root INFO IMAGE : Video frame
+13:11:01,368 root INFO 1 => 053-67%
+13:11:01,368 root INFO ------------
+13:11:01,515 root INFO IMAGE : Video frame
+13:11:01,515 root INFO 1 => 053-72%
+13:11:01,515 root INFO ------------
+13:11:02,285 root INFO IMAGE : Video frame
+13:11:02,286 root INFO 1 => 053-50%
+13:11:02,286 root INFO ------------
+13:11:02,442 root INFO IMAGE : Video frame
+13:11:02,442 root INFO 1 => 053-88%
+13:11:02,442 root INFO ------------
+13:11:02,599 root INFO IMAGE : Video frame
+13:11:02,600 root INFO 1 => 053-80%
+13:11:02,600 root INFO ------------
+13:11:02,761 root INFO IMAGE : Video frame
+13:11:02,761 root INFO 1 => 053-69%
+13:11:02,761 root INFO ------------
+13:11:03,401 root INFO IMAGE : Video frame
+13:11:03,402 root INFO 1 => 053-50%
+13:11:03,402 root INFO ------------
+13:11:03,561 root INFO IMAGE : Video frame
+13:11:03,561 root INFO 1 => 053-76%
+13:11:03,561 root INFO ------------
+13:11:03,721 root INFO IMAGE : Video frame
+13:11:03,721 root INFO 1 => 053-96%
+13:11:03,721 root INFO ------------
+13:11:03,879 root INFO IMAGE : Video frame
+13:11:03,879 root INFO 1 => 053-96%
+13:11:03,879 root INFO ------------
+13:11:04,31 root INFO IMAGE : Video frame
+13:11:04,31 root INFO 1 => 053-85%
+13:11:04,31 root INFO ------------
+13:11:04,512 root INFO IMAGE : Video frame
+13:11:04,512 root INFO 1 => 053-91%
+13:11:04,512 root INFO ------------
+13:11:04,685 root INFO IMAGE : Video frame
+13:11:04,685 root INFO 1 => 053-99%
+13:11:04,685 root INFO ------------
+13:11:04,836 root INFO IMAGE : Video frame
+13:11:04,836 root INFO 1 => 053-96%
+2 => 042-79%
+13:11:04,837 root INFO ------------
+13:11:05,2 root INFO IMAGE : Video frame
+13:11:05,2 root INFO 1 => 053-92%
+2 => 042-50%
+13:11:05,2 root INFO ------------
+13:11:05,162 root INFO IMAGE : Video frame
+13:11:05,162 root INFO 1 => 053-98%
+2 => 042-76%
+13:11:05,162 root INFO ------------
+13:11:05,324 root INFO IMAGE : Video frame
+13:11:05,324 root INFO 1 => 053-83%
+2 => 042-53%
+13:11:05,324 root INFO ------------
+13:11:05,483 root INFO IMAGE : Video frame
+13:11:05,483 root INFO 1 => 053-95%
+2 => 042-71%
+13:11:05,483 root INFO ------------
+13:11:05,646 root INFO IMAGE : Video frame
+13:11:05,646 root INFO 1 => 053-83%
+2 => 042-63%
+13:11:05,646 root INFO ------------
+13:11:05,808 root INFO IMAGE : Video frame
+13:11:05,809 root INFO 1 => 053-97%
+13:11:05,809 root INFO ------------
+13:11:05,963 root INFO IMAGE : Video frame
+13:11:05,964 root INFO 1 => 042-57%
+13:11:05,964 root INFO ------------
+13:11:06,120 root INFO IMAGE : Video frame
+13:11:06,120 root INFO 1 => 042-80%
+2 => 053-76%
+13:11:06,120 root INFO ------------
+13:11:06,289 root INFO IMAGE : Video frame
+13:11:06,289 root INFO 1 => 053-91%
+2 => 042-86%
+13:11:06,289 root INFO ------------
+13:11:06,437 root INFO IMAGE : Video frame
+13:11:06,437 root INFO 1 => 042-93%
+2 => 053-55%
+13:11:06,437 root INFO ------------
+13:12:26,926 root INFO IMAGE : Video frame
+13:12:26,926 root INFO 1 => 023-53%
+13:12:26,926 root INFO ------------
+13:12:29,33 root INFO IMAGE : Video frame
+13:12:29,33 root INFO 1 => 023-52%
+13:12:29,34 root INFO ------------
+13:12:29,198 root INFO IMAGE : Video frame
+13:12:29,198 root INFO 1 => 023-73%
+13:12:29,198 root INFO ------------
+13:12:29,369 root INFO IMAGE : Video frame
+13:12:29,370 root INFO 1 => 023-59%
+13:12:29,370 root INFO ------------
+13:12:30,237 root INFO IMAGE : Video frame
+13:12:30,238 root INFO 1 => 023-59%
+13:12:30,238 root INFO ------------
+13:12:30,587 root INFO IMAGE : Video frame
+13:12:30,587 root INFO 1 => 042-51%
+13:12:30,587 root INFO ------------
+13:12:30,940 root INFO IMAGE : Video frame
+13:12:30,940 root INFO 1 => 023-76%
+13:12:30,940 root INFO ------------
+13:12:31,111 root INFO IMAGE : Video frame
+13:12:31,111 root INFO 1 => 023-70%
+13:12:31,111 root INFO ------------
+13:12:31,278 root INFO IMAGE : Video frame
+13:12:31,278 root INFO 1 => 023-69%
+13:12:31,278 root INFO ------------
+13:12:31,948 root INFO IMAGE : Video frame
+13:12:31,948 root INFO 1 => 023-84%
+13:12:31,948 root INFO ------------
+13:12:32,307 root INFO IMAGE : Video frame
+13:12:32,307 root INFO 1 => 042-63%
+13:12:32,307 root INFO ------------
+13:12:33,728 root INFO IMAGE : Video frame
+13:12:33,728 root INFO 1 => 042-54%
+13:12:33,728 root INFO ------------
+13:12:33,921 root INFO IMAGE : Video frame
+13:12:33,921 root INFO 1 => 042-68%
+13:12:33,921 root INFO ------------
+13:12:34,261 root INFO IMAGE : Video frame
+13:12:34,261 root INFO 1 => 023-66%
+13:12:34,261 root INFO ------------
+13:12:34,445 root INFO IMAGE : Video frame
+13:12:34,445 root INFO 1 => 023-58%
+13:12:34,445 root INFO ------------
+13:12:34,619 root INFO IMAGE : Video frame
+13:12:34,619 root INFO 1 => 042-51%
+13:12:34,619 root INFO ------------
+13:12:34,797 root INFO IMAGE : Video frame
+13:12:34,797 root INFO 1 => 042-50%
+13:12:34,797 root INFO ------------
+13:12:34,985 root INFO IMAGE : Video frame
+13:12:34,985 root INFO 1 => 023-52%
+13:12:34,985 root INFO ------------
+13:12:35,815 root INFO IMAGE : Video frame
+13:12:35,815 root INFO 1 => 023-55%
+13:12:35,815 root INFO ------------
+13:12:35,983 root INFO IMAGE : Video frame
+13:12:35,983 root INFO 1 => 023-75%
+13:12:35,983 root INFO ------------
+13:12:36,161 root INFO IMAGE : Video frame
+13:12:36,161 root INFO 1 => 042-50%
+13:12:36,161 root INFO ------------
+13:12:36,336 root INFO IMAGE : Video frame
+13:12:36,337 root INFO 1 => 023-58%
+13:12:36,337 root INFO ------------
+13:12:36,516 root INFO IMAGE : Video frame
+13:12:36,516 root INFO 1 => 042-81%
+13:12:36,516 root INFO ------------
+13:12:36,689 root INFO IMAGE : Video frame
+13:12:36,690 root INFO 1 => 042-87%
+13:12:36,690 root INFO ------------
+13:12:36,866 root INFO IMAGE : Video frame
+13:12:36,866 root INFO 1 => 042-77%
+13:12:36,866 root INFO ------------
+13:12:37,50 root INFO IMAGE : Video frame
+13:12:37,50 root INFO 1 => 042-84%
+13:12:37,51 root INFO ------------
+13:12:37,237 root INFO IMAGE : Video frame
+13:12:37,237 root INFO 1 => 042-85%
+13:12:37,237 root INFO ------------
+13:12:37,413 root INFO IMAGE : Video frame
+13:12:37,413 root INFO 1 => 042-78%
+13:12:37,413 root INFO ------------
+13:12:37,593 root INFO IMAGE : Video frame
+13:12:37,593 root INFO 1 => 042-90%
+13:12:37,593 root INFO ------------
+13:12:37,773 root INFO IMAGE : Video frame
+13:12:37,773 root INFO 1 => 042-93%
+13:12:37,773 root INFO ------------
+13:12:37,953 root INFO IMAGE : Video frame
+13:12:37,954 root INFO 1 => 042-89%
+13:12:37,954 root INFO ------------
+13:12:38,459 root INFO IMAGE : Video frame
+13:12:38,459 root INFO 1 => 042-61%
+13:12:38,459 root INFO ------------
+13:12:38,660 root INFO IMAGE : Video frame
+13:12:38,660 root INFO 1 => 042-72%
+13:12:38,660 root INFO ------------
+13:12:38,851 root INFO IMAGE : Video frame
+13:12:38,852 root INFO 1 => 042-62%
+13:12:38,852 root INFO ------------
+13:12:39,28 root INFO IMAGE : Video frame
+13:12:39,28 root INFO 1 => 042-87%
+13:12:39,28 root INFO ------------
+13:12:39,207 root INFO IMAGE : Video frame
+13:12:39,207 root INFO 1 => 042-94%
+13:12:39,207 root INFO ------------
+13:12:39,392 root INFO IMAGE : Video frame
+13:12:39,392 root INFO 1 => 042-89%
+13:12:39,392 root INFO ------------
+13:12:39,566 root INFO IMAGE : Video frame
+13:12:39,566 root INFO 1 => 042-94%
+13:12:39,567 root INFO ------------
+13:12:39,755 root INFO IMAGE : Video frame
+13:12:39,755 root INFO 1 => 042-97%
+13:12:39,755 root INFO ------------
+13:12:39,938 root INFO IMAGE : Video frame
+13:12:39,938 root INFO 1 => 042-96%
+13:12:39,938 root INFO ------------
+13:12:40,124 root INFO IMAGE : Video frame
+13:12:40,124 root INFO 1 => 042-90%
+13:12:40,124 root INFO ------------
+13:12:40,311 root INFO IMAGE : Video frame
+13:12:40,312 root INFO 1 => 042-97%
+13:12:40,312 root INFO ------------
+13:12:40,485 root INFO IMAGE : Video frame
+13:12:40,485 root INFO 1 => 042-97%
+13:12:40,485 root INFO ------------
+13:12:40,653 root INFO IMAGE : Video frame
+13:12:40,653 root INFO 1 => 042-87%
+13:12:40,653 root INFO ------------
+13:12:40,988 root INFO IMAGE : Video frame
+13:12:40,989 root INFO 1 => 042-64%
+13:12:40,989 root INFO ------------
+13:12:41,165 root INFO IMAGE : Video frame
+13:12:41,165 root INFO 1 => 042-67%
+13:12:41,165 root INFO ------------
+13:12:41,353 root INFO IMAGE : Video frame
+13:12:41,353 root INFO 1 => 042-88%
+13:12:41,354 root INFO ------------
+13:12:41,524 root INFO IMAGE : Video frame
+13:12:41,524 root INFO 1 => 042-80%
+13:12:41,525 root INFO ------------
+13:12:41,701 root INFO IMAGE : Video frame
+13:12:41,702 root INFO 1 => 042-68%
+13:12:41,702 root INFO ------------
+13:12:41,867 root INFO IMAGE : Video frame
+13:12:41,867 root INFO 1 => 042-53%
+13:12:41,867 root INFO ------------
+13:12:42,51 root INFO IMAGE : Video frame
+13:12:42,52 root INFO 1 => 042-57%
+13:12:42,52 root INFO ------------
+13:12:42,226 root INFO IMAGE : Video frame
+13:12:42,226 root INFO 1 => 042-74%
+13:12:42,226 root INFO ------------
+13:12:42,407 root INFO IMAGE : Video frame
+13:12:42,407 root INFO 1 => 042-70%
+13:12:42,407 root INFO ------------
+13:12:42,579 root INFO IMAGE : Video frame
+13:12:42,580 root INFO 1 => 042-73%
+13:12:42,580 root INFO ------------
+13:12:42,746 root INFO IMAGE : Video frame
+13:12:42,746 root INFO 1 => 042-62%
+13:12:42,746 root INFO ------------
+13:12:42,922 root INFO IMAGE : Video frame
+13:12:42,922 root INFO 1 => 042-78%
+13:12:42,923 root INFO ------------
+13:12:43,99 root INFO IMAGE : Video frame
+13:12:43,99 root INFO 1 => 042-79%
+13:12:43,99 root INFO ------------
+13:12:43,273 root INFO IMAGE : Video frame
+13:12:43,273 root INFO 1 => 042-70%
+13:12:43,273 root INFO ------------
+13:12:43,440 root INFO IMAGE : Video frame
+13:12:43,440 root INFO 1 => 042-66%
+13:12:43,440 root INFO ------------
+13:12:43,614 root INFO IMAGE : Video frame
+13:12:43,614 root INFO 1 => 042-68%
+13:12:43,614 root INFO ------------
+13:12:43,785 root INFO IMAGE : Video frame
+13:12:43,785 root INFO 1 => 042-53%
+13:12:43,785 root INFO ------------
+13:12:44,113 root INFO IMAGE : Video frame
+13:12:44,113 root INFO 1 => 042-54%
+13:12:44,113 root INFO ------------
+13:13:23,545 root INFO IMAGE : Video frame
+13:13:23,545 root INFO 1 => 052-50%
+13:13:23,545 root INFO ------------
+13:13:25,172 root INFO IMAGE : Video frame
+13:13:25,173 root INFO 1 => 052-63%
+13:13:25,173 root INFO ------------
+13:13:25,962 root INFO IMAGE : Video frame
+13:13:25,962 root INFO 1 => 052-55%
+13:13:25,962 root INFO ------------
+13:13:26,130 root INFO IMAGE : Video frame
+13:13:26,130 root INFO 1 => 052-53%
+13:13:26,130 root INFO ------------
+13:13:26,304 root INFO IMAGE : Video frame
+13:13:26,304 root INFO 1 => 052-55%
+13:13:26,304 root INFO ------------
+13:13:26,470 root INFO IMAGE : Video frame
+13:13:26,471 root INFO 1 => 052-55%
+13:13:26,471 root INFO ------------
+13:13:26,642 root INFO IMAGE : Video frame
+13:13:26,642 root INFO 1 => 052-57%
+13:13:26,643 root INFO ------------
+13:13:26,819 root INFO IMAGE : Video frame
+13:13:26,819 root INFO 1 => 052-51%
+13:13:26,819 root INFO ------------
+13:13:26,997 root INFO IMAGE : Video frame
+13:13:26,997 root INFO 1 => 052-52%
+13:13:26,997 root INFO ------------
+13:13:27,330 root INFO IMAGE : Video frame
+13:13:27,330 root INFO 1 => 052-57%
+13:13:27,330 root INFO ------------
+13:13:27,507 root INFO IMAGE : Video frame
+13:13:27,507 root INFO 1 => 052-53%
+13:13:27,507 root INFO ------------
+13:13:27,695 root INFO IMAGE : Video frame
+13:13:27,695 root INFO 1 => 052-55%
+13:13:27,695 root INFO ------------
+13:13:27,881 root INFO IMAGE : Video frame
+13:13:27,881 root INFO 1 => 052-52%
+13:13:27,881 root INFO ------------
+13:13:28,64 root INFO IMAGE : Video frame
+13:13:28,64 root INFO 1 => 052-60%
+13:13:28,64 root INFO ------------
+13:13:28,232 root INFO IMAGE : Video frame
+13:13:28,232 root INFO 1 => 052-58%
+13:13:28,232 root INFO ------------
+13:13:28,413 root INFO IMAGE : Video frame
+13:13:28,413 root INFO 1 => 052-58%
+13:13:28,413 root INFO ------------
+13:13:29,750 root INFO IMAGE : Video frame
+13:13:29,750 root INFO 1 => 052-50%
+13:13:29,750 root INFO ------------
+13:13:29,921 root INFO IMAGE : Video frame
+13:13:29,921 root INFO 1 => 052-55%
+13:13:29,921 root INFO ------------
+13:13:30,412 root INFO IMAGE : Video frame
+13:13:30,412 root INFO 1 => 052-52%
+13:13:30,412 root INFO ------------
+13:13:30,586 root INFO IMAGE : Video frame
+13:13:30,586 root INFO 1 => 052-61%
+13:13:30,586 root INFO ------------
+13:13:30,767 root INFO IMAGE : Video frame
+13:13:30,767 root INFO 1 => 052-63%
+13:13:30,767 root INFO ------------
+13:13:35,952 root INFO IMAGE : Video frame
+13:13:35,953 root INFO 1 => 052-54%
+13:13:35,953 root INFO ------------
+13:13:36,116 root INFO IMAGE : Video frame
+13:13:36,117 root INFO 1 => 052-56%
+13:13:36,117 root INFO ------------
+13:13:36,289 root INFO IMAGE : Video frame
+13:13:36,289 root INFO 1 => 052-53%
+13:13:36,290 root INFO ------------
+13:13:36,465 root INFO IMAGE : Video frame
+13:13:36,465 root INFO 1 => 052-51%
+13:13:36,465 root INFO ------------
+13:13:36,794 root INFO IMAGE : Video frame
+13:13:36,795 root INFO 1 => 052-50%
+13:13:36,795 root INFO ------------
+13:13:39,880 root INFO IMAGE : Video frame
+13:13:39,880 root INFO 1 => 052-51%
+13:13:39,880 root INFO ------------
+13:13:40,71 root INFO IMAGE : Video frame
+13:13:40,72 root INFO 1 => 052-51%
+13:13:40,72 root INFO ------------
+13:14:21,278 root INFO IMAGE : Video frame
+13:14:21,278 root INFO 1 => 052-52%
+13:14:21,278 root INFO ------------
+13:14:21,433 root INFO IMAGE : Video frame
+13:14:21,433 root INFO 1 => 052-59%
+13:14:21,433 root INFO ------------
+13:14:21,593 root INFO IMAGE : Video frame
+13:14:21,593 root INFO 1 => 052-61%
+13:14:21,593 root INFO ------------
+13:14:21,754 root INFO IMAGE : Video frame
+13:14:21,754 root INFO 1 => 052-55%
+13:14:21,754 root INFO ------------
+13:14:30,251 root INFO IMAGE : Video frame
+13:14:30,252 root INFO 1 => 052-52%
+13:14:30,252 root INFO ------------
+13:14:30,411 root INFO IMAGE : Video frame
+13:14:30,411 root INFO 1 => 052-50%
+13:14:30,411 root INFO ------------
+13:14:31,302 root INFO IMAGE : Video frame
+13:14:31,302 root INFO 1 => 052-54%
+13:14:31,302 root INFO ------------
+13:14:31,457 root INFO IMAGE : Video frame
+13:14:31,457 root INFO 1 => 052-55%
+13:14:31,457 root INFO ------------
+13:14:31,615 root INFO IMAGE : Video frame
+13:14:31,616 root INFO 1 => 052-52%
+13:14:31,616 root INFO ------------
+13:14:31,903 root INFO IMAGE : Video frame
+13:14:31,903 root INFO 1 => 052-57%
+13:14:31,903 root INFO ------------
+13:14:32,66 root INFO IMAGE : Video frame
+13:14:32,66 root INFO 1 => 052-55%
+13:14:32,66 root INFO ------------
+13:14:32,516 root INFO IMAGE : Video frame
+13:14:32,516 root INFO 1 => 052-51%
+13:14:32,516 root INFO ------------
+13:14:35,76 root INFO IMAGE : Video frame
+13:14:35,76 root INFO 1 => 052-55%
+13:14:35,76 root INFO ------------
+13:14:35,229 root INFO IMAGE : Video frame
+13:14:35,229 root INFO 1 => 052-59%
+13:14:35,229 root INFO ------------
+13:14:35,390 root INFO IMAGE : Video frame
+13:14:35,390 root INFO 1 => 052-52%
+13:14:35,390 root INFO ------------
+13:14:35,545 root INFO IMAGE : Video frame
+13:14:35,545 root INFO 1 => 052-52%
+13:14:35,546 root INFO ------------
+13:15:25,186 root INFO IMAGE : Video frame
+13:15:25,186 root INFO 1 => 023-55%
+13:15:25,186 root INFO ------------
+13:15:25,939 root INFO IMAGE : Video frame
+13:15:25,939 root INFO 1 => 028-52%
+13:15:25,939 root INFO ------------
+13:15:27,302 root INFO IMAGE : Video frame
+13:15:27,302 root INFO 1 => 051-54%
+13:15:27,302 root INFO ------------
+13:15:28,787 root INFO IMAGE : Video frame
+13:15:28,787 root INFO 1 => 051-63%
+13:15:28,787 root INFO ------------
+13:15:29,817 root INFO IMAGE : Video frame
+13:15:29,818 root INFO 1 => 023-59%
+13:15:29,818 root INFO ------------
+13:15:30,284 root INFO IMAGE : Video frame
+13:15:30,284 root INFO 1 => 023-50%
+13:15:30,284 root INFO ------------
+13:15:30,875 root INFO IMAGE : Video frame
+13:15:30,875 root INFO 1 => 023-67%
+13:15:30,875 root INFO ------------
+13:15:31,35 root INFO IMAGE : Video frame
+13:15:31,35 root INFO 1 => 003-54%
+13:15:31,35 root INFO ------------
+13:15:31,485 root INFO IMAGE : Video frame
+13:15:31,486 root INFO 1 => 023-71%
+2 => 003-52%
+13:15:31,486 root INFO ------------
+13:15:31,642 root INFO IMAGE : Video frame
+13:15:31,642 root INFO 1 => 003-81%
+2 => 023-50%
+13:15:31,642 root INFO ------------
+13:15:31,807 root INFO IMAGE : Video frame
+13:15:31,808 root INFO 1 => 023-82%
+2 => 003-66%
+13:15:31,808 root INFO ------------
+13:15:31,958 root INFO IMAGE : Video frame
+13:15:31,958 root INFO 1 => 023-86%
+13:15:31,958 root INFO ------------
+13:15:32,115 root INFO IMAGE : Video frame
+13:15:32,115 root INFO 1 => 023-91%
+13:15:32,115 root INFO ------------
+13:15:32,284 root INFO IMAGE : Video frame
+13:15:32,284 root INFO 1 => 003-78%
+2 => 023-62%
+13:15:32,284 root INFO ------------
+13:15:32,434 root INFO IMAGE : Video frame
+13:15:32,435 root INFO 1 => 023-80%
+2 => 003-67%
+13:15:32,435 root INFO ------------
+13:15:32,598 root INFO IMAGE : Video frame
+13:15:32,598 root INFO 1 => 023-75%
+2 => 003-61%
+13:15:32,598 root INFO ------------
+13:15:32,769 root INFO IMAGE : Video frame
+13:15:32,770 root INFO 1 => 003-68%
+2 => 023-59%
+13:15:32,770 root INFO ------------
+13:15:33,76 root INFO IMAGE : Video frame
+13:15:33,76 root INFO 1 => 003-51%
+13:15:33,76 root INFO ------------
+13:15:33,241 root INFO IMAGE : Video frame
+13:15:33,241 root INFO 1 => 003-61%
+2 => 003-56%
+13:15:33,241 root INFO ------------
+13:15:42,633 root INFO IMAGE : Video frame
+13:15:42,633 root INFO 1 => 053-65%
+13:15:42,633 root INFO ------------
+13:15:43,844 root INFO IMAGE : Video frame
+13:15:43,844 root INFO 1 => 053-51%
+13:15:43,844 root INFO ------------
+13:15:44,290 root INFO IMAGE : Video frame
+13:15:44,290 root INFO 1 => 053-69%
+13:15:44,290 root INFO ------------
+13:15:44,611 root INFO IMAGE : Video frame
+13:15:44,611 root INFO 1 => 042-70%
+13:15:44,611 root INFO ------------
+13:15:44,925 root INFO IMAGE : Video frame
+13:15:44,925 root INFO 1 => 042-71%
+2 => 053-50%
+13:15:44,925 root INFO ------------
+13:15:45,81 root INFO IMAGE : Video frame
+13:15:45,81 root INFO 1 => 053-57%
+13:15:45,81 root INFO ------------
+13:15:45,228 root INFO IMAGE : Video frame
+13:15:45,228 root INFO 1 => 053-78%
+13:15:45,228 root INFO ------------
+13:15:45,394 root INFO IMAGE : Video frame
+13:15:45,394 root INFO 1 => 053-73%
+13:15:45,394 root INFO ------------
+13:15:45,551 root INFO IMAGE : Video frame
+13:15:45,551 root INFO 1 => 053-73%
+13:15:45,551 root INFO ------------
+13:15:45,711 root INFO IMAGE : Video frame
+13:15:45,711 root INFO 1 => 053-73%
+2 => 042-51%
+13:15:45,711 root INFO ------------
+13:15:45,865 root INFO IMAGE : Video frame
+13:15:45,865 root INFO 1 => 053-71%
+13:15:45,866 root INFO ------------
+13:15:46,17 root INFO IMAGE : Video frame
+13:15:46,17 root INFO 1 => 053-76%
+2 => 042-57%
+13:15:46,17 root INFO ------------
+13:15:46,172 root INFO IMAGE : Video frame
+13:15:46,172 root INFO 1 => 053-74%
+13:15:46,172 root INFO ------------
+13:15:46,325 root INFO IMAGE : Video frame
+13:15:46,325 root INFO 1 => 053-90%
+2 => 042-65%
+13:15:46,325 root INFO ------------
+13:15:46,488 root INFO IMAGE : Video frame
+13:15:46,488 root INFO 1 => 053-71%
+2 => 042-67%
+13:15:46,488 root INFO ------------
+13:15:46,651 root INFO IMAGE : Video frame
+13:15:46,651 root INFO 1 => 053-84%
+2 => 042-65%
+13:15:46,651 root INFO ------------
+13:15:46,824 root INFO IMAGE : Video frame
+13:15:46,824 root INFO 1 => 053-86%
+2 => 042-76%
+13:15:46,824 root INFO ------------
+13:15:46,975 root INFO IMAGE : Video frame
+13:15:46,975 root INFO 1 => 053-98%
+2 => 042-63%
+13:15:46,975 root INFO ------------
+13:15:47,134 root INFO IMAGE : Video frame
+13:15:47,134 root INFO 1 => 053-92%
+13:15:47,134 root INFO ------------
+13:15:47,284 root INFO IMAGE : Video frame
+13:15:47,284 root INFO 1 => 042-78%
+13:15:47,284 root INFO ------------
+13:15:47,432 root INFO IMAGE : Video frame
+13:15:47,432 root INFO 1 => 053-89%
+2 => 042-87%
+13:15:47,432 root INFO ------------
+13:15:47,585 root INFO IMAGE : Video frame
+13:15:47,585 root INFO 1 => 053-94%
+13:15:47,585 root INFO ------------
+13:15:47,747 root INFO IMAGE : Video frame
+13:15:47,747 root INFO 1 => 053-75%
+13:15:47,747 root INFO ------------
+13:15:48,221 root INFO IMAGE : Video frame
+13:15:48,221 root INFO 1 => 042-70%
+2 => 053-52%
+13:15:48,221 root INFO ------------
+13:17:15,754 root INFO IMAGE : Video frame
+13:17:15,754 root INFO 1 => 042-59%
+13:17:15,754 root INFO ------------
+13:17:15,909 root INFO IMAGE : Video frame
+13:17:15,909 root INFO 1 => 042-51%
+13:17:15,910 root INFO ------------
+13:17:16,67 root INFO IMAGE : Video frame
+13:17:16,67 root INFO 1 => 053-61%
+13:17:16,67 root INFO ------------
+13:17:17,3 root INFO IMAGE : Video frame
+13:17:17,3 root INFO 1 => 042-54%
+13:17:17,3 root INFO ------------
+13:17:17,162 root INFO IMAGE : Video frame
+13:17:17,162 root INFO 1 => 042-52%
+13:17:17,162 root INFO ------------
+13:17:17,305 root INFO IMAGE : Video frame
+13:17:17,306 root INFO 1 => 042-57%
+13:17:17,306 root INFO ------------
+13:17:17,456 root INFO IMAGE : Video frame
+13:17:17,456 root INFO 1 => 053-61%
+13:17:17,456 root INFO ------------
+13:17:17,616 root INFO IMAGE : Video frame
+13:17:17,617 root INFO 1 => 053-64%
+13:17:17,617 root INFO ------------
+13:17:18,215 root INFO IMAGE : Video frame
+13:17:18,215 root INFO 1 => 042-77%
+13:17:18,215 root INFO ------------
+13:17:18,369 root INFO IMAGE : Video frame
+13:17:18,369 root INFO 1 => 053-50%
+13:17:18,370 root INFO ------------
+13:17:18,526 root INFO IMAGE : Video frame
+13:17:18,526 root INFO 1 => 053-95%
+2 => 042-84%
+13:17:18,526 root INFO ------------
+13:17:18,680 root INFO IMAGE : Video frame
+13:17:18,680 root INFO 1 => 053-86%
+2 => 042-77%
+13:17:18,680 root INFO ------------
+13:17:18,835 root INFO IMAGE : Video frame
+13:17:18,835 root INFO 1 => 053-74%
+2 => 042-61%
+13:17:18,835 root INFO ------------
+13:17:18,998 root INFO IMAGE : Video frame
+13:17:18,998 root INFO 1 => 053-88%
+13:17:18,998 root INFO ------------
+13:17:19,158 root INFO IMAGE : Video frame
+13:17:19,158 root INFO 1 => 053-95%
+2 => 042-66%
+13:17:19,158 root INFO ------------
+13:17:19,310 root INFO IMAGE : Video frame
+13:17:19,311 root INFO 1 => 042-86%
+2 => 053-83%
+13:17:19,311 root INFO ------------
+13:17:19,473 root INFO IMAGE : Video frame
+13:17:19,473 root INFO 1 => 042-96%
+13:17:19,473 root INFO ------------
+13:17:19,636 root INFO IMAGE : Video frame
+13:17:19,636 root INFO 1 => 053-97%
+2 => 042-59%
+13:17:19,636 root INFO ------------
+13:17:19,798 root INFO IMAGE : Video frame
+13:17:19,798 root INFO 1 => 053-94%
+2 => 042-88%
+13:17:19,798 root INFO ------------
+13:17:19,954 root INFO IMAGE : Video frame
+13:17:19,954 root INFO 1 => 042-90%
+13:17:19,954 root INFO ------------
+13:17:20,116 root INFO IMAGE : Video frame
+13:17:20,116 root INFO 1 => 053-87%
+2 => 042-85%
+13:17:20,116 root INFO ------------
+13:17:20,273 root INFO IMAGE : Video frame
+13:17:20,273 root INFO 1 => 042-78%
+13:17:20,273 root INFO ------------
+13:17:20,724 root INFO IMAGE : Video frame
+13:17:20,724 root INFO 1 => 053-62%
+13:17:20,724 root INFO ------------
+13:17:43,619 root INFO IMAGE : Video frame
+13:17:43,619 root INFO 1 => 003-54%
+13:17:43,619 root INFO ------------
+13:17:44,57 root INFO IMAGE : Video frame
+13:17:44,57 root INFO 1 => 003-67%
+2 => 023-64%
+13:17:44,57 root INFO ------------
+13:17:44,502 root INFO IMAGE : Video frame
+13:17:44,502 root INFO 1 => 003-72%
+2 => 023-51%
+13:17:44,502 root INFO ------------
+13:17:44,651 root INFO IMAGE : Video frame
+13:17:44,651 root INFO 1 => 003-66%
+2 => 023-62%
+13:17:44,651 root INFO ------------
+13:17:44,816 root INFO IMAGE : Video frame
+13:17:44,816 root INFO 1 => 003-57%
+2 => 023-54%
+13:17:44,816 root INFO ------------
+13:17:44,986 root INFO IMAGE : Video frame
+13:17:44,986 root INFO 1 => 003-87%
+13:17:44,986 root INFO ------------
+13:17:45,147 root INFO IMAGE : Video frame
+13:17:45,147 root INFO 1 => 023-62%
+13:17:45,147 root INFO ------------
+13:17:45,314 root INFO IMAGE : Video frame
+13:17:45,314 root INFO 1 => 003-69%
+2 => 023-53%
+13:17:45,314 root INFO ------------
+13:17:45,465 root INFO IMAGE : Video frame
+13:17:45,465 root INFO 1 => 023-65%
+13:17:45,465 root INFO ------------
+13:17:45,620 root INFO IMAGE : Video frame
+13:17:45,621 root INFO 1 => 003-86%
+2 => 023-64%
+13:17:45,621 root INFO ------------
+13:18:01,971 root INFO IMAGE : Video frame
+13:18:01,971 root INFO 1 => 053-53%
+13:18:01,971 root INFO ------------
+13:18:02,125 root INFO IMAGE : Video frame
+13:18:02,125 root INFO 1 => 053-86%
+13:18:02,126 root INFO ------------
+13:18:02,743 root INFO IMAGE : Video frame
+13:18:02,743 root INFO 1 => 053-57%
+13:18:02,743 root INFO ------------
+13:18:02,902 root INFO IMAGE : Video frame
+13:18:02,902 root INFO 1 => 053-73%
+13:18:02,902 root INFO ------------
+13:18:03,58 root INFO IMAGE : Video frame
+13:18:03,58 root INFO 1 => 042-72%
+13:18:03,58 root INFO ------------
+13:18:03,211 root INFO IMAGE : Video frame
+13:18:03,211 root INFO 1 => 042-76%
+2 => 053-66%
+13:18:03,211 root INFO ------------
+13:18:03,508 root INFO IMAGE : Video frame
+13:18:03,508 root INFO 1 => 053-55%
+13:18:03,508 root INFO ------------
+13:18:03,829 root INFO IMAGE : Video frame
+13:18:03,830 root INFO 1 => 053-88%
+2 => 042-57%
+13:18:03,830 root INFO ------------
+13:18:03,988 root INFO IMAGE : Video frame
+13:18:03,989 root INFO 1 => 042-56%
+2 => 053-53%
+13:18:03,989 root INFO ------------
+13:18:04,148 root INFO IMAGE : Video frame
+13:18:04,148 root INFO 1 => 042-90%
+13:18:04,148 root INFO ------------
+13:18:04,306 root INFO IMAGE : Video frame
+13:18:04,306 root INFO 1 => 053-96%
+2 => 042-76%
+13:18:04,306 root INFO ------------
+13:18:04,465 root INFO IMAGE : Video frame
+13:18:04,465 root INFO 1 => 053-84%
+13:18:04,465 root INFO ------------
+13:18:04,618 root INFO IMAGE : Video frame
+13:18:04,618 root INFO 1 => 042-65%
+13:18:04,618 root INFO ------------
+13:18:57,685 root INFO IMAGE : Video frame
+13:18:57,685 root INFO 1 => 052-53%
+13:18:57,685 root INFO ------------
+13:18:57,840 root INFO IMAGE : Video frame
+13:18:57,840 root INFO 1 => 052-57%
+13:18:57,840 root INFO ------------
+13:18:58,462 root INFO IMAGE : Video frame
+13:18:58,462 root INFO 1 => 052-50%
+13:18:58,462 root INFO ------------
+13:18:59,87 root INFO IMAGE : Video frame
+13:18:59,87 root INFO 1 => 052-58%
+13:18:59,88 root INFO ------------
+13:18:59,232 root INFO IMAGE : Video frame
+13:18:59,232 root INFO 1 => 052-60%
+13:18:59,232 root INFO ------------
+13:18:59,389 root INFO IMAGE : Video frame
+13:18:59,389 root INFO 1 => 052-76%
+13:18:59,389 root INFO ------------
+13:18:59,542 root INFO IMAGE : Video frame
+13:18:59,542 root INFO 1 => 052-80%
+13:18:59,542 root INFO ------------
+13:18:59,702 root INFO IMAGE : Video frame
+13:18:59,702 root INFO 1 => 052-74%
+13:18:59,702 root INFO ------------
+13:18:59,861 root INFO IMAGE : Video frame
+13:18:59,861 root INFO 1 => 052-73%
+13:18:59,862 root INFO ------------
+13:19:00,26 root INFO IMAGE : Video frame
+13:19:00,26 root INFO 1 => 052-78%
+13:19:00,26 root INFO ------------
+13:19:00,187 root INFO IMAGE : Video frame
+13:19:00,188 root INFO 1 => 052-78%
+13:19:00,188 root INFO ------------
+13:19:00,345 root INFO IMAGE : Video frame
+13:19:00,345 root INFO 1 => 052-80%
+13:19:00,345 root INFO ------------
+13:19:00,506 root INFO IMAGE : Video frame
+13:19:00,506 root INFO 1 => 052-73%
+13:19:00,506 root INFO ------------
+13:19:00,660 root INFO IMAGE : Video frame
+13:19:00,660 root INFO 1 => 052-79%
+13:19:00,660 root INFO ------------
+13:19:00,825 root INFO IMAGE : Video frame
+13:19:00,825 root INFO 1 => 052-91%
+13:19:00,825 root INFO ------------
+13:19:00,983 root INFO IMAGE : Video frame
+13:19:00,983 root INFO 1 => 052-92%
+13:19:00,983 root INFO ------------
+13:19:01,146 root INFO IMAGE : Video frame
+13:19:01,146 root INFO 1 => 052-89%
+13:19:01,146 root INFO ------------
+13:19:01,302 root INFO IMAGE : Video frame
+13:19:01,302 root INFO 1 => 052-84%
+13:19:01,302 root INFO ------------
+13:19:01,452 root INFO IMAGE : Video frame
+13:19:01,452 root INFO 1 => 052-75%
+13:19:01,452 root INFO ------------
+13:19:01,609 root INFO IMAGE : Video frame
+13:19:01,609 root INFO 1 => 052-71%
+13:19:01,609 root INFO ------------
+13:19:01,769 root INFO IMAGE : Video frame
+13:19:01,769 root INFO 1 => 052-63%
+13:19:01,769 root INFO ------------
+13:19:01,929 root INFO IMAGE : Video frame
+13:19:01,929 root INFO 1 => 052-55%
+13:19:01,929 root INFO ------------
+13:19:02,83 root INFO IMAGE : Video frame
+13:19:02,83 root INFO 1 => 052-55%
+13:19:02,83 root INFO ------------
+13:19:07,55 root INFO IMAGE : Video frame
+13:19:07,55 root INFO 1 => 052-51%
+13:19:07,55 root INFO ------------
+13:19:07,211 root INFO IMAGE : Video frame
+13:19:07,211 root INFO 1 => 052-53%
+13:19:07,211 root INFO ------------
+13:19:07,374 root INFO IMAGE : Video frame
+13:19:07,374 root INFO 1 => 052-55%
+13:19:07,374 root INFO ------------
+13:19:07,532 root INFO IMAGE : Video frame
+13:19:07,532 root INFO 1 => 052-53%
+13:19:07,532 root INFO ------------
+13:19:07,689 root INFO IMAGE : Video frame
+13:19:07,689 root INFO 1 => 052-54%
+13:19:07,689 root INFO ------------
+13:19:07,838 root INFO IMAGE : Video frame
+13:19:07,838 root INFO 1 => 052-51%
+13:19:07,838 root INFO ------------
+13:19:08,143 root INFO IMAGE : Video frame
+13:19:08,144 root INFO 1 => 052-50%
+13:19:08,144 root INFO ------------
+13:19:08,302 root INFO IMAGE : Video frame
+13:19:08,302 root INFO 1 => 052-50%
+13:19:08,303 root INFO ------------
+13:19:08,446 root INFO IMAGE : Video frame
+13:19:08,446 root INFO 1 => 052-50%
+13:19:08,446 root INFO ------------
+13:19:08,598 root INFO IMAGE : Video frame
+13:19:08,598 root INFO 1 => 052-50%
+13:19:08,598 root INFO ------------
+13:19:08,751 root INFO IMAGE : Video frame
+13:19:08,751 root INFO 1 => 052-51%
+13:19:08,751 root INFO ------------
+13:19:08,907 root INFO IMAGE : Video frame
+13:19:08,907 root INFO 1 => 052-53%
+13:19:08,907 root INFO ------------
+13:19:09,66 root INFO IMAGE : Video frame
+13:19:09,66 root INFO 1 => 052-51%
+13:19:09,66 root INFO ------------
+13:22:28,16 root INFO IMAGE : Video frame
+13:22:28,16 root INFO 1 => 042-50%
+13:22:28,16 root INFO ------------
+13:22:28,173 root INFO IMAGE : Video frame
+13:22:28,173 root INFO 1 => 042-56%
+13:22:28,173 root INFO ------------
+13:22:28,330 root INFO IMAGE : Video frame
+13:22:28,330 root INFO 1 => 042-62%
+13:22:28,330 root INFO ------------
+13:22:28,489 root INFO IMAGE : Video frame
+13:22:28,489 root INFO 1 => 042-63%
+13:22:28,489 root INFO ------------
+13:22:28,645 root INFO IMAGE : Video frame
+13:22:28,645 root INFO 1 => 042-63%
+13:22:28,645 root INFO ------------
+13:22:28,815 root INFO IMAGE : Video frame
+13:22:28,815 root INFO 1 => 042-63%
+13:22:28,815 root INFO ------------
+13:22:28,978 root INFO IMAGE : Video frame
+13:22:28,978 root INFO 1 => 042-63%
+13:22:28,978 root INFO ------------
+13:22:29,139 root INFO IMAGE : Video frame
+13:22:29,139 root INFO 1 => 042-63%
+13:22:29,139 root INFO ------------
+13:22:29,305 root INFO IMAGE : Video frame
+13:22:29,305 root INFO 1 => 042-63%
+13:22:29,305 root INFO ------------
+13:22:29,474 root INFO IMAGE : Video frame
+13:22:29,474 root INFO 1 => 042-63%
+13:22:29,474 root INFO ------------
+13:22:29,636 root INFO IMAGE : Video frame
+13:22:29,636 root INFO 1 => 042-63%
+13:22:29,637 root INFO ------------
+13:22:29,773 root INFO IMAGE : Video frame
+13:22:29,773 root INFO 1 => 042-63%
+13:22:29,774 root INFO ------------
+13:22:29,921 root INFO IMAGE : Video frame
+13:22:29,921 root INFO 1 => 042-63%
+13:22:29,921 root INFO ------------
+13:22:30,70 root INFO IMAGE : Video frame
+13:22:30,70 root INFO 1 => 042-63%
+13:22:30,70 root INFO ------------
+13:22:30,223 root INFO IMAGE : Video frame
+13:22:30,223 root INFO 1 => 042-63%
+13:22:30,223 root INFO ------------
+13:22:30,383 root INFO IMAGE : Video frame
+13:22:30,383 root INFO 1 => 042-63%
+13:22:30,383 root INFO ------------
+13:22:30,539 root INFO IMAGE : Video frame
+13:22:30,539 root INFO 1 => 042-63%
+13:22:30,539 root INFO ------------
+13:22:30,698 root INFO IMAGE : Video frame
+13:22:30,698 root INFO 1 => 042-63%
+13:22:30,698 root INFO ------------
+13:22:30,846 root INFO IMAGE : Video frame
+13:22:30,847 root INFO 1 => 042-63%
+13:22:30,847 root INFO ------------
+13:22:31,0 root INFO IMAGE : Video frame
+13:22:31,1 root INFO 1 => 042-63%
+13:22:31,1 root INFO ------------
+13:22:31,151 root INFO IMAGE : Video frame
+13:22:31,151 root INFO 1 => 042-63%
+13:22:31,151 root INFO ------------
+13:22:31,310 root INFO IMAGE : Video frame
+13:22:31,310 root INFO 1 => 042-63%
+13:22:31,310 root INFO ------------
+13:22:31,461 root INFO IMAGE : Video frame
+13:22:31,461 root INFO 1 => 042-63%
+13:22:31,462 root INFO ------------
+13:22:31,606 root INFO IMAGE : Video frame
+13:22:31,606 root INFO 1 => 042-63%
+13:22:31,606 root INFO ------------
+13:22:31,752 root INFO IMAGE : Video frame
+13:22:31,752 root INFO 1 => 042-63%
+13:22:31,752 root INFO ------------
+13:22:31,905 root INFO IMAGE : Video frame
+13:22:31,905 root INFO 1 => 042-63%
+13:22:31,905 root INFO ------------
+13:22:32,65 root INFO IMAGE : Video frame
+13:22:32,65 root INFO 1 => 042-63%
+13:22:32,65 root INFO ------------
+13:22:32,220 root INFO IMAGE : Video frame
+13:22:32,220 root INFO 1 => 042-63%
+13:22:32,220 root INFO ------------
+13:22:32,365 root INFO IMAGE : Video frame
+13:22:32,366 root INFO 1 => 042-63%
+13:22:32,366 root INFO ------------
+13:22:32,513 root INFO IMAGE : Video frame
+13:22:32,513 root INFO 1 => 042-63%
+13:22:32,513 root INFO ------------
+13:22:32,682 root INFO IMAGE : Video frame
+13:22:32,682 root INFO 1 => 042-63%
+13:22:32,682 root INFO ------------
+13:22:32,822 root INFO IMAGE : Video frame
+13:22:32,822 root INFO 1 => 042-63%
+13:22:32,822 root INFO ------------
+13:22:32,969 root INFO IMAGE : Video frame
+13:22:32,969 root INFO 1 => 042-63%
+13:22:32,969 root INFO ------------
+13:22:33,134 root INFO IMAGE : Video frame
+13:22:33,134 root INFO 1 => 042-63%
+13:22:33,134 root INFO ------------
+13:22:33,273 root INFO IMAGE : Video frame
+13:22:33,273 root INFO 1 => 042-63%
+13:22:33,273 root INFO ------------
+13:22:33,422 root INFO IMAGE : Video frame
+13:22:33,422 root INFO 1 => 042-63%
+13:22:33,422 root INFO ------------
+13:22:33,583 root INFO IMAGE : Video frame
+13:22:33,584 root INFO 1 => 042-63%
+13:22:33,584 root INFO ------------
+13:22:33,743 root INFO IMAGE : Video frame
+13:22:33,743 root INFO 1 => 042-63%
+13:22:33,744 root INFO ------------
+13:22:33,891 root INFO IMAGE : Video frame
+13:22:33,891 root INFO 1 => 042-63%
+13:22:33,891 root INFO ------------
+13:22:34,37 root INFO IMAGE : Video frame
+13:22:34,37 root INFO 1 => 042-63%
+13:22:34,37 root INFO ------------
+13:22:34,201 root INFO IMAGE : Video frame
+13:22:34,202 root INFO 1 => 042-63%
+13:22:34,202 root INFO ------------
+13:22:34,353 root INFO IMAGE : Video frame
+13:22:34,353 root INFO 1 => 042-63%
+13:22:34,353 root INFO ------------
+13:22:34,508 root INFO IMAGE : Video frame
+13:22:34,508 root INFO 1 => 042-63%
+13:22:34,508 root INFO ------------
+13:22:34,672 root INFO IMAGE : Video frame
+13:22:34,673 root INFO 1 => 042-63%
+13:22:34,673 root INFO ------------
+13:22:34,830 root INFO IMAGE : Video frame
+13:22:34,830 root INFO 1 => 042-63%
+13:22:34,830 root INFO ------------
+13:22:34,987 root INFO IMAGE : Video frame
+13:22:34,987 root INFO 1 => 042-63%
+13:22:34,987 root INFO ------------
+13:22:35,142 root INFO IMAGE : Video frame
+13:22:35,142 root INFO 1 => 042-63%
+13:22:35,143 root INFO ------------
+13:22:35,297 root INFO IMAGE : Video frame
+13:22:35,298 root INFO 1 => 042-63%
+13:22:35,298 root INFO ------------
+13:22:35,457 root INFO IMAGE : Video frame
+13:22:35,458 root INFO 1 => 042-63%
+13:22:35,458 root INFO ------------
+13:22:35,615 root INFO IMAGE : Video frame
+13:22:35,615 root INFO 1 => 042-63%
+13:22:35,615 root INFO ------------
+13:22:35,763 root INFO IMAGE : Video frame
+13:22:35,763 root INFO 1 => 042-63%
+13:22:35,763 root INFO ------------
+13:22:35,929 root INFO IMAGE : Video frame
+13:22:35,929 root INFO 1 => 042-63%
+13:22:35,929 root INFO ------------
+13:22:36,81 root INFO IMAGE : Video frame
+13:22:36,81 root INFO 1 => 042-63%
+13:22:36,82 root INFO ------------
+13:22:36,239 root INFO IMAGE : Video frame
+13:22:36,239 root INFO 1 => 042-63%
+13:22:36,239 root INFO ------------
+13:22:36,394 root INFO IMAGE : Video frame
+13:22:36,394 root INFO 1 => 042-63%
+13:22:36,394 root INFO ------------
+13:22:36,553 root INFO IMAGE : Video frame
+13:22:36,553 root INFO 1 => 042-63%
+13:22:36,553 root INFO ------------
+13:22:36,716 root INFO IMAGE : Video frame
+13:22:36,716 root INFO 1 => 042-63%
+13:22:36,716 root INFO ------------
+13:22:36,872 root INFO IMAGE : Video frame
+13:22:36,872 root INFO 1 => 042-63%
+13:22:36,872 root INFO ------------
+13:22:37,36 root INFO IMAGE : Video frame
+13:22:37,36 root INFO 1 => 042-63%
+13:22:37,36 root INFO ------------
+13:22:37,194 root INFO IMAGE : Video frame
+13:22:37,194 root INFO 1 => 042-63%
+13:22:37,195 root INFO ------------
+13:22:37,341 root INFO IMAGE : Video frame
+13:22:37,341 root INFO 1 => 042-63%
+13:22:37,341 root INFO ------------
+13:22:37,484 root INFO IMAGE : Video frame
+13:22:37,484 root INFO 1 => 042-63%
+13:22:37,484 root INFO ------------
+13:22:37,667 root INFO IMAGE : Video frame
+13:22:37,667 root INFO 1 => 042-63%
+13:22:37,667 root INFO ------------
+13:22:37,814 root INFO IMAGE : Video frame
+13:22:37,814 root INFO 1 => 042-63%
+13:22:37,814 root INFO ------------
+13:22:37,958 root INFO IMAGE : Video frame
+13:22:37,959 root INFO 1 => 042-63%
+13:22:37,959 root INFO ------------
+13:22:38,122 root INFO IMAGE : Video frame
+13:22:38,122 root INFO 1 => 042-63%
+13:22:38,122 root INFO ------------
+13:22:38,270 root INFO IMAGE : Video frame
+13:22:38,270 root INFO 1 => 042-63%
+13:22:38,270 root INFO ------------
+13:22:38,430 root INFO IMAGE : Video frame
+13:22:38,430 root INFO 1 => 042-63%
+13:22:38,430 root INFO ------------
+13:22:38,583 root INFO IMAGE : Video frame
+13:22:38,583 root INFO 1 => 042-63%
+13:22:38,583 root INFO ------------
+13:22:38,743 root INFO IMAGE : Video frame
+13:22:38,743 root INFO 1 => 042-63%
+13:22:38,744 root INFO ------------
+13:22:38,895 root INFO IMAGE : Video frame
+13:22:38,895 root INFO 1 => 042-63%
+13:22:38,895 root INFO ------------
+13:22:39,56 root INFO IMAGE : Video frame
+13:22:39,56 root INFO 1 => 042-63%
+13:22:39,57 root INFO ------------
+13:22:39,196 root INFO IMAGE : Video frame
+13:22:39,196 root INFO 1 => 042-63%
+13:22:39,196 root INFO ------------
+13:22:39,355 root INFO IMAGE : Video frame
+13:22:39,355 root INFO 1 => 042-63%
+13:22:39,355 root INFO ------------
+13:22:39,510 root INFO IMAGE : Video frame
+13:22:39,510 root INFO 1 => 042-63%
+13:22:39,510 root INFO ------------
+13:22:39,664 root INFO IMAGE : Video frame
+13:22:39,664 root INFO 1 => 042-63%
+13:22:39,664 root INFO ------------
+13:22:39,816 root INFO IMAGE : Video frame
+13:22:39,816 root INFO 1 => 042-63%
+13:22:39,816 root INFO ------------
+13:22:39,956 root INFO IMAGE : Video frame
+13:22:39,956 root INFO 1 => 042-63%
+13:22:39,956 root INFO ------------
+13:22:40,109 root INFO IMAGE : Video frame
+13:22:40,109 root INFO 1 => 042-63%
+13:22:40,109 root INFO ------------
+13:22:40,262 root INFO IMAGE : Video frame
+13:22:40,262 root INFO 1 => 042-63%
+13:22:40,262 root INFO ------------
+13:22:40,427 root INFO IMAGE : Video frame
+13:22:40,427 root INFO 1 => 042-63%
+13:22:40,427 root INFO ------------
+13:22:40,588 root INFO IMAGE : Video frame
+13:22:40,589 root INFO 1 => 042-63%
+13:22:40,589 root INFO ------------
+13:22:40,748 root INFO IMAGE : Video frame
+13:22:40,748 root INFO 1 => 042-63%
+13:22:40,748 root INFO ------------
+13:22:40,901 root INFO IMAGE : Video frame
+13:22:40,901 root INFO 1 => 042-63%
+13:22:40,901 root INFO ------------
+13:22:41,65 root INFO IMAGE : Video frame
+13:22:41,66 root INFO 1 => 042-63%
+13:22:41,66 root INFO ------------
+13:22:41,232 root INFO IMAGE : Video frame
+13:22:41,232 root INFO 1 => 042-63%
+13:22:41,232 root INFO ------------
+13:22:41,393 root INFO IMAGE : Video frame
+13:22:41,393 root INFO 1 => 042-63%
+13:22:41,394 root INFO ------------
+13:22:41,561 root INFO IMAGE : Video frame
+13:22:41,561 root INFO 1 => 042-63%
+13:22:41,561 root INFO ------------
+13:22:41,716 root INFO IMAGE : Video frame
+13:22:41,717 root INFO 1 => 042-61%
+13:22:41,717 root INFO ------------
+13:22:41,871 root INFO IMAGE : Video frame
+13:22:41,872 root INFO 1 => 042-60%
+13:22:41,872 root INFO ------------
+13:22:42,26 root INFO IMAGE : Video frame
+13:22:42,26 root INFO 1 => 042-59%
+13:22:42,26 root INFO ------------
+13:22:42,197 root INFO IMAGE : Video frame
+13:22:42,197 root INFO 1 => 042-59%
+13:22:42,197 root INFO ------------
+13:22:42,345 root INFO IMAGE : Video frame
+13:22:42,346 root INFO 1 => 042-59%
+13:22:42,346 root INFO ------------
+13:22:42,511 root INFO IMAGE : Video frame
+13:22:42,511 root INFO 1 => 042-58%
+13:22:42,511 root INFO ------------
+13:22:42,659 root INFO IMAGE : Video frame
+13:22:42,659 root INFO 1 => 042-56%
+13:22:42,660 root INFO ------------
+13:22:42,814 root INFO IMAGE : Video frame
+13:22:42,815 root INFO 1 => 042-57%
+13:22:42,815 root INFO ------------
+13:22:42,972 root INFO IMAGE : Video frame
+13:22:42,972 root INFO 1 => 042-56%
+13:22:42,972 root INFO ------------
+13:22:43,127 root INFO IMAGE : Video frame
+13:22:43,127 root INFO 1 => 042-51%
+13:22:43,127 root INFO ------------
+13:22:43,725 root INFO IMAGE : Video frame
+13:22:43,725 root INFO 1 => 042-54%
+13:22:43,725 root INFO ------------
+13:22:43,883 root INFO IMAGE : Video frame
+13:22:43,883 root INFO 1 => 042-51%
+13:22:43,883 root INFO ------------
+13:22:44,932 root INFO IMAGE : Video frame
+13:22:44,932 root INFO 1 => 053-55%
+13:22:44,932 root INFO ------------
+13:22:45,77 root INFO IMAGE : Video frame
+13:22:45,77 root INFO 1 => 053-54%
+13:22:45,77 root INFO ------------
+13:22:45,235 root INFO IMAGE : Video frame
+13:22:45,235 root INFO 1 => 053-59%
+2 => 042-54%
+13:22:45,235 root INFO ------------
+13:22:45,392 root INFO IMAGE : Video frame
+13:22:45,392 root INFO 1 => 042-61%
+13:22:45,392 root INFO ------------
+13:22:45,548 root INFO IMAGE : Video frame
+13:22:45,548 root INFO 1 => 042-71%
+13:22:45,548 root INFO ------------
+13:22:45,708 root INFO IMAGE : Video frame
+13:22:45,708 root INFO 1 => 042-74%
+2 => 053-57%
+13:22:45,709 root INFO ------------
+13:22:45,852 root INFO IMAGE : Video frame
+13:22:45,853 root INFO 1 => 042-76%
+2 => 053-74%
+13:22:45,853 root INFO ------------
+13:22:45,998 root INFO IMAGE : Video frame
+13:22:45,998 root INFO 1 => 042-77%
+2 => 053-56%
+13:22:45,998 root INFO ------------
+13:22:46,155 root INFO IMAGE : Video frame
+13:22:46,155 root INFO 1 => 042-71%
+2 => 053-53%
+13:22:46,155 root INFO ------------
+13:22:46,313 root INFO IMAGE : Video frame
+13:22:46,313 root INFO 1 => 042-56%
+13:22:46,313 root INFO ------------
+13:22:46,465 root INFO IMAGE : Video frame
+13:22:46,465 root INFO 1 => 042-50%
+13:22:46,465 root INFO ------------
+13:22:47,244 root INFO IMAGE : Video frame
+13:22:47,244 root INFO 1 => 053-54%
+13:22:47,244 root INFO ------------
+13:22:47,403 root INFO IMAGE : Video frame
+13:22:47,403 root INFO 1 => 053-58%
+13:22:47,403 root INFO ------------
+13:22:47,560 root INFO IMAGE : Video frame
+13:22:47,560 root INFO 1 => 053-75%
+2 => 042-55%
+13:22:47,560 root INFO ------------
+13:22:47,713 root INFO IMAGE : Video frame
+13:22:47,713 root INFO 1 => 053-82%
+2 => 042-57%
+13:22:47,713 root INFO ------------
+13:22:47,853 root INFO IMAGE : Video frame
+13:22:47,853 root INFO 1 => 053-90%
+2 => 042-57%
+13:22:47,853 root INFO ------------
+13:22:48,3 root INFO IMAGE : Video frame
+13:22:48,3 root INFO 1 => 053-95%
+2 => 042-66%
+13:22:48,3 root INFO ------------
+13:22:48,156 root INFO IMAGE : Video frame
+13:22:48,157 root INFO 1 => 053-97%
+2 => 042-71%
+13:22:48,157 root INFO ------------
+13:22:48,296 root INFO IMAGE : Video frame
+13:22:48,296 root INFO 1 => 053-97%
+2 => 042-70%
+13:22:48,296 root INFO ------------
+13:22:48,444 root INFO IMAGE : Video frame
+13:22:48,445 root INFO 1 => 053-98%
+2 => 042-66%
+13:22:48,445 root INFO ------------
+13:22:48,603 root INFO IMAGE : Video frame
+13:22:48,603 root INFO 1 => 053-99%
+2 => 042-63%
+13:22:48,603 root INFO ------------
+13:22:48,761 root INFO IMAGE : Video frame
+13:22:48,761 root INFO 1 => 053-99%
+2 => 042-73%
+13:22:48,761 root INFO ------------
+13:22:48,914 root INFO IMAGE : Video frame
+13:22:48,914 root INFO 1 => 053-99%
+2 => 042-71%
+13:22:48,914 root INFO ------------
+13:22:49,62 root INFO IMAGE : Video frame
+13:22:49,62 root INFO 1 => 053-99%
+2 => 042-74%
+13:22:49,62 root INFO ------------
+13:22:49,225 root INFO IMAGE : Video frame
+13:22:49,226 root INFO 1 => 053-99%
+2 => 042-77%
+13:22:49,226 root INFO ------------
+13:22:49,370 root INFO IMAGE : Video frame
+13:22:49,370 root INFO 1 => 053-99%
+2 => 042-62%
+13:22:49,370 root INFO ------------
+13:22:49,519 root INFO IMAGE : Video frame
+13:22:49,519 root INFO 1 => 053-99%
+2 => 042-57%
+13:22:49,519 root INFO ------------
+13:22:49,680 root INFO IMAGE : Video frame
+13:22:49,680 root INFO 1 => 053-99%
+2 => 042-77%
+13:22:49,680 root INFO ------------
+13:22:49,827 root INFO IMAGE : Video frame
+13:22:49,828 root INFO 1 => 053-99%
+2 => 042-83%
+13:22:49,828 root INFO ------------
+13:22:49,990 root INFO IMAGE : Video frame
+13:22:49,990 root INFO 1 => 053-98%
+2 => 042-82%
+13:22:49,990 root INFO ------------
+13:22:50,147 root INFO IMAGE : Video frame
+13:22:50,147 root INFO 1 => 053-97%
+2 => 042-87%
+13:22:50,147 root INFO ------------
+13:22:50,299 root INFO IMAGE : Video frame
+13:22:50,299 root INFO 1 => 053-96%
+2 => 042-81%
+13:22:50,299 root INFO ------------
+13:22:50,443 root INFO IMAGE : Video frame
+13:22:50,443 root INFO 1 => 053-94%
+2 => 042-81%
+13:22:50,443 root INFO ------------
+13:22:50,599 root INFO IMAGE : Video frame
+13:22:50,599 root INFO 1 => 053-90%
+2 => 042-82%
+13:22:50,599 root INFO ------------
+13:22:50,754 root INFO IMAGE : Video frame
+13:22:50,754 root INFO 1 => 042-77%
+2 => 053-73%
+13:22:50,754 root INFO ------------
+13:22:50,900 root INFO IMAGE : Video frame
+13:22:50,901 root INFO 1 => 053-54%
+2 => 042-51%
+13:22:50,901 root INFO ------------
+13:22:51,63 root INFO IMAGE : Video frame
+13:22:51,63 root INFO 1 => 042-58%
+13:22:51,63 root INFO ------------
+13:22:51,221 root INFO IMAGE : Video frame
+13:22:51,221 root INFO 1 => 042-57%
+13:22:51,221 root INFO ------------
+13:22:51,831 root INFO IMAGE : Video frame
+13:22:51,831 root INFO 1 => 042-76%
+2 => 053-75%
+13:22:51,831 root INFO ------------
+13:22:51,983 root INFO IMAGE : Video frame
+13:22:51,983 root INFO 1 => 042-90%
+2 => 053-87%
+13:22:51,983 root INFO ------------
+13:22:52,134 root INFO IMAGE : Video frame
+13:22:52,134 root INFO 1 => 053-95%
+2 => 042-87%
+13:22:52,134 root INFO ------------
+13:22:52,304 root INFO IMAGE : Video frame
+13:22:52,304 root INFO 1 => 053-95%
+2 => 042-67%
+13:22:52,304 root INFO ------------
+13:22:52,468 root INFO IMAGE : Video frame
+13:22:52,469 root INFO 1 => 053-89%
+13:22:52,469 root INFO ------------
+13:22:52,625 root INFO IMAGE : Video frame
+13:22:52,625 root INFO 1 => 053-96%
+2 => 042-58%
+13:22:52,625 root INFO ------------
+13:22:52,780 root INFO IMAGE : Video frame
+13:22:52,780 root INFO 1 => 053-92%
+2 => 042-78%
+13:22:52,780 root INFO ------------
+13:22:52,943 root INFO IMAGE : Video frame
+13:22:52,943 root INFO 1 => 053-98%
+2 => 042-86%
+13:22:52,943 root INFO ------------
+13:22:53,109 root INFO IMAGE : Video frame
+13:22:53,109 root INFO 1 => 053-99%
+2 => 042-94%
+13:22:53,109 root INFO ------------
+13:22:53,263 root INFO IMAGE : Video frame
+13:22:53,263 root INFO 1 => 053-99%
+2 => 042-92%
+13:22:53,263 root INFO ------------
+13:22:53,417 root INFO IMAGE : Video frame
+13:22:53,417 root INFO 1 => 053-99%
+2 => 042-81%
+13:22:53,417 root INFO ------------
+13:22:53,572 root INFO IMAGE : Video frame
+13:22:53,572 root INFO 1 => 053-99%
+2 => 042-76%
+13:22:53,572 root INFO ------------
+13:22:53,720 root INFO IMAGE : Video frame
+13:22:53,720 root INFO 1 => 053-98%
+2 => 042-76%
+13:22:53,720 root INFO ------------
+13:22:53,874 root INFO IMAGE : Video frame
+13:22:53,874 root INFO 1 => 053-97%
+2 => 042-70%
+13:22:53,874 root INFO ------------
+13:22:54,23 root INFO IMAGE : Video frame
+13:22:54,24 root INFO 1 => 053-89%
+13:22:54,24 root INFO ------------
+13:22:54,174 root INFO IMAGE : Video frame
+13:22:54,174 root INFO 1 => 042-61%
+13:22:54,174 root INFO ------------
+13:22:54,615 root INFO IMAGE : Video frame
+13:22:54,615 root INFO 1 => 042-82%
+13:22:54,615 root INFO ------------
+13:22:54,770 root INFO IMAGE : Video frame
+13:22:54,770 root INFO 1 => 053-86%
+2 => 042-72%
+13:22:54,770 root INFO ------------
+13:22:54,923 root INFO IMAGE : Video frame
+13:22:54,923 root INFO 1 => 053-94%
+2 => 042-83%
+13:22:54,923 root INFO ------------
+13:22:55,82 root INFO IMAGE : Video frame
+13:22:55,82 root INFO 1 => 053-92%
+2 => 042-86%
+13:22:55,83 root INFO ------------
+13:22:55,240 root INFO IMAGE : Video frame
+13:22:55,240 root INFO 1 => 053-98%
+2 => 042-55%
+13:22:55,240 root INFO ------------
+13:22:55,402 root INFO IMAGE : Video frame
+13:22:55,402 root INFO 1 => 053-98%
+2 => 042-81%
+13:22:55,402 root INFO ------------
+13:22:55,558 root INFO IMAGE : Video frame
+13:22:55,558 root INFO 1 => 053-93%
+2 => 042-75%
+13:22:55,558 root INFO ------------
+13:22:55,714 root INFO IMAGE : Video frame
+13:22:55,714 root INFO 1 => 053-80%
+13:22:55,714 root INFO ------------
+13:22:55,876 root INFO IMAGE : Video frame
+13:22:55,876 root INFO 1 => 042-56%
+13:22:55,876 root INFO ------------
+13:22:56,41 root INFO IMAGE : Video frame
+13:22:56,41 root INFO 1 => 042-66%
+13:22:56,41 root INFO ------------
+13:22:56,196 root INFO IMAGE : Video frame
+13:22:56,196 root INFO 1 => 042-84%
+13:22:56,196 root INFO ------------
+13:22:56,337 root INFO IMAGE : Video frame
+13:22:56,337 root INFO 1 => 042-87%
+13:22:56,337 root INFO ------------
+13:22:56,649 root INFO IMAGE : Video frame
+13:22:56,650 root INFO 1 => 053-84%
+2 => 042-64%
+13:22:56,650 root INFO ------------
+13:22:56,805 root INFO IMAGE : Video frame
+13:22:56,805 root INFO 1 => 053-68%
+2 => 042-53%
+13:22:56,805 root INFO ------------
+13:22:56,955 root INFO IMAGE : Video frame
+13:22:56,955 root INFO 1 => 042-57%
+13:22:56,955 root INFO ------------
+13:22:57,409 root INFO IMAGE : Video frame
+13:22:57,409 root INFO 1 => 053-61%
+13:22:57,409 root INFO ------------
+13:22:57,569 root INFO IMAGE : Video frame
+13:22:57,569 root INFO 1 => 053-76%
+13:22:57,569 root INFO ------------
+13:22:58,171 root INFO IMAGE : Video frame
+13:22:58,171 root INFO 1 => 053-71%
+13:22:58,171 root INFO ------------
+13:23:36,355 root INFO IMAGE : Video frame
+13:23:36,355 root INFO 1 => 023-53%
+13:23:36,355 root INFO ------------
+13:23:36,941 root INFO IMAGE : Video frame
+13:23:36,941 root INFO 1 => 023-58%
+13:23:36,941 root INFO ------------
+13:23:37,379 root INFO IMAGE : Video frame
+13:23:37,379 root INFO 1 => 023-91%
+2 => 028-86%
+13:23:37,380 root INFO ------------
+13:23:37,540 root INFO IMAGE : Video frame
+13:23:37,540 root INFO 1 => 028-53%
+13:23:37,540 root INFO ------------
+13:23:37,851 root INFO IMAGE : Video frame
+13:23:37,851 root INFO 1 => 028-82%
+13:23:37,851 root INFO ------------
+13:23:38,15 root INFO IMAGE : Video frame
+13:23:38,15 root INFO 1 => 028-83%
+13:23:38,15 root INFO ------------
+13:23:55,760 root INFO IMAGE : Video frame
+13:23:55,760 root INFO 1 => 053-73%
+13:23:55,760 root INFO ------------
+13:23:55,918 root INFO IMAGE : Video frame
+13:23:55,918 root INFO 1 => 053-82%
+13:23:55,918 root INFO ------------
+13:23:56,367 root INFO IMAGE : Video frame
+13:23:56,367 root INFO 1 => 053-80%
+13:23:56,367 root INFO ------------
+13:23:56,672 root INFO IMAGE : Video frame
+13:23:56,672 root INFO 1 => 053-53%
+13:23:56,673 root INFO ------------
+13:23:56,989 root INFO IMAGE : Video frame
+13:23:56,989 root INFO 1 => 053-65%
+13:23:56,989 root INFO ------------
+13:23:57,145 root INFO IMAGE : Video frame
+13:23:57,146 root INFO 1 => 053-50%
+13:23:57,146 root INFO ------------
+13:23:57,309 root INFO IMAGE : Video frame
+13:23:57,309 root INFO 1 => 053-83%
+13:23:57,309 root INFO ------------
+13:23:57,462 root INFO IMAGE : Video frame
+13:23:57,462 root INFO 1 => 053-87%
+13:23:57,462 root INFO ------------
+13:23:57,623 root INFO IMAGE : Video frame
+13:23:57,623 root INFO 1 => 053-75%
+13:23:57,623 root INFO ------------
+13:23:57,776 root INFO IMAGE : Video frame
+13:23:57,776 root INFO 1 => 053-91%
+13:23:57,776 root INFO ------------
+13:23:57,931 root INFO IMAGE : Video frame
+13:23:57,931 root INFO 1 => 053-84%
+13:23:57,931 root INFO ------------
+13:23:58,95 root INFO IMAGE : Video frame
+13:23:58,95 root INFO 1 => 042-74%
+2 => 053-65%
+13:23:58,95 root INFO ------------
+13:23:58,245 root INFO IMAGE : Video frame
+13:23:58,245 root INFO 1 => 053-85%
+2 => 042-56%
+13:23:58,245 root INFO ------------
+13:23:58,412 root INFO IMAGE : Video frame
+13:23:58,412 root INFO 1 => 053-97%
+13:23:58,412 root INFO ------------
+13:23:58,563 root INFO IMAGE : Video frame
+13:23:58,563 root INFO 1 => 053-97%
+13:23:58,563 root INFO ------------
+13:23:58,715 root INFO IMAGE : Video frame
+13:23:58,715 root INFO 1 => 053-84%
+13:23:58,715 root INFO ------------
+13:23:58,866 root INFO IMAGE : Video frame
+13:23:58,866 root INFO 1 => 053-83%
+13:23:58,866 root INFO ------------
+13:23:59,8 root INFO IMAGE : Video frame
+13:23:59,8 root INFO 1 => 053-96%
+2 => 042-80%
+13:23:59,8 root INFO ------------
+13:23:59,159 root INFO IMAGE : Video frame
+13:23:59,159 root INFO 1 => 053-91%
+13:23:59,160 root INFO ------------
+13:23:59,319 root INFO IMAGE : Video frame
+13:23:59,319 root INFO 1 => 053-90%
+13:23:59,319 root INFO ------------
+13:23:59,477 root INFO IMAGE : Video frame
+13:23:59,477 root INFO 1 => 053-92%
+2 => 042-60%
+13:23:59,477 root INFO ------------
+13:23:59,635 root INFO IMAGE : Video frame
+13:23:59,635 root INFO 1 => 042-75%
+13:23:59,635 root INFO ------------
+13:23:59,789 root INFO IMAGE : Video frame
+13:23:59,789 root INFO 1 => 053-93%
+2 => 042-65%
+13:23:59,789 root INFO ------------
+13:23:59,951 root INFO IMAGE : Video frame
+13:23:59,951 root INFO 1 => 053-98%
+2 => 042-58%
+13:23:59,951 root INFO ------------
+13:24:00,103 root INFO IMAGE : Video frame
+13:24:00,103 root INFO 1 => 042-90%
+2 => 053-79%
+13:24:00,103 root INFO ------------
+13:24:00,258 root INFO IMAGE : Video frame
+13:24:00,258 root INFO 1 => 042-73%
+2 => 053-60%
+13:24:00,258 root INFO ------------
+13:24:00,422 root INFO IMAGE : Video frame
+13:24:00,422 root INFO 1 => 053-88%
+2 => 042-56%
+13:24:00,422 root INFO ------------
+13:24:00,576 root INFO IMAGE : Video frame
+13:24:00,576 root INFO 1 => 053-94%
+2 => 042-86%
+13:24:00,576 root INFO ------------
+13:24:00,736 root INFO IMAGE : Video frame
+13:24:00,736 root INFO 1 => 053-85%
+2 => 042-58%
+13:24:00,736 root INFO ------------
+13:24:01,53 root INFO IMAGE : Video frame
+13:24:01,53 root INFO 1 => 053-83%
+13:24:01,53 root INFO ------------
+13:24:01,352 root INFO IMAGE : Video frame
+13:24:01,352 root INFO 1 => 053-87%
+13:24:01,352 root INFO ------------
+13:24:39,756 root INFO IMAGE : Video frame
+13:24:39,756 root INFO 1 => 053-50%
+13:24:39,756 root INFO ------------
+13:24:39,900 root INFO IMAGE : Video frame
+13:24:39,900 root INFO 1 => 053-57%
+13:24:39,901 root INFO ------------
+13:24:40,65 root INFO IMAGE : Video frame
+13:24:40,66 root INFO 1 => 053-58%
+13:24:40,66 root INFO ------------
+13:24:41,208 root INFO IMAGE : Video frame
+13:24:41,208 root INFO 1 => 053-52%
+13:24:41,208 root INFO ------------
+13:24:41,369 root INFO IMAGE : Video frame
+13:24:41,369 root INFO 1 => 053-72%
+13:24:41,369 root INFO ------------
+13:24:41,520 root INFO IMAGE : Video frame
+13:24:41,520 root INFO 1 => 053-53%
+13:24:41,520 root INFO ------------
+13:24:41,675 root INFO IMAGE : Video frame
+13:24:41,676 root INFO 1 => 053-66%
+13:24:41,676 root INFO ------------
+13:24:41,976 root INFO IMAGE : Video frame
+13:24:41,976 root INFO 1 => 053-83%
+13:24:41,977 root INFO ------------
+13:24:42,135 root INFO IMAGE : Video frame
+13:24:42,136 root INFO 1 => 053-93%
+13:24:42,136 root INFO ------------
+13:24:42,284 root INFO IMAGE : Video frame
+13:24:42,284 root INFO 1 => 053-84%
+13:24:42,284 root INFO ------------
+13:24:42,430 root INFO IMAGE : Video frame
+13:24:42,430 root INFO 1 => 053-91%
+13:24:42,430 root INFO ------------
+13:24:42,593 root INFO IMAGE : Video frame
+13:24:42,594 root INFO 1 => 053-94%
+13:24:42,594 root INFO ------------
+13:24:42,750 root INFO IMAGE : Video frame
+13:24:42,751 root INFO 1 => 053-53%
+13:24:42,751 root INFO ------------
+13:24:42,908 root INFO IMAGE : Video frame
+13:24:42,908 root INFO 1 => 053-57%
+13:24:42,908 root INFO ------------
+13:24:43,70 root INFO IMAGE : Video frame
+13:24:43,71 root INFO 1 => 053-96%
+13:24:43,71 root INFO ------------
+13:24:43,223 root INFO IMAGE : Video frame
+13:24:43,223 root INFO 1 => 053-99%
+13:24:43,223 root INFO ------------
+13:24:43,386 root INFO IMAGE : Video frame
+13:24:43,386 root INFO 1 => 053-99%
+2 => 042-74%
+13:24:43,386 root INFO ------------
+13:24:43,540 root INFO IMAGE : Video frame
+13:24:43,540 root INFO 1 => 053-98%
+13:24:43,540 root INFO ------------
+13:24:43,699 root INFO IMAGE : Video frame
+13:24:43,699 root INFO 1 => 053-65%
+13:24:43,700 root INFO ------------
+13:24:43,846 root INFO IMAGE : Video frame
+13:24:43,847 root INFO 1 => 053-94%
+13:24:43,847 root INFO ------------
+13:24:43,994 root INFO IMAGE : Video frame
+13:24:43,994 root INFO 1 => 053-99%
+2 => 042-66%
+13:24:43,994 root INFO ------------
+13:24:44,165 root INFO IMAGE : Video frame
+13:24:44,165 root INFO 1 => 053-96%
+13:24:44,165 root INFO ------------
+13:24:44,332 root INFO IMAGE : Video frame
+13:24:44,332 root INFO 1 => 053-61%
+13:24:44,332 root INFO ------------
+13:24:44,488 root INFO IMAGE : Video frame
+13:24:44,488 root INFO 1 => 042-85%
+2 => 053-83%
+13:24:44,488 root INFO ------------
+13:24:44,650 root INFO IMAGE : Video frame
+13:24:44,650 root INFO 1 => 053-97%
+2 => 042-87%
+13:24:44,650 root INFO ------------
+13:24:44,804 root INFO IMAGE : Video frame
+13:24:44,805 root INFO 1 => 042-89%
+2 => 053-71%
+13:24:44,805 root INFO ------------
+13:24:44,971 root INFO IMAGE : Video frame
+13:24:44,971 root INFO 1 => 053-87%
+2 => 042-58%
+13:24:44,971 root INFO ------------
+13:24:45,127 root INFO IMAGE : Video frame
+13:24:45,128 root INFO 1 => 053-84%
+13:24:45,128 root INFO ------------
+13:24:49,394 root INFO IMAGE : Video frame
+13:24:49,394 root INFO 1 => 009-59%
+13:24:49,394 root INFO ------------
+13:24:49,851 root INFO IMAGE : Video frame
+13:24:49,851 root INFO 1 => 009-68%
+13:24:49,851 root INFO ------------
+13:24:50,16 root INFO IMAGE : Video frame
+13:24:50,16 root INFO 1 => 009-57%
+13:24:50,16 root INFO ------------
+13:24:55,130 root INFO IMAGE : Video frame
+13:24:55,130 root INFO 1 => 028-62%
+13:24:55,131 root INFO ------------
+13:25:02,373 root INFO IMAGE : Video frame
+13:25:02,373 root INFO 1 => 007-75%
+13:25:02,373 root INFO ------------
+13:25:06,179 root INFO IMAGE : Video frame
+13:25:06,179 root INFO 1 => 028-53%
+13:25:06,179 root INFO ------------
+13:25:06,337 root INFO IMAGE : Video frame
+13:25:06,337 root INFO 1 => 028-57%
+13:25:06,337 root INFO ------------
+13:25:06,483 root INFO IMAGE : Video frame
+13:25:06,484 root INFO 1 => 028-56%
+13:25:06,484 root INFO ------------
+13:25:13,457 root INFO IMAGE : Video frame
+13:25:13,457 root INFO 1 => 023-60%
+13:25:13,457 root INFO ------------
+13:25:13,779 root INFO IMAGE : Video frame
+13:25:13,780 root INFO 1 => 023-59%
+2 => 003-57%
+13:25:13,780 root INFO ------------
+13:25:14,97 root INFO IMAGE : Video frame
+13:25:14,97 root INFO 1 => 023-68%
+13:25:14,98 root INFO ------------
+13:25:14,248 root INFO IMAGE : Video frame
+13:25:14,248 root INFO 1 => 023-77%
+13:25:14,248 root INFO ------------
+13:25:14,412 root INFO IMAGE : Video frame
+13:25:14,412 root INFO 1 => 023-84%
+2 => 003-73%
+13:25:14,412 root INFO ------------
+13:25:14,560 root INFO IMAGE : Video frame
+13:25:14,560 root INFO 1 => 023-73%
+13:25:14,560 root INFO ------------
+13:25:14,721 root INFO IMAGE : Video frame
+13:25:14,721 root INFO 1 => 003-76%
+13:25:14,721 root INFO ------------
+13:25:14,880 root INFO IMAGE : Video frame
+13:25:14,881 root INFO 1 => 023-91%
+2 => 003-79%
+13:25:14,881 root INFO ------------
+13:25:15,43 root INFO IMAGE : Video frame
+13:25:15,44 root INFO 1 => 023-87%
+2 => 003-83%
+13:25:15,44 root INFO ------------
+13:25:15,193 root INFO IMAGE : Video frame
+13:25:15,193 root INFO 1 => 003-55%
+13:25:15,193 root INFO ------------
+13:25:20,354 root INFO IMAGE : Video frame
+13:25:20,354 root INFO 1 => 053-51%
+13:25:20,354 root INFO ------------
+13:25:20,512 root INFO IMAGE : Video frame
+13:25:20,512 root INFO 1 => 053-57%
+13:25:20,512 root INFO ------------
+13:25:21,572 root INFO IMAGE : Video frame
+13:25:21,572 root INFO 1 => 053-53%
+13:25:21,572 root INFO ------------
+13:25:21,870 root INFO IMAGE : Video frame
+13:25:21,870 root INFO 1 => 053-62%
+13:25:21,870 root INFO ------------
+13:25:22,25 root INFO IMAGE : Video frame
+13:25:22,25 root INFO 1 => 053-51%
+13:25:22,25 root INFO ------------
+13:25:22,329 root INFO IMAGE : Video frame
+13:25:22,329 root INFO 1 => 053-72%
+13:25:22,329 root INFO ------------
+13:25:22,491 root INFO IMAGE : Video frame
+13:25:22,491 root INFO 1 => 053-84%
+13:25:22,492 root INFO ------------
+13:25:22,648 root INFO IMAGE : Video frame
+13:25:22,648 root INFO 1 => 053-57%
+13:25:22,648 root INFO ------------
+13:25:22,947 root INFO IMAGE : Video frame
+13:25:22,947 root INFO 1 => 042-64%
+2 => 053-56%
+13:25:22,947 root INFO ------------
+13:25:23,98 root INFO IMAGE : Video frame
+13:25:23,98 root INFO 1 => 053-69%
+2 => 042-66%
+13:25:23,98 root INFO ------------
+13:25:23,254 root INFO IMAGE : Video frame
+13:25:23,255 root INFO 1 => 053-67%
+13:25:23,255 root INFO ------------
+13:25:23,411 root INFO IMAGE : Video frame
+13:25:23,411 root INFO 1 => 053-90%
+13:25:23,411 root INFO ------------
+13:25:23,568 root INFO IMAGE : Video frame
+13:25:23,568 root INFO 1 => 053-75%
+13:25:23,568 root INFO ------------
+13:25:23,726 root INFO IMAGE : Video frame
+13:25:23,726 root INFO 1 => 053-57%
+13:25:23,726 root INFO ------------
+13:25:23,870 root INFO IMAGE : Video frame
+13:25:23,870 root INFO 1 => 053-67%
+2 => 042-63%
+13:25:23,870 root INFO ------------
+13:25:24,41 root INFO IMAGE : Video frame
+13:25:24,41 root INFO 1 => 042-83%
+2 => 053-80%
+13:25:24,41 root INFO ------------
+13:25:24,213 root INFO IMAGE : Video frame
+13:25:24,213 root INFO 1 => 053-95%
+13:25:24,214 root INFO ------------
+13:25:24,382 root INFO IMAGE : Video frame
+13:25:24,382 root INFO 1 => 053-99%
+13:25:24,382 root INFO ------------
+13:25:24,545 root INFO IMAGE : Video frame
+13:25:24,545 root INFO 1 => 053-92%
+2 => 042-74%
+13:25:24,545 root INFO ------------
+13:25:24,711 root INFO IMAGE : Video frame
+13:25:24,711 root INFO 1 => 042-88%
+2 => 053-87%
+13:25:24,711 root INFO ------------
+13:25:24,857 root INFO IMAGE : Video frame
+13:25:24,857 root INFO 1 => 053-97%
+13:25:24,857 root INFO ------------
+13:25:25,17 root INFO IMAGE : Video frame
+13:25:25,17 root INFO 1 => 053-96%
+2 => 042-66%
+13:25:25,17 root INFO ------------
+13:25:25,178 root INFO IMAGE : Video frame
+13:25:25,178 root INFO 1 => 053-85%
+2 => 042-56%
+13:25:25,178 root INFO ------------
+13:25:25,333 root INFO IMAGE : Video frame
+13:25:25,333 root INFO 1 => 053-91%
+2 => 042-75%
+13:25:25,333 root INFO ------------
+13:25:25,500 root INFO IMAGE : Video frame
+13:25:25,500 root INFO 1 => 053-97%
+2 => 042-65%
+13:25:25,501 root INFO ------------
+13:25:25,669 root INFO IMAGE : Video frame
+13:25:25,669 root INFO 1 => 042-91%
+2 => 053-63%
+13:25:25,669 root INFO ------------
+13:25:25,828 root INFO IMAGE : Video frame
+13:25:25,828 root INFO 1 => 053-79%
+13:25:25,828 root INFO ------------
+13:25:25,988 root INFO IMAGE : Video frame
+13:25:25,988 root INFO 1 => 042-57%
+13:25:25,988 root INFO ------------
+13:26:24,699 root INFO IMAGE : Video frame
+13:26:24,699 root INFO 1 => 042-55%
+13:26:24,699 root INFO ------------
+13:26:24,850 root INFO IMAGE : Video frame
+13:26:24,850 root INFO 1 => 042-50%
+13:26:24,851 root INFO ------------
+13:26:25,6 root INFO IMAGE : Video frame
+13:26:25,7 root INFO 1 => 042-56%
+13:26:25,7 root INFO ------------
+13:26:25,167 root INFO IMAGE : Video frame
+13:26:25,168 root INFO 1 => 042-67%
+13:26:25,168 root INFO ------------
+13:26:25,455 root INFO IMAGE : Video frame
+13:26:25,455 root INFO 1 => 042-81%
+13:26:25,456 root INFO ------------
+13:26:25,611 root INFO IMAGE : Video frame
+13:26:25,611 root INFO 1 => 042-85%
+13:26:25,611 root INFO ------------
+13:26:25,909 root INFO IMAGE : Video frame
+13:26:25,909 root INFO 1 => 042-88%
+13:26:25,909 root INFO ------------
+13:26:59,217 root INFO IMAGE : Video frame
+13:26:59,217 root INFO 1 => 053-60%
+13:26:59,217 root INFO ------------
+13:26:59,526 root INFO IMAGE : Video frame
+13:26:59,527 root INFO 1 => 053-54%
+13:26:59,527 root INFO ------------
+13:26:59,683 root INFO IMAGE : Video frame
+13:26:59,683 root INFO 1 => 053-54%
+13:26:59,683 root INFO ------------
+13:26:59,842 root INFO IMAGE : Video frame
+13:26:59,842 root INFO 1 => 053-77%
+13:26:59,842 root INFO ------------
+13:27:00,313 root INFO IMAGE : Video frame
+13:27:00,313 root INFO 1 => 023-53%
+13:27:00,313 root INFO ------------
+13:27:00,471 root INFO IMAGE : Video frame
+13:27:00,471 root INFO 1 => 053-58%
+13:27:00,471 root INFO ------------
+13:27:00,621 root INFO IMAGE : Video frame
+13:27:00,621 root INFO 1 => 053-81%
+13:27:00,621 root INFO ------------
+13:27:00,784 root INFO IMAGE : Video frame
+13:27:00,784 root INFO 1 => 053-87%
+13:27:00,784 root INFO ------------
+13:27:01,259 root INFO IMAGE : Video frame
+13:27:01,260 root INFO 1 => 023-50%
+13:27:01,260 root INFO ------------
+13:27:01,401 root INFO IMAGE : Video frame
+13:27:01,401 root INFO 1 => 053-96%
+13:27:01,401 root INFO ------------
+13:27:01,552 root INFO IMAGE : Video frame
+13:27:01,552 root INFO 1 => 053-92%
+2 => 023-66%
+13:27:01,552 root INFO ------------
+13:27:01,866 root INFO IMAGE : Video frame
+13:27:01,866 root INFO 1 => 053-94%
+13:27:01,866 root INFO ------------
+13:27:02,11 root INFO IMAGE : Video frame
+13:27:02,11 root INFO 1 => 053-96%
+2 => 042-88%
+13:27:02,11 root INFO ------------
+13:27:02,161 root INFO IMAGE : Video frame
+13:27:02,161 root INFO 1 => 042-74%
+13:27:02,161 root INFO ------------
+13:27:02,316 root INFO IMAGE : Video frame
+13:27:02,316 root INFO 1 => 053-82%
+13:27:02,316 root INFO ------------
+13:27:02,474 root INFO IMAGE : Video frame
+13:27:02,474 root INFO 1 => 042-69%
+2 => 053-61%
+13:27:02,474 root INFO ------------
+13:27:02,627 root INFO IMAGE : Video frame
+13:27:02,627 root INFO 1 => 042-55%
+13:27:02,627 root INFO ------------
+13:27:02,790 root INFO IMAGE : Video frame
+13:27:02,790 root INFO 1 => 053-51%
+13:27:02,790 root INFO ------------
+13:27:19,95 root INFO IMAGE : Video frame
+13:27:19,95 root INFO 1 => 009-50%
+13:27:19,95 root INFO ------------
+13:27:20,88 root INFO IMAGE : Video frame
+13:27:20,88 root INFO 1 => 007-77%
+13:27:20,88 root INFO ------------
+13:28:54,629 root INFO IMAGE : Video frame
+13:28:54,629 root INFO 1 => 001-64%
+13:28:54,629 root INFO ------------
+13:29:05,580 root INFO IMAGE : Video frame
+13:29:05,580 root INFO 1 => 000-79%
+13:29:05,580 root INFO ------------
+13:29:05,739 root INFO IMAGE : Video frame
+13:29:05,739 root INFO 1 => 000-73%
+13:29:05,739 root INFO ------------
+13:29:05,895 root INFO IMAGE : Video frame
+13:29:05,895 root INFO 1 => 000-64%
+13:29:05,895 root INFO ------------
+13:29:06,57 root INFO IMAGE : Video frame
+13:29:06,57 root INFO 1 => 000-53%
+13:29:06,57 root INFO ------------
+13:29:06,217 root INFO IMAGE : Video frame
+13:29:06,217 root INFO 1 => 000-55%
+13:29:06,217 root INFO ------------
+13:29:28,159 root INFO IMAGE : Video frame
+13:29:28,159 root INFO 1 => 000-76%
+13:29:28,159 root INFO ------------
+13:29:28,322 root INFO IMAGE : Video frame
+13:29:28,322 root INFO 1 => 000-75%
+13:29:28,322 root INFO ------------
+13:29:28,474 root INFO IMAGE : Video frame
+13:29:28,474 root INFO 1 => 000-62%
+13:29:28,474 root INFO ------------
+13:29:28,628 root INFO IMAGE : Video frame
+13:29:28,628 root INFO 1 => 000-75%
+13:29:28,628 root INFO ------------
+13:29:28,785 root INFO IMAGE : Video frame
+13:29:28,785 root INFO 1 => 000-75%
+13:29:28,785 root INFO ------------
+13:29:28,940 root INFO IMAGE : Video frame
+13:29:28,941 root INFO 1 => 000-52%
+13:29:28,941 root INFO ------------
+13:29:29,95 root INFO IMAGE : Video frame
+13:29:29,95 root INFO 1 => 000-55%
+13:29:29,95 root INFO ------------
+13:29:30,266 root INFO IMAGE : Video frame
+13:29:30,267 root INFO 1 => 025-66%
+13:29:30,267 root INFO ------------
+13:29:30,568 root INFO IMAGE : Video frame
+13:29:30,568 root INFO 1 => 025-69%
+13:29:30,568 root INFO ------------
+13:29:30,730 root INFO IMAGE : Video frame
+13:29:30,730 root INFO 1 => 025-50%
+13:29:30,730 root INFO ------------
+13:29:31,33 root INFO IMAGE : Video frame
+13:29:31,33 root INFO 1 => 025-50%
+13:29:31,33 root INFO ------------
+13:29:36,479 root INFO IMAGE : Video frame
+13:29:36,479 root INFO 1 => 025-55%
+13:29:36,479 root INFO ------------
+13:29:36,630 root INFO IMAGE : Video frame
+13:29:36,630 root INFO 1 => 025-52%
+13:29:36,630 root INFO ------------
+13:29:47,265 root INFO IMAGE : Video frame
+13:29:47,265 root INFO 1 => 023-52%
+13:29:47,265 root INFO ------------
+13:29:47,418 root INFO IMAGE : Video frame
+13:29:47,418 root INFO 1 => 025-50%
+13:29:47,418 root INFO ------------
+13:29:47,560 root INFO IMAGE : Video frame
+13:29:47,560 root INFO 1 => 023-67%
+2 => 025-60%
+13:29:47,561 root INFO ------------
+13:29:47,705 root INFO IMAGE : Video frame
+13:29:47,705 root INFO 1 => 025-69%
+13:29:47,705 root INFO ------------
+13:29:47,867 root INFO IMAGE : Video frame
+13:29:47,867 root INFO 1 => 025-62%
+13:29:47,867 root INFO ------------
+13:29:48,27 root INFO IMAGE : Video frame
+13:29:48,27 root INFO 1 => 025-79%
+13:29:48,27 root INFO ------------
+13:29:48,188 root INFO IMAGE : Video frame
+13:29:48,188 root INFO 1 => 025-81%
+13:29:48,188 root INFO ------------
+13:29:48,338 root INFO IMAGE : Video frame
+13:29:48,338 root INFO 1 => 025-85%
+13:29:48,338 root INFO ------------
+13:29:48,490 root INFO IMAGE : Video frame
+13:29:48,490 root INFO 1 => 025-85%
+13:29:48,490 root INFO ------------
+13:29:48,634 root INFO IMAGE : Video frame
+13:29:48,634 root INFO 1 => 025-80%
+13:29:48,634 root INFO ------------
+13:29:48,778 root INFO IMAGE : Video frame
+13:29:48,778 root INFO 1 => 025-67%
+13:29:48,779 root INFO ------------
+13:29:48,946 root INFO IMAGE : Video frame
+13:29:48,946 root INFO 1 => 025-62%
+13:29:48,946 root INFO ------------
+13:29:49,88 root INFO IMAGE : Video frame
+13:29:49,88 root INFO 1 => 025-74%
+13:29:49,89 root INFO ------------
+13:29:49,235 root INFO IMAGE : Video frame
+13:29:49,235 root INFO 1 => 025-73%
+13:29:49,235 root INFO ------------
+13:29:49,395 root INFO IMAGE : Video frame
+13:29:49,395 root INFO 1 => 025-70%
+13:29:49,395 root INFO ------------
+13:29:49,845 root INFO IMAGE : Video frame
+13:29:49,846 root INFO 1 => 025-64%
+13:29:49,846 root INFO ------------
+13:29:49,995 root INFO IMAGE : Video frame
+13:29:49,996 root INFO 1 => 025-72%
+13:29:49,996 root INFO ------------
+13:29:50,142 root INFO IMAGE : Video frame
+13:29:50,142 root INFO 1 => 025-73%
+13:29:50,142 root INFO ------------
+13:29:50,306 root INFO IMAGE : Video frame
+13:29:50,306 root INFO 1 => 025-64%
+13:29:50,306 root INFO ------------
+13:29:51,240 root INFO IMAGE : Video frame
+13:29:51,241 root INFO 1 => 025-57%
+13:29:51,241 root INFO ------------
+13:29:51,394 root INFO IMAGE : Video frame
+13:29:51,394 root INFO 1 => 025-50%
+13:29:51,394 root INFO ------------
+13:29:51,537 root INFO IMAGE : Video frame
+13:29:51,537 root INFO 1 => 025-50%
+13:29:51,537 root INFO ------------
+13:30:46,347 root INFO IMAGE : Video frame
+13:30:46,347 root INFO 1 => 000-56%
+13:30:46,347 root INFO ------------
+13:30:46,489 root INFO IMAGE : Video frame
+13:30:46,489 root INFO 1 => 000-56%
+13:30:46,489 root INFO ------------
+13:30:46,636 root INFO IMAGE : Video frame
+13:30:46,636 root INFO 1 => 000-70%
+13:30:46,637 root INFO ------------
+13:30:46,805 root INFO IMAGE : Video frame
+13:30:46,805 root INFO 1 => 000-61%
+13:30:46,805 root INFO ------------
+13:31:42,60 root INFO IMAGE : Video frame
+13:31:42,60 root INFO 1 => 028-61%
+13:31:42,60 root INFO ------------
+13:31:42,224 root INFO IMAGE : Video frame
+13:31:42,225 root INFO 1 => 028-53%
+13:31:42,225 root INFO ------------
+13:31:46,631 root INFO IMAGE : Video frame
+13:31:46,631 root INFO 1 => 023-64%
+2 => 028-52%
+13:31:46,631 root INFO ------------
+13:31:46,937 root INFO IMAGE : Video frame
+13:31:46,937 root INFO 1 => 053-67%
+13:31:46,938 root INFO ------------
+13:31:47,93 root INFO IMAGE : Video frame
+13:31:47,93 root INFO 1 => 053-71%
+13:31:47,93 root INFO ------------
+13:31:47,255 root INFO IMAGE : Video frame
+13:31:47,255 root INFO 1 => 023-59%
+13:31:47,255 root INFO ------------
+13:31:47,413 root INFO IMAGE : Video frame
+13:31:47,413 root INFO 1 => 023-64%
+2 => 053-60%
+13:31:47,413 root INFO ------------
+13:31:47,857 root INFO IMAGE : Video frame
+13:31:47,857 root INFO 1 => 023-86%
+2 => 028-81%
+13:31:47,858 root INFO ------------
+13:31:48,157 root INFO IMAGE : Video frame
+13:31:48,157 root INFO 1 => 023-59%
+13:31:48,157 root INFO ------------
+13:31:48,313 root INFO IMAGE : Video frame
+13:31:48,313 root INFO 1 => 023-80%
+13:31:48,313 root INFO ------------
+13:31:48,481 root INFO IMAGE : Video frame
+13:31:48,482 root INFO 1 => 028-55%
+13:31:48,482 root INFO ------------
+13:31:48,648 root INFO IMAGE : Video frame
+13:31:48,648 root INFO 1 => 023-68%
+13:31:48,648 root INFO ------------
+13:31:48,805 root INFO IMAGE : Video frame
+13:31:48,805 root INFO 1 => 023-80%
+2 => 028-71%
+13:31:48,805 root INFO ------------
+13:31:48,957 root INFO IMAGE : Video frame
+13:31:48,957 root INFO 1 => 023-67%
+13:31:48,957 root INFO ------------
+13:31:49,118 root INFO IMAGE : Video frame
+13:31:49,118 root INFO 1 => 028-86%
+13:31:49,118 root INFO ------------
+13:31:49,411 root INFO IMAGE : Video frame
+13:31:49,411 root INFO 1 => 028-82%
+2 => 023-51%
+13:31:49,412 root INFO ------------
+13:31:49,575 root INFO IMAGE : Video frame
+13:31:49,575 root INFO 1 => 028-77%
+2 => 023-61%
+13:31:49,575 root INFO ------------
+13:31:49,727 root INFO IMAGE : Video frame
+13:31:49,727 root INFO 1 => 023-76%
+2 => 028-61%
+13:31:49,727 root INFO ------------
+13:31:49,884 root INFO IMAGE : Video frame
+13:31:49,884 root INFO 1 => 023-76%
+2 => 028-54%
+13:31:49,884 root INFO ------------
+13:31:50,35 root INFO IMAGE : Video frame
+13:31:50,35 root INFO 1 => 028-91%
+2 => 023-70%
+13:31:50,35 root INFO ------------
+13:31:50,193 root INFO IMAGE : Video frame
+13:31:50,193 root INFO 1 => 028-83%
+13:31:50,193 root INFO ------------
+13:31:50,354 root INFO IMAGE : Video frame
+13:31:50,354 root INFO 1 => 028-83%
+13:31:50,354 root INFO ------------
+13:31:50,512 root INFO IMAGE : Video frame
+13:31:50,512 root INFO 1 => 028-64%
+13:31:50,512 root INFO ------------
+13:31:57,680 root INFO IMAGE : Video frame
+13:31:57,680 root INFO 1 => 053-61%
+13:31:57,680 root INFO ------------
+13:31:57,832 root INFO IMAGE : Video frame
+13:31:57,833 root INFO 1 => 053-62%
+13:31:57,833 root INFO ------------
+13:31:57,993 root INFO IMAGE : Video frame
+13:31:57,993 root INFO 1 => 053-70%
+13:31:57,993 root INFO ------------
+13:31:58,151 root INFO IMAGE : Video frame
+13:31:58,151 root INFO 1 => 053-64%
+13:31:58,151 root INFO ------------
+13:31:58,305 root INFO IMAGE : Video frame
+13:31:58,305 root INFO 1 => 053-83%
+2 => 023-75%
+13:31:58,305 root INFO ------------
+13:31:58,462 root INFO IMAGE : Video frame
+13:31:58,462 root INFO 1 => 053-60%
+2 => 023-50%
+13:31:58,462 root INFO ------------
+13:31:58,619 root INFO IMAGE : Video frame
+13:31:58,620 root INFO 1 => 053-53%
+2 => 023-51%
+13:31:58,620 root INFO ------------
+13:31:58,778 root INFO IMAGE : Video frame
+13:31:58,778 root INFO 1 => 053-94%
+13:31:58,778 root INFO ------------
+13:31:58,932 root INFO IMAGE : Video frame
+13:31:58,933 root INFO 1 => 053-62%
+2 => 023-60%
+13:31:58,933 root INFO ------------
+13:31:59,92 root INFO IMAGE : Video frame
+13:31:59,92 root INFO 1 => 053-90%
+13:31:59,92 root INFO ------------
+13:31:59,240 root INFO IMAGE : Video frame
+13:31:59,240 root INFO 1 => 053-72%
+13:31:59,240 root INFO ------------
+13:31:59,382 root INFO IMAGE : Video frame
+13:31:59,383 root INFO 1 => 053-95%
+13:31:59,383 root INFO ------------
+13:31:59,527 root INFO IMAGE : Video frame
+13:31:59,527 root INFO 1 => 053-84%
+13:31:59,527 root INFO ------------
+13:31:59,685 root INFO IMAGE : Video frame
+13:31:59,685 root INFO 1 => 053-90%
+2 => 042-59%
+13:31:59,685 root INFO ------------
+13:31:59,850 root INFO IMAGE : Video frame
+13:31:59,850 root INFO 1 => 053-86%
+2 => 042-72%
+13:31:59,850 root INFO ------------
+13:32:00,7 root INFO IMAGE : Video frame
+13:32:00,7 root INFO 1 => 053-95%
+2 => 042-65%
+13:32:00,8 root INFO ------------
+13:32:00,167 root INFO IMAGE : Video frame
+13:32:00,167 root INFO 1 => 053-92%
+13:32:00,167 root INFO ------------
+13:32:00,326 root INFO IMAGE : Video frame
+13:32:00,326 root INFO 1 => 053-76%
+13:32:00,326 root INFO ------------
+13:32:00,620 root INFO IMAGE : Video frame
+13:32:00,620 root INFO 1 => 053-59%
+13:32:00,620 root INFO ------------
+13:32:12,502 root INFO IMAGE : Video frame
+13:32:12,502 root INFO 1 => 028-74%
+13:32:12,502 root INFO ------------
+13:32:21,716 root INFO IMAGE : Video frame
+13:32:21,716 root INFO 1 => 028-55%
+13:32:21,716 root INFO ------------
+13:32:21,867 root INFO IMAGE : Video frame
+13:32:21,867 root INFO 1 => 028-69%
+13:32:21,867 root INFO ------------
+13:32:22,7 root INFO IMAGE : Video frame
+13:32:22,7 root INFO 1 => 028-55%
+13:32:22,7 root INFO ------------
+13:32:22,162 root INFO IMAGE : Video frame
+13:32:22,162 root INFO 1 => 028-54%
+13:32:22,162 root INFO ------------
+13:32:25,18 root INFO IMAGE : Video frame
+13:32:25,18 root INFO 1 => 028-50%
+13:32:25,18 root INFO ------------
+13:32:25,173 root INFO IMAGE : Video frame
+13:32:25,173 root INFO 1 => 028-59%
+13:32:25,173 root INFO ------------
+13:32:25,329 root INFO IMAGE : Video frame
+13:32:25,329 root INFO 1 => 028-67%
+13:32:25,329 root INFO ------------
+13:32:25,474 root INFO IMAGE : Video frame
+13:32:25,475 root INFO 1 => 028-81%
+2 => 000-50%
+13:32:25,475 root INFO ------------
+13:32:25,641 root INFO IMAGE : Video frame
+13:32:25,641 root INFO 1 => 028-93%
+2 => 000-73%
+13:32:25,641 root INFO ------------
+13:32:25,792 root INFO IMAGE : Video frame
+13:32:25,792 root INFO 1 => 028-88%
+2 => 000-83%
+13:32:25,792 root INFO ------------
+13:32:25,944 root INFO IMAGE : Video frame
+13:32:25,944 root INFO 1 => 028-97%
+2 => 000-65%
+13:32:25,944 root INFO ------------
+13:32:26,91 root INFO IMAGE : Video frame
+13:32:26,91 root INFO 1 => 028-93%
+2 => 000-50%
+13:32:26,91 root INFO ------------
+13:32:26,250 root INFO IMAGE : Video frame
+13:32:26,250 root INFO 1 => 000-71%
+13:32:26,250 root INFO ------------
+13:32:26,408 root INFO IMAGE : Video frame
+13:32:26,408 root INFO 1 => 028-99%
+13:32:26,408 root INFO ------------
+13:32:26,565 root INFO IMAGE : Video frame
+13:32:26,565 root INFO 1 => 028-63%
+13:32:26,565 root INFO ------------
+13:32:26,719 root INFO IMAGE : Video frame
+13:32:26,720 root INFO 1 => 028-82%
+13:32:26,720 root INFO ------------
+13:32:26,889 root INFO IMAGE : Video frame
+13:32:26,889 root INFO 1 => 028-63%
+13:32:26,889 root INFO ------------
+13:32:41,922 root INFO IMAGE : Video frame
+13:32:41,922 root INFO 1 => 053-51%
+13:32:41,922 root INFO ------------
+13:32:42,504 root INFO IMAGE : Video frame
+13:32:42,505 root INFO 1 => 053-93%
+13:32:42,505 root INFO ------------
+13:32:42,667 root INFO IMAGE : Video frame
+13:32:42,667 root INFO 1 => 053-80%
+13:32:42,667 root INFO ------------
+13:32:42,818 root INFO IMAGE : Video frame
+13:32:42,818 root INFO 1 => 053-62%
+13:32:42,818 root INFO ------------
+13:32:42,981 root INFO IMAGE : Video frame
+13:32:42,981 root INFO 1 => 053-67%
+13:32:42,981 root INFO ------------
+13:32:43,133 root INFO IMAGE : Video frame
+13:32:43,133 root INFO 1 => 053-81%
+13:32:43,133 root INFO ------------
+13:32:43,288 root INFO IMAGE : Video frame
+13:32:43,288 root INFO 1 => 053-97%
+13:32:43,288 root INFO ------------
+13:32:43,450 root INFO IMAGE : Video frame
+13:32:43,450 root INFO 1 => 053-95%
+13:32:43,450 root INFO ------------
+13:32:54,41 root INFO IMAGE : Video frame
+13:32:54,41 root INFO 1 => 007-50%
+13:32:54,41 root INFO ------------
+13:33:02,953 root INFO IMAGE : Video frame
+13:33:02,953 root INFO 1 => 028-57%
+13:33:02,953 root INFO ------------
+13:33:12,18 root INFO IMAGE : Video frame
+13:33:12,18 root INFO 1 => 023-66%
+2 => 003-58%
+13:33:12,18 root INFO ------------
+13:33:13,41 root INFO IMAGE : Video frame
+13:33:13,41 root INFO 1 => 003-72%
+13:33:13,41 root INFO ------------
+13:33:16,804 root INFO IMAGE : Video frame
+13:33:16,804 root INFO 1 => 053-60%
+13:33:16,804 root INFO ------------
+13:33:18,543 root INFO IMAGE : Video frame
+13:33:18,543 root INFO 1 => 053-54%
+13:33:18,543 root INFO ------------
+13:33:18,701 root INFO IMAGE : Video frame
+13:33:18,701 root INFO 1 => 053-78%
+13:33:18,701 root INFO ------------
+13:33:19,147 root INFO IMAGE : Video frame
+13:33:19,147 root INFO 1 => 053-52%
+13:33:19,147 root INFO ------------
+13:33:19,581 root INFO IMAGE : Video frame
+13:33:19,581 root INFO 1 => 053-55%
+13:33:19,581 root INFO ------------
+13:33:54,631 root INFO IMAGE : Video frame
+13:33:54,631 root INFO 1 => 023-50%
+13:33:54,631 root INFO ------------
+13:33:55,833 root INFO IMAGE : Video frame
+13:33:55,833 root INFO 1 => 023-52%
+13:33:55,833 root INFO ------------
+13:34:19,231 root INFO IMAGE : Video frame
+13:34:19,231 root INFO 1 => 053-52%
+13:34:19,231 root INFO ------------
+13:34:19,382 root INFO IMAGE : Video frame
+13:34:19,382 root INFO 1 => 053-62%
+13:34:19,382 root INFO ------------
+13:34:24,514 root INFO IMAGE : Video frame
+13:34:24,515 root INFO 1 => 023-54%
+13:34:24,515 root INFO ------------
+13:34:26,444 root INFO IMAGE : Video frame
+13:34:26,444 root INFO 1 => 023-62%
+13:34:26,444 root INFO ------------
+13:34:29,95 root INFO IMAGE : Video frame
+13:34:29,95 root INFO 1 => 028-53%
+13:34:29,95 root INFO ------------
+13:34:30,845 root INFO IMAGE : Video frame
+13:34:30,846 root INFO 1 => 003-50%
+13:34:30,846 root INFO ------------
+13:35:24,821 root INFO IMAGE : Video frame
+13:35:24,822 root INFO 1 => 053-62%
+2 => 003-55%
+13:35:24,822 root INFO ------------
+13:35:24,969 root INFO IMAGE : Video frame
+13:35:24,970 root INFO 1 => 053-61%
+13:35:24,970 root INFO ------------
+13:35:25,113 root INFO IMAGE : Video frame
+13:35:25,113 root INFO 1 => 053-68%
+13:35:25,113 root INFO ------------
+13:35:25,280 root INFO IMAGE : Video frame
+13:35:25,280 root INFO 1 => 053-58%
+13:35:25,281 root INFO ------------
+13:35:32,300 root INFO IMAGE : Video frame
+13:35:32,300 root INFO 1 => 009-56%
+13:35:32,300 root INFO ------------
+13:35:32,928 root INFO IMAGE : Video frame
+13:35:32,928 root INFO 1 => 000-59%
+13:35:32,928 root INFO ------------
+13:35:33,84 root INFO IMAGE : Video frame
+13:35:33,84 root INFO 1 => 000-76%
+13:35:33,84 root INFO ------------
+13:35:33,231 root INFO IMAGE : Video frame
+13:35:33,231 root INFO 1 => 000-56%
+13:35:33,231 root INFO ------------

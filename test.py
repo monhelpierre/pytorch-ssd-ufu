@@ -121,6 +121,7 @@ if __name__ == '__main__':
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
+    onedrivepath = 'C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/test/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
@@ -170,7 +171,7 @@ if __name__ == '__main__':
             if args.save:
                 save_path = args.save + '/' + model_name + '/'
             else:
-                save_path = results_path + 'test/image/' + model_name + '/' 
+                save_path = onedrivepath + 'image/' + model_name + '/' 
 
             if not os.path.exists(save_path):
                 os.mkdir(save_path)
