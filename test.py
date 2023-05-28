@@ -80,7 +80,6 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
         video_time = datetime.timedelta(seconds=seconds)
         cv2.putText(frame, f'FPS: {int(fps)}   {video_time}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
         cv2.imshow('Video', frame)
-        
         if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
             break
     cap.release()
