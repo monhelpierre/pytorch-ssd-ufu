@@ -24,6 +24,7 @@ ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
 ap.add_argument("-sp", "--save", required=False, help="Path to save detection")
+ap.add_argument("-map", "--precision", required=False, help="Path to save detection")
 args = ap.parse_args()
        
 def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
@@ -177,6 +178,8 @@ if __name__ == '__main__':
             elif args.image:
                 print('Detection from single image.')
                 process_image(cfg, args.image, save_path, label_names, logging)
+            elif args.precision:
+                calulate_mAP(model, dataloader, cfg, label_names, device)
             else:
                 print('Detection from test set images.')
                 dataloader = create_dataloader(
@@ -187,7 +190,6 @@ if __name__ == '__main__':
                     image_stddev=cfg.image_stddev,
                     num_workers=workers
                 )
-                calulate_mAP(model, dataloader, cfg, label_names, device)
                 for image_path in images_path_list:
                     process_image(cfg, image_path, save_path, label_names, logging)
         else:
