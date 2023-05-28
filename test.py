@@ -54,8 +54,7 @@ def read_image(cfg, image_path=None, frame=None):
         image = image.resize(size)
     else:
         image = Image.open(image_path)
-        image = image.resize(size)
-    image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)  
+        image = image.resize(size)  
     image = transforms.ToTensor()(image)
     image = image.unsqueeze(0).to(device)
     return image
@@ -69,16 +68,17 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
         ret, frame = cap.read()
         if not ret:
             break
-        image = read_image(cfg, frame=frame)
-        frame, nb_found, detection = model.detect('Video frame', image, label_names, logging, threshold, no_amp)
+        frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame), label_names, logging, threshold, no_amp)
         if nb_found > 0:
-            frame = cv2.convertScaleAbs(frame, alpha=(255.0))
-            cv2.imwrite(save_path + str(cpt) + '.png', frame)
+            if not os.path.exists(save_path):
+                os.makedirs(save_path)
+            filename = save_path + 'frame' + str(cpt) + '.png' 
+            frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
+            Image.fromarray(frame).save(filename)
             cpt += 1
         frame_count -= 1
         seconds = round(frame_count / fps)
-        video_time = datetime.timedelta(seconds=seconds)
-        cv2.putText(frame, f'FPS: {int(fps)}   {video_time}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
+        cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
         cv2.imshow('Video', frame)
         if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
             break
@@ -98,16 +98,14 @@ def convert_to_onnx(model, size, path):
         
 def process_image(cfg, image_path, save_path, label_names, logging):
     image_name = image_path.split('/')[-1]
-    image, nb_found, detection = model.detect(image_name, read_image(cfg, image_path), label_names, logging)        
+    image, nb_found, _ = model.detect(image_name, read_image(cfg, image_path=image_path), label_names, logging)        
     if nb_found > 0:
-        if save_path:
-            filename = save_path + image_name.split('/')[-1]
-            image = cv2.convertScaleAbs(image, alpha=(255.0))
-            cv2.imwrite(filename, image)
-    else:
-        if not log_path:
-            print('No object detected in the image')
-    
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
+        filename = save_path + 'result-' + image_name.split('/')[-1]
+        image = cv2.convertScaleAbs(image, alpha=(255.0))
+        Image.fromarray(image).save(filename)
+
 #=========================================================================================================
 
 if __name__ == '__main__':
@@ -151,8 +149,6 @@ if __name__ == '__main__':
         cfg = config_path + f'{model_name}.yaml'
 
         if os.path.exists(cfg):
-            if(args.save and not os.path.exists(args.save)):
-                raise ValueError("Save path does not exist")
             pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
             model = build_model(cfg, label_names)
@@ -173,15 +169,10 @@ if __name__ == '__main__':
             else:
                 save_path = onedrivepath + 'image/' + model_name + '/' 
 
-            if not os.path.exists(save_path):
-                os.mkdir(save_path)
-                
             if args.video:
                 if os.path.exists(args.video):
                     print('Detection from video.')
                     save_path = save_path.replace('/image/', '/video/')
-                    if not os.path.exists(save_path):
-                        os.mkdir(save_path)
                     detect_from_video(cfg, args.video, save_path, model, logging, threshold, no_amp)
             elif args.image:
                 print('Detection from single image.')
@@ -196,7 +187,7 @@ if __name__ == '__main__':
                     image_stddev=cfg.image_stddev,
                     num_workers=workers
                 )
-                #calulate_mAP(model, dataloader, cfg, label_names, device)
+                calulate_mAP(model, dataloader, cfg, label_names, device)
                 for image_path in images_path_list:
                     process_image(cfg, image_path, save_path, label_names, logging)
         else:
