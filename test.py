@@ -64,11 +64,9 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    
     output_file = save_path + 'output.avi'
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     video_writer = cv2.VideoWriter(output_file, fourcc, fps, (cfg.input_size, cfg.input_size))  
-    
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -205,3 +203,5 @@ if __name__ == '__main__':
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Desktop/videos/01 Brazilian traffic laws and signs. My Brazilian Friends driving in São Paulo City SP.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4"
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/1.mp4" --save "C:/Users/monhe/OneDrive/Downloads/"
+#python test.py -mi 0 --video "C:/Users/monhe/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhe/Downloads"
+#python test.py -mi 0 --video "C:/Users/monhe/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhe/Downloads"
