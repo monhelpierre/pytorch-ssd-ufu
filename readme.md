@@ -7,8 +7,8 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Evaluation: 02 val
 * Testing: 01 test
 
-| Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                                |
-|----------------------------|:----------:|:-----------------:|------------------------------------------------------------------------------|
+| Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                        |
+|----------------------------|:----------:|:-----------------:|----------------------------------------------------------------------|
 | MobileNetV2 SSDLite        | 320        | 87.4              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 | MobileNetV3 Small SSDLite  | 320        | 84.5              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 | MobileNetV3 Large SSDLite  | 320        | 46.0              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
@@ -38,6 +38,27 @@ To visualize training progress using TensorBoard:
 tensorboard --logdir <LOG_DIRECTORY>
 ```
 
+## Class description
+| Label      | English Description             | Portuguese Description                      |
+|------------|:--------------------------------|:--------------------------------------------|
+| 000        | Stop sign                       | Parada obrigatória                          |
+| 001        | Give away                       | Dê a preferência                            |
+| 003        | No left turn                    | Proíbido virar à esquerda                   |
+| 004        | No right turn                   | Proíbido virar à direita                    |
+| 007        | No park                         | Proíbido estacionar                         |
+| 008        | Regular park                    | Estacionamento regularizdo                  |
+| 009        | No park and stop                | Proíbido parar e estacionar                 |
+| 023        | Speed limit                     | Limite de velocidade permitida              |
+| 025        | Road hump                       | Âlfandega                                   |
+| 028        | Sense of the way circulation    | Sentido de circulação da via                |
+| 035        | Truck keep right                | Veículo pesados, mantenham-se à direita     |
+| 040        | Bus route                       | Fôaixa de ônibus                            |
+| 042        | Cycling                         | Bicycleta permitida                         |
+| 051        | Yellow light                    | Atenção veículos                            |
+| 052        | Red light                       | Parada de veículos                          |
+| 053        | Green light                     | Veículos podem seguir                       |
+
+
 To test from a video:
 ```bash
 python test.py -mi 0 --video "/path/to/video/" --save "/path/to/save/video/output/" (mobilenetv2_ssdlite)
@@ -52,22 +73,3 @@ To test from the test dataset where output images will be saved in logs folder:
 ```bash
 python test.py -mi 0 (mobilenetv2_ssdlite)
 ```
-
-CLASS  -   DESCRIPTION
------------------------------------
-000        -   Stop sign
-001        -   Give away
-003        -   No left turn
-004        -   No right turn
-007        -   No park
-008        -   Regular park
-009        -   No park and stop
-023        -   Speed limit
-025        -   Road hump
-028        -   Sense of the way circulation
-035        -   Truck keep right
-040        -   Bus route
-042        -   Cycling
-051        -   Yellow light
-052        -   Red light
-053        -   Green light
