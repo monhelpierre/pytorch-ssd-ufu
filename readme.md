@@ -52,3 +52,22 @@ To test from the test dataset where output images will be saved in logs folder:
 ```bash
 python test.py -mi 0 (mobilenetv2_ssdlite)
 ```
+
+CLASS  -   DESCRIPTION
+-----------------------------------
+000        -   Stop sign
+001        -   Give away
+003        -   No left turn
+004        -   No right turn
+007        -   No park
+008        -   Regular park
+009        -   No park and stop
+023        -   Speed limit
+025        -   Road hump
+028        -   Sense of the way circulation
+035        -   Truck keep right
+040        -   Bus route
+042        -   Cycling
+051        -   Yellow light
+052        -   Red light
+053        -   Green light
