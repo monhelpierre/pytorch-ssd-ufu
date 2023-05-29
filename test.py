@@ -61,28 +61,32 @@ def read_image(cfg, image_path=None, frame=None):
     return image
 
 def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_amp=True, fps = 300):
-    cpt = 0
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    
+    output_file = save_path + 'output.avi'
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    video_writer = cv2.VideoWriter(output_file, fourcc, fps, (cfg.input_size, cfg.input_size))  
+    
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
         frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame), label_names, logging, threshold, no_amp)
+        frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
         if nb_found > 0:
             if not os.path.exists(save_path):
                 os.makedirs(save_path)
-            filename = save_path + 'frame' + str(cpt) + '.png' 
             frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
-            Image.fromarray(frame).save(filename)
-            cpt += 1
+            video_writer.write(frame)
         frame_count -= 1
         seconds = round(frame_count / fps)
         cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
         cv2.imshow('Video', frame)
         if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
             break
+    video_writer.release()
     cap.release()
     cv2.destroyAllWindows()
 
@@ -200,3 +204,4 @@ if __name__ == '__main__':
 #python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Pictures/test6.jpg" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Desktop/videos/01 Brazilian traffic laws and signs. My Brazilian Friends driving in São Paulo City SP.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
 #python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4"
+#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/1.mp4" --save "C:/Users/monhe/OneDrive/Downloads/"
