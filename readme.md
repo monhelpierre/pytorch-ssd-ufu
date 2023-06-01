@@ -7,6 +7,8 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Evaluation: 02 val
 * Testing: 01 test
 
+(https://drive.google.com/drive/folders/19Ch4V5ApUGn-FMBh0kknPzgf20HagUPv?usp=sharing)
+
 | Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                        |
 |----------------------------|:----------:|:-----------------:|----------------------------------------------------------------------|
 | MobileNetV2 SSDLite        | 320        | 87.4              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |

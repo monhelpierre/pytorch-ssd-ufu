@@ -1,5 +1,5 @@
 # Data
-recall_steps: 11
+recall_steps: 5
 image_mean: [123.675 , 116.28, 103.53]
 image_stddev: [58.395, 57.12, 57.375]
 
@@ -8,7 +8,7 @@ model: SSDLite
 backbone:
   name: MobileNetV2
   width_mult: 1.0
-input_size: 320
+input_size: 520
 anchor_scales: [0.1, 0.2, 0.375, 0.55, 0.725, 0.9]
 anchor_aspect_ratios: [[1, 2], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2], [1, 2]]
 
