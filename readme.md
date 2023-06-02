@@ -14,6 +14,8 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 | MobileNetV2 SSDLite        | 320        | 87.4              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 | MobileNetV3 Small SSDLite  | 320        | 84.5              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 | MobileNetV3 Large SSDLite  | 320        | 46.0              | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
+|----------------------------|------------|-------------------|----------------------------------------------------------------------|
+| MobileNetV2 SSDLite        | 520        |                   | [configs/mobilenetV2_ssdlite.yaml](configs/mobilenetV2_ssdlite.yaml) |
 
 ## Requirements
 * Python ≥ 3.6
