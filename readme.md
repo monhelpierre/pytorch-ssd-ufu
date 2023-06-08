@@ -24,7 +24,7 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Install libraries: `pip install -r requirements.txt`
 
 ## Configuration
-We use YAML for configuration management. See `configs/*/*.yaml` for examples.
+We use YAML for configuration management. See `configs/*.yaml` for examples.
 You can modify the settings as needed.
 
 ## Training
