@@ -206,7 +206,6 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp,
 
 def train_model(config_path, results_path, model_name, device, train_json, val_json, label_names):
     cfg = config_path + f'{model_name}.yaml'
-    logdir = results_path + f'{model_name}/'
     workers = 4
     resume = True
     no_amp = 1
@@ -216,6 +215,8 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
     enable_amp = (not no_amp)
 
     #CheckDataset(cfg)
+
+    logdir = results_path + f'{cfg.input_size}/{model_name}/'
     
     if os.path.exists(logdir) and (not resume):
         raise ValueError("Log directory %s already exists. Specify --resume "
@@ -355,7 +356,7 @@ if __name__ == '__main__':
         PrepareDataset(dataset_path)
 
     device = 'cpu'
-    results_path = 'results/'
+    results_path = 'results'
     train_json = dataset_path + 'train.json'
     val_json = dataset_path + 'val.json'
     label_names = [
