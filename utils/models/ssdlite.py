@@ -238,7 +238,7 @@ class SSDLite(nn.Sequential):
         image_info = f'IMAGE : {image_name.split("/")[-1]}'
         
         for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
-            if score > threshold:
+            if score >= threshold:
                 x1, y1, x2, y2 = box.cpu().numpy().astype(int)
                 score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
                 label =  label_names[cls.cpu().numpy()] + '-' + score_value

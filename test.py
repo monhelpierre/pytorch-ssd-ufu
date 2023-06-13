@@ -118,7 +118,7 @@ if __name__ == '__main__':
     threshold = 0.5
     
     root = os.getcwd() + '/'
-    results_path = root + 'results/'
+    results_path = root + 'results'
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
@@ -152,8 +152,9 @@ if __name__ == '__main__':
         cfg = config_path + f'{model_name}.yaml'
 
         if os.path.exists(cfg):
-            pth = results_path + f'{model_name}/best.pth'
             cfg = load_config(cfg)
+            pth = results_path + f'{cfg.input_size}/{model_name}/best.pth'
+            
             model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
@@ -181,6 +182,14 @@ if __name__ == '__main__':
                 print('Detection from single image.')
                 process_image(cfg, args.image, save_path, label_names, logging)
             elif args.precision:
+                dataloader = create_dataloader(
+                    test_json,
+                    batch_size=cfg.batch_size,
+                    image_size=cfg.input_size,
+                    image_mean=cfg.image_mean,
+                    image_stddev=cfg.image_stddev,
+                    num_workers=workers
+                )
                 calulate_mAP(model, dataloader, cfg, label_names, device)
             else:
                 print('Detection from test set images.')
