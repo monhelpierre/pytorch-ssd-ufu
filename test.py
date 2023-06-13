@@ -118,7 +118,7 @@ if __name__ == '__main__':
     threshold = 0.5
     
     root = os.getcwd() + '/'
-    results_path = root + 'results'
+    results_path = root + 'results/'
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
