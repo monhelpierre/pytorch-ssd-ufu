@@ -221,7 +221,7 @@ class SSDLite(nn.Sequential):
         classes = torch.reshape(classes, [bs, num_anchors * num_classes])
         return boxes, scores, classes
     
-    def detect(self, image_name, image, label_names, logging, threshold=0.5, no_amp=True):
+    def detect(self, image_name, image, label_names, logging, threshold=0.6, no_amp=True):
         from utils.misc import nms
         nb_found = 0
         with torch.no_grad():
@@ -238,7 +238,7 @@ class SSDLite(nn.Sequential):
         image_info = f'IMAGE : {image_name.split("/")[-1]}'
         
         for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
-            if score >= threshold:
+            if score > threshold:
                 x1, y1, x2, y2 = box.cpu().numpy().astype(int)
                 score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
                 label =  label_names[cls.cpu().numpy()] + '-' + score_value
