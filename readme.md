@@ -1,4 +1,4 @@
-# Detection, classification and recognition of brazilian vertical traffic sings and lights from a car using single shot multibox detector.
+# Detection and classification of Brazilian vertical traffic sings and lights from a car using Single Shot Multibox Detector (SSD).
 PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325) from orignal repository (https://github.com/biyoml/PyTorch-SSD).
 
 ## Results
