@@ -168,8 +168,7 @@ if __name__ == '__main__':
             model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
-
-            print(pth)
+            
             if os.path.exists(pth):
                 print('Loaded from pretrained model')
                 model.load_state_dict(torch.load(pth)['model_state_dict'])
