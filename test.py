@@ -19,7 +19,7 @@ import logging
 import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-db", "--dataset", required=False, default="C:/datasets/", help="Link to database")
+ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/ufu/datasets/", help="Link to database")
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
@@ -61,12 +61,17 @@ def read_image(cfg, image_path=None, frame=None):
     return image
 
 def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_amp=True, fps = 300):
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    
     output_file = save_path + 'output.avi'
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     video_writer = cv2.VideoWriter(output_file, fourcc, fps, (cfg.input_size, cfg.input_size))  
+    
+    count_name = 0
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -74,10 +79,10 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
         frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame), label_names, logging, threshold, no_amp)
         frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
         if nb_found > 0:
-            if not os.path.exists(save_path):
-                os.makedirs(save_path)
+            count_name += 1
             frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
             video_writer.write(frame)
+            cv2.imwrite(save_path + str(count_name) + '.png', frame)
         frame_count -= 1
         seconds = round(frame_count / fps)
         cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
@@ -153,12 +158,18 @@ if __name__ == '__main__':
 
         if os.path.exists(cfg):
             cfg = load_config(cfg)
-            pth = results_path + f'{cfg.input_size}/{model_name}/best.pth'
+            input_size = cfg.input_size
+            
+            if cfg.input_size == 320:
+                input_size = f'{cfg.input_size}_1'
+                
+            pth = results_path + f'{input_size}/{model_name}/best.pth'
             
             model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
 
+            print(pth)
             if os.path.exists(pth):
                 print('Loaded from pretrained model')
                 model.load_state_dict(torch.load(pth)['model_state_dict'])
