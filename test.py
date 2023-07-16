@@ -150,10 +150,7 @@ if __name__ == '__main__':
         if args.model:
             if model_name != model_names[int(args.model)]:
                 continue
-            
-        #print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
-        #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
-            
+             
         cfg = config_path + f'{model_name}.yaml'
 
         if os.path.exists(cfg):
@@ -168,6 +165,9 @@ if __name__ == '__main__':
             model = build_model(cfg, label_names)
             model.to(device)
             model.eval()
+            
+            print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
+            #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
             
             if os.path.exists(pth):
                 print('Loaded from pretrained model')
