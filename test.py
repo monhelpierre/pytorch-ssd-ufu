@@ -82,7 +82,7 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
             count_name += 1
             frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
             video_writer.write(frame)
-            cv2.imwrite(save_path + str(count_name) + '.png', frame)
+            cv2.imwrite(save_path + str(count_name) + '.jpg', frame)
         frame_count -= 1
         seconds = round(frame_count / fps)
         cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
@@ -96,7 +96,7 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
 def get_split_test(dataset_path, testing_file):
     with open(dataset_path + testing_file) as f:
         ids = [line.strip() for line in f.readlines()]
-    return [dataset_path + 'images/' + id + '.png' for id in ids]       
+    return [dataset_path + 'images/' + id + '.jpg' for id in ids]       
 
 def convert_to_onnx(model, size, path):
     model.eval()

@@ -115,7 +115,7 @@ class PrepareDataset():
                     ids = [line.strip() for line in f.readlines()]
 
                 for id in tqdm(ids, desc=f"{split}"):
-                    image_path = os.path.join(self.root, 'images', id + '.png')
+                    image_path = os.path.join(self.root, 'images', id + '.jpg')
                     annotation_path = os.path.join(self.root, 'annotations', id + '.xml')
                     boxes, classes, difficulties = self.parse_annotation(annotation_path)
                     classes = [self.label_names.index(c) for c in classes]
@@ -256,7 +256,6 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
         'APs': AveragePrecision(len(label_names), cfg.recall_steps)
     }
 
-
     # Checkpointing
     ckpt = CheckpointManager(logdir, model=model, optim=optim, scaler=scaler, scheduler=scheduler, best_score=0.)
     ckpt.restore_lastest_checkpoint()
@@ -277,6 +276,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
         # Train
         model.train()
         metrics['loss'].reset()
+        metrics['APs'].reset()
         if epoch == 1:
             warnings.filterwarnings(
                 'ignore',
@@ -301,6 +301,11 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
                 metrics = metrics,
                 device = device)
             loss = metrics['loss'].result
+            APs = metrics['APs'].result
+            mAP50 = APs[:, 0].mean()
+            mAP = APs.mean()
+            print("mAP@[0.5]: %.3f" % mAP50)
+            print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
             lr = get_lr(optim)
             pbar.set_postfix(loss='%.5f' % metrics['loss'].result, lr=lr)
 
@@ -308,6 +313,8 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
                 warmup_scheduler.step()
         writers['train'].add_scalar('Loss', loss, epoch)
         writers['train'].add_scalar('Learning rate', get_lr(optim), epoch)
+        writers['train'].add_scalar('mAP@[0.5]', mAP50, epoch)
+        writers['train'].add_scalar('mAP@[0.5:0.95]', mAP, epoch)
         scheduler.step()
         
         # Validation
@@ -349,7 +356,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
 if __name__ == '__main__':
     root = os.getcwd().replace('\\', '/') + '/'
     config_path = root + 'configs/'
-    dataset_path = 'C:/datasets/'
+    dataset_path = 'C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/ufu/datasets/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
     if len([x for x in os.listdir(dataset_path) if x.__contains__('json')]) != 3:

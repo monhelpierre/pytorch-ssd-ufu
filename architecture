@@ -455,3 +455,61 @@ SSDLite(
     )
   )
 )
+
+
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{l l l l l l |}
+      \hline
+      \textbf{Layer} & \textbf{In} & \textbf{Out} & \textbf{Kernel} & \textbf{Stride}\\\hline 
+      Conv2dNormActivation & 3 & 32 & (3,3) & (2,2)\\
+      Conv2dNormActivation & 32 & 32 & (3,3) & (1,1)\\  
+      Conv2dNormActivation & 32 & 16 & (1,1) & (1,1)\\  
+      Conv2dNormActivation & 16 & 96 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 96 & 96 & (3,3) & (2,2)\\ 
+      Conv2dNormActivation & 96 & 24 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 24 & 144 & (1,1) & (1,1)\\  
+      Conv2dNormActivation & 144 & 144 & (3,3) & (1,1)\\ 
+      Conv2dNormActivation & 144 & 24 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 24 & 144 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 144 & 144 & (3,3) & (2,2)\\ 
+      Conv2dNormActivation & 144 & 32 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 32 & 192 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 192 & 192 & (3,3) & (1,1)\\  
+      Conv2dNormActivation & 192 & 32 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 32 & 192 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 192 & 192 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 192 & 64 & (1,1) & (1,1)\\  
+      Conv2dNormActivation & 64 & 384 & (1,1) & (1,1)\\  
+      Conv2dNormActivation & 384 & 384 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 384 & 64 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 64 & 384 & (1,1) & (1,1)\\ 
+      Conv2dNormActivation & 384 & 384 & (3,3) & (1,1)\\ 
+      Conv2dNormActivation & 384 & 64 & (1,1) & (1,1)\\  
+      Conv2dNormActivation & 64 & 384 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 384 & 384 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 384 & 96 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 96 & 576 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 576 & 576 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 576 & 96 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 96 & 576 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 576 & 576 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 576 & 96 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 96 & 576 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 576 & 576 & (3,3) & (2,2)\\
+      Conv2dNormActivation & 576 & 160 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 160 & 960 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 960 & 960 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 960 & 160 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 160 & 960 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 960 & 960 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 960 & 160 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 160 & 960 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 960 & 960 & (3,3) & (1,1)\\
+      Conv2dNormActivation & 960 & 320 & (1,1) & (1,1)\\
+      Conv2dNormActivation & 320 & 1280 & (1,1) & (1,1)\\\hline 
+    \end{tabular}
+     \caption{Training results for every input size}
+    \label{tab:trainingresults}
+\end{table}

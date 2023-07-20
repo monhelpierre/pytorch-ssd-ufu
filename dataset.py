@@ -3,13 +3,14 @@ import cv2
 import shutil
 import datetime
 import imutils
+from PIL import Image
 
 path = [
         'C:/Users/monhe/OneDrive/Documents/pytorch-ssd-ufu/',
         'C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/ufu/pytorch-ssd-ufu/'
 ]
 
-root = path[0] + 'datasets/'
+root = path[1] + 'datasets/'
 root2 = 'C:/Users/monhe/OneDrive/Documents/datasets/'
 
 def extract_images_from_videos(base_path):
@@ -52,22 +53,24 @@ def extract_images_from_videos(base_path):
     print("Total of all Img saved {}".format(len(os.listdir(images_path_))))
     
 if __name__ == '__main__':
-    
     #extract_images_from_videos(root2)
+    #savepath = 'C:/Users/monhe/Downloads/draft/'
     
-    """
-    for image_name in os.listdir(root + 'images'):
+    #for image_name in os.listdir(root + 'images'):
+        #im1 = Image.open(f'{root}images/{image_name}')
+        #im1.save(f"{savepath}{image_name.replace('png', 'jpg')}")
         
+        """
         if not image_name.__contains__('@'):
             original = root + 'images/' + image_name
             target =  root2 + 'images/' + image_name
             
-            original_ann = root + 'annotations/' + image_name.replace('png', 'xml')
-            target_ann = root2 + 'annotations/' + image_name.replace('png', 'xml')
+            original_ann = root + 'annotations/' + image_name.replace('jpg', 'xml')
+            target_ann = root2 + 'annotations/' + image_name.replace('jpg', 'xml')
             
             if not os.path.exists(target):
                 shutil.copyfile(original, target)
             
             if not os.path.exists(target_ann):
                 shutil.copyfile(original_ann, target_ann)
-    """
+        """
