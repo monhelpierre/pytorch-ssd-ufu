@@ -17,11 +17,11 @@ from utils.misc import load_config, unnormalize
 import argparse
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
 ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
-args = vars(ap.parse_args())
+ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+args = ap.parse_args()
 
-if int(args['model']) < 0 or int(args['model']) > 2:
+if int(args.model) < 0 or int(args.model) > 2:
     raise ValueError("Model index should be 0, 1 or 2")
 
 class CheckDataset():
@@ -374,7 +374,7 @@ if __name__ == '__main__':
     ]
     
     for model_name in model_names:
-        if model_name != model_names[int(args['model'])]:
+        if model_name != model_names[int(args.model)]:
             continue
 
         train_model(

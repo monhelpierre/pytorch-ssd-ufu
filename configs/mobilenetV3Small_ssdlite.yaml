@@ -14,7 +14,7 @@ anchor_aspect_ratios: [[1, 2], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2], [1, 2]]
 
 # Training
 batch_size: 32
-epochs: 25
+epochs: 30
 optim:
   name: SGD
   lr: 0.001
