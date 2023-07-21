@@ -345,6 +345,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
             print("mAP@[0.5]: %.3f" % mAP50)
             print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
             writers['val'].add_scalar('Loss', metrics['loss'].result, epoch)
+            writers['val'].add_scalar('Learning rate', get_lr(optim), epoch)
             writers['val'].add_scalar('mAP@[0.5]', mAP50, epoch)
             writers['val'].add_scalar('mAP@[0.5:0.95]', mAP, epoch)
         ckpt.epoch += 1
