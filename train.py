@@ -300,17 +300,19 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
                 scaler = scaler,
                 metrics = metrics,
                 device = device)
-            loss = metrics['loss'].result
-            APs = metrics['APs'].result
-            mAP50 = APs[:, 0].mean()
-            mAP = APs.mean()
-            print("mAP@[0.5]: %.3f" % mAP50)
-            print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
             lr = get_lr(optim)
             pbar.set_postfix(loss='%.5f' % metrics['loss'].result, lr=lr)
 
             if epoch == 1:
                 warmup_scheduler.step()
+        
+        loss = metrics['loss'].result
+        APs = metrics['APs'].result
+        mAP50 = APs[:, 0].mean()
+        mAP = APs.mean()
+        print("mAP@[0.5]: %.3f" % mAP50)
+        print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
+            
         writers['train'].add_scalar('Loss', loss, epoch)
         writers['train'].add_scalar('Learning rate', get_lr(optim), epoch)
         writers['train'].add_scalar('mAP@[0.5]', mAP50, epoch)
