@@ -19,7 +19,7 @@ import logging
 import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/ufu/datasets/", help="Link to database")
+ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
@@ -123,7 +123,7 @@ if __name__ == '__main__':
     threshold = 0.5
     
     root = os.getcwd() + '/'
-    results_path = root + 'results/'
+    results_path = root + 'results2/'
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'

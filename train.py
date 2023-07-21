@@ -356,14 +356,14 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
 if __name__ == '__main__':
     root = os.getcwd().replace('\\', '/') + '/'
     config_path = root + 'configs/'
-    dataset_path = 'C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/ufu/datasets/'
+    dataset_path = 'C:/Users/monhe/Downloads/datasets/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
     if len([x for x in os.listdir(dataset_path) if x.__contains__('json')]) != 3:
         PrepareDataset(dataset_path)
 
     device = 'cpu'
-    results_path = 'results/'
+    results_path = 'results2/'
     train_json = dataset_path + 'train.json'
     val_json = dataset_path + 'val.json'
     label_names = [
