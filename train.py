@@ -18,6 +18,7 @@ import argparse
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
 args = vars(ap.parse_args())
 
 if int(args['model']) < 0 or int(args['model']) > 2:
@@ -312,7 +313,6 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
         mAP = APs.mean()
         print("mAP@[0.5]: %.3f" % mAP50)
         print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
-            
         writers['train'].add_scalar('Loss', loss, epoch)
         writers['train'].add_scalar('Learning rate', get_lr(optim), epoch)
         writers['train'].add_scalar('mAP@[0.5]', mAP50, epoch)
@@ -359,16 +359,15 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
 if __name__ == '__main__':
     root = os.getcwd().replace('\\', '/') + '/'
     config_path = root + 'configs/'
-    dataset_path = 'C:/Users/monhe/Downloads/datasets/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
-    if len([x for x in os.listdir(dataset_path) if x.__contains__('json')]) != 3:
-        PrepareDataset(dataset_path)
+    if len([x for x in os.listdir(args.dataset) if x.__contains__('json')]) != 3:
+        PrepareDataset(args.dataset)
 
     device = 'cpu'
-    results_path = 'results2/'
-    train_json = dataset_path + 'train.json'
-    val_json = dataset_path + 'val.json'
+    results_path = 'results3/'
+    train_json = args.dataset + 'train.json'
+    val_json = args.dataset + 'val.json'
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
         '025', '028', '035', '040', '042', '051', '052', '053'
