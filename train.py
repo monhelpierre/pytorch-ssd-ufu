@@ -171,11 +171,11 @@ def get_lr(optim):
     for param_group in optim.param_groups:
         return param_group['lr']
 
-def train_step(images, true_boxes, true_classes, model, optim, amp, scaler,
-               metrics, device):
+def train_step(images, true_boxes, true_classes, difficulties, model, optim, amp, scaler, metrics, device):
     images = images.to(device)
     true_boxes = [x.to(device) for x in true_boxes]
     true_classes = [x.to(device) for x in true_classes]
+    difficulties = [x.to(device) for x in difficulties]
 
     optim.zero_grad()
     with autocast(enabled=amp):
@@ -187,9 +187,10 @@ def train_step(images, true_boxes, true_classes, model, optim, amp, scaler,
 
     loss = loss.item()
     metrics['loss'].update(loss, images.shape[0])
+    det_boxes, det_scores, det_classes = nms(*model.decode(preds))
+    metrics['APs'].update(det_boxes, det_scores, det_classes, true_boxes, true_classes, difficulties, True)
 
-def test_step(images, true_boxes, true_classes, difficulties, model, amp,
-              metrics, device):
+def test_step(images, true_boxes, true_classes, difficulties, model, amp, metrics, device):
     images = images.to(device)
     true_boxes = [x.to(device) for x in true_boxes]
     true_classes = [x.to(device) for x in true_classes]
@@ -200,10 +201,8 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp,
         loss = model.compute_loss(preds, true_boxes, true_classes)
     loss = loss.item()
     metrics['loss'].update(loss, images.shape[0])
-
     det_boxes, det_scores, det_classes = nms(*model.decode(preds))
-    metrics['APs'].update(det_boxes, det_scores, det_classes,
-                          true_boxes, true_classes, difficulties)
+    metrics['APs'].update(det_boxes, det_scores, det_classes, true_boxes, true_classes, difficulties)
 
 def train_model(config_path, results_path, model_name, device, train_json, val_json, label_names):
     cfg = config_path + f'{model_name}.yaml'
@@ -291,10 +290,11 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
         pbar = tqdm(train_loader,
             bar_format="{l_bar}{bar:20}{r_bar}",
             desc="Training")
-        for (images, true_boxes, true_classes, _) in pbar:
+        for (images, true_boxes, true_classes, difficulties) in pbar:
             train_step(images,
                 true_boxes,
                 true_classes,
+                difficulties = difficulties,
                 model = model,
                 optim = optim,
                 amp = enable_amp,
@@ -306,14 +306,14 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
 
             if epoch == 1:
                 warmup_scheduler.step()
-        
-        loss = metrics['loss'].result
         APs = metrics['APs'].result
         mAP50 = APs[:, 0].mean()
         mAP = APs.mean()
+        if mAP > ckpt.best_score:
+            ckpt.best_score = mAP
         print("mAP@[0.5]: %.3f" % mAP50)
         print("mAP@[0.5:0.95]: %.3f (best: %.3f)" % (mAP, ckpt.best_score))
-        writers['train'].add_scalar('Loss', loss, epoch)
+        writers['train'].add_scalar('Loss', metrics['loss'].result, epoch)
         writers['train'].add_scalar('Learning rate', get_lr(optim), epoch)
         writers['train'].add_scalar('mAP@[0.5]', mAP50, epoch)
         writers['train'].add_scalar('mAP@[0.5:0.95]', mAP, epoch)
@@ -322,6 +322,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
         # Validation
         if epoch % val_period == 0:
             model.eval()
+            ckpt.best_score = 0.00
             metrics['loss'].reset()
             metrics['APs'].reset()
             pbar = tqdm(val_loader,
@@ -365,7 +366,7 @@ if __name__ == '__main__':
         PrepareDataset(args.dataset)
 
     device = 'cpu'
-    results_path = 'results3/'
+    results_path = 'results4/'
     train_json = args.dataset + 'train.json'
     val_json = args.dataset + 'val.json'
     label_names = [

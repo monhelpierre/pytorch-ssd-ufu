@@ -34,7 +34,7 @@ class AveragePrecision(object):
         self.false_negatives = []
 
     def update(self, det_boxes, det_scores, det_classes, true_boxes, true_classes,
-               difficulties):
+               difficulties, isTraining=False):
         iou_thres = np.linspace(0.5, 0.95, 10)
 
         bs = len(det_boxes)
@@ -78,7 +78,7 @@ class AveragePrecision(object):
             if indices[0].shape[0] > 0:
                 matches = torch.stack(indices, axis=1)   # [num_matches, 2]
                 matches = matches.cpu().numpy()   # only np.unique() supports `return_index` option
-                ious = ious.cpu().numpy()
+                ious = ious.cpu().numpy() if not isTraining else ious.detach().numpy()
                 ious = ious[matches[:, 0], matches[:, 1]]
 
                 # Find the ground truth with the best IoU for each detection
