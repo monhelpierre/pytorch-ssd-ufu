@@ -78,14 +78,17 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
             break
         frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame), label_names, logging, threshold, no_amp)
         frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
+        
+        frame_count -= 1
+        seconds = round(frame_count / fps)
+        cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
+        
         if nb_found > 0:
             count_name += 1
             frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
             video_writer.write(frame)
             cv2.imwrite(save_path + str(count_name) + '.jpg', frame)
-        frame_count -= 1
-        seconds = round(frame_count / fps)
-        cv2.putText(frame, f'FPS: {int(fps)}   {datetime.timedelta(seconds=seconds)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR, 2) 
+        
         cv2.imshow('Video', frame)
         if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
             break
@@ -123,7 +126,7 @@ if __name__ == '__main__':
     threshold = 0.5
     
     root = os.getcwd() + '/'
-    results_path = root + 'results2/'
+    results_path = root + 'results/'
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
