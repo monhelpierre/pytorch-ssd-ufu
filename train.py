@@ -366,7 +366,7 @@ if __name__ == '__main__':
         PrepareDataset(args.dataset)
 
     device = 'cpu'
-    results_path = 'results4/'
+    results_path = 'results/'
     train_json = args.dataset + 'train.json'
     val_json = args.dataset + 'val.json'
     label_names = [
