@@ -18,14 +18,16 @@ import argparse
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
-ap.add_argument("-mi", "--model", required=True, help="Model index [0, 1, 2]")
+ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
 args = ap.parse_args()
 
-if int(args.model) < 0 or int(args.model) > 2:
-    raise ValueError("Model index should be 0, 1 or 2")
+if args.model:
+    if int(args.model) < 0 or int(args.model) > 2:
+        raise ValueError("Model index should be 0, 1 or 2")
 
 class CheckDataset():
-    def __init__(self, cfg, dataset_link, splits=['train', 'val', 'test']):
+    def __init__(self, cfg, dataset_link, input_size, splits=['train', 'val', 'test']):
+        self.input_size = input_size
         self.dataset_link = dataset_link
         self.splits = splits
         self.cfg = cfg
@@ -36,7 +38,7 @@ class CheckDataset():
         for split in self.splits:
             dataloader_0 = create_dataloader(self.dataset_link + split + '.json',
                 batch_size = self.cfg.batch_size,
-                image_size = self.cfg.input_size,
+                image_size = self.input_size,
                 image_mean = self.cfg.image_mean,
                 image_stddev = self.cfg.image_stddev,
                 augment = False,
@@ -44,7 +46,7 @@ class CheckDataset():
                 seed = seed)
             dataloader_1 = create_dataloader(self.dataset_link + split + '.json',
                 batch_size = self. cfg.batch_size,
-                image_size = self.cfg.input_size,
+                image_size = self.input_size,
                 image_mean = self.cfg.image_mean,
                 image_stddev = self.cfg.image_stddev,
                 augment = True,
@@ -71,8 +73,9 @@ class CheckDataset():
             plt.close()
 
 class PrepareDataset():
-    def __init__(self, dataset_path):
+    def __init__(self, dataset_path, input_size):
         self.root = dataset_path
+        self.input_size = input_size
         self.splits = ['train', 'val', 'test']
         self.label_names = [
             '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
@@ -108,7 +111,7 @@ class PrepareDataset():
 
     def start(self):
         for split in self.splits:
-            json_file = self.root + f'{split}.json'
+            json_file = self.root + f'{split}{self.input_size}.json'
             if not os.path.exists(json_file):
                 dataset = []
                 training_file = os.path.join(self.root, f'divide/{split}.txt')
@@ -204,7 +207,7 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp, metric
     det_boxes, det_scores, det_classes = nms(*model.decode(preds))
     metrics['APs'].update(det_boxes, det_scores, det_classes, true_boxes, true_classes, difficulties)
 
-def train_model(img_size, config_path, results_path, model_name, device, train_json, val_json, label_names):
+def train_model(input_size, config_path, results_path, model_name, device, train_json, val_json, label_names):
     cfg = config_path + f'{model_name}.yaml'
     workers = 4
     resume = True
@@ -213,10 +216,9 @@ def train_model(img_size, config_path, results_path, model_name, device, train_j
     
     cfg = load_config(cfg)
     enable_amp = (not no_amp)
-    cfg.input_size = img_size
-    #CheckDataset(cfg)
+    CheckDataset(cfg, input_size)
 
-    logdir = results_path + f'{cfg.input_size}/{model_name}/'
+    logdir = results_path + f'{input_size}/{model_name}/'
     
     if os.path.exists(logdir) and (not resume):
         raise ValueError("Log directory %s already exists. Specify --resume "
@@ -229,7 +231,7 @@ def train_model(img_size, config_path, results_path, model_name, device, train_j
     train_loader = create_dataloader(
         train_json,
         batch_size = cfg.batch_size,
-        image_size = cfg.input_size,
+        image_size = input_size,
         image_mean = cfg.image_mean,
         image_stddev = cfg.image_stddev,
         augment = True,
@@ -239,7 +241,7 @@ def train_model(img_size, config_path, results_path, model_name, device, train_j
     val_loader = create_dataloader(
         val_json,
         batch_size = cfg.batch_size,
-        image_size = cfg.input_size,
+        image_size = input_size,
         image_mean = cfg.image_mean,
         image_stddev = cfg.image_stddev,
         num_workers = workers)
@@ -362,8 +364,6 @@ if __name__ == '__main__':
     config_path = root + 'configs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
-    if len([x for x in os.listdir(args.dataset) if x.__contains__('json')]) != 3:
-        PrepareDataset(args.dataset)
 
     device = 'cpu'
     results_path = 'results2/'
@@ -372,13 +372,23 @@ if __name__ == '__main__':
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
         '025', '028', '035', '040', '042', '051', '052', '053'
-    ]sizes = [128,320,512]
+    ]
+    all_sizes = [128,320,512]
     
-    for model_name in model_names:
-        #if model_name != model_names[int(args.model)]:
-            #continue
-        for img_size in sizes:
-            train_model(img_size,
+    for img_size in all_sizes:
+        print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
+        
+        if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
+            PrepareDataset(args.dataset, img_size)
+        
+        for model_name in model_names:
+        
+            if args.model: 
+                if model_name != model_names[int(args.model)]:
+                    continue
+        
+            train_model(
+                img_size,
                 config_path, 
                 results_path, 
                 model_name, 
