@@ -204,16 +204,16 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp, metric
     det_boxes, det_scores, det_classes = nms(*model.decode(preds))
     metrics['APs'].update(det_boxes, det_scores, det_classes, true_boxes, true_classes, difficulties)
 
-def train_model(config_path, results_path, model_name, device, train_json, val_json, label_names):
+def train_model(img_size, config_path, results_path, model_name, device, train_json, val_json, label_names):
     cfg = config_path + f'{model_name}.yaml'
     workers = 4
     resume = True
     no_amp = 1
     val_period = 1
-
+    
     cfg = load_config(cfg)
     enable_amp = (not no_amp)
-
+    cfg.input_size = img_size
     #CheckDataset(cfg)
 
     logdir = results_path + f'{cfg.input_size}/{model_name}/'
@@ -225,7 +225,7 @@ def train_model(config_path, results_path, model_name, device, train_json, val_j
 
     model = build_model(cfg, label_names)
     model.to(device)
-
+    
     train_loader = create_dataloader(
         train_json,
         batch_size = cfg.batch_size,
@@ -366,24 +366,24 @@ if __name__ == '__main__':
         PrepareDataset(args.dataset)
 
     device = 'cpu'
-    results_path = 'results/'
+    results_path = 'results2/'
     train_json = args.dataset + 'train.json'
     val_json = args.dataset + 'val.json'
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
         '025', '028', '035', '040', '042', '051', '052', '053'
-    ]
+    ]sizes = [128,320,512]
     
     for model_name in model_names:
-        if model_name != model_names[int(args.model)]:
-            continue
-
-        train_model(
-            config_path, 
-            results_path, 
-            model_name, 
-            device, 
-            train_json, 
-            val_json, 
-            label_names
-        )
+        #if model_name != model_names[int(args.model)]:
+            #continue
+        for img_size in sizes:
+            train_model(img_size,
+                config_path, 
+                results_path, 
+                model_name, 
+                device, 
+                train_json, 
+                val_json, 
+                label_names
+            )
