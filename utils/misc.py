@@ -10,12 +10,12 @@ def load_config(fname):
     cfg.freeze()
     return cfg
 
-def build_model(cfg, class_names):
+def build_model(cfg, input_size, class_names):
     backbone = getattr(utils.models.backbones, cfg.backbone.pop('name'))(**cfg.backbone)
     return getattr(utils.models, cfg.model)(
         backbone,
         num_classes=len(class_names),
-        input_size=cfg.input_size,
+        input_size=input_size,
         anchor_scales=cfg.anchor_scales,
         anchor_aspect_ratios=cfg.anchor_aspect_ratios
     )

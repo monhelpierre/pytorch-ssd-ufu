@@ -216,7 +216,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
     
     cfg = load_config(cfg)
     enable_amp = (not no_amp)
-    CheckDataset(cfg, input_size)
+    #CheckDataset(cfg, input_size)
 
     logdir = results_path + f'{input_size}/{model_name}/'
     
@@ -225,7 +225,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
                          "in command line if you want to resume the training."
                          % logdir)
 
-    model = build_model(cfg, label_names)
+    model = build_model(cfg, input_size, label_names)
     model.to(device)
     
     train_loader = create_dataloader(
