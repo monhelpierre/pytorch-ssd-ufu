@@ -26,8 +26,9 @@ if args.model:
         raise ValueError("Model index should be 0, 1 or 2")
 
 class CheckDataset():
-    def __init__(self, cfg, dataset_link, input_size, splits=['train', 'val', 'test']):
+    def __init__(self, cfg, dataset_link, input_size, batch_size, splits=['train', 'val', 'test']):
         self.input_size = input_size
+        self.batch_size = batch_size
         self.dataset_link = dataset_link
         self.splits = splits
         self.cfg = cfg
@@ -37,7 +38,7 @@ class CheckDataset():
         seed = random.randint(0, 9999)
         for split in self.splits:
             dataloader_0 = create_dataloader(self.dataset_link + split + '.json',
-                batch_size = self.cfg.batch_size,
+                batch_size = self.batch_size,
                 image_size = self.input_size,
                 image_mean = self.cfg.image_mean,
                 image_stddev = self.cfg.image_stddev,
@@ -45,7 +46,7 @@ class CheckDataset():
                 shuffle = True,
                 seed = seed)
             dataloader_1 = create_dataloader(self.dataset_link + split + '.json',
-                batch_size = self. cfg.batch_size,
+                batch_size = self.batch_size,
                 image_size = self.input_size,
                 image_mean = self.cfg.image_mean,
                 image_stddev = self.cfg.image_stddev,
@@ -207,7 +208,7 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp, metric
     det_boxes, det_scores, det_classes = nms(*model.decode(preds))
     metrics['APs'].update(det_boxes, det_scores, det_classes, true_boxes, true_classes, difficulties)
 
-def train_model(input_size, config_path, results_path, model_name, device, train_json, val_json, label_names):
+def train_model(input_size, config_path, results_path, model_name, device, train_json, val_json, label_names, batch_size):
     cfg = config_path + f'{model_name}.yaml'
     workers = 4
     resume = True
@@ -216,7 +217,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
     
     cfg = load_config(cfg)
     enable_amp = (not no_amp)
-    #CheckDataset(cfg, input_size)
+    #CheckDataset(cfg, input_size, batch_size)
 
     logdir = results_path + f'{input_size}/{model_name}/'
     
@@ -230,7 +231,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
     
     train_loader = create_dataloader(
         train_json,
-        batch_size = cfg.batch_size,
+        batch_size = batch_size,
         image_size = input_size,
         image_mean = cfg.image_mean,
         image_stddev = cfg.image_stddev,
@@ -240,7 +241,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
     
     val_loader = create_dataloader(
         val_json,
-        batch_size = cfg.batch_size,
+        batch_size = batch_size,
         image_size = input_size,
         image_mean = cfg.image_mean,
         image_stddev = cfg.image_stddev,
@@ -365,36 +366,42 @@ if __name__ == '__main__':
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
     device = 'cpu'
-    results_path = 'results2/'
    
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
         '025', '028', '035', '040', '042', '051', '052', '053'
     ]
-    all_sizes = [128,320,512]
+
+    all_sizes = [128,256,320,512]
+    batch_sizes = [16,32]
     
     for img_size in all_sizes:
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
-        
-        if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
-            PrepareDataset(args.dataset, img_size)
-        
-        train_json = args.dataset + f'train{img_size}.json'
-        val_json = args.dataset + f'val{img_size}.json'
-        
-        for model_name in model_names:
-        
-            if args.model: 
-                if model_name != model_names[int(args.model)]:
-                    continue
-        
-            train_model(
-                img_size,
-                config_path, 
-                results_path, 
-                model_name, 
-                device, 
-                train_json, 
-                val_json, 
-                label_names
-            )
+
+        for batch_size in batch_sizes:
+            print('BATCH SIZE : ' + str(img_size) + 'x' + str(img_size))
+            results_path = f'results{batch_size}/'
+
+            if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
+                PrepareDataset(args.dataset, img_size)
+            
+            train_json = args.dataset + f'train{img_size}.json'
+            val_json = args.dataset + f'val{img_size}.json'
+            
+            for model_name in model_names:
+            
+                if args.model: 
+                    if model_name != model_names[int(args.model)]:
+                        continue
+            
+                train_model(
+                    img_size,
+                    config_path, 
+                    results_path, 
+                    model_name, 
+                    device, 
+                    train_json, 
+                    val_json, 
+                    label_names,
+                    batch_size
+                )

@@ -12,7 +12,6 @@ anchor_scales: [0.1, 0.2, 0.375, 0.55, 0.725, 0.9]
 anchor_aspect_ratios: [[1, 2], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2], [1, 2]]
 
 # Training
-batch_size: 16 #32
 epochs: 30
 optim:
   name: SGD
