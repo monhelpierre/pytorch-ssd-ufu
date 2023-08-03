@@ -364,11 +364,9 @@ if __name__ == '__main__':
     config_path = root + 'configs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
 
-
     device = 'cpu'
     results_path = 'results2/'
-    train_json = args.dataset + 'train.json'
-    val_json = args.dataset + 'val.json'
+   
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
         '025', '028', '035', '040', '042', '051', '052', '053'
@@ -386,6 +384,9 @@ if __name__ == '__main__':
             if args.model: 
                 if model_name != model_names[int(args.model)]:
                     continue
+
+            train_json = args.dataset + f'train{img_size}.json'
+            val_json = args.dataset + f'val{img_size}.json'
         
             train_model(
                 img_size,
