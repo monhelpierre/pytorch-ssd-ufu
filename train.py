@@ -372,14 +372,14 @@ if __name__ == '__main__':
         '025', '028', '035', '040', '042', '051', '052', '053'
     ]
 
-    all_sizes = [128,256,320,512]
-    batch_sizes = [16,32]
+    input_sizes = [128, 256, 320, 512]
+    batch_sizes = [8, 16, 32, 64]
     
-    for img_size in all_sizes:
+    for img_size in input_sizes:
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
 
         for batch_size in batch_sizes:
-            print('BATCH SIZE : ' + str(img_size) + 'x' + str(img_size))
+            print('BATCH SIZE : ' + str(batch_size))
             results_path = f'results{batch_size}/'
 
             if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
