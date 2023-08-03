@@ -379,14 +379,14 @@ if __name__ == '__main__':
         if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
             PrepareDataset(args.dataset, img_size)
         
+        train_json = args.dataset + f'train{img_size}.json'
+        val_json = args.dataset + f'val{img_size}.json'
+        
         for model_name in model_names:
         
             if args.model: 
                 if model_name != model_names[int(args.model)]:
                     continue
-
-            train_json = args.dataset + f'train{img_size}.json'
-            val_json = args.dataset + f'val{img_size}.json'
         
             train_model(
                 img_size,
