@@ -19,6 +19,8 @@ import argparse
 ap = argparse.ArgumentParser()
 ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
+ap.add_argument("-is", "--img_size", required=False, default=320)
+ap.add_argument("-bs", "--batch_size", required=False, default=32)
 args = ap.parse_args()
 
 if args.model:
@@ -378,9 +380,17 @@ if __name__ == '__main__':
     val_json = args.dataset + 'val.json'
     
     for img_size in input_sizes:
+        if args.img_size: 
+            if img_size != args.img_size:
+                continue
+
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
 
         for batch_size in batch_sizes:
+            if args.model: 
+                if model_name != args.batch_size:
+                    continue
+
             print('BATCH SIZE : ' + str(batch_size))
             results_path = f'results{batch_size}/'
 
