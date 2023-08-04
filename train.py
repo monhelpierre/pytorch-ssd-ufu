@@ -74,9 +74,8 @@ class CheckDataset():
             plt.close()
 
 class PrepareDataset():
-    def __init__(self, dataset_path, input_size):
+    def __init__(self, dataset_path):
         self.root = dataset_path
-        self.input_size = input_size
         self.splits = ['train', 'val', 'test']
         self.label_names = [
             '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
@@ -386,7 +385,7 @@ if __name__ == '__main__':
             results_path = f'results{batch_size}/'
 
             if len([x for x in os.listdir(args.dataset) if x.__contains__('.json')]) != 3:
-                PrepareDataset(args.dataset, img_size)            
+                PrepareDataset(args.dataset)            
             
             for model_name in model_names:
             
