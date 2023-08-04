@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 ap = argparse.ArgumentParser()
 ap.add_argument("-db", "--dataset", required=False, default="C:/Users/monhe/Downloads/datasets/", help="Link to database")
 ap.add_argument("-mi", "--model", required=False, help="Model index [0, 1, 2]")
+ap.add_argument("-sz", "--size", required=False, default=320, help="Model index [0, 1, 2]")
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
 ap.add_argument("-sp", "--save", required=False, help="Path to save detection")
@@ -28,7 +29,7 @@ ap.add_argument("-map", "--precision", required=False, help="Path to save detect
 args = ap.parse_args()
        
 def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
-    metric = AveragePrecision(len(label_names), cfg.recall_steps)
+    metric = AveragePrecision(len(label_names), cfg.recall_steps, device)
     metric.reset()
     pbar = tqdm(dataloader, bar_format="{l_bar}{bar:30}{r_bar}")
     with torch.no_grad():
@@ -48,8 +49,8 @@ def calulate_mAP(model, dataloader, cfg, label_names, device, no_amp=True):
     print("mAP@[0.5]: %.3f" % APs[:, 0].mean())
     print("mAP@[0.5:0.95]: %.3f" % APs.mean())
 
-def read_image(cfg, image_path=None, frame=None):
-    size = (cfg.input_size, cfg.input_size)
+def read_image(cfg, image_path=None, frame=None, input_size=320):
+    size = (input_size, input_size)
     if image_path == None:
         image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
         image = image.resize(size)
@@ -60,7 +61,7 @@ def read_image(cfg, image_path=None, frame=None):
     image = image.unsqueeze(0).to(device)
     return image
 
-def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_amp=True, fps = 300):
+def detect_from_video(cfg, video_path, save_path, model, logging, threshold, input_size, no_amp=True, fps = 300):
     if not os.path.exists(save_path):
         os.makedirs(save_path)
     cap = cv2.VideoCapture(video_path)
@@ -69,14 +70,14 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, no_
     
     output_file = save_path + 'output.avi'
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    video_writer = cv2.VideoWriter(output_file, fourcc, fps, (cfg.input_size, cfg.input_size))  
+    video_writer = cv2.VideoWriter(output_file, fourcc, fps, (input_size, input_size))  
     
     count_name = 0
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
-        frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame), label_names, logging, threshold, no_amp)
+        frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame, input_size=input_size), label_names, logging, threshold, no_amp)
         frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
         
         frame_count -= 1
@@ -107,9 +108,9 @@ def convert_to_onnx(model, size, path):
     onnx_path = path + "/model.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
         
-def process_image(cfg, image_path, save_path, label_names, logging):
+def process_image(cfg, image_path, save_path, label_names, logging, input_size):
     image_name = image_path.split('/')[-1]
-    image, nb_found, _ = model.detect(image_name, read_image(cfg, image_path=image_path), label_names, logging)        
+    image, nb_found, _ = model.detect(image_name, read_image(cfg, image_path=image_path, input_size=input_size), label_names, logging)        
     if nb_found > 0:
         if not os.path.exists(save_path):
             os.makedirs(save_path)
@@ -148,76 +149,83 @@ if __name__ == '__main__':
         datefmt='%H:%M:%S',
         level=logging.INFO
     )
+    
+    input_sizes = [128, 256, 320, 512]
               
-    for model_name in model_names:
-        if args.model:
-            if model_name != model_names[int(args.model)]:
+    for input_size in input_sizes:
+        
+        if args.size:
+            if input_size != args.size:
                 continue
-             
-        cfg = config_path + f'{model_name}.yaml'
-
-        if os.path.exists(cfg):
-            cfg = load_config(cfg)
-            input_size = cfg.input_size
-            
-            if cfg.input_size == 320:
-                input_size = f'{cfg.input_size}_1'
+        
+        for model_name in model_names:
+            if args.model:
+                if model_name != model_names[int(args.model)]:
+                    continue
                 
-            pth = results_path + f'{input_size}/{model_name}/best.pth'
-            
-            model = build_model(cfg, label_names)
-            model.to(device)
-            model.eval()
-            
-            print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
-            #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
-            
-            if os.path.exists(pth):
-                print('Loaded from pretrained model')
-                model.load_state_dict(torch.load(pth)['model_state_dict'])
-            
-            logging.info("=-------------------")
-            logging.info(model_name)
-            print(model_name)
-            logging.info("=-------------------\n")
+            cfg = config_path + f'{model_name}.yaml'
 
-            if args.save:
-                save_path = args.save + '/' + model_name + '/'
-            else:
-                save_path = onedrivepath + 'image/' + model_name + '/' 
+            if os.path.exists(cfg):
+                cfg = load_config(cfg)
+                
+                if input_size == 320:
+                    input_size = f'{input_size}_1'
+                    
+                pth = results_path + f'{input_size}/{model_name}/best.pth'
+                
+                model = build_model(cfg, input_size, label_names, device)
+                model.to(device)
+                model.eval()
+                
+                print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
+                #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
+                
+                if os.path.exists(pth):
+                    print('Loaded from pretrained model')
+                    model.load_state_dict(torch.load(pth)['model_state_dict'])
+                
+                logging.info("=-------------------")
+                logging.info(model_name)
+                print(model_name)
+                logging.info("=-------------------\n")
 
-            if args.video:
-                if os.path.exists(args.video):
-                    print('Detection from video.')
-                    save_path = save_path.replace('/image/', '/video/')
-                    detect_from_video(cfg, args.video, save_path, model, logging, threshold, no_amp)
-            elif args.image:
-                print('Detection from single image.')
-                process_image(cfg, args.image, save_path, label_names, logging)
-            elif args.precision:
-                dataloader = create_dataloader(
-                    test_json,
-                    batch_size=cfg.batch_size,
-                    image_size=cfg.input_size,
-                    image_mean=cfg.image_mean,
-                    image_stddev=cfg.image_stddev,
-                    num_workers=workers
-                )
-                calulate_mAP(model, dataloader, cfg, label_names, device)
+                if args.save:
+                    save_path = args.save + '/' + model_name + '/'
+                else:
+                    save_path = onedrivepath + 'image/' + model_name + '/' 
+
+                if args.video:
+                    if os.path.exists(args.video):
+                        print('Detection from video.')
+                        save_path = save_path.replace('/image/', '/video/')
+                        detect_from_video(cfg, args.video, save_path, model, logging, threshold, input_size, no_amp)
+                elif args.image:
+                    print('Detection from single image.')
+                    process_image(cfg, args.image, save_path, label_names, logging, input_size)
+                elif args.precision:
+                    dataloader = create_dataloader(
+                        test_json,
+                        batch_size=cfg.batch_size,
+                        image_size=input_size,
+                        image_mean=cfg.image_mean,
+                        image_stddev=cfg.image_stddev,
+                        num_workers=workers
+                    )
+                    calulate_mAP(model, dataloader, cfg, label_names, device)
+                else:
+                    print('Detection from test set images.')
+                    dataloader = create_dataloader(
+                        test_json,
+                        batch_size=cfg.batch_size,
+                        image_size=input_size,
+                        image_mean=cfg.image_mean,
+                        image_stddev=cfg.image_stddev,
+                        num_workers=workers
+                    )
+                    for image_path in images_path_list:
+                        process_image(cfg, image_path, save_path, label_names, logging, input_size)
             else:
-                print('Detection from test set images.')
-                dataloader = create_dataloader(
-                    test_json,
-                    batch_size=cfg.batch_size,
-                    image_size=cfg.input_size,
-                    image_mean=cfg.image_mean,
-                    image_stddev=cfg.image_stddev,
-                    num_workers=workers
-                )
-                for image_path in images_path_list:
-                    process_image(cfg, image_path, save_path, label_names, logging)
-        else:
-            print(f"Please check if conf file and save path exist for {model_name}")
+                print(f"Please check if conf file and save path exist for {model_name}")
             
 #python test.py -mi 0 -dataset "C:/datasets/"
 #python test.py -mi 0 --video "C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Corupá-SC to São Francisco do Sul-SC.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
