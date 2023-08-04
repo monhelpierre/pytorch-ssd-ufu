@@ -168,10 +168,10 @@ if __name__ == '__main__':
             if os.path.exists(cfg):
                 cfg = load_config(cfg)
                 
-                if input_size == 320:
-                    input_size = f'{input_size}_1'
-                    
                 pth = results_path + f'{input_size}/{model_name}/best.pth'
+
+                if input_size == 320:
+                    pth = results_path + f'{input_size}_2/{model_name}/best.pth'
                 
                 model = build_model(cfg, input_size, label_names, device)
                 model.to(device)
