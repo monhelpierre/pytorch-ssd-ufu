@@ -4,8 +4,9 @@ from utils.boxes import calculate_ious
 from utils.constants import BACKGROUND_INDEX
 
 class Mean(object):
-    def __init__(self):
+    def __init__(self, device):
         self.reset()
+        self.device = device
 
     def reset(self):
         self.sum = 0
@@ -20,9 +21,10 @@ class Mean(object):
         return self.sum / self.count
 
 class AveragePrecision(object):
-    def __init__(self, num_classes, recall_steps):
+    def __init__(self, num_classes, recall_steps, device):
         self.num_classes = num_classes
         self.recall_steps = recall_steps
+        self.device = device
         self.reset()
 
     def reset(self):
@@ -54,7 +56,7 @@ class AveragePrecision(object):
                 ],
                 return_counts=True
             )
-            self.num_relevent[class_indices] += counts.cpu()
+            self.num_relevent[class_indices] += counts.to(self.device)
 
             if num_dets == 0:
                 continue
@@ -77,8 +79,8 @@ class AveragePrecision(object):
             indices = torch.where(mask)   # ground truth indices, detection indices
             if indices[0].shape[0] > 0:
                 matches = torch.stack(indices, axis=1)   # [num_matches, 2]
-                matches = matches.cpu().numpy()   # only np.unique() supports `return_index` option
-                ious = ious.cpu().numpy() if not isTraining else ious.detach().numpy()
+                matches = matches.to(self.device).numpy()   # only np.unique() supports `return_index` option
+                ious = ious.to(self.device).numpy() if not isTraining else ious.detach().numpy()
                 ious = ious[matches[:, 0], matches[:, 1]]
 
                 # Find the ground truth with the best IoU for each detection
@@ -87,7 +89,7 @@ class AveragePrecision(object):
                 matches = matches[indices]
                 ious = ious[indices]
 
-                is_difficult = difficulties[i].bool().cpu().numpy()[matches[:, 0]]
+                is_difficult = difficulties[i].bool().to(self.device).numpy()[matches[:, 0]]
                 is_fp[matches[:, 1][is_difficult]] = (
                     np.expand_dims(ious[is_difficult], axis=-1)
                     < iou_thres
@@ -98,7 +100,7 @@ class AveragePrecision(object):
                 matches = matches[indices]
                 ious = ious[indices]
 
-                is_easy = ~(difficulties[i].bool().cpu().numpy()[matches[:, 0]])
+                is_easy = ~(difficulties[i].bool().to(self.device).numpy()[matches[:, 0]])
                 is_tp[matches[:, 1][is_easy]] = (
                     np.expand_dims(ious[is_easy], axis=-1)
                     >= iou_thres

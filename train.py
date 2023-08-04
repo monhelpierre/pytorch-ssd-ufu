@@ -112,7 +112,7 @@ class PrepareDataset():
 
     def start(self):
         for split in self.splits:
-            json_file = self.root + f'{split}{self.input_size}.json'
+            json_file = self.root + f'{split}.json'
             if not os.path.exists(json_file):
                 dataset = []
                 training_file = os.path.join(self.root, f'divide/{split}.txt')
@@ -226,7 +226,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
                          "in command line if you want to resume the training."
                          % logdir)
 
-    model = build_model(cfg, input_size, label_names)
+    model = build_model(cfg, input_size, label_names, device)
     model.to(device)
     
     train_loader = create_dataloader(
@@ -255,8 +255,8 @@ def train_model(input_size, config_path, results_path, model_name, device, train
         **cfg.scheduler
     )
     metrics = {
-        'loss': Mean(),
-        'APs': AveragePrecision(len(label_names), cfg.recall_steps)
+        'loss': Mean(device),
+        'APs': AveragePrecision(len(label_names), cfg.recall_steps, device)
     }
 
     # Checkpointing
@@ -374,6 +374,9 @@ if __name__ == '__main__':
 
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
+
+    train_json = args.dataset + 'train.json'
+    val_json = args.dataset + 'val.json'
     
     for img_size in input_sizes:
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
@@ -385,8 +388,7 @@ if __name__ == '__main__':
             if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
                 PrepareDataset(args.dataset, img_size)
             
-            train_json = args.dataset + f'train{img_size}.json'
-            val_json = args.dataset + f'val{img_size}.json'
+            
             
             for model_name in model_names:
             

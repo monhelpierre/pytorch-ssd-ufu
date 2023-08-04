@@ -10,14 +10,15 @@ def load_config(fname):
     cfg.freeze()
     return cfg
 
-def build_model(cfg, input_size, class_names):
+def build_model(cfg, input_size, class_names, device):
     backbone = getattr(utils.models.backbones, cfg.backbone.pop('name'))(**cfg.backbone)
     return getattr(utils.models, cfg.model)(
         backbone,
         num_classes=len(class_names),
         input_size=input_size,
         anchor_scales=cfg.anchor_scales,
-        anchor_aspect_ratios=cfg.anchor_aspect_ratios
+        anchor_aspect_ratios=cfg.anchor_aspect_ratios,
+        device = device
     )
 
 def nms(boxes, scores, classes, score_thres=0.01, iou_thres=0.5, max_dets=200):

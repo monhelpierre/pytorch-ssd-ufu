@@ -53,7 +53,7 @@ class _Heads(nn.Module):
         return regression_preds, class_preds
 
 class SSDLite(nn.Sequential): 
-    def __init__(self, backbone, num_classes, input_size, anchor_scales, anchor_aspect_ratios,):
+    def __init__(self, backbone, num_classes, input_size, anchor_scales, anchor_aspect_ratios, device):
         feature_shapes = get_output_shapes(backbone, input_size)   # [num_stages, [3]]
         heads = _Heads(
             layer_channels=[shape[0] for shape in feature_shapes], 
@@ -61,6 +61,8 @@ class SSDLite(nn.Sequential):
             num_classes=num_classes
         )
         super().__init__(backbone, heads)
+
+        self.device = device
 
         anchors = self._define_anchors(# pixel coordinates; cxcywh; [num_anchors, 4]
             input_size,
@@ -133,7 +135,7 @@ class SSDLite(nn.Sequential):
         num_negatives = torch.clip(num_positives, min=1) * neg_pos_ratio
         negative_mask = (   # [bs, num_anchors]
             torch.arange(classification_loss.shape[1])
-            < num_negatives.cpu().unsqueeze(-1)   # [bs, 1]
+            < num_negatives.to(self.device).unsqueeze(-1)   # [bs, 1]
         )
         negative_classification_loss, _ = torch.sort(
             classification_loss * (~positive_mask).int(),
@@ -229,7 +231,7 @@ class SSDLite(nn.Sequential):
                 preds = self(image)
         
         det_boxes, det_scores, det_classes = nms(*self.decode(preds))
-        image = cv2.cvtColor(image[0].permute(1, 2, 0).cpu().numpy(), cv2.COLOR_RGB2BGR)
+        image = cv2.cvtColor(image[0].permute(1, 2, 0).to(self.device).numpy(), cv2.COLOR_RGB2BGR)
     
         boxes = []
         labels = []
@@ -239,9 +241,9 @@ class SSDLite(nn.Sequential):
         
         for box, score, cls in zip(det_boxes[0], det_scores[0], det_classes[0]):
             if score > threshold:
-                x1, y1, x2, y2 = box.cpu().numpy().astype(int)
-                score_value = (str(floor(float(score.cpu().numpy()) * 100))) + '%'
-                label =  label_names[cls.cpu().numpy()] + '-' + score_value
+                x1, y1, x2, y2 = box.to(self.device).numpy().astype(int)
+                score_value = (str(floor(float(score.to(self.device).numpy()) * 100))) + '%'
+                label =  label_names[cls.to(self.device).numpy()] + '-' + score_value
                 cv2.rectangle(image, (x1, y1), (x2, y2), COLOR, 1)
                 (w, h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.3, -1)
                 image = cv2.rectangle(image, (x1, y1 - 15), (x1 + w, y1), COLOR, -1)
@@ -250,7 +252,7 @@ class SSDLite(nn.Sequential):
                 detection += f'{nb_found} => {label}\n'
                 boxes.append(box)
                 scores.append(score)
-                labels.append(label_names[cls.cpu().numpy()])
+                labels.append(label_names[cls.to(self.device).numpy()])
                 
         if nb_found > 0:
             INDEX = -1
