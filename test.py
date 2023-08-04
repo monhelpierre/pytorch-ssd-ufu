@@ -132,7 +132,7 @@ if __name__ == '__main__':
     config_path = root + 'configs/'
     test_path = root + 'test/images/'
     log_path = root + 'logs/'
-    onedrivepath = 'C:/Users/monhe/OneDrive - Universidade Federal de Uberlândia/test/'
+
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
     label_names = [
         '000', '001', '003', '004', '007', '008','009','023', 
@@ -163,8 +163,8 @@ if __name__ == '__main__':
         print('IMAGE SIZE : ' + str(input_size) + 'x' + str(input_size))
 
         for batch_size in batch_sizes:
-            if args.size:
-                if input_size != args.bs:
+            if args.batch_size:
+                if batch_size != args.batch_size:
                     continue
 
             print('BATCH SIZE : ' + str(batch_size))
@@ -174,6 +174,8 @@ if __name__ == '__main__':
                 if args.model:
                     if model_name != model_names[int(args.model)]:
                         continue
+
+                best = ''
                     
                 cfg = config_path + f'{model_name}.yaml'
 
@@ -181,8 +183,7 @@ if __name__ == '__main__':
                     cfg = load_config(cfg)
                     
                     pth = results_path + f'{input_size}/{model_name}/best.pth'
-
-                    best = ''
+                    
                     if input_size == 320:
                         best = '_2'
                     
@@ -191,7 +192,16 @@ if __name__ == '__main__':
                     model = build_model(cfg, input_size, label_names, device)
                     model.to(device)
                     model.eval()
-                    
+
+                    nb_layers = 0
+                    for name, m in model.named_modules():
+                        #if len(list(m.named_modules())) > 1:
+                        nb_layers += 1
+                        #print(name)
+                    print(f'The {model_name} model contains {nb_layers} layers.')
+
+                    break
+                                        
                     print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
                     #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
                     
