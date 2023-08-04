@@ -182,8 +182,11 @@ if __name__ == '__main__':
                     
                     pth = results_path + f'{input_size}/{model_name}/best.pth'
 
+                    best = ''
                     if input_size == 320:
-                        pth = results_path + f'{input_size}_2/{model_name}/best.pth'
+                        best = '_2'
+                    
+                    pth = results_path + f'{input_size}{best}/{model_name}/best.pth'
                     
                     model = build_model(cfg, input_size, label_names, device)
                     model.to(device)
