@@ -198,13 +198,15 @@ if __name__ == '__main__':
                         #if len(list(m.named_modules())) > 1:
                         nb_layers += 1
                         #print(name)
-                    print(f'The {model_name} model contains {nb_layers} layers.')
 
-                    break
-                                        
+                    print(f'The {model_name} model contains {nb_layers} layers.')
                     print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
-                    #print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
+                    print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
                     
+                    #The mobilenetV2_ssdlite model contains 340 layers.
+                    #The mobilenetV3Small_ssdlite model contains 333 layers.
+                    #The mobilenetV3Large_ssdlite model contains 379 layers.
+
                     if os.path.exists(pth):
                         print('Loaded from pretrained model')
                         model.load_state_dict(torch.load(pth)['model_state_dict'])
