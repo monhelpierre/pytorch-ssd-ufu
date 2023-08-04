@@ -385,10 +385,8 @@ if __name__ == '__main__':
             print('BATCH SIZE : ' + str(batch_size))
             results_path = f'results{batch_size}/'
 
-            if len([x for x in os.listdir(args.dataset) if x.__contains__(str(img_size)+'.json')]) != 3:
-                PrepareDataset(args.dataset, img_size)
-            
-            
+            if len([x for x in os.listdir(args.dataset) if x.__contains__('.json')]) != 3:
+                PrepareDataset(args.dataset, img_size)            
             
             for model_name in model_names:
             
