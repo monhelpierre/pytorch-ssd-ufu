@@ -341,7 +341,8 @@ def train_model(input_size, config_path, results_path, model_name, device, train
                         model = model,
                         amp = enable_amp,
                         metrics = metrics,
-                        device = device)
+                        device = device
+                    )
                     pbar.set_postfix(loss='%.5f' % metrics['loss'].result)
             APs = metrics['APs'].result
             mAP50 = APs[:, 0].mean()
@@ -381,14 +382,14 @@ if __name__ == '__main__':
     
     for img_size in input_sizes:
         if args.img_size: 
-            if img_size != args.img_size:
+            if img_size != int(args.img_size):
                 continue
 
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
 
         for batch_size in batch_sizes:
-            if args.model: 
-                if batch_size != args.batch_size:
+            if args.batch_size:
+                if batch_size != int(args.batch_size):
                     continue
 
             print('BATCH SIZE : ' + str(batch_size))

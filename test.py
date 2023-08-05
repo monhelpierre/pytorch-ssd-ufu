@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
         for batch_size in batch_sizes:
             if args.batch_size:
-                if batch_size != args.batch_size:
+                if batch_size != int(args.batch_size):
                     continue
 
             print('BATCH SIZE : ' + str(batch_size))
@@ -202,10 +202,6 @@ if __name__ == '__main__':
                     print(f'The {model_name} model contains {nb_layers} layers.')
                     print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
                     print('Number of trainable parameters : ' + str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
-                    
-                    #The mobilenetV2_ssdlite model contains 340 layers.
-                    #The mobilenetV3Small_ssdlite model contains 333 layers.
-                    #The mobilenetV3Large_ssdlite model contains 379 layers.
 
                     if os.path.exists(pth):
                         print('Loaded from pretrained model')
@@ -218,8 +214,6 @@ if __name__ == '__main__':
 
                     if args.save:
                         save_path = args.save + '/' + model_name + '/'
-                    else:
-                        save_path = onedrivepath + 'image/' + model_name + '/' 
 
                     if args.video:
                         if os.path.exists(args.video):
