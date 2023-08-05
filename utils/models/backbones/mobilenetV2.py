@@ -23,15 +23,32 @@ class _ExtraBlock(nn.Sequential):
                        relu6=True),
         )
 
-def countLayers(trunk, desc=''):
+def flatten(model):
+    submodules = list(model.children())
+    if len(submodules) == 0:
+        return [model]
+    else:
+        res = []
+        for module in submodules:
+            res += flatten(module)
+        return res
+    
+def countLayers(model, desc=''):
     nb_layers = 0
-    for name, m in trunk.named_modules():
-        if len(list(m.named_modules())) == 1:
-            nb_layers += 1
+    if desc == '':
+        for name, m in model.named_modules():
+            if len(list(m.named_children())) > 1:
+                nb_layers += 1
+        nb_layers -= 2 
+    else:
+        for name, m in model.named_modules():
+            if len(list(m.named_modules())) != 1:
+                nb_layers += 1
+        nb_layers += 2
     print(f'The {desc} mobilenet v2 baseline contains {nb_layers} layers.')
       
-def showLayersInfo(trunk, extra_layers):
-    countLayers(trunk)       
+def showLayersInfo(model, extra_layers):
+    countLayers(model)       
     countLayers(extra_layers, 'extracted') 
 
 class MobileNetV2(nn.Module):

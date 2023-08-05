@@ -195,9 +195,9 @@ if __name__ == '__main__':
 
                     nb_layers = 0
                     for name, m in model.named_modules():
-                        #if len(list(m.named_modules())) > 1:
-                        nb_layers += 1
-                        #print(name)
+                        if len(list(m.named_children())) > 1: 
+                            nb_layers += 1
+                    nb_layers -= 2
 
                     print(f'The {model_name} model contains {nb_layers} layers.')
                     print('Number of parameters : ' + str(sum(p.numel() for p in model.parameters())))
