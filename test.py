@@ -218,9 +218,7 @@ if __name__ == '__main__':
 
                     if args.save:
                         save_path = args.save + '/' + model_name + '/'
-                    else:
-                        save_path = onedrivepath + 'image/' + model_name + '/' 
-
+                    
                     if args.video:
                         if os.path.exists(args.video):
                             print('Detection from video.')
