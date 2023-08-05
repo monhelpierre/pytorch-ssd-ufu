@@ -214,7 +214,11 @@ if __name__ == '__main__':
 
                     if args.save:
                         save_path = args.save + '/' + model_name + '/'
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> bd5a87b17c17af3ed9bacb6cd0956664a13aeb16
                     if args.video:
                         if os.path.exists(args.video):
                             print('Detection from video.')
