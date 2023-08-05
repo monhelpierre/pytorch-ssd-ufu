@@ -23,10 +23,23 @@ class _ExtraBlock(nn.Sequential):
                        relu6=True),
         )
 
+def showLayersInfo(trunk, extra_layers):
+    nb_layers = 0
+    for name, m in trunk.named_modules():
+        nb_layers += 1
+    print(f'The mobilenet v2 baseline contains {nb_layers} layers.')
+               
+    nb_layers = 0
+    for name, m in extra_layers.named_modules():
+        nb_layers += 1
+    print(f'The extracted mobilenet v2 baseline contains {nb_layers} layers.')
+           
+
 class MobileNetV2(nn.Module):
     def __init__(self, width_mult):
         super().__init__()
         trunk = mobilenet_v2(pretrained=(width_mult == 1), width_mult=width_mult)
+              
         self.trunk = create_feature_extractor(
             trunk,
             return_nodes={
@@ -42,6 +55,8 @@ class MobileNetV2(nn.Module):
                 _ExtraBlock(256, 128),
             ]
         )
+        
+        showLayersInfo(trunk, self.extra_layers)
 
     def forward(self, images):
         ftrs = self.trunk(images)
