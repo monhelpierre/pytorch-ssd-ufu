@@ -388,7 +388,7 @@ if __name__ == '__main__':
 
         for batch_size in batch_sizes:
             if args.model: 
-                if model_name != args.batch_size:
+                if batch_size != args.batch_size:
                     continue
 
             print('BATCH SIZE : ' + str(batch_size))
