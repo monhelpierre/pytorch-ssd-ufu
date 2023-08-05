@@ -1,5 +1,5 @@
 from torch import nn
-from torchvision.models import mobilenet_v2
+from torchvision.models import mobilenet_v2, MobileNet_V2_Weights
 from torchvision.models.feature_extraction import create_feature_extractor
 from utils.models.layers import ConvBNReLU
 
@@ -23,22 +23,25 @@ class _ExtraBlock(nn.Sequential):
                        relu6=True),
         )
 
-def showLayersInfo(trunk, extra_layers):
+def countLayers(trunk, desc=''):
     nb_layers = 0
     for name, m in trunk.named_modules():
-        nb_layers += 1
-    print(f'The mobilenet v2 baseline contains {nb_layers} layers.')
-               
-    nb_layers = 0
-    for name, m in extra_layers.named_modules():
-        nb_layers += 1
-    print(f'The extracted mobilenet v2 baseline contains {nb_layers} layers.')
-           
+        if len(list(m.named_modules())) == 1:
+            nb_layers += 1
+    print(f'The {desc} mobilenet v2 baseline contains {nb_layers} layers.')
+      
+def showLayersInfo(trunk, extra_layers):
+    countLayers(trunk)       
+    countLayers(extra_layers, 'extracted') 
 
 class MobileNetV2(nn.Module):
     def __init__(self, width_mult):
         super().__init__()
-        trunk = mobilenet_v2(pretrained=(width_mult == 1), width_mult=width_mult)
+        
+        if width_mult == 1:
+            trunk = mobilenet_v2(weights=MobileNet_V2_Weights.IMAGENET1K_V1, width_mult=width_mult)
+        else:
+            trunk = mobilenet_v2(width_mult=width_mult)
               
         self.trunk = create_feature_extractor(
             trunk,
