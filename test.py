@@ -151,18 +151,19 @@ if __name__ == '__main__':
         level=logging.INFO
     )
 
-    FROM_DEFAULT = True
+    FROM_DEFAULT_SIZE = True
+    FROM_DEFAULT_BATCH = True
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
               
     for input_size in input_sizes:
-        if FROM_DEFAULT:
+        if FROM_DEFAULT_SIZE:
             if input_size != args.img_size:
                 continue
         print('IMAGE SIZE : ' + str(input_size) + 'x' + str(input_size))
 
         for batch_size in batch_sizes:
-            if FROM_DEFAULT:
+            if FROM_DEFAULT_BATCH:
                 if batch_size != int(args.batch_size):
                     continue
             print('BATCH SIZE : ' + str(batch_size))

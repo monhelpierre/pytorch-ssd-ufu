@@ -72,7 +72,6 @@ class PrepareDataset():
                 training_file = os.path.join(self.root, f'divide/{split}.txt')
                 with open(training_file) as f:
                     ids = [line.strip() for line in f.readlines()]
-
                 for id in tqdm(ids, desc=f"{split}"):
                     image_path = os.path.join(self.root, 'images', id + '.jpg')
                     annotation_path = os.path.join(self.root, 'annotations', id + '.xml')
@@ -87,7 +86,6 @@ class PrepareDataset():
                         }
                     )
                 self.save_as_json(json_file, dataset)
-
         print("Dataset Complete.")
 
 class CheckpointManager(object):
@@ -134,7 +132,6 @@ def train_step(images, true_boxes, true_classes, difficulties, model, optim, amp
     true_boxes = [x.to(device) for x in true_boxes]
     true_classes = [x.to(device) for x in true_classes]
     difficulties = [x.to(device) for x in difficulties]
-
     optim.zero_grad()
     with autocast(enabled=amp):
         preds = model(images)
@@ -142,7 +139,6 @@ def train_step(images, true_boxes, true_classes, difficulties, model, optim, amp
     scaler.scale(loss).backward()
     scaler.step(optim)
     scaler.update()
-
     loss = loss.item()
     metrics['loss'].update(loss, images.shape[0])
     det_boxes, det_scores, det_classes = nms(*model.decode(preds))
@@ -153,7 +149,6 @@ def test_step(images, true_boxes, true_classes, difficulties, model, amp, metric
     true_boxes = [x.to(device) for x in true_boxes]
     true_classes = [x.to(device) for x in true_classes]
     difficulties = [x.to(device) for x in difficulties]
-
     with autocast(enabled=amp):
         preds = model(images)
         loss = model.compute_loss(preds, true_boxes, true_classes)
@@ -278,9 +273,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
             ckpt.best_score = 0.00
             metrics['loss'].reset()
             metrics['APs'].reset()
-            pbar = tqdm(val_loader,
-                        bar_format="{l_bar}{bar:20}{r_bar}",
-                        desc=f"Validation ({str(datetime.datetime.now()).split('.')[0]})")
+            pbar = tqdm(val_loader, bar_format="{l_bar}{bar:20}{r_bar}", desc=f"Validation ({str(datetime.datetime.now()).split('.')[0]})")
             with torch.no_grad():
                 for (images, true_boxes, true_classes, difficulties) in pbar:
                     test_step(images,
@@ -317,7 +310,8 @@ if __name__ == '__main__':
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
     
     device = 'cpu'
-    FROM_DEFAULT = False
+    FROM_DEFAULT_SIZE = False
+    FROM_DEFAULT_BATCH = False
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
 
@@ -325,13 +319,13 @@ if __name__ == '__main__':
     val_json = args.dataset + 'val.json'
     
     for img_size in input_sizes:
-        if FROM_DEFAULT: 
+        if FROM_DEFAULT_SIZE: 
             if img_size != int(args.img_size):
                 continue
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
 
         for batch_size in batch_sizes:
-            if FROM_DEFAULT:
+            if FROM_DEFAULT_BATCH:
                 if batch_size != int(args.batch_size):
                     continue
             print('BATCH SIZE : ' + str(batch_size))
@@ -341,7 +335,6 @@ if __name__ == '__main__':
                 PrepareDataset(args.dataset)            
             
             for model_name in model_names:
-            
                 if args.model: 
                     if model_name != model_names[int(args.model)]:
                         continue
