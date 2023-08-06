@@ -315,8 +315,9 @@ if __name__ == '__main__':
     root = os.getcwd().replace('\\', '/') + '/'
     config_path = root + 'configs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
+    
     device = 'cpu'
-
+    FROM_DEFAULT = False
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
 
@@ -324,17 +325,15 @@ if __name__ == '__main__':
     val_json = args.dataset + 'val.json'
     
     for img_size in input_sizes:
-        if args.img_size: 
+        if FROM_DEFAULT: 
             if img_size != int(args.img_size):
                 continue
-
         print('IMAGE SIZE : ' + str(img_size) + 'x' + str(img_size))
 
         for batch_size in batch_sizes:
-            if args.batch_size:
+            if FROM_DEFAULT:
                 if batch_size != int(args.batch_size):
                     continue
-
             print('BATCH SIZE : ' + str(batch_size))
             results_path = f'results{batch_size}/'
 
