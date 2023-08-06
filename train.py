@@ -23,66 +23,19 @@ ap.add_argument("-is", "--img_size", required=False, default=320)
 ap.add_argument("-bs", "--batch_size", required=False, default=32)
 args = ap.parse_args()
 
+label_names = [
+    '000', '001', '003', '004', '007', '008','009','023', 
+    '025', '028', '035', '040', '042', '051', '052', '053'
+]
+
 if args.model:
     if int(args.model) < 0 or int(args.model) > 2:
         raise ValueError("Model index should be 0, 1 or 2")
-
-class CheckDataset():
-    def __init__(self, cfg, dataset_link, input_size, batch_size, splits=['train', 'val', 'test']):
-        self.input_size = input_size
-        self.batch_size = batch_size
-        self.dataset_link = dataset_link
-        self.splits = splits
-        self.cfg = cfg
-        self.start()
-
-    def start(self):        
-        seed = random.randint(0, 9999)
-        for split in self.splits:
-            dataloader_0 = create_dataloader(self.dataset_link + split + '.json',
-                batch_size = self.batch_size,
-                image_size = self.input_size,
-                image_mean = self.cfg.image_mean,
-                image_stddev = self.cfg.image_stddev,
-                augment = False,
-                shuffle = True,
-                seed = seed)
-            dataloader_1 = create_dataloader(self.dataset_link + split + '.json',
-                batch_size = self.batch_size,
-                image_size = self.input_size,
-                image_mean = self.cfg.image_mean,
-                image_stddev = self.cfg.image_stddev,
-                augment = True,
-                shuffle = True,
-                seed = seed)
-            dataiter_0 = iter(dataloader_0)
-            dataiter_1 = iter(dataloader_1)
-
-        while True:
-            plt.figure(figsize=(15, 7))
-            images, boxes, classes, _ = next(dataiter_0)
-            image = unnormalize(images[0], self.cfg.image_mean, self.cfg.image_stddev)
-            plt.subplot(1, 2, 1)
-            plt.title("w/o augmentation")
-            plt.imshow(image.permute([1, 2, 0]))
-
-            images, boxes, classes, _ = next(dataiter_1)
-            image = unnormalize(images[0], self.cfg.image_mean, self.cfg.image_stddev)
-            plt.subplot(1, 2, 2)
-            plt.title("w/ augmentation")
-            plt.imshow(image.permute([1, 2, 0]))
-
-            plt.show()
-            plt.close()
 
 class PrepareDataset():
     def __init__(self, dataset_path):
         self.root = dataset_path
         self.splits = ['train', 'val', 'test']
-        self.label_names = [
-            '000000', '000001', '000003', '000004', '000007', '000008','000009','000023', 
-            '000025', '000028', '000035', '000040', '000042', '000051', '000052', '000053'
-        ]
         self.start()
 
     def parse_annotation(self, annotation_path):
@@ -124,7 +77,7 @@ class PrepareDataset():
                     image_path = os.path.join(self.root, 'images', id + '.jpg')
                     annotation_path = os.path.join(self.root, 'annotations', id + '.xml')
                     boxes, classes, difficulties = self.parse_annotation(annotation_path)
-                    classes = [self.label_names.index(c) for c in classes]
+                    classes = [label_names.index(c) for c in classes]
                     dataset.append(
                         {
                             'image': os.path.abspath(image_path),
@@ -154,7 +107,7 @@ class CheckpointManager(object):
             'scaler_state_dict': self.scaler.state_dict(),
             'scheduler_state_dict': self.scheduler.state_dict(),
             'epoch': self.epoch,
-            'best_score': self.best_score,
+            'best_score': self.best_score
         }
         torch.save(data, os.path.join(self.logdir, filename))
 
@@ -218,8 +171,6 @@ def train_model(input_size, config_path, results_path, model_name, device, train
     
     cfg = load_config(cfg)
     enable_amp = (not no_amp)
-    #CheckDataset(cfg, input_size, batch_size)
-
     logdir = results_path + f'{input_size}/{model_name}/'
     
     if os.path.exists(logdir) and (not resume):
@@ -291,9 +242,7 @@ def train_model(input_size, config_path, results_path, model_name, device, train
                 start_factor=0.001,
                 total_iters=min(1000, len(train_loader))
             )
-        pbar = tqdm(train_loader,
-            bar_format="{l_bar}{bar:20}{r_bar}",
-            desc="Training")
+        pbar = tqdm(train_loader, bar_format="{l_bar}{bar:20}{r_bar}", desc="Training")
         for (images, true_boxes, true_classes, difficulties) in pbar:
             train_step(images,
                 true_boxes,
@@ -366,13 +315,7 @@ if __name__ == '__main__':
     root = os.getcwd().replace('\\', '/') + '/'
     config_path = root + 'configs/'
     model_names = [x.split('.')[0] for x in os.listdir(config_path) if x.__contains__('yaml')]
-
     device = 'cpu'
-   
-    label_names = [
-        '000', '001', '003', '004', '007', '008','009','023', 
-        '025', '028', '035', '040', '042', '051', '052', '053'
-    ]
 
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
