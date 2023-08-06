@@ -155,7 +155,6 @@ if __name__ == '__main__':
     batch_sizes = [8, 16, 32, 64]
               
     for input_size in input_sizes:
-
         if args.img_size:
             if input_size != args.img_size:
                 continue
@@ -175,13 +174,11 @@ if __name__ == '__main__':
                     if model_name != model_names[int(args.model)]:
                         continue
 
-                best = ''
-                    
+                best = ''   
                 cfg = config_path + f'{model_name}.yaml'
 
                 if os.path.exists(cfg):
                     cfg = load_config(cfg)
-                    
                     pth = results_path + f'{input_size}/{model_name}/best.pth'
                     
                     if input_size == 320:
