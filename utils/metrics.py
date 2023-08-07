@@ -121,7 +121,6 @@ class AveragePrecision(object):
         classes = torch.IntTensor(self.det_classes)[indices]
         true_positives = torch.IntTensor(self.true_positives)[indices]
         false_positives = torch.IntTensor(self.false_positives)[indices]
-        false_negatives = torch.IntTensor(self.false_negatives)[indices]
         recall_thres = torch.linspace(0, 1, self.recall_steps)
 
         APs = torch.zeros([self.num_classes, 10])
@@ -132,13 +131,10 @@ class AveragePrecision(object):
 
             tp_cum = torch.cumsum(true_positives[classes == c], axis=0)    # [n, 10]
             fp_cum = torch.cumsum(false_positives[classes == c], axis=0)   # [n, 10]
-            fn_cum = torch.cumsum(false_negatives[classes == c], axis=0)   # [n, 10]
             num_relevent = self.num_relevent[c]
 
             recalls = tp_cum / num_relevent
             precisions = tp_cum / (tp_cum + fp_cum + 1e-10)
-            recalls_class = tp_cum / (tp_cum + fn_cum + 1e-10)
-
             recall_above_thres = recalls.unsqueeze(-1) >= recall_thres   # [n, 10, recall_steps]
 
             max_precisions, _ = torch.max(   # [10, recall_steps]
