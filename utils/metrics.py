@@ -146,5 +146,4 @@ class AveragePrecision(object):
                 axis=0
             )
             APs[c] = torch.mean(max_precisions, axis=-1)
-            recalls[c] = recalls_class[-1]
         return APs
