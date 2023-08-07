@@ -1,0 +1,1806 @@
+20:00:35,988 root INFO =-------------------
+20:00:35,988 root INFO mobilenetV3Large_ssdlite
+20:00:35,990 root INFO =-------------------
+
+20:00:36,224 root INFO IMAGE : 000751@invertimage@contrast.jpg
+20:00:36,225 root INFO 1 => 028-74%
+20:00:36,225 root INFO ------------
+20:00:36,359 root INFO IMAGE : 000393@imagesolarize.jpg
+20:00:36,360 root INFO 1 => 028-77%
+20:00:36,360 root INFO ------------
+20:00:36,433 root INFO IMAGE : 001197@channelshuffle@sigmoidcontrast.jpg
+20:00:36,433 root INFO 1 => 023-86%
+20:00:36,434 root INFO ------------
+20:00:36,496 root INFO IMAGE : 000423@imagesolarize@noise.jpg
+20:00:36,496 root INFO 1 => 025-68%
+20:00:36,497 root INFO ------------
+20:00:36,599 root INFO IMAGE : 000359@noise.jpg
+20:00:36,600 root INFO 1 => 008-94%
+2 => 008-92%
+20:00:36,600 root INFO ------------
+20:00:36,701 root INFO IMAGE : 000758@sigmoidcontrast@noise.jpg
+20:00:36,701 root INFO 1 => 028-97%
+2 => 028-85%
+20:00:36,701 root INFO ------------
+20:00:36,952 root INFO IMAGE : 001009@channelshuffle@imagesolarize.jpg
+20:00:36,952 root INFO 1 => 023-92%
+2 => 023-81%
+20:00:36,952 root INFO ------------
+20:00:37,31 root INFO IMAGE : 000660@noise@contrast.jpg
+20:00:37,32 root INFO 1 => 023-95%
+20:00:37,32 root INFO ------------
+20:00:37,224 root INFO IMAGE : 000903@noise.jpg
+20:00:37,224 root INFO 1 => 023-83%
+2 => 023-63%
+20:00:37,224 root INFO ------------
+20:00:37,352 root INFO IMAGE : 001036@sigmoidcontrast@channelshuffle.jpg
+20:00:37,352 root INFO 1 => 009-70%
+20:00:37,352 root INFO ------------
+20:00:37,444 root INFO IMAGE : 001036@sigmoidcontrast@invertimage.jpg
+20:00:37,444 root INFO 1 => 009-78%
+20:00:37,444 root INFO ------------
+20:00:37,612 root INFO IMAGE : 001167@sigmoidcontrast.jpg
+20:00:37,612 root INFO 1 => 025-94%
+20:00:37,612 root INFO ------------
+20:00:37,835 root INFO IMAGE : 001214@linearcontrast.jpg
+20:00:37,835 root INFO 1 => 053-75%
+2 => 053-73%
+20:00:37,835 root INFO ------------
+20:00:37,911 root INFO IMAGE : 000404@sigmoidcontrast.jpg
+20:00:37,912 root INFO 1 => 053-98%
+2 => 053-97%
+20:00:37,912 root INFO ------------
+20:00:37,994 root INFO IMAGE : 000696@imagesolarize@contrast.jpg
+20:00:37,994 root INFO 1 => 028-83%
+20:00:37,994 root INFO ------------
+20:00:38,66 root INFO IMAGE : 000336@imagesolarize@sigmoidcontrast.jpg
+20:00:38,66 root INFO 1 => 009-81%
+2 => 023-76%
+20:00:38,66 root INFO ------------
+20:00:38,481 root INFO IMAGE : 000425@imagesolarize.jpg
+20:00:38,481 root INFO 1 => 053-67%
+20:00:38,481 root INFO ------------
+20:00:38,560 root INFO IMAGE : 000836@contrast@contrast.jpg
+20:00:38,560 root INFO 1 => 025-91%
+2 => 025-75%
+20:00:38,560 root INFO ------------
+20:00:38,649 root INFO IMAGE : 000818@sigmoidcontrast@channelshuffle.jpg
+20:00:38,649 root INFO 1 => 023-81%
+2 => 023-79%
+20:00:38,649 root INFO ------------
+20:00:38,764 root INFO IMAGE : 000966@noise@linearcontrast.jpg
+20:00:38,765 root INFO 1 => 025-67%
+20:00:38,765 root INFO ------------
+20:00:39,82 root INFO IMAGE : 000593@channelshuffle.jpg
+20:00:39,82 root INFO 1 => 053-78%
+2 => 053-76%
+20:00:39,82 root INFO ------------
+20:00:39,287 root INFO IMAGE : 000276@noise@linearcontrast.jpg
+20:00:39,287 root INFO 1 => 052-96%
+2 => 052-77%
+20:00:39,287 root INFO ------------
+20:00:39,762 root INFO IMAGE : 001060@channelshuffle.jpg
+20:00:39,762 root INFO 1 => 023-70%
+20:00:39,762 root INFO ------------
+20:00:40,251 root INFO IMAGE : 000648@contrast@noise.jpg
+20:00:40,252 root INFO 1 => 023-96%
+20:00:40,252 root INFO ------------
+20:00:40,340 root INFO IMAGE : 000043@invertimage@channelshuffle.jpg
+20:00:40,340 root INFO 1 => 052-77%
+2 => 052-66%
+20:00:40,340 root INFO ------------
+20:00:40,497 root INFO IMAGE : 001172@invertimage.jpg
+20:00:40,497 root INFO 1 => 028-81%
+20:00:40,497 root INFO ------------
+20:00:40,688 root INFO IMAGE : 001115@noise@sigmoidcontrast.jpg
+20:00:40,688 root INFO 1 => 052-98%
+20:00:40,688 root INFO ------------
+20:00:40,804 root INFO IMAGE : 000702@sigmoidcontrast.jpg
+20:00:40,805 root INFO 1 => 028-73%
+20:00:40,805 root INFO ------------
+20:00:40,899 root INFO IMAGE : 000353@noise@contrast.jpg
+20:00:40,899 root INFO 1 => 008-89%
+20:00:40,899 root INFO ------------
+20:00:41,88 root INFO IMAGE : 000718@contrast@contrast.jpg
+20:00:41,99 root INFO 1 => 009-92%
+20:00:41,99 root INFO ------------
+20:00:41,161 root INFO IMAGE : 000860@channelshuffle@invertimage.jpg
+20:00:41,161 root INFO 1 => 028-60%
+20:00:41,161 root INFO ------------
+20:00:41,229 root INFO IMAGE : 000800@sigmoidcontrast@imagesolarize.jpg
+20:00:41,229 root INFO 1 => 009-85%
+20:00:41,229 root INFO ------------
+20:00:41,394 root INFO IMAGE : 001030@imagesolarize.jpg
+20:00:41,394 root INFO 1 => 000-63%
+20:00:41,394 root INFO ------------
+20:00:41,722 root INFO IMAGE : 000470@invertimage.jpg
+20:00:41,722 root INFO 1 => 023-91%
+2 => 023-67%
+20:00:41,722 root INFO ------------
+20:00:42,101 root INFO IMAGE : 000614@sigmoidcontrast@imagesolarize.jpg
+20:00:42,101 root INFO 1 => 023-94%
+2 => 023-60%
+20:00:42,102 root INFO ------------
+20:00:42,226 root INFO IMAGE : 001095@invertimage@contrast.jpg
+20:00:42,226 root INFO 1 => 052-78%
+20:00:42,226 root INFO ------------
+20:00:42,462 root INFO IMAGE : 000044@sigmoidcontrast.jpg
+20:00:42,463 root INFO 1 => 023-85%
+20:00:42,463 root INFO ------------
+20:00:42,521 root INFO IMAGE : 000703@sigmoidcontrast.jpg
+20:00:42,521 root INFO 1 => 028-88%
+20:00:42,521 root INFO ------------
+20:00:42,765 root INFO IMAGE : 000690@channelshuffle@invertimage.jpg
+20:00:42,765 root INFO 1 => 023-81%
+20:00:42,765 root INFO ------------
+20:00:42,866 root INFO IMAGE : 000887@imagesolarize.jpg
+20:00:42,866 root INFO 1 => 023-94%
+20:00:42,866 root INFO ------------
+20:00:42,944 root INFO IMAGE : 001206@channelshuffle@channelshuffle.jpg
+20:00:42,944 root INFO 1 => 053-61%
+20:00:42,944 root INFO ------------
+20:00:43,43 root INFO IMAGE : 000632@sigmoidcontrast@channelshuffle.jpg
+20:00:43,43 root INFO 1 => 028-98%
+20:00:43,43 root INFO ------------
+20:00:43,267 root INFO IMAGE : 000344@channelshuffle@contrast.jpg
+20:00:43,267 root INFO 1 => 053-70%
+20:00:43,267 root INFO ------------
+20:00:43,370 root INFO IMAGE : 000205@invertimage@sigmoidcontrast.jpg
+20:00:43,370 root INFO 1 => 053-70%
+2 => 040-60%
+20:00:43,371 root INFO ------------
+20:00:43,469 root INFO IMAGE : 000134@noise@sigmoidcontrast.jpg
+20:00:43,469 root INFO 1 => 042-71%
+2 => 009-69%
+20:00:43,469 root INFO ------------
+20:00:43,546 root INFO IMAGE : 000095@sigmoidcontrast.jpg
+20:00:43,546 root INFO 1 => 053-89%
+20:00:43,547 root INFO ------------
+20:00:43,697 root INFO IMAGE : 001114@sigmoidcontrast@invertimage.jpg
+20:00:43,698 root INFO 1 => 009-90%
+20:00:43,698 root INFO ------------
+20:00:44,108 root INFO IMAGE : 001272@noise@noise.jpg
+20:00:44,108 root INFO 1 => 028-66%
+20:00:44,108 root INFO ------------
+20:00:44,183 root INFO IMAGE : 000571@imagesolarize@imagesolarize.jpg
+20:00:44,183 root INFO 1 => 053-74%
+20:00:44,183 root INFO ------------
+20:00:44,395 root INFO IMAGE : 001146@channelshuffle@sigmoidcontrast.jpg
+20:00:44,395 root INFO 1 => 035-85%
+20:00:44,395 root INFO ------------
+20:00:44,560 root INFO IMAGE : 001092@invertimage@imagesolarize.jpg
+20:00:44,561 root INFO 1 => 008-88%
+20:00:44,561 root INFO ------------
+20:00:44,924 root INFO IMAGE : 000148@noise@noise.jpg
+20:00:44,924 root INFO 1 => 028-63%
+20:00:44,924 root INFO ------------
+20:00:45,31 root INFO IMAGE : 000975@channelshuffle.jpg
+20:00:45,31 root INFO 1 => 028-80%
+20:00:45,31 root INFO ------------
+20:00:45,148 root INFO IMAGE : 001464@sigmoidcontrast@sigmoidcontrast.jpg
+20:00:45,148 root INFO 1 => 009-99%
+20:00:45,148 root INFO ------------
+20:00:45,411 root INFO IMAGE : 001293@channelshuffle@sigmoidcontrast.jpg
+20:00:45,411 root INFO 1 => 053-68%
+20:00:45,411 root INFO ------------
+20:00:45,585 root INFO IMAGE : 001427@contrast@noise.jpg
+20:00:45,585 root INFO 1 => 053-89%
+2 => 053-73%
+20:00:45,585 root INFO ------------
+20:00:45,649 root INFO IMAGE : 000291@noise@sigmoidcontrast.jpg
+20:00:45,649 root INFO 1 => 053-90%
+20:00:45,649 root INFO ------------
+20:00:45,801 root INFO IMAGE : 001393@contrast@channelshuffle.jpg
+20:00:45,801 root INFO 1 => 009-67%
+20:00:45,801 root INFO ------------
+20:00:45,918 root INFO IMAGE : 000799@imagesolarize@imagesolarize.jpg
+20:00:45,918 root INFO 1 => 035-84%
+20:00:45,918 root INFO ------------
+20:00:46,4 root INFO IMAGE : 000016@linearcontrast@channelshuffle.jpg
+20:00:46,4 root INFO 1 => 052-93%
+20:00:46,4 root INFO ------------
+20:00:46,317 root INFO IMAGE : 000928@invertimage@channelshuffle.jpg
+20:00:46,317 root INFO 1 => 023-77%
+20:00:46,318 root INFO ------------
+20:00:46,396 root INFO IMAGE : 000675@imagesolarize@sigmoidcontrast.jpg
+20:00:46,396 root INFO 1 => 009-92%
+20:00:46,396 root INFO ------------
+20:00:46,464 root INFO IMAGE : 001470@invertimage@sigmoidcontrast.jpg
+20:00:46,464 root INFO 1 => 023-92%
+20:00:46,464 root INFO ------------
+20:00:46,612 root INFO IMAGE : 000007@linearcontrast@channelshuffle.jpg
+20:00:46,612 root INFO 1 => 052-72%
+2 => 052-61%
+20:00:46,612 root INFO ------------
+20:00:46,976 root INFO IMAGE : 000807@imagesolarize@imagesolarize.jpg
+20:00:46,976 root INFO 1 => 009-94%
+20:00:46,976 root INFO ------------
+20:00:47,334 root INFO IMAGE : 000754@sigmoidcontrast@channelshuffle.jpg
+20:00:47,334 root INFO 1 => 035-88%
+20:00:47,334 root INFO ------------
+20:00:47,568 root INFO IMAGE : 000045@invertimage@linearcontrast.jpg
+20:00:47,568 root INFO 1 => 052-97%
+2 => 052-97%
+3 => 007-82%
+20:00:47,569 root INFO ------------
+20:00:47,640 root INFO IMAGE : 000263@linearcontrast@sigmoidcontrast.jpg
+20:00:47,640 root INFO 1 => 053-93%
+20:00:47,640 root INFO ------------
+20:00:47,807 root INFO IMAGE : 000640@noise.jpg
+20:00:47,807 root INFO 1 => 028-75%
+20:00:47,807 root INFO ------------
+20:00:48,25 root INFO IMAGE : 000621@invertimage@imagesolarize.jpg
+20:00:48,25 root INFO 1 => 009-74%
+20:00:48,25 root INFO ------------
+20:00:48,118 root INFO IMAGE : 001243@channelshuffle@invertimage.jpg
+20:00:48,119 root INFO 1 => 053-85%
+20:00:48,119 root INFO ------------
+20:00:48,239 root INFO IMAGE : 001047@invertimage.jpg
+20:00:48,239 root INFO 1 => 035-97%
+20:00:48,239 root INFO ------------
+20:00:48,386 root INFO IMAGE : 000168@channelshuffle.jpg
+20:00:48,386 root INFO 1 => 009-95%
+2 => 000-95%
+20:00:48,387 root INFO ------------
+20:00:48,514 root INFO IMAGE : 000349@channelshuffle@channelshuffle.jpg
+20:00:48,514 root INFO 1 => 051-98%
+20:00:48,514 root INFO ------------
+20:00:48,668 root INFO IMAGE : 000136@sigmoidcontrast@imagesolarize.jpg
+20:00:48,668 root INFO 1 => 007-66%
+20:00:48,668 root INFO ------------
+20:00:48,748 root INFO IMAGE : 000086@invertimage@invertimage.jpg
+20:00:48,749 root INFO 1 => 053-90%
+20:00:48,749 root INFO ------------
+20:00:49,38 root INFO IMAGE : 000505@noise@linearcontrast.jpg
+20:00:49,38 root INFO 1 => 009-72%
+2 => 023-63%
+20:00:49,38 root INFO ------------
+20:00:49,117 root INFO IMAGE : 000729@channelshuffle.jpg
+20:00:49,118 root INFO 1 => 023-82%
+20:00:49,118 root INFO ------------
+20:00:49,215 root INFO IMAGE : 001248@channelshuffle@channelshuffle.jpg
+20:00:49,215 root INFO 1 => 028-64%
+20:00:49,215 root INFO ------------
+20:00:49,409 root INFO IMAGE : 001458@invertimage@contrast.jpg
+20:00:49,410 root INFO 1 => 053-89%
+20:00:49,410 root INFO ------------
+20:00:49,553 root INFO IMAGE : 001074@imagesolarize@contrast.jpg
+20:00:49,554 root INFO 1 => 009-70%
+20:00:49,554 root INFO ------------
+20:00:49,695 root INFO IMAGE : 000971@linearcontrast@invertimage.jpg
+20:00:49,696 root INFO 1 => 053-71%
+20:00:49,696 root INFO ------------
+20:00:49,816 root INFO IMAGE : 000824@invertimage@invertimage.jpg
+20:00:49,816 root INFO 1 => 009-83%
+20:00:49,816 root INFO ------------
+20:00:49,931 root INFO IMAGE : 000763@sigmoidcontrast@sigmoidcontrast.jpg
+20:00:49,931 root INFO 1 => 023-98%
+2 => 023-98%
+20:00:49,931 root INFO ------------
+20:00:50,44 root INFO IMAGE : 001058@linearcontrast.jpg
+20:00:50,44 root INFO 1 => 007-62%
+20:00:50,44 root INFO ------------
+20:00:50,207 root INFO IMAGE : 000512@noise.jpg
+20:00:50,207 root INFO 1 => 053-68%
+2 => 023-68%
+3 => 053-66%
+20:00:50,207 root INFO ------------
+20:00:50,443 root INFO IMAGE : 001306@contrast@channelshuffle.jpg
+20:00:50,444 root INFO 1 => 023-96%
+20:00:50,444 root INFO ------------
+20:00:50,533 root INFO IMAGE : 000354@channelshuffle@linearcontrast.jpg
+20:00:50,533 root INFO 1 => 053-92%
+20:00:50,534 root INFO ------------
+20:00:50,612 root INFO IMAGE : 000839@noise@invertimage.jpg
+20:00:50,612 root INFO 1 => 023-84%
+20:00:50,612 root INFO ------------
+20:00:50,703 root INFO IMAGE : 001066@imagesolarize@imagesolarize.jpg
+20:00:50,704 root INFO 1 => 023-83%
+20:00:50,704 root INFO ------------
+20:00:50,765 root INFO IMAGE : 000208@channelshuffle@channelshuffle.jpg
+20:00:50,765 root INFO 1 => 053-74%
+20:00:50,765 root INFO ------------
+20:00:50,931 root INFO IMAGE : 000668@channelshuffle@imagesolarize.jpg
+20:00:50,931 root INFO 1 => 023-96%
+2 => 023-87%
+20:00:50,932 root INFO ------------
+20:00:51,49 root INFO IMAGE : 001061@sigmoidcontrast@contrast.jpg
+20:00:51,49 root INFO 1 => 023-89%
+20:00:51,50 root INFO ------------
+20:00:51,353 root INFO IMAGE : 000478@channelshuffle@channelshuffle.jpg
+20:00:51,353 root INFO 1 => 000-74%
+20:00:51,353 root INFO ------------
+20:00:51,599 root INFO IMAGE : 001445@imagesolarize.jpg
+20:00:51,599 root INFO 1 => 023-78%
+20:00:51,599 root INFO ------------
+20:00:51,690 root INFO IMAGE : 000907@noise@contrast.jpg
+20:00:51,691 root INFO 1 => 028-94%
+20:00:51,691 root INFO ------------
+20:00:51,776 root INFO IMAGE : 001250@invertimage@channelshuffle.jpg
+20:00:51,776 root INFO 1 => 009-70%
+20:00:51,776 root INFO ------------
+20:00:51,851 root INFO IMAGE : 000322@contrast.jpg
+20:00:51,851 root INFO 1 => 053-63%
+20:00:51,851 root INFO ------------
+20:00:52,80 root INFO IMAGE : 001132@noise@imagesolarize.jpg
+20:00:52,80 root INFO 1 => 023-69%
+20:00:52,80 root INFO ------------
+20:00:52,305 root INFO IMAGE : 000198@noise@noise.jpg
+20:00:52,305 root INFO 1 => 023-85%
+2 => 023-77%
+20:00:52,305 root INFO ------------
+20:00:52,423 root INFO IMAGE : 000939@noise.jpg
+20:00:52,423 root INFO 1 => 007-92%
+20:00:52,423 root INFO ------------
+20:00:52,737 root INFO IMAGE : 000011@noise@invertimage.jpg
+20:00:52,737 root INFO 1 => 007-94%
+20:00:52,738 root INFO ------------
+20:00:52,814 root INFO IMAGE : 000572@channelshuffle@sigmoidcontrast.jpg
+20:00:52,814 root INFO 1 => 007-91%
+2 => 007-78%
+3 => 007-64%
+20:00:52,814 root INFO ------------
+20:00:53,107 root INFO IMAGE : 000903@channelshuffle@noise.jpg
+20:00:53,107 root INFO 1 => 023-76%
+20:00:53,107 root INFO ------------
+20:00:53,231 root INFO IMAGE : 000782@channelshuffle@channelshuffle.jpg
+20:00:53,231 root INFO 1 => 028-83%
+20:00:53,231 root INFO ------------
+20:00:53,300 root INFO IMAGE : 000225@channelshuffle@invertimage.jpg
+20:00:53,300 root INFO 1 => 023-96%
+2 => 023-84%
+20:00:53,300 root INFO ------------
+20:00:53,427 root INFO IMAGE : 000878@noise@contrast.jpg
+20:00:53,427 root INFO 1 => 023-99%
+2 => 023-69%
+20:00:53,427 root INFO ------------
+20:00:53,585 root INFO IMAGE : 000025@linearcontrast.jpg
+20:00:53,585 root INFO 1 => 007-61%
+20:00:53,585 root INFO ------------
+20:00:53,769 root INFO IMAGE : 000813@channelshuffle@sigmoidcontrast.jpg
+20:00:53,769 root INFO 1 => 035-76%
+20:00:53,769 root INFO ------------
+20:00:53,858 root INFO IMAGE : 000130@contrast.jpg
+20:00:53,858 root INFO 1 => 040-90%
+2 => 007-88%
+20:00:53,858 root INFO ------------
+20:00:54,115 root INFO IMAGE : 001001@contrast.jpg
+20:00:54,115 root INFO 1 => 001-95%
+20:00:54,115 root INFO ------------
+20:00:54,345 root INFO IMAGE : 000777@sigmoidcontrast@contrast.jpg
+20:00:54,345 root INFO 1 => 023-99%
+20:00:54,345 root INFO ------------
+20:00:54,459 root INFO IMAGE : 001293@channelshuffle@noise.jpg
+20:00:54,459 root INFO 1 => 053-72%
+20:00:54,459 root INFO ------------
+20:00:54,540 root INFO IMAGE : 000575@linearcontrast@sigmoidcontrast.jpg
+20:00:54,540 root INFO 1 => 053-92%
+20:00:54,540 root INFO ------------
+20:00:54,634 root INFO IMAGE : 000422@linearcontrast.jpg
+20:00:54,634 root INFO 1 => 000-92%
+20:00:54,634 root INFO ------------
+20:00:54,701 root INFO IMAGE : 001008@linearcontrast@sigmoidcontrast.jpg
+20:00:54,702 root INFO 1 => 008-81%
+20:00:54,702 root INFO ------------
+20:00:54,849 root INFO IMAGE : 000584@invertimage@noise.jpg
+20:00:54,849 root INFO 1 => 053-65%
+20:00:54,849 root INFO ------------
+20:00:55,6 root INFO IMAGE : 001257@sigmoidcontrast.jpg
+20:00:55,6 root INFO 1 => 009-98%
+20:00:55,7 root INFO ------------
+20:00:55,61 root INFO IMAGE : 000266@sigmoidcontrast@channelshuffle.jpg
+20:00:55,61 root INFO 1 => 007-70%
+2 => 053-70%
+3 => 053-64%
+20:00:55,61 root INFO ------------
+20:00:55,338 root INFO IMAGE : 000183@linearcontrast@contrast.jpg
+20:00:55,339 root INFO 1 => 052-67%
+2 => 052-62%
+20:00:55,339 root INFO ------------
+20:00:55,699 root INFO IMAGE : 001471@invertimage@channelshuffle.jpg
+20:00:55,699 root INFO 1 => 023-94%
+20:00:55,699 root INFO ------------
+20:00:55,945 root INFO IMAGE : 000169@sigmoidcontrast@imagesolarize.jpg
+20:00:55,945 root INFO 1 => 009-95%
+20:00:55,945 root INFO ------------
+20:00:56,211 root INFO IMAGE : 000285@linearcontrast.jpg
+20:00:56,212 root INFO 1 => 052-80%
+20:00:56,212 root INFO ------------
+20:00:56,357 root INFO IMAGE : 000489@invertimage@invertimage.jpg
+20:00:56,357 root INFO 1 => 023-93%
+20:00:56,357 root INFO ------------
+20:00:56,517 root INFO IMAGE : 001458@noise.jpg
+20:00:56,517 root INFO 1 => 053-85%
+20:00:56,517 root INFO ------------
+20:00:56,852 root INFO IMAGE : 000622@noise@sigmoidcontrast.jpg
+20:00:56,852 root INFO 1 => 023-97%
+2 => 023-74%
+20:00:56,852 root INFO ------------
+20:00:56,980 root INFO IMAGE : 000520@imagesolarize@contrast.jpg
+20:00:56,980 root INFO 1 => 000-93%
+2 => 009-64%
+20:00:56,980 root INFO ------------
+20:00:57,146 root INFO IMAGE : 000793@noise@sigmoidcontrast.jpg
+20:00:57,147 root INFO 1 => 028-87%
+2 => 028-71%
+20:00:57,147 root INFO ------------
+20:00:57,271 root INFO IMAGE : 001327@linearcontrast@sigmoidcontrast.jpg
+20:00:57,271 root INFO 1 => 000-78%
+20:00:57,271 root INFO ------------
+20:00:57,987 root INFO IMAGE : 000028@channelshuffle@noise.jpg
+20:00:57,988 root INFO 1 => 053-86%
+2 => 028-81%
+3 => 053-69%
+20:00:57,988 root INFO ------------
+20:00:58,191 root INFO IMAGE : 000218@channelshuffle@linearcontrast.jpg
+20:00:58,192 root INFO 1 => 007-96%
+2 => 052-96%
+3 => 007-60%
+20:00:58,192 root INFO ------------
+20:00:58,352 root INFO IMAGE : 000719@sigmoidcontrast@sigmoidcontrast.jpg
+20:00:58,352 root INFO 1 => 025-75%
+20:00:58,352 root INFO ------------
+20:00:58,953 root INFO IMAGE : 000680@noise.jpg
+20:00:58,953 root INFO 1 => 009-92%
+20:00:58,953 root INFO ------------
+20:00:59,183 root INFO IMAGE : 000235@invertimage.jpg
+20:00:59,183 root INFO 1 => 052-96%
+2 => 052-94%
+3 => 007-84%
+4 => 028-72%
+20:00:59,183 root INFO ------------
+20:00:59,327 root INFO IMAGE : 000572@contrast@contrast.jpg
+20:00:59,327 root INFO 1 => 007-86%
+2 => 052-69%
+20:00:59,327 root INFO ------------
+20:00:59,507 root INFO IMAGE : 000676@channelshuffle@linearcontrast.jpg
+20:00:59,507 root INFO 1 => 023-89%
+2 => 023-81%
+20:00:59,507 root INFO ------------
+20:00:59,596 root INFO IMAGE : 001386@noise.jpg
+20:00:59,596 root INFO 1 => 000-75%
+20:00:59,596 root INFO ------------
+20:00:59,772 root INFO IMAGE : 001053@linearcontrast@sigmoidcontrast.jpg
+20:00:59,772 root INFO 1 => 000-78%
+20:00:59,772 root INFO ------------
+20:00:59,849 root INFO IMAGE : 000931@invertimage.jpg
+20:00:59,850 root INFO 1 => 023-71%
+20:00:59,850 root INFO ------------
+20:00:59,976 root INFO IMAGE : 000393@channelshuffle.jpg
+20:00:59,976 root INFO 1 => 028-74%
+20:00:59,976 root INFO ------------
+20:01:00,226 root INFO IMAGE : 000509@imagesolarize.jpg
+20:01:00,226 root INFO 1 => 051-98%
+2 => 051-98%
+3 => 051-89%
+20:01:00,226 root INFO ------------
+20:01:00,475 root INFO IMAGE : 000775@sigmoidcontrast.jpg
+20:01:00,475 root INFO 1 => 023-95%
+20:01:00,476 root INFO ------------
+20:01:00,634 root INFO IMAGE : 001067@invertimage@invertimage.jpg
+20:01:00,635 root INFO 1 => 009-78%
+20:01:00,635 root INFO ------------
+20:01:00,803 root INFO IMAGE : 001245@channelshuffle@invertimage.jpg
+20:01:00,803 root INFO 1 => 025-62%
+20:01:00,803 root INFO ------------
+20:01:00,883 root INFO IMAGE : 001252@contrast@contrast.jpg
+20:01:00,883 root INFO 1 => 000-96%
+20:01:00,883 root INFO ------------
+20:01:01,283 root INFO IMAGE : 000818@channelshuffle@noise.jpg
+20:01:01,283 root INFO 1 => 023-85%
+20:01:01,283 root INFO ------------
+20:01:01,454 root INFO IMAGE : 001074@imagesolarize@noise.jpg
+20:01:01,454 root INFO 1 => 009-78%
+2 => 009-66%
+20:01:01,454 root INFO ------------
+20:01:01,727 root INFO IMAGE : 000654@sigmoidcontrast.jpg
+20:01:01,727 root INFO 1 => 023-98%
+20:01:01,727 root INFO ------------
+20:01:01,865 root INFO IMAGE : 000007@invertimage@channelshuffle.jpg
+20:01:01,865 root INFO 1 => 052-76%
+2 => 004-67%
+20:01:01,865 root INFO ------------
+20:01:02,7 root INFO IMAGE : 000457.jpg
+20:01:02,7 root INFO 1 => 009-79%
+20:01:02,7 root INFO ------------
+20:01:02,81 root INFO IMAGE : 000220@contrast@imagesolarize.jpg
+20:01:02,82 root INFO 1 => 009-87%
+20:01:02,82 root INFO ------------
+20:01:02,267 root INFO IMAGE : 000741@invertimage@sigmoidcontrast.jpg
+20:01:02,268 root INFO 1 => 009-87%
+20:01:02,268 root INFO ------------
+20:01:02,368 root INFO IMAGE : 001130@linearcontrast.jpg
+20:01:02,368 root INFO 1 => 023-78%
+20:01:02,368 root INFO ------------
+20:01:02,573 root INFO IMAGE : 001142@invertimage@linearcontrast.jpg
+20:01:02,573 root INFO 1 => 023-62%
+20:01:02,573 root INFO ------------
+20:01:02,764 root INFO IMAGE : 000246@noise@sigmoidcontrast.jpg
+20:01:02,765 root INFO 1 => 053-66%
+20:01:02,765 root INFO ------------
+20:01:02,915 root INFO IMAGE : 001400@noise@contrast.jpg
+20:01:02,915 root INFO 1 => 007-94%
+20:01:02,915 root INFO ------------
+20:01:03,22 root INFO IMAGE : 001471@imagesolarize.jpg
+20:01:03,22 root INFO 1 => 023-91%
+20:01:03,22 root INFO ------------
+20:01:03,140 root INFO IMAGE : 001164@linearcontrast@noise.jpg
+20:01:03,140 root INFO 1 => 000-74%
+20:01:03,140 root INFO ------------
+20:01:03,261 root INFO IMAGE : 000617@sigmoidcontrast.jpg
+20:01:03,261 root INFO 1 => 023-84%
+20:01:03,261 root INFO ------------
+20:01:03,360 root INFO IMAGE : 000240@channelshuffle@sigmoidcontrast.jpg
+20:01:03,360 root INFO 1 => 023-72%
+2 => 023-66%
+3 => 009-65%
+20:01:03,360 root INFO ------------
+20:01:03,466 root INFO IMAGE : 001077@noise@noise.jpg
+20:01:03,466 root INFO 1 => 025-70%
+20:01:03,466 root INFO ------------
+20:01:03,573 root INFO IMAGE : 000598@invertimage@linearcontrast.jpg
+20:01:03,573 root INFO 1 => 023-82%
+20:01:03,573 root INFO ------------
+20:01:03,686 root INFO IMAGE : 000788@linearcontrast.jpg
+20:01:03,686 root INFO 1 => 023-94%
+20:01:03,686 root INFO ------------
+20:01:03,849 root INFO IMAGE : 000457@channelshuffle.jpg
+20:01:03,849 root INFO 1 => 009-62%
+20:01:03,849 root INFO ------------
+20:01:04,187 root INFO IMAGE : 000949@linearcontrast@invertimage.jpg
+20:01:04,187 root INFO 1 => 052-92%
+2 => 052-87%
+20:01:04,187 root INFO ------------
+20:01:04,299 root INFO IMAGE : 000753@linearcontrast@invertimage.jpg
+20:01:04,299 root INFO 1 => 028-60%
+20:01:04,299 root INFO ------------
+20:01:04,378 root INFO IMAGE : 000044@sigmoidcontrast@contrast.jpg
+20:01:04,379 root INFO 1 => 023-85%
+20:01:04,379 root INFO ------------
+20:01:04,488 root INFO IMAGE : 000852@linearcontrast@sigmoidcontrast.jpg
+20:01:04,489 root INFO 1 => 023-72%
+20:01:04,489 root INFO ------------
+20:01:04,581 root INFO IMAGE : 001415@linearcontrast@noise.jpg
+20:01:04,581 root INFO 1 => 025-72%
+20:01:04,581 root INFO ------------
+20:01:04,678 root INFO IMAGE : 000043@channelshuffle.jpg
+20:01:04,679 root INFO 1 => 052-77%
+2 => 004-77%
+20:01:04,679 root INFO ------------
+20:01:04,811 root INFO IMAGE : 000081@contrast@sigmoidcontrast.jpg
+20:01:04,811 root INFO 1 => 007-76%
+2 => 052-62%
+20:01:04,812 root INFO ------------
+20:01:04,888 root INFO IMAGE : 000726.jpg
+20:01:04,888 root INFO 1 => 001-72%
+20:01:04,888 root INFO ------------
+20:01:05,92 root INFO IMAGE : 000872@channelshuffle@sigmoidcontrast.jpg
+20:01:05,92 root INFO 1 => 028-96%
+20:01:05,92 root INFO ------------
+20:01:05,265 root INFO IMAGE : 000705@linearcontrast@channelshuffle.jpg
+20:01:05,265 root INFO 1 => 028-92%
+20:01:05,265 root INFO ------------
+20:01:05,663 root INFO IMAGE : 000086@noise@channelshuffle.jpg
+20:01:05,663 root INFO 1 => 053-70%
+20:01:05,663 root INFO ------------
+20:01:05,756 root INFO IMAGE : 001166@noise.jpg
+20:01:05,756 root INFO 1 => 023-83%
+20:01:05,756 root INFO ------------
+20:01:05,869 root INFO IMAGE : 000441@imagesolarize@invertimage.jpg
+20:01:05,869 root INFO 1 => 008-60%
+20:01:05,869 root INFO ------------
+20:01:06,138 root INFO IMAGE : 000242@noise@noise.jpg
+20:01:06,138 root INFO 1 => 023-91%
+20:01:06,138 root INFO ------------
+20:01:06,327 root INFO IMAGE : 000083@noise@contrast.jpg
+20:01:06,327 root INFO 1 => 053-86%
+20:01:06,327 root INFO ------------
+20:01:06,565 root INFO IMAGE : 000567@channelshuffle@channelshuffle.jpg
+20:01:06,565 root INFO 1 => 007-74%
+20:01:06,565 root INFO ------------
+20:01:06,699 root INFO IMAGE : 000640@channelshuffle@noise.jpg
+20:01:06,699 root INFO 1 => 028-75%
+20:01:06,699 root INFO ------------
+20:01:06,869 root INFO IMAGE : 001213@contrast.jpg
+20:01:06,870 root INFO 1 => 009-94%
+20:01:06,870 root INFO ------------
+20:01:07,73 root INFO IMAGE : 000036@linearcontrast@noise.jpg
+20:01:07,73 root INFO 1 => 023-81%
+20:01:07,73 root INFO ------------
+20:01:07,712 root INFO IMAGE : 001445@contrast@sigmoidcontrast.jpg
+20:01:07,713 root INFO 1 => 023-93%
+20:01:07,713 root INFO ------------
+20:01:07,849 root INFO IMAGE : 000872@invertimage@contrast.jpg
+20:01:07,849 root INFO 1 => 028-92%
+20:01:07,849 root INFO ------------
+20:01:08,33 root INFO IMAGE : 000235@contrast@invertimage.jpg
+20:01:08,34 root INFO 1 => 052-95%
+2 => 052-93%
+3 => 007-77%
+4 => 028-62%
+20:01:08,34 root INFO ------------
+20:01:08,135 root INFO IMAGE : 001106@channelshuffle.jpg
+20:01:08,135 root INFO 1 => 023-89%
+2 => 023-86%
+3 => 023-68%
+20:01:08,135 root INFO ------------
+20:01:08,370 root INFO IMAGE : 000753@sigmoidcontrast@linearcontrast.jpg
+20:01:08,370 root INFO 1 => 028-86%
+20:01:08,370 root INFO ------------
+20:01:08,678 root INFO IMAGE : 001070@contrast@channelshuffle.jpg
+20:01:08,678 root INFO 1 => 035-91%
+20:01:08,678 root INFO ------------
+20:01:08,781 root INFO IMAGE : 000579@channelshuffle@channelshuffle.jpg
+20:01:08,781 root INFO 1 => 007-63%
+20:01:08,781 root INFO ------------
+20:01:09,226 root INFO IMAGE : 000078@contrast@noise.jpg
+20:01:09,226 root INFO 1 => 051-99%
+2 => 051-99%
+3 => 051-94%
+20:01:09,226 root INFO ------------
+20:01:09,863 root INFO IMAGE : 000814@linearcontrast@sigmoidcontrast.jpg
+20:01:09,863 root INFO 1 => 023-87%
+2 => 023-67%
+20:01:09,863 root INFO ------------
+20:01:10,243 root INFO IMAGE : 001305@imagesolarize@contrast.jpg
+20:01:10,244 root INFO 1 => 000-94%
+20:01:10,244 root INFO ------------
+20:01:10,354 root INFO IMAGE : 000771@invertimage@invertimage.jpg
+20:01:10,354 root INFO 1 => 023-62%
+2 => 023-62%
+20:01:10,354 root INFO ------------
+20:01:10,515 root INFO IMAGE : 000045@invertimage@invertimage.jpg
+20:01:10,515 root INFO 1 => 052-98%
+2 => 052-97%
+3 => 007-91%
+20:01:10,515 root INFO ------------
+20:01:10,655 root INFO IMAGE : 000179@contrast.jpg
+20:01:10,655 root INFO 1 => 052-93%
+20:01:10,655 root INFO ------------
+20:01:10,813 root INFO IMAGE : 000441@noise@contrast.jpg
+20:01:10,813 root INFO 1 => 008-93%
+20:01:10,813 root INFO ------------
+20:01:10,946 root INFO IMAGE : 000665@channelshuffle@noise.jpg
+20:01:10,946 root INFO 1 => 028-85%
+20:01:10,946 root INFO ------------
+20:01:11,38 root INFO IMAGE : 000053@sigmoidcontrast@linearcontrast.jpg
+20:01:11,38 root INFO 1 => 053-91%
+2 => 023-85%
+20:01:11,39 root INFO ------------
+20:01:11,317 root INFO IMAGE : 001245@contrast@contrast.jpg
+20:01:11,317 root INFO 1 => 025-87%
+20:01:11,317 root INFO ------------
+20:01:11,416 root INFO IMAGE : 001015@noise@noise.jpg
+20:01:11,416 root INFO 1 => 008-66%
+20:01:11,416 root INFO ------------
+20:01:11,531 root INFO IMAGE : 000023@noise@channelshuffle.jpg
+20:01:11,531 root INFO 1 => 004-60%
+20:01:11,531 root INFO ------------
+20:01:11,621 root INFO IMAGE : 001471@imagesolarize@contrast.jpg
+20:01:11,621 root INFO 1 => 023-92%
+20:01:11,621 root INFO ------------
+20:01:11,989 root INFO IMAGE : 000749@channelshuffle.jpg
+20:01:11,989 root INFO 1 => 023-77%
+20:01:11,989 root INFO ------------
+20:01:12,317 root INFO IMAGE : 001372@contrast@sigmoidcontrast.jpg
+20:01:12,317 root INFO 1 => 023-98%
+20:01:12,318 root INFO ------------
+20:01:12,439 root INFO IMAGE : 001228@channelshuffle.jpg
+20:01:12,439 root INFO 1 => 023-89%
+20:01:12,439 root INFO ------------
+20:01:12,539 root INFO IMAGE : 001366@noise@invertimage.jpg
+20:01:12,539 root INFO 1 => 053-68%
+20:01:12,539 root INFO ------------
+20:01:12,831 root INFO IMAGE : 001314@imagesolarize@imagesolarize.jpg
+20:01:12,831 root INFO 1 => 023-97%
+20:01:12,832 root INFO ------------
+20:01:13,274 root INFO IMAGE : 000236@channelshuffle@invertimage.jpg
+20:01:13,274 root INFO 1 => 053-79%
+20:01:13,274 root INFO ------------
+20:01:13,466 root INFO IMAGE : 000002@contrast@imagesolarize.jpg
+20:01:13,466 root INFO 1 => 053-64%
+20:01:13,466 root INFO ------------
+20:01:13,548 root INFO IMAGE : 000369@contrast@contrast.jpg
+20:01:13,548 root INFO 1 => 028-65%
+20:01:13,548 root INFO ------------
+20:01:13,634 root INFO IMAGE : 001220@imagesolarize@contrast.jpg
+20:01:13,634 root INFO 1 => 023-83%
+20:01:13,634 root INFO ------------
+20:01:13,720 root INFO IMAGE : 000458@contrast.jpg
+20:01:13,720 root INFO 1 => 023-63%
+20:01:13,720 root INFO ------------
+20:01:13,841 root INFO IMAGE : 000046@linearcontrast@contrast.jpg
+20:01:13,841 root INFO 1 => 053-87%
+20:01:13,841 root INFO ------------
+20:01:13,961 root INFO IMAGE : 001309@noise@invertimage.jpg
+20:01:13,961 root INFO 1 => 025-76%
+20:01:13,961 root INFO ------------
+20:01:14,156 root INFO IMAGE : 000475@channelshuffle.jpg
+20:01:14,156 root INFO 1 => 023-61%
+20:01:14,157 root INFO ------------
+20:01:14,304 root INFO IMAGE : 001179@invertimage@invertimage.jpg
+20:01:14,304 root INFO 1 => 053-90%
+20:01:14,304 root INFO ------------
+20:01:14,529 root INFO IMAGE : 000786@noise@channelshuffle.jpg
+20:01:14,529 root INFO 1 => 028-87%
+20:01:14,529 root INFO ------------
+20:01:14,618 root INFO IMAGE : 000380@imagesolarize@invertimage.jpg
+20:01:14,618 root INFO 1 => 007-95%
+20:01:14,618 root INFO ------------
+20:01:14,707 root INFO IMAGE : 001093@sigmoidcontrast@invertimage.jpg
+20:01:14,707 root INFO 1 => 052-98%
+2 => 052-79%
+20:01:14,707 root INFO ------------
+20:01:14,821 root INFO IMAGE : 000331@invertimage@imagesolarize.jpg
+20:01:14,821 root INFO 1 => 028-85%
+20:01:14,821 root INFO ------------
+20:01:14,939 root INFO IMAGE : 000543@sigmoidcontrast@contrast.jpg
+20:01:14,939 root INFO 1 => 025-88%
+20:01:14,939 root INFO ------------
+20:01:15,55 root INFO IMAGE : 000610@noise@contrast.jpg
+20:01:15,55 root INFO 1 => 035-94%
+2 => 035-61%
+20:01:15,55 root INFO ------------
+20:01:15,564 root INFO IMAGE : 000937@imagesolarize@invertimage.jpg
+20:01:15,564 root INFO 1 => 028-74%
+20:01:15,564 root INFO ------------
+20:01:15,665 root INFO IMAGE : 000145@contrast@invertimage.jpg
+20:01:15,665 root INFO 1 => 053-91%
+20:01:15,665 root INFO ------------
+20:01:15,776 root INFO IMAGE : 001180@invertimage@linearcontrast.jpg
+20:01:15,776 root INFO 1 => 025-68%
+20:01:15,776 root INFO ------------
+20:01:15,882 root INFO IMAGE : 000460@channelshuffle@invertimage.jpg
+20:01:15,882 root INFO 1 => 001-68%
+20:01:15,882 root INFO ------------
+20:01:15,976 root INFO IMAGE : 000040@contrast.jpg
+20:01:15,976 root INFO 1 => 023-63%
+20:01:15,976 root INFO ------------
+20:01:16,102 root INFO IMAGE : 000198@linearcontrast@noise.jpg
+20:01:16,102 root INFO 1 => 023-69%
+20:01:16,102 root INFO ------------
+20:01:16,362 root INFO IMAGE : 000994@noise@sigmoidcontrast.jpg
+20:01:16,363 root INFO 1 => 023-94%
+20:01:16,363 root INFO ------------
+20:01:16,489 root INFO IMAGE : 001081@sigmoidcontrast@noise.jpg
+20:01:16,489 root INFO 1 => 023-85%
+20:01:16,489 root INFO ------------
+20:01:16,567 root INFO IMAGE : 001052@channelshuffle@contrast.jpg
+20:01:16,568 root INFO 1 => 053-96%
+2 => 053-87%
+3 => 008-65%
+4 => 053-61%
+20:01:16,568 root INFO ------------
+20:01:16,633 root INFO IMAGE : 000837@invertimage@sigmoidcontrast.jpg
+20:01:16,633 root INFO 1 => 001-65%
+20:01:16,633 root INFO ------------
+20:01:16,786 root INFO IMAGE : 000027@invertimage@linearcontrast.jpg
+20:01:16,787 root INFO 1 => 053-76%
+2 => 042-73%
+20:01:16,787 root INFO ------------
+20:01:16,872 root INFO IMAGE : 001130@invertimage@invertimage.jpg
+20:01:16,872 root INFO 1 => 023-92%
+20:01:16,872 root INFO ------------
+20:01:16,975 root INFO IMAGE : 000439@contrast@imagesolarize.jpg
+20:01:16,975 root INFO 1 => 004-61%
+20:01:16,975 root INFO ------------
+20:01:17,120 root INFO IMAGE : 000427@channelshuffle@contrast.jpg
+20:01:17,120 root INFO 1 => 025-86%
+20:01:17,120 root INFO ------------
+20:01:17,409 root INFO IMAGE : 001094@linearcontrast@imagesolarize.jpg
+20:01:17,409 root INFO 1 => 009-75%
+20:01:17,409 root INFO ------------
+20:01:17,537 root INFO IMAGE : 000575@sigmoidcontrast@channelshuffle.jpg
+20:01:17,537 root INFO 1 => 053-77%
+20:01:17,537 root INFO ------------
+20:01:17,631 root INFO IMAGE : 000312@imagesolarize@imagesolarize.jpg
+20:01:17,631 root INFO 1 => 053-93%
+20:01:17,631 root INFO ------------
+20:01:18,127 root INFO IMAGE : 001184@channelshuffle@linearcontrast.jpg
+20:01:18,132 root INFO 1 => 023-85%
+20:01:18,132 root INFO ------------
+20:01:18,236 root INFO IMAGE : 000621@imagesolarize.jpg
+20:01:18,236 root INFO 1 => 009-89%
+20:01:18,236 root INFO ------------
+20:01:18,575 root INFO IMAGE : 000201@invertimage@imagesolarize.jpg
+20:01:18,575 root INFO 1 => 053-77%
+20:01:18,576 root INFO ------------
+20:01:18,730 root INFO IMAGE : 000125@sigmoidcontrast.jpg
+20:01:18,730 root INFO 1 => 052-97%
+2 => 052-96%
+3 => 052-80%
+20:01:18,730 root INFO ------------
+20:01:18,839 root INFO IMAGE : 000241@channelshuffle@noise.jpg
+20:01:18,839 root INFO 1 => 053-71%
+20:01:18,839 root INFO ------------
+20:01:19,16 root INFO IMAGE : 000084@imagesolarize@linearcontrast.jpg
+20:01:19,16 root INFO 1 => 008-88%
+2 => 008-64%
+20:01:19,16 root INFO ------------
+20:01:19,201 root INFO IMAGE : 000428@channelshuffle.jpg
+20:01:19,201 root INFO 1 => 052-98%
+2 => 052-97%
+3 => 007-82%
+4 => 028-61%
+20:01:19,201 root INFO ------------
+20:01:19,306 root INFO IMAGE : 000290@noise@channelshuffle.jpg
+20:01:19,306 root INFO 1 => 023-65%
+20:01:19,306 root INFO ------------
+20:01:19,419 root INFO IMAGE : 000342@imagesolarize@imagesolarize.jpg
+20:01:19,419 root INFO 1 => 009-64%
+20:01:19,419 root INFO ------------
+20:01:19,728 root INFO IMAGE : 000648@channelshuffle@invertimage.jpg
+20:01:19,728 root INFO 1 => 023-88%
+20:01:19,729 root INFO ------------
+20:01:19,868 root INFO IMAGE : 001424@sigmoidcontrast@channelshuffle.jpg
+20:01:19,868 root INFO 1 => 025-80%
+20:01:19,868 root INFO ------------
+20:01:20,58 root INFO IMAGE : 000211@contrast@channelshuffle.jpg
+20:01:20,58 root INFO 1 => 023-76%
+20:01:20,58 root INFO ------------
+20:01:20,151 root INFO IMAGE : 000364@imagesolarize@noise.jpg
+20:01:20,151 root INFO 1 => 053-81%
+2 => 028-63%
+20:01:20,151 root INFO ------------
+20:01:20,452 root INFO IMAGE : 001105@channelshuffle@linearcontrast.jpg
+20:01:20,452 root INFO 1 => 000-94%
+20:01:20,452 root INFO ------------
+20:01:20,551 root INFO IMAGE : 000787@sigmoidcontrast@imagesolarize.jpg
+20:01:20,551 root INFO 1 => 023-94%
+2 => 023-86%
+20:01:20,551 root INFO ------------
+20:01:20,742 root INFO IMAGE : 000133@invertimage@contrast.jpg
+20:01:20,742 root INFO 1 => 004-66%
+20:01:20,742 root INFO ------------
+20:01:20,883 root INFO IMAGE : 000908@contrast.jpg
+20:01:20,884 root INFO 1 => 028-73%
+20:01:20,884 root INFO ------------
+20:01:20,989 root INFO IMAGE : 000911.jpg
+20:01:20,989 root INFO 1 => 028-66%
+20:01:20,989 root INFO ------------
+20:01:21,94 root INFO IMAGE : 000644@invertimage@channelshuffle.jpg
+20:01:21,94 root INFO 1 => 009-87%
+20:01:21,94 root INFO ------------
+20:01:21,225 root INFO IMAGE : 001444@channelshuffle@noise.jpg
+20:01:21,225 root INFO 1 => 000-87%
+20:01:21,226 root INFO ------------
+20:01:21,442 root INFO IMAGE : 001359@sigmoidcontrast@noise.jpg
+20:01:21,442 root INFO 1 => 007-75%
+20:01:21,442 root INFO ------------
+20:01:21,545 root INFO IMAGE : 000769@linearcontrast@sigmoidcontrast.jpg
+20:01:21,545 root INFO 1 => 023-61%
+20:01:21,545 root INFO ------------
+20:01:21,816 root INFO IMAGE : 000522@invertimage@contrast.jpg
+20:01:21,816 root INFO 1 => 053-97%
+2 => 053-81%
+20:01:21,816 root INFO ------------
+20:01:21,972 root INFO IMAGE : 000575@channelshuffle@linearcontrast.jpg
+20:01:21,972 root INFO 1 => 053-66%
+20:01:21,972 root INFO ------------
+20:01:22,117 root INFO IMAGE : 001371@linearcontrast.jpg
+20:01:22,117 root INFO 1 => 053-94%
+2 => 003-61%
+20:01:22,117 root INFO ------------
+20:01:22,244 root INFO IMAGE : 000524@linearcontrast.jpg
+20:01:22,244 root INFO 1 => 053-68%
+20:01:22,244 root INFO ------------
+20:01:22,459 root INFO IMAGE : 001168@invertimage@invertimage.jpg
+20:01:22,459 root INFO 1 => 003-79%
+20:01:22,459 root INFO ------------
+20:01:22,637 root INFO IMAGE : 000333@contrast@imagesolarize.jpg
+20:01:22,638 root INFO 1 => 007-99%
+20:01:22,638 root INFO ------------
+20:01:22,756 root INFO IMAGE : 000711@sigmoidcontrast@linearcontrast.jpg
+20:01:22,756 root INFO 1 => 023-95%
+20:01:22,756 root INFO ------------
+20:01:23,291 root INFO IMAGE : 000890@sigmoidcontrast.jpg
+20:01:23,291 root INFO 1 => 009-84%
+20:01:23,291 root INFO ------------
+20:01:23,381 root INFO IMAGE : 000803@channelshuffle@sigmoidcontrast.jpg
+20:01:23,381 root INFO 1 => 035-62%
+20:01:23,381 root INFO ------------
+20:01:23,543 root INFO IMAGE : 000459@sigmoidcontrast@contrast.jpg
+20:01:23,543 root INFO 1 => 023-62%
+20:01:23,543 root INFO ------------
+20:01:23,630 root INFO IMAGE : 001442@linearcontrast@noise.jpg
+20:01:23,630 root INFO 1 => 053-66%
+20:01:23,630 root INFO ------------
+20:01:23,730 root INFO IMAGE : 000087@invertimage@sigmoidcontrast.jpg
+20:01:23,730 root INFO 1 => 053-90%
+20:01:23,731 root INFO ------------
+20:01:23,853 root INFO IMAGE : 000767@channelshuffle@channelshuffle.jpg
+20:01:23,853 root INFO 1 => 035-87%
+20:01:23,854 root INFO ------------
+20:01:24,292 root INFO IMAGE : 001476@channelshuffle@invertimage.jpg
+20:01:24,292 root INFO 1 => 023-91%
+20:01:24,292 root INFO ------------
+20:01:24,384 root INFO IMAGE : 001459@sigmoidcontrast.jpg
+20:01:24,384 root INFO 1 => 000-95%
+20:01:24,384 root INFO ------------
+20:01:24,482 root INFO IMAGE : 000854@imagesolarize@imagesolarize.jpg
+20:01:24,482 root INFO 1 => 009-87%
+20:01:24,482 root INFO ------------
+20:01:24,589 root INFO IMAGE : 001186@contrast@noise.jpg
+20:01:24,590 root INFO 1 => 007-83%
+20:01:24,590 root INFO ------------
+20:01:24,780 root INFO IMAGE : 000677@linearcontrast.jpg
+20:01:24,780 root INFO 1 => 023-77%
+20:01:24,781 root INFO ------------
+20:01:25,480 root INFO IMAGE : 000079@contrast@linearcontrast.jpg
+20:01:25,480 root INFO 1 => 053-96%
+2 => 053-76%
+20:01:25,480 root INFO ------------
+20:01:25,632 root INFO IMAGE : 000655@channelshuffle@noise.jpg
+20:01:25,632 root INFO 1 => 035-72%
+20:01:25,632 root INFO ------------
+20:01:25,767 root INFO IMAGE : 000694@linearcontrast@channelshuffle.jpg
+20:01:25,767 root INFO 1 => 028-75%
+20:01:25,767 root INFO ------------
+20:01:26,76 root INFO IMAGE : 000376@noise@channelshuffle.jpg
+20:01:26,77 root INFO 1 => 052-89%
+2 => 052-85%
+3 => 052-74%
+20:01:26,77 root INFO ------------
+20:01:26,230 root INFO IMAGE : 000271@sigmoidcontrast@contrast.jpg
+20:01:26,230 root INFO 1 => 052-99%
+2 => 052-97%
+20:01:26,230 root INFO ------------
+20:01:26,843 root INFO IMAGE : 000385@sigmoidcontrast@noise.jpg
+20:01:26,843 root INFO 1 => 052-96%
+2 => 052-92%
+20:01:26,843 root INFO ------------
+20:01:27,271 root INFO IMAGE : 000742@noise@noise.jpg
+20:01:27,271 root INFO 1 => 023-69%
+20:01:27,271 root INFO ------------
+20:01:27,569 root INFO IMAGE : 001363@sigmoidcontrast@sigmoidcontrast.jpg
+20:01:27,569 root INFO 1 => 000-69%
+2 => 000-67%
+20:01:27,569 root INFO ------------
+20:01:27,724 root INFO IMAGE : 001156@invertimage@contrast.jpg
+20:01:27,724 root INFO 1 => 023-72%
+20:01:27,724 root INFO ------------
+20:01:27,827 root INFO IMAGE : 001128@noise@contrast.jpg
+20:01:27,827 root INFO 1 => 023-91%
+20:01:27,827 root INFO ------------
+20:01:28,280 root INFO IMAGE : 000430@noise@invertimage.jpg
+20:01:28,280 root INFO 1 => 053-98%
+2 => 053-97%
+20:01:28,281 root INFO ------------
+20:01:28,424 root INFO IMAGE : 000204@noise@sigmoidcontrast.jpg
+20:01:28,424 root INFO 1 => 003-93%
+2 => 023-72%
+20:01:28,424 root INFO ------------
+20:01:28,504 root INFO IMAGE : 000575@invertimage@linearcontrast.jpg
+20:01:28,504 root INFO 1 => 053-74%
+20:01:28,504 root INFO ------------
+20:01:29,361 root INFO IMAGE : 000090@sigmoidcontrast@contrast.jpg
+20:01:29,361 root INFO 1 => 023-91%
+20:01:29,361 root INFO ------------
+20:01:29,945 root INFO IMAGE : 000119.jpg
+20:01:29,945 root INFO 1 => 052-86%
+20:01:29,945 root INFO ------------
+20:01:30,130 root INFO IMAGE : 000634@invertimage@imagesolarize.jpg
+20:01:30,130 root INFO 1 => 023-78%
+20:01:30,130 root INFO ------------
+20:01:30,240 root INFO IMAGE : 001053@linearcontrast.jpg
+20:01:30,240 root INFO 1 => 000-63%
+20:01:30,240 root INFO ------------
+20:01:30,352 root INFO IMAGE : 000557@invertimage@contrast.jpg
+20:01:30,352 root INFO 1 => 007-67%
+20:01:30,352 root INFO ------------
+20:01:30,710 root INFO IMAGE : 000947@noise@invertimage.jpg
+20:01:30,710 root INFO 1 => 023-92%
+2 => 023-83%
+20:01:30,710 root INFO ------------
+20:01:31,14 root INFO IMAGE : 000940@invertimage@imagesolarize.jpg
+20:01:31,14 root INFO 1 => 023-74%
+20:01:31,14 root INFO ------------
+20:01:31,172 root INFO IMAGE : 000653@noise@noise.jpg
+20:01:31,173 root INFO 1 => 023-74%
+20:01:31,173 root INFO ------------
+20:01:31,274 root INFO IMAGE : 000358@invertimage@noise.jpg
+20:01:31,275 root INFO 1 => 052-96%
+2 => 052-96%
+3 => 007-81%
+20:01:31,275 root INFO ------------
+20:01:31,459 root INFO IMAGE : 001163@channelshuffle@invertimage.jpg
+20:01:31,460 root INFO 1 => 009-72%
+20:01:31,460 root INFO ------------
+20:01:31,614 root INFO IMAGE : 000434@sigmoidcontrast@channelshuffle.jpg
+20:01:31,615 root INFO 1 => 001-87%
+20:01:31,615 root INFO ------------
+20:01:31,725 root INFO IMAGE : 000423@invertimage.jpg
+20:01:31,725 root INFO 1 => 025-93%
+20:01:31,725 root INFO ------------
+20:01:31,823 root INFO IMAGE : 001337@contrast@linearcontrast.jpg
+20:01:31,823 root INFO 1 => 023-80%
+20:01:31,823 root INFO ------------
+20:01:32,76 root INFO IMAGE : 000311@noise.jpg
+20:01:32,76 root INFO 1 => 053-75%
+20:01:32,76 root INFO ------------
+20:01:32,200 root INFO IMAGE : 000766@noise.jpg
+20:01:32,200 root INFO 1 => 009-97%
+20:01:32,200 root INFO ------------
+20:01:32,301 root INFO IMAGE : 001219@linearcontrast@invertimage.jpg
+20:01:32,301 root INFO 1 => 023-78%
+20:01:32,301 root INFO ------------
+20:01:32,437 root INFO IMAGE : 000600@imagesolarize@imagesolarize.jpg
+20:01:32,437 root INFO 1 => 009-98%
+20:01:32,437 root INFO ------------
+20:01:32,708 root INFO IMAGE : 001055@linearcontrast@channelshuffle.jpg
+20:01:32,708 root INFO 1 => 000-95%
+20:01:32,708 root INFO ------------
+20:01:32,852 root INFO IMAGE : 001427@invertimage.jpg
+20:01:32,853 root INFO 1 => 053-90%
+2 => 053-79%
+3 => 008-63%
+20:01:32,853 root INFO ------------
+20:01:33,66 root INFO IMAGE : 001067@noise.jpg
+20:01:33,66 root INFO 1 => 009-65%
+20:01:33,66 root INFO ------------
+20:01:33,254 root INFO IMAGE : 000080@channelshuffle@sigmoidcontrast.jpg
+20:01:33,254 root INFO 1 => 007-77%
+20:01:33,254 root INFO ------------
+20:01:33,412 root INFO IMAGE : 001335@channelshuffle@invertimage.jpg
+20:01:33,412 root INFO 1 => 000-97%
+20:01:33,412 root INFO ------------
+20:01:33,851 root INFO IMAGE : 000933@channelshuffle@imagesolarize.jpg
+20:01:33,851 root INFO 1 => 023-80%
+2 => 023-73%
+20:01:33,851 root INFO ------------
+20:01:34,127 root INFO IMAGE : 000516@linearcontrast@invertimage.jpg
+20:01:34,127 root INFO 1 => 052-94%
+20:01:34,127 root INFO ------------
+20:01:34,315 root INFO IMAGE : 000386@noise@invertimage.jpg
+20:01:34,315 root INFO 1 => 009-95%
+20:01:34,315 root INFO ------------
+20:01:34,559 root INFO IMAGE : 000204@noise@linearcontrast.jpg
+20:01:34,559 root INFO 1 => 003-71%
+20:01:34,559 root INFO ------------
+20:01:35,52 root INFO IMAGE : 001442@invertimage@contrast.jpg
+20:01:35,52 root INFO 1 => 053-90%
+2 => 028-84%
+20:01:35,52 root INFO ------------
+20:01:35,185 root INFO IMAGE : 001229@invertimage@channelshuffle.jpg
+20:01:35,185 root INFO 1 => 053-90%
+20:01:35,185 root INFO ------------
+20:01:35,333 root INFO IMAGE : 000313@channelshuffle@sigmoidcontrast.jpg
+20:01:35,334 root INFO 1 => 007-83%
+20:01:35,334 root INFO ------------
+20:01:35,470 root INFO IMAGE : 001424@noise.jpg
+20:01:35,471 root INFO 1 => 025-76%
+20:01:35,471 root INFO ------------
+20:01:36,11 root INFO IMAGE : 000615@channelshuffle@imagesolarize.jpg
+20:01:36,11 root INFO 1 => 023-74%
+20:01:36,11 root INFO ------------
+20:01:36,264 root INFO IMAGE : 000642@invertimage@channelshuffle.jpg
+20:01:36,264 root INFO 1 => 023-99%
+20:01:36,264 root INFO ------------
+20:01:36,493 root INFO IMAGE : 001309@invertimage.jpg
+20:01:36,493 root INFO 1 => 025-76%
+20:01:36,493 root INFO ------------
+20:01:36,676 root INFO IMAGE : 000480@sigmoidcontrast@imagesolarize.jpg
+20:01:36,677 root INFO 1 => 025-64%
+20:01:36,677 root INFO ------------
+20:01:36,908 root INFO IMAGE : 001476@channelshuffle@channelshuffle.jpg
+20:01:36,908 root INFO 1 => 023-96%
+20:01:36,908 root INFO ------------
+20:01:37,95 root INFO IMAGE : 001197@sigmoidcontrast@contrast.jpg
+20:01:37,95 root INFO 1 => 023-95%
+20:01:37,95 root INFO ------------
+20:01:37,353 root INFO IMAGE : 001029@noise@noise.jpg
+20:01:37,353 root INFO 1 => 028-70%
+20:01:37,353 root INFO ------------
+20:01:37,453 root INFO IMAGE : 001329@invertimage@contrast.jpg
+20:01:37,453 root INFO 1 => 053-76%
+20:01:37,454 root INFO ------------
+20:01:37,571 root INFO IMAGE : 000886@sigmoidcontrast@channelshuffle.jpg
+20:01:37,571 root INFO 1 => 023-69%
+20:01:37,571 root INFO ------------
+20:01:37,798 root INFO IMAGE : 000971@linearcontrast@sigmoidcontrast.jpg
+20:01:37,799 root INFO 1 => 053-84%
+20:01:37,799 root INFO ------------
+20:01:38,256 root INFO IMAGE : 000364@noise.jpg
+20:01:38,256 root INFO 1 => 053-93%
+2 => 028-83%
+20:01:38,256 root INFO ------------
+20:01:38,566 root INFO IMAGE : 000389@linearcontrast@contrast.jpg
+20:01:38,566 root INFO 1 => 053-78%
+2 => 053-68%
+20:01:38,566 root INFO ------------
+20:01:38,682 root INFO IMAGE : 000389@invertimage.jpg
+20:01:38,682 root INFO 1 => 053-89%
+2 => 053-83%
+20:01:38,682 root INFO ------------
+20:01:38,806 root INFO IMAGE : 000336@noise@imagesolarize.jpg
+20:01:38,806 root INFO 1 => 023-79%
+20:01:38,806 root INFO ------------
+20:01:39,192 root INFO IMAGE : 000193@invertimage@invertimage.jpg
+20:01:39,192 root INFO 1 => 008-97%
+2 => 008-84%
+3 => 008-64%
+20:01:39,192 root INFO ------------
+20:01:39,556 root INFO IMAGE : 000814@contrast@linearcontrast.jpg
+20:01:39,556 root INFO 1 => 023-62%
+20:01:39,556 root INFO ------------
+20:01:39,673 root INFO IMAGE : 000516@imagesolarize@sigmoidcontrast.jpg
+20:01:39,673 root INFO 1 => 052-83%
+20:01:39,673 root INFO ------------
+20:01:39,797 root INFO IMAGE : 000751@imagesolarize@invertimage.jpg
+20:01:39,797 root INFO 1 => 028-71%
+20:01:39,798 root INFO ------------
+20:01:39,901 root INFO IMAGE : 000199@channelshuffle.jpg
+20:01:39,901 root INFO 1 => 009-97%
+2 => 053-77%
+20:01:39,901 root INFO ------------
+20:01:40,2 root INFO IMAGE : 000984@linearcontrast@noise.jpg
+20:01:40,3 root INFO 1 => 053-68%
+20:01:40,3 root INFO ------------
+20:01:40,581 root INFO IMAGE : 001305@sigmoidcontrast@noise.jpg
+20:01:40,582 root INFO 1 => 000-99%
+20:01:40,582 root INFO ------------
+20:01:41,147 root INFO IMAGE : 000252@linearcontrast@sigmoidcontrast.jpg
+20:01:41,147 root INFO 1 => 053-91%
+20:01:41,147 root INFO ------------
+20:01:41,294 root INFO IMAGE : 000994@linearcontrast@channelshuffle.jpg
+20:01:41,294 root INFO 1 => 023-80%
+20:01:41,294 root INFO ------------
+20:01:41,411 root INFO IMAGE : 000468@invertimage@channelshuffle.jpg
+20:01:41,411 root INFO 1 => 040-86%
+20:01:41,411 root INFO ------------
+20:01:41,518 root INFO IMAGE : 000827@noise@channelshuffle.jpg
+20:01:41,518 root INFO 1 => 028-90%
+2 => 001-68%
+20:01:41,518 root INFO ------------
+20:01:42,34 root INFO IMAGE : 001464@noise.jpg
+20:01:42,34 root INFO 1 => 009-99%
+20:01:42,34 root INFO ------------
+20:01:42,203 root INFO IMAGE : 000356@channelshuffle@invertimage.jpg
+20:01:42,203 root INFO 1 => 053-96%
+2 => 053-95%
+20:01:42,203 root INFO ------------
+20:01:42,484 root INFO IMAGE : 000744@imagesolarize@noise.jpg
+20:01:42,484 root INFO 1 => 023-75%
+20:01:42,484 root INFO ------------
+20:01:42,579 root INFO IMAGE : 001211@channelshuffle@noise.jpg
+20:01:42,579 root INFO 1 => 053-97%
+2 => 053-82%
+20:01:42,579 root INFO ------------
+20:01:42,827 root INFO IMAGE : 000814@contrast@noise.jpg
+20:01:42,827 root INFO 1 => 023-79%
+2 => 023-70%
+20:01:42,827 root INFO ------------
+20:01:43,257 root INFO IMAGE : 000559@imagesolarize@invertimage.jpg
+20:01:43,257 root INFO 1 => 028-70%
+20:01:43,258 root INFO ------------
+20:01:43,432 root INFO IMAGE : 000751@channelshuffle@sigmoidcontrast.jpg
+20:01:43,432 root INFO 1 => 028-85%
+20:01:43,432 root INFO ------------
+20:01:43,533 root INFO IMAGE : 000407@channelshuffle.jpg
+20:01:43,533 root INFO 1 => 001-88%
+2 => 003-84%
+20:01:43,533 root INFO ------------
+20:01:43,690 root INFO IMAGE : 000000@channelshuffle@linearcontrast.jpg
+20:01:43,690 root INFO 1 => 001-78%
+20:01:43,690 root INFO ------------
+20:01:43,792 root INFO IMAGE : 000475@sigmoidcontrast@noise.jpg
+20:01:43,793 root INFO 1 => 023-60%
+20:01:43,793 root INFO ------------
+20:01:43,896 root INFO IMAGE : 000389@invertimage@channelshuffle.jpg
+20:01:43,896 root INFO 1 => 053-83%
+2 => 053-78%
+20:01:43,897 root INFO ------------
+20:01:44,123 root INFO IMAGE : 000648@channelshuffle@contrast.jpg
+20:01:44,123 root INFO 1 => 023-84%
+20:01:44,123 root INFO ------------
+20:01:44,213 root INFO IMAGE : 000250@linearcontrast.jpg
+20:01:44,213 root INFO 1 => 007-86%
+20:01:44,213 root INFO ------------
+20:01:44,440 root INFO IMAGE : 001255@channelshuffle@invertimage.jpg
+20:01:44,441 root INFO 1 => 007-80%
+20:01:44,441 root INFO ------------
+20:01:44,611 root INFO IMAGE : 000748@noise@noise.jpg
+20:01:44,611 root INFO 1 => 028-85%
+20:01:44,611 root INFO ------------
+20:01:44,727 root INFO IMAGE : 000243@channelshuffle@linearcontrast.jpg
+20:01:44,727 root INFO 1 => 008-60%
+2 => 008-60%
+20:01:44,727 root INFO ------------
+20:01:44,881 root INFO IMAGE : 000367@imagesolarize@sigmoidcontrast.jpg
+20:01:44,881 root INFO 1 => 052-74%
+20:01:44,881 root INFO ------------
+20:01:44,978 root INFO IMAGE : 000544@sigmoidcontrast@invertimage.jpg
+20:01:44,978 root INFO 1 => 053-60%
+20:01:44,978 root INFO ------------
+20:01:45,158 root INFO IMAGE : 000629@channelshuffle@channelshuffle.jpg
+20:01:45,159 root INFO 1 => 028-87%
+2 => 028-85%
+20:01:45,159 root INFO ------------
+20:01:45,405 root INFO IMAGE : 000436@imagesolarize@imagesolarize.jpg
+20:01:45,405 root INFO 1 => 009-98%
+20:01:45,405 root INFO ------------
+20:01:45,601 root INFO IMAGE : 000078@noise@contrast.jpg
+20:01:45,601 root INFO 1 => 051-99%
+2 => 051-99%
+3 => 051-91%
+20:01:45,601 root INFO ------------
+20:01:46,104 root INFO IMAGE : 000152@noise@imagesolarize.jpg
+20:01:46,104 root INFO 1 => 023-66%
+20:01:46,104 root INFO ------------
+20:01:46,205 root INFO IMAGE : 000262@sigmoidcontrast@invertimage.jpg
+20:01:46,206 root INFO 1 => 007-95%
+20:01:46,206 root INFO ------------
+20:01:46,314 root INFO IMAGE : 000712@invertimage@contrast.jpg
+20:01:46,314 root INFO 1 => 023-69%
+20:01:46,314 root INFO ------------
+20:01:47,75 root INFO IMAGE : 001329@linearcontrast@imagesolarize.jpg
+20:01:47,75 root INFO 1 => 053-90%
+20:01:47,75 root INFO ------------
+20:01:47,180 root INFO IMAGE : 000985@channelshuffle@invertimage.jpg
+20:01:47,180 root INFO 1 => 028-76%
+20:01:47,180 root INFO ------------
+20:01:47,280 root INFO IMAGE : 001470@contrast@invertimage.jpg
+20:01:47,280 root INFO 1 => 023-90%
+20:01:47,280 root INFO ------------
+20:01:47,352 root INFO IMAGE : 000698@invertimage@linearcontrast.jpg
+20:01:47,352 root INFO 1 => 023-89%
+20:01:47,353 root INFO ------------
+20:01:47,549 root INFO IMAGE : 000953@linearcontrast@invertimage.jpg
+20:01:47,549 root INFO 1 => 007-94%
+20:01:47,549 root INFO ------------
+20:01:47,644 root INFO IMAGE : 000524@invertimage@noise.jpg
+20:01:47,644 root INFO 1 => 053-76%
+20:01:47,644 root INFO ------------
+20:01:47,777 root INFO IMAGE : 000869@linearcontrast@sigmoidcontrast.jpg
+20:01:47,777 root INFO 1 => 035-90%
+20:01:47,777 root INFO ------------
+20:01:48,134 root INFO IMAGE : 000690@channelshuffle.jpg
+20:01:48,134 root INFO 1 => 023-92%
+20:01:48,134 root INFO ------------
+20:01:48,303 root INFO IMAGE : 000345@channelshuffle@noise.jpg
+20:01:48,303 root INFO 1 => 000-93%
+20:01:48,303 root INFO ------------
+20:01:48,416 root INFO IMAGE : 000349@contrast@noise.jpg
+20:01:48,416 root INFO 1 => 051-95%
+20:01:48,416 root INFO ------------
+20:01:48,528 root INFO IMAGE : 001435@contrast@noise.jpg
+20:01:48,528 root INFO 1 => 053-96%
+2 => 053-96%
+20:01:48,528 root INFO ------------
+20:01:48,644 root INFO IMAGE : 000432@invertimage@invertimage.jpg
+20:01:48,644 root INFO 1 => 053-90%
+20:01:48,645 root INFO ------------
+20:01:49,285 root INFO IMAGE : 000310@invertimage@sigmoidcontrast.jpg
+20:01:49,286 root INFO 1 => 007-72%
+20:01:49,286 root INFO ------------
+20:01:49,419 root INFO IMAGE : 001200@noise@channelshuffle.jpg
+20:01:49,419 root INFO 1 => 028-63%
+20:01:49,419 root INFO ------------
+20:01:49,559 root INFO IMAGE : 001371.jpg
+20:01:49,559 root INFO 1 => 053-94%
+20:01:49,559 root INFO ------------
+20:01:49,640 root INFO IMAGE : 000325.jpg
+20:01:49,640 root INFO 1 => 001-93%
+2 => 003-84%
+20:01:49,640 root INFO ------------
+20:01:49,908 root INFO IMAGE : 000099@linearcontrast@channelshuffle.jpg
+20:01:49,908 root INFO 1 => 053-68%
+20:01:49,908 root INFO ------------
+20:01:50,333 root INFO IMAGE : 000066@channelshuffle.jpg
+20:01:50,333 root INFO 1 => 053-97%
+20:01:50,333 root INFO ------------
+20:01:50,464 root INFO IMAGE : 000403@linearcontrast@noise.jpg
+20:01:50,464 root INFO 1 => 023-93%
+20:01:50,464 root INFO ------------
+20:01:50,569 root INFO IMAGE : 000132.jpg
+20:01:50,569 root INFO 1 => 051-92%
+2 => 051-81%
+3 => 051-73%
+20:01:50,569 root INFO ------------
+20:01:50,692 root INFO IMAGE : 000225@sigmoidcontrast@contrast.jpg
+20:01:50,692 root INFO 1 => 023-93%
+2 => 023-83%
+20:01:50,693 root INFO ------------
+20:01:50,828 root INFO IMAGE : 001138@noise@noise.jpg
+20:01:50,828 root INFO 1 => 053-94%
+20:01:50,828 root INFO ------------
+20:01:50,924 root INFO IMAGE : 000116@imagesolarize.jpg
+20:01:50,924 root INFO 1 => 053-87%
+2 => 053-67%
+20:01:50,924 root INFO ------------
+20:01:51,33 root INFO IMAGE : 001467@invertimage@channelshuffle.jpg
+20:01:51,33 root INFO 1 => 028-78%
+2 => 028-69%
+20:01:51,33 root INFO ------------
+20:01:51,160 root INFO IMAGE : 001157@contrast@noise.jpg
+20:01:51,161 root INFO 1 => 053-87%
+2 => 053-82%
+3 => 003-72%
+20:01:51,161 root INFO ------------
+20:01:51,272 root INFO IMAGE : 000193@imagesolarize@sigmoidcontrast.jpg
+20:01:51,272 root INFO 1 => 008-89%
+2 => 008-75%
+3 => 008-63%
+20:01:51,272 root INFO ------------
+20:01:51,713 root INFO IMAGE : 001146@channelshuffle@invertimage.jpg
+20:01:51,714 root INFO 1 => 035-89%
+20:01:51,714 root INFO ------------
+20:01:51,780 root INFO IMAGE : 000045@imagesolarize@contrast.jpg
+20:01:51,780 root INFO 1 => 007-90%
+2 => 052-88%
+3 => 052-88%
+20:01:51,780 root INFO ------------
+20:01:51,854 root INFO IMAGE : 001349@contrast@channelshuffle.jpg
+20:01:51,854 root INFO 1 => 053-94%
+20:01:51,854 root INFO ------------
+20:01:51,953 root INFO IMAGE : 001411@invertimage@channelshuffle.jpg
+20:01:51,953 root INFO 1 => 023-83%
+20:01:51,953 root INFO ------------
+20:01:52,51 root INFO IMAGE : 000716@contrast@noise.jpg
+20:01:52,51 root INFO 1 => 023-64%
+20:01:52,51 root INFO ------------
+20:01:52,164 root INFO IMAGE : 001408@linearcontrast@linearcontrast.jpg
+20:01:52,164 root INFO 1 => 052-84%
+20:01:52,164 root INFO ------------
+20:01:52,740 root INFO IMAGE : 001449@channelshuffle@contrast.jpg
+20:01:52,740 root INFO 1 => 025-70%
+20:01:52,740 root INFO ------------
+20:01:52,845 root INFO IMAGE : 000756@noise@noise.jpg
+20:01:52,845 root INFO 1 => 025-89%
+20:01:52,845 root INFO ------------
+20:01:52,948 root INFO IMAGE : 001355@channelshuffle@contrast.jpg
+20:01:52,948 root INFO 1 => 053-73%
+20:01:52,948 root INFO ------------
+20:01:53,126 root INFO IMAGE : 000827@imagesolarize@invertimage.jpg
+20:01:53,127 root INFO 1 => 001-85%
+20:01:53,127 root INFO ------------
+20:01:53,856 root INFO IMAGE : 000906@sigmoidcontrast.jpg
+20:01:53,856 root INFO 1 => 023-75%
+20:01:53,856 root INFO ------------
+20:01:54,129 root INFO IMAGE : 000558@sigmoidcontrast@contrast.jpg
+20:01:54,129 root INFO 1 => 053-88%
+20:01:54,129 root INFO ------------
+20:01:54,315 root INFO IMAGE : 001400@invertimage@imagesolarize.jpg
+20:01:54,315 root INFO 1 => 007-75%
+20:01:54,315 root INFO ------------
+20:01:54,415 root INFO IMAGE : 000120@imagesolarize@sigmoidcontrast.jpg
+20:01:54,415 root INFO 1 => 007-76%
+20:01:54,415 root INFO ------------
+20:01:54,529 root INFO IMAGE : 001101@channelshuffle@sigmoidcontrast.jpg
+20:01:54,529 root INFO 1 => 023-74%
+20:01:54,529 root INFO ------------
+20:01:54,746 root INFO IMAGE : 000290@sigmoidcontrast.jpg
+20:01:54,746 root INFO 1 => 023-77%
+20:01:54,746 root INFO ------------
+20:01:55,207 root INFO IMAGE : 000020@sigmoidcontrast@linearcontrast.jpg
+20:01:55,207 root INFO 1 => 052-85%
+2 => 052-63%
+3 => 028-61%
+4 => 053-60%
+20:01:55,207 root INFO ------------
+20:01:55,288 root INFO IMAGE : 001037@contrast@noise.jpg
+20:01:55,288 root INFO 1 => 053-87%
+20:01:55,289 root INFO ------------
+20:01:55,376 root INFO IMAGE : 000396@noise.jpg
+20:01:55,376 root INFO 1 => 009-89%
+20:01:55,376 root INFO ------------
+20:01:55,479 root INFO IMAGE : 000932@sigmoidcontrast@linearcontrast.jpg
+20:01:55,479 root INFO 1 => 023-84%
+20:01:55,479 root INFO ------------
+20:01:55,583 root INFO IMAGE : 000777@channelshuffle.jpg
+20:01:55,583 root INFO 1 => 023-99%
+20:01:55,583 root INFO ------------
+20:01:55,814 root INFO IMAGE : 000264@channelshuffle@invertimage.jpg
+20:01:55,814 root INFO 1 => 009-79%
+20:01:55,814 root INFO ------------
+20:01:55,983 root INFO IMAGE : 000675@sigmoidcontrast@contrast.jpg
+20:01:55,983 root INFO 1 => 009-91%
+20:01:55,983 root INFO ------------
+20:01:56,141 root INFO IMAGE : 000118@invertimage@sigmoidcontrast.jpg
+20:01:56,141 root INFO 1 => 023-94%
+2 => 003-65%
+20:01:56,141 root INFO ------------
+20:01:56,258 root INFO IMAGE : 000748@sigmoidcontrast@invertimage.jpg
+20:01:56,258 root INFO 1 => 028-88%
+20:01:56,258 root INFO ------------
+20:01:56,378 root INFO IMAGE : 001362@imagesolarize.jpg
+20:01:56,378 root INFO 1 => 025-69%
+20:01:56,378 root INFO ------------
+20:01:56,525 root INFO IMAGE : 001256@sigmoidcontrast@noise.jpg
+20:01:56,525 root INFO 1 => 007-84%
+20:01:56,525 root INFO ------------
+20:01:56,794 root INFO IMAGE : 000103@channelshuffle@noise.jpg
+20:01:56,795 root INFO 1 => 053-88%
+20:01:56,795 root INFO ------------
+20:01:56,929 root INFO IMAGE : 000045@linearcontrast@channelshuffle.jpg
+20:01:56,929 root INFO 1 => 052-93%
+2 => 052-86%
+3 => 007-84%
+20:01:56,930 root INFO ------------
+20:01:57,252 root INFO IMAGE : 000882@imagesolarize@imagesolarize.jpg
+20:01:57,252 root INFO 1 => 028-78%
+2 => 028-70%
+20:01:57,252 root INFO ------------
+20:01:57,462 root INFO IMAGE : 000985@invertimage@noise.jpg
+20:01:57,462 root INFO 1 => 028-75%
+20:01:57,462 root INFO ------------
+20:01:57,668 root INFO IMAGE : 000261@imagesolarize@invertimage.jpg
+20:01:57,668 root INFO 1 => 023-69%
+20:01:57,668 root INFO ------------
+20:01:57,762 root INFO IMAGE : 000255@noise@imagesolarize.jpg
+20:01:57,762 root INFO 1 => 051-95%
+2 => 051-80%
+3 => 051-66%
+4 => 007-64%
+5 => 003-63%
+20:01:57,763 root INFO ------------
+20:01:57,953 root INFO IMAGE : 000489@channelshuffle@invertimage.jpg
+20:01:57,953 root INFO 1 => 023-90%
+20:01:57,953 root INFO ------------
+20:01:58,71 root INFO IMAGE : 000466@channelshuffle@contrast.jpg
+20:01:58,71 root INFO 1 => 040-85%
+20:01:58,71 root INFO ------------
+20:01:58,191 root INFO IMAGE : 001471@noise@linearcontrast.jpg
+20:01:58,191 root INFO 1 => 023-85%
+20:01:58,191 root INFO ------------
+20:01:58,390 root INFO IMAGE : 001462@linearcontrast@sigmoidcontrast.jpg
+20:01:58,391 root INFO 1 => 025-83%
+20:01:58,391 root INFO ------------
+20:01:58,877 root INFO IMAGE : 001423@linearcontrast@channelshuffle.jpg
+20:01:58,877 root INFO 1 => 053-71%
+20:01:58,877 root INFO ------------
+20:01:59,98 root INFO IMAGE : 000288@channelshuffle@contrast.jpg
+20:01:59,99 root INFO 1 => 023-89%
+20:01:59,99 root INFO ------------
+20:01:59,891 root INFO IMAGE : 000405@sigmoidcontrast.jpg
+20:01:59,891 root INFO 1 => 040-73%
+20:01:59,891 root INFO ------------
+20:02:00,456 root INFO IMAGE : 000241@channelshuffle@sigmoidcontrast.jpg
+20:02:00,456 root INFO 1 => 053-85%
+20:02:00,456 root INFO ------------
+20:02:00,770 root INFO IMAGE : 001089@linearcontrast@contrast.jpg
+20:02:00,770 root INFO 1 => 025-93%
+20:02:00,770 root INFO ------------
+20:02:00,994 root INFO IMAGE : 001112@invertimage.jpg
+20:02:00,994 root INFO 1 => 028-66%
+20:02:00,995 root INFO ------------
+20:02:01,772 root INFO IMAGE : 000946@invertimage@noise.jpg
+20:02:01,773 root INFO 1 => 023-90%
+2 => 023-86%
+20:02:01,773 root INFO ------------
+20:02:01,874 root INFO IMAGE : 001055@channelshuffle@linearcontrast.jpg
+20:02:01,874 root INFO 1 => 000-92%
+20:02:01,874 root INFO ------------
+20:02:02,362 root INFO IMAGE : 000946@linearcontrast@imagesolarize.jpg
+20:02:02,362 root INFO 1 => 023-91%
+20:02:02,363 root INFO ------------
+20:02:03,109 root INFO IMAGE : 000294@noise@imagesolarize.jpg
+20:02:03,109 root INFO 1 => 052-62%
+20:02:03,109 root INFO ------------
+20:02:03,255 root INFO IMAGE : 000811@imagesolarize@sigmoidcontrast.jpg
+20:02:03,255 root INFO 1 => 023-89%
+20:02:03,255 root INFO ------------
+20:02:03,399 root INFO IMAGE : 000648@channelshuffle@linearcontrast.jpg
+20:02:03,399 root INFO 1 => 023-75%
+20:02:03,399 root INFO ------------
+20:02:03,772 root INFO IMAGE : 000787@contrast@noise.jpg
+20:02:03,772 root INFO 1 => 023-95%
+2 => 023-91%
+20:02:03,772 root INFO ------------
+20:02:03,918 root INFO IMAGE : 000059@imagesolarize@channelshuffle.jpg
+20:02:03,919 root INFO 1 => 051-76%
+20:02:03,919 root INFO ------------
+20:02:04,29 root INFO IMAGE : 001068@channelshuffle.jpg
+20:02:04,29 root INFO 1 => 028-96%
+20:02:04,29 root INFO ------------
+20:02:04,380 root INFO IMAGE : 000177@channelshuffle.jpg
+20:02:04,380 root INFO 1 => 009-75%
+20:02:04,380 root INFO ------------
+20:02:04,463 root INFO IMAGE : 000013@channelshuffle@contrast.jpg
+20:02:04,463 root INFO 1 => 053-70%
+20:02:04,463 root INFO ------------
+20:02:04,642 root INFO IMAGE : 000733@noise.jpg
+20:02:04,643 root INFO 1 => 023-88%
+20:02:04,643 root INFO ------------
+20:02:04,751 root INFO IMAGE : 000478@imagesolarize@linearcontrast.jpg
+20:02:04,751 root INFO 1 => 000-67%
+20:02:04,751 root INFO ------------
+20:02:04,968 root INFO IMAGE : 001264@sigmoidcontrast@invertimage.jpg
+20:02:04,968 root INFO 1 => 035-77%
+20:02:04,968 root INFO ------------
+20:02:05,729 root INFO IMAGE : 001134@contrast@imagesolarize.jpg
+20:02:05,729 root INFO 1 => 007-82%
+20:02:05,729 root INFO ------------
+20:02:06,439 root INFO IMAGE : 000883@imagesolarize.jpg
+20:02:06,439 root INFO 1 => 000-96%
+20:02:06,439 root INFO ------------
+20:02:06,535 root INFO IMAGE : 000085@linearcontrast@sigmoidcontrast.jpg
+20:02:06,535 root INFO 1 => 052-92%
+20:02:06,535 root INFO ------------
+20:02:06,631 root INFO IMAGE : 000754@noise@sigmoidcontrast.jpg
+20:02:06,631 root INFO 1 => 035-68%
+20:02:06,631 root INFO ------------
+20:02:06,735 root INFO IMAGE : 000475@contrast@channelshuffle.jpg
+20:02:06,736 root INFO 1 => 023-73%
+20:02:06,736 root INFO ------------
+20:02:06,909 root INFO IMAGE : 000169@noise.jpg
+20:02:06,909 root INFO 1 => 009-94%
+20:02:06,909 root INFO ------------
+20:02:07,3 root INFO IMAGE : 000833@contrast.jpg
+20:02:07,3 root INFO 1 => 023-95%
+2 => 023-67%
+20:02:07,3 root INFO ------------
+20:02:07,248 root INFO IMAGE : 001047@invertimage@contrast.jpg
+20:02:07,248 root INFO 1 => 035-90%
+20:02:07,248 root INFO ------------
+20:02:07,462 root INFO IMAGE : 001236@invertimage@noise.jpg
+20:02:07,462 root INFO 1 => 025-60%
+20:02:07,462 root INFO ------------
+20:02:08,37 root INFO IMAGE : 001112@channelshuffle.jpg
+20:02:08,37 root INFO 1 => 028-79%
+20:02:08,37 root INFO ------------
+20:02:08,182 root INFO IMAGE : 000104@invertimage@channelshuffle.jpg
+20:02:08,182 root INFO 1 => 053-86%
+20:02:08,182 root INFO ------------
+20:02:08,457 root INFO IMAGE : 001290@invertimage@linearcontrast.jpg
+20:02:08,457 root INFO 1 => 001-83%
+20:02:08,457 root INFO ------------
+20:02:08,633 root INFO IMAGE : 001038@linearcontrast@sigmoidcontrast.jpg
+20:02:08,633 root INFO 1 => 008-91%
+20:02:08,633 root INFO ------------
+20:02:08,803 root INFO IMAGE : 000266@contrast@channelshuffle.jpg
+20:02:08,803 root INFO 1 => 053-87%
+2 => 053-84%
+20:02:08,803 root INFO ------------
+20:02:09,254 root INFO IMAGE : 000308@sigmoidcontrast.jpg
+20:02:09,254 root INFO 1 => 007-69%
+20:02:09,254 root INFO ------------
+20:02:09,457 root INFO IMAGE : 000091@linearcontrast@contrast.jpg
+20:02:09,457 root INFO 1 => 053-74%
+20:02:09,457 root INFO ------------
+20:02:09,584 root INFO IMAGE : 000371@invertimage@invertimage.jpg
+20:02:09,584 root INFO 1 => 007-82%
+20:02:09,584 root INFO ------------
+20:02:09,812 root INFO IMAGE : 000200@imagesolarize@linearcontrast.jpg
+20:02:09,812 root INFO 1 => 053-71%
+20:02:09,812 root INFO ------------
+20:02:09,969 root INFO IMAGE : 000867@noise@noise.jpg
+20:02:09,969 root INFO 1 => 023-88%
+20:02:09,969 root INFO ------------
+20:02:10,219 root INFO IMAGE : 000324@imagesolarize.jpg
+20:02:10,219 root INFO 1 => 053-66%
+20:02:10,219 root INFO ------------
+20:02:10,337 root INFO IMAGE : 000490@noise@sigmoidcontrast.jpg
+20:02:10,337 root INFO 1 => 053-78%
+20:02:10,337 root INFO ------------
+20:02:10,555 root INFO IMAGE : 001387@imagesolarize.jpg
+20:02:10,555 root INFO 1 => 000-69%
+20:02:10,555 root INFO ------------
+20:02:10,996 root INFO IMAGE : 001180@noise@channelshuffle.jpg
+20:02:10,996 root INFO 1 => 025-84%
+20:02:10,996 root INFO ------------
+20:02:11,234 root INFO IMAGE : 000571@invertimage@linearcontrast.jpg
+20:02:11,234 root INFO 1 => 053-80%
+20:02:11,234 root INFO ------------
+20:02:11,494 root INFO IMAGE : 000345@noise@sigmoidcontrast.jpg
+20:02:11,494 root INFO 1 => 000-95%
+20:02:11,495 root INFO ------------
+20:02:11,585 root INFO IMAGE : 000721@sigmoidcontrast@noise.jpg
+20:02:11,585 root INFO 1 => 028-94%
+2 => 001-82%
+3 => 028-74%
+20:02:11,586 root INFO ------------
+20:02:11,689 root INFO IMAGE : 001476@sigmoidcontrast.jpg
+20:02:11,689 root INFO 1 => 023-96%
+20:02:11,689 root INFO ------------
+20:02:11,846 root INFO IMAGE : 000947@sigmoidcontrast.jpg
+20:02:11,846 root INFO 1 => 023-98%
+2 => 023-96%
+20:02:11,847 root INFO ------------
+20:02:12,155 root INFO IMAGE : 000617@sigmoidcontrast@noise.jpg
+20:02:12,156 root INFO 1 => 023-77%
+20:02:12,156 root INFO ------------
+20:02:12,673 root INFO IMAGE : 001259@noise@sigmoidcontrast.jpg
+20:02:12,674 root INFO 1 => 053-60%
+20:02:12,674 root INFO ------------
+20:02:12,902 root INFO IMAGE : 000265@sigmoidcontrast@sigmoidcontrast.jpg
+20:02:12,903 root INFO 1 => 023-60%
+20:02:12,903 root INFO ------------
+20:02:13,135 root INFO IMAGE : 001070@imagesolarize@noise.jpg
+20:02:13,135 root INFO 1 => 035-83%
+20:02:13,136 root INFO ------------
+20:02:13,261 root INFO IMAGE : 000317@sigmoidcontrast@linearcontrast.jpg
+20:02:13,261 root INFO 1 => 052-96%
+2 => 023-90%
+20:02:13,261 root INFO ------------
+20:02:13,426 root INFO IMAGE : 000068.jpg
+20:02:13,427 root INFO 1 => 028-96%
+20:02:13,427 root INFO ------------
+20:02:13,584 root INFO IMAGE : 000945@sigmoidcontrast@linearcontrast.jpg
+20:02:13,584 root INFO 1 => 025-90%
+20:02:13,584 root INFO ------------
+20:02:13,817 root INFO IMAGE : 001404@invertimage@invertimage.jpg
+20:02:13,817 root INFO 1 => 035-93%
+2 => 035-91%
+20:02:13,817 root INFO ------------
+20:02:14,47 root INFO IMAGE : 000404@imagesolarize@noise.jpg
+20:02:14,47 root INFO 1 => 053-97%
+2 => 053-75%
+20:02:14,47 root INFO ------------
+20:02:14,246 root INFO IMAGE : 000793@contrast@invertimage.jpg
+20:02:14,246 root INFO 1 => 028-90%
+20:02:14,246 root INFO ------------
+20:02:14,363 root INFO IMAGE : 000137@linearcontrast.jpg
+20:02:14,363 root INFO 1 => 023-69%
+20:02:14,363 root INFO ------------
+20:02:14,485 root INFO IMAGE : 000028.jpg
+20:02:14,485 root INFO 1 => 053-95%
+2 => 053-91%
+3 => 028-90%
+20:02:14,485 root INFO ------------
+20:02:14,624 root INFO IMAGE : 000439@invertimage@channelshuffle.jpg
+20:02:14,624 root INFO 1 => 004-85%
+20:02:14,624 root INFO ------------
+20:02:14,805 root INFO IMAGE : 000709@imagesolarize@noise.jpg
+20:02:14,805 root INFO 1 => 023-62%
+20:02:14,805 root INFO ------------
+20:02:14,961 root INFO IMAGE : 000062@channelshuffle@contrast.jpg
+20:02:14,962 root INFO 1 => 053-82%
+20:02:14,962 root INFO ------------
+20:02:15,189 root INFO IMAGE : 000971@contrast.jpg
+20:02:15,189 root INFO 1 => 053-81%
+20:02:15,189 root INFO ------------
+20:02:15,411 root INFO IMAGE : 001322@sigmoidcontrast@contrast.jpg
+20:02:15,412 root INFO 1 => 053-82%
+20:02:15,412 root INFO ------------
+20:02:15,503 root INFO IMAGE : 000682@sigmoidcontrast@invertimage.jpg
+20:02:15,503 root INFO 1 => 023-71%
+20:02:15,503 root INFO ------------
+20:02:15,596 root INFO IMAGE : 001372@sigmoidcontrast@linearcontrast.jpg
+20:02:15,596 root INFO 1 => 023-97%
+20:02:15,596 root INFO ------------
+20:02:16,90 root INFO IMAGE : 000583@sigmoidcontrast.jpg
+20:02:16,90 root INFO 1 => 023-64%
+20:02:16,90 root INFO ------------
+20:02:16,440 root INFO IMAGE : 001157@noise@linearcontrast.jpg
+20:02:16,441 root INFO 1 => 053-78%
+20:02:16,441 root INFO ------------
+20:02:16,772 root INFO IMAGE : 000601@channelshuffle@imagesolarize.jpg
+20:02:16,772 root INFO 1 => 023-76%
+20:02:16,772 root INFO ------------
+20:02:16,884 root INFO IMAGE : 000176@invertimage@contrast.jpg
+20:02:16,884 root INFO 1 => 023-97%
+20:02:16,884 root INFO ------------
+20:02:17,227 root INFO IMAGE : 000654@invertimage@contrast.jpg
+20:02:17,227 root INFO 1 => 023-91%
+20:02:17,227 root INFO ------------
+20:02:17,438 root INFO IMAGE : 000571@invertimage@contrast.jpg
+20:02:17,438 root INFO 1 => 053-90%
+20:02:17,438 root INFO ------------
+20:02:17,880 root INFO IMAGE : 001381@noise@contrast.jpg
+20:02:17,880 root INFO 1 => 028-64%
+20:02:17,880 root INFO ------------
+20:02:18,79 root INFO IMAGE : 000263@invertimage.jpg
+20:02:18,80 root INFO 1 => 053-93%
+20:02:18,80 root INFO ------------
+20:02:18,338 root INFO IMAGE : 001466@channelshuffle@imagesolarize.jpg
+20:02:18,338 root INFO 1 => 003-76%
+20:02:18,338 root INFO ------------
+20:02:18,624 root INFO IMAGE : 000312@invertimage@noise.jpg
+20:02:18,624 root INFO 1 => 053-91%
+2 => 053-91%
+20:02:18,624 root INFO ------------
+20:02:18,788 root INFO IMAGE : 001385@imagesolarize@imagesolarize.jpg
+20:02:18,788 root INFO 1 => 023-85%
+20:02:18,788 root INFO ------------
+20:02:19,71 root INFO IMAGE : 000557@sigmoidcontrast@invertimage.jpg
+20:02:19,71 root INFO 1 => 007-83%
+20:02:19,71 root INFO ------------
+20:02:19,150 root INFO IMAGE : 000731@noise@channelshuffle.jpg
+20:02:19,150 root INFO 1 => 023-81%
+20:02:19,150 root INFO ------------
+20:02:19,221 root INFO IMAGE : 000681@sigmoidcontrast.jpg
+20:02:19,221 root INFO 1 => 001-61%
+20:02:19,221 root INFO ------------
+20:02:19,312 root INFO IMAGE : 001448.jpg
+20:02:19,312 root INFO 1 => 023-97%
+20:02:19,312 root INFO ------------
+20:02:19,622 root INFO IMAGE : 001186@channelshuffle@invertimage.jpg
+20:02:19,623 root INFO 1 => 007-61%
+20:02:19,623 root INFO ------------
+20:02:19,886 root INFO IMAGE : 000532@sigmoidcontrast.jpg
+20:02:19,886 root INFO 1 => 008-92%
+20:02:19,886 root INFO ------------
+20:02:20,22 root INFO IMAGE : 000298@linearcontrast@contrast.jpg
+20:02:20,22 root INFO 1 => 053-80%
+20:02:20,22 root INFO ------------
+20:02:20,314 root INFO IMAGE : 000153@invertimage.jpg
+20:02:20,314 root INFO 1 => 053-78%
+20:02:20,314 root INFO ------------
+20:02:20,632 root INFO IMAGE : 001421@sigmoidcontrast@channelshuffle.jpg
+20:02:20,632 root INFO 1 => 028-88%
+20:02:20,632 root INFO ------------
+20:02:21,806 root INFO IMAGE : 001335@imagesolarize.jpg
+20:02:21,806 root INFO 1 => 000-74%
+20:02:21,806 root INFO ------------
+20:02:22,188 root INFO IMAGE : 001150@sigmoidcontrast@contrast.jpg
+20:02:22,188 root INFO 1 => 025-73%
+20:02:22,188 root INFO ------------
+20:02:22,463 root INFO IMAGE : 000591@invertimage@contrast.jpg
+20:02:22,463 root INFO 1 => 053-93%
+20:02:22,464 root INFO ------------
+20:02:22,966 root INFO IMAGE : 001396@invertimage@imagesolarize.jpg
+20:02:22,966 root INFO 1 => 007-74%
+20:02:22,966 root INFO ------------
+20:02:23,72 root INFO IMAGE : 000146@contrast@channelshuffle.jpg
+20:02:23,73 root INFO 1 => 052-86%
+2 => 052-86%
+20:02:23,73 root INFO ------------
+20:02:23,165 root INFO IMAGE : 001127@linearcontrast.jpg
+20:02:23,165 root INFO 1 => 000-64%
+20:02:23,165 root INFO ------------
+20:02:23,297 root INFO IMAGE : 000707@linearcontrast@imagesolarize.jpg
+20:02:23,297 root INFO 1 => 023-84%
+20:02:23,297 root INFO ------------
+20:02:23,823 root INFO IMAGE : 000482@channelshuffle@noise.jpg
+20:02:23,823 root INFO 1 => 023-78%
+20:02:23,824 root INFO ------------
+20:02:24,173 root INFO IMAGE : 000997@contrast.jpg
+20:02:24,173 root INFO 1 => 053-97%
+20:02:24,173 root INFO ------------
+20:02:24,732 root INFO IMAGE : 000446@channelshuffle@contrast.jpg
+20:02:24,732 root INFO 1 => 009-60%
+20:02:24,732 root INFO ------------
+20:02:24,992 root INFO IMAGE : 000768@channelshuffle@invertimage.jpg
+20:02:24,992 root INFO 1 => 023-86%
+20:02:24,992 root INFO ------------
+20:02:25,144 root INFO IMAGE : 000099@noise.jpg
+20:02:25,144 root INFO 1 => 053-97%
+2 => 009-89%
+20:02:25,145 root INFO ------------
+20:02:25,247 root INFO IMAGE : 000815@channelshuffle@noise.jpg
+20:02:25,247 root INFO 1 => 009-86%
+20:02:25,247 root INFO ------------
+20:02:25,530 root INFO IMAGE : 000167@imagesolarize@invertimage.jpg
+20:02:25,530 root INFO 1 => 007-91%
+20:02:25,530 root INFO ------------
+20:02:25,965 root INFO IMAGE : 000330@noise@sigmoidcontrast.jpg
+20:02:25,965 root INFO 1 => 053-62%
+20:02:25,966 root INFO ------------
+20:02:26,72 root INFO IMAGE : 000748@sigmoidcontrast@contrast.jpg
+20:02:26,72 root INFO 1 => 028-85%
+20:02:26,72 root INFO ------------
+20:02:26,196 root INFO IMAGE : 001269@contrast@imagesolarize.jpg
+20:02:26,196 root INFO 1 => 009-86%
+20:02:26,196 root INFO ------------
+20:02:26,317 root INFO IMAGE : 001468@sigmoidcontrast@channelshuffle.jpg
+20:02:26,317 root INFO 1 => 007-97%
+20:02:26,317 root INFO ------------
+20:02:26,464 root INFO IMAGE : 001141@contrast.jpg
+20:02:26,465 root INFO 1 => 023-95%
+20:02:26,465 root INFO ------------
+20:02:27,64 root INFO IMAGE : 001240@imagesolarize@sigmoidcontrast.jpg
+20:02:27,64 root INFO 1 => 023-81%
+20:02:27,64 root INFO ------------
+20:02:27,187 root INFO IMAGE : 000066@sigmoidcontrast.jpg
+20:02:27,187 root INFO 1 => 053-97%
+20:02:27,187 root INFO ------------
+20:02:27,283 root INFO IMAGE : 000824@invertimage@contrast.jpg
+20:02:27,284 root INFO 1 => 009-93%
+20:02:27,284 root INFO ------------
+20:02:28,120 root INFO IMAGE : 001231@noise@noise.jpg
+20:02:28,120 root INFO 1 => 008-82%
+20:02:28,120 root INFO ------------
+20:02:28,365 root INFO IMAGE : 001316@contrast.jpg
+20:02:28,365 root INFO 1 => 035-95%
+20:02:28,365 root INFO ------------
+20:02:28,453 root INFO IMAGE : 000128@contrast@imagesolarize.jpg
+20:02:28,453 root INFO 1 => 053-94%
+20:02:28,453 root INFO ------------
+20:02:28,630 root INFO IMAGE : 000818@noise@sigmoidcontrast.jpg
+20:02:28,630 root INFO 1 => 023-84%
+2 => 023-66%
+20:02:28,630 root INFO ------------
+20:02:28,746 root INFO IMAGE : 000807@channelshuffle.jpg
+20:02:28,746 root INFO 1 => 009-97%
+20:02:28,746 root INFO ------------

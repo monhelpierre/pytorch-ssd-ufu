@@ -25,7 +25,7 @@ ap.add_argument("-is", "--img_size", required=False, default=320)
 ap.add_argument("-bs", "--batch_size", required=False, default=32)
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
-ap.add_argument("-sp", "--save", required=False, help="Path to save detection")
+ap.add_argument("-sp", "--save", required=True, help="Path to save detection")
 ap.add_argument("-map", "--precision", required=False, help="Path to save detection")
 args = ap.parse_args()
        
@@ -109,13 +109,13 @@ def convert_to_onnx(model, size, path):
     onnx_path = path + "/model.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
         
-def process_image(cfg, image_path, save_path, label_names, logging, input_size):
+def process_image(cfg, image_path, save_path, label_names, logging, input_size, batch_size):
     image_name = image_path.split('/')[-1]
     image, nb_found, _ = model.detect(image_name, read_image(cfg, image_path=image_path, input_size=input_size), label_names, logging)        
     if nb_found > 0:
         if not os.path.exists(save_path):
             os.makedirs(save_path)
-        filename = save_path + 'result-' + image_name.split('/')[-1]
+        filename = save_path + f'result-{input_size}-{batch_size}-' + image_name.split('/')[-1]
         image = cv2.convertScaleAbs(image, alpha=(255.0))
         Image.fromarray(image).save(filename)
 
@@ -151,8 +151,8 @@ if __name__ == '__main__':
         level=logging.INFO
     )
 
-    FROM_DEFAULT_SIZE = True
-    FROM_DEFAULT_BATCH = True
+    FROM_DEFAULT_SIZE = False
+    FROM_DEFAULT_BATCH = False
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
               
@@ -167,7 +167,7 @@ if __name__ == '__main__':
                 if batch_size != int(args.batch_size):
                     continue
             print('BATCH SIZE : ' + str(batch_size))
-            #results_path = f'results{batch_size}/'
+            results_path = f'results{batch_size}/'
             
             for model_name in model_names:
                 if args.model:
@@ -209,8 +209,8 @@ if __name__ == '__main__':
                     print(model_name)
                     logging.info("=-------------------\n")
 
-                    if args.save:
-                        save_path = args.save + '/' + model_name + '/'
+                    save_path = args.save + '/' + model_name + '/'
+
                     if args.video:
                         if os.path.exists(args.video):
                             print('Detection from video.')
@@ -218,7 +218,7 @@ if __name__ == '__main__':
                             detect_from_video(cfg, args.video, save_path, model, logging, threshold, input_size, no_amp)
                     elif args.image:
                         print('Detection from single image.')
-                        process_image(cfg, args.image, save_path, label_names, logging, input_size)
+                        process_image(cfg, args.image, save_path, label_names, logging, input_size, batch_size)
                     elif args.precision:
                         dataloader = create_dataloader(
                             test_json,
@@ -240,15 +240,10 @@ if __name__ == '__main__':
                             num_workers=workers
                         )
                         for image_path in images_path_list:
-                            process_image(cfg, image_path, save_path, label_names, logging, input_size)
+                            process_image(cfg, image_path, save_path, label_names, logging, input_size, batch_size)
                 else:
                     print(f"Please check if conf file and save path exist for {model_name}")
                 
 #python test.py -mi 0 -dataset "C:/datasets/"
-#python test.py -mi 0 --video "C:/Users/monhe/Videos/4K Video Downloader/DRIVING IN BRAZIL Corupá-SC to São Francisco do Sul-SC.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
-#python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Pictures/test6.jpg" --save "C:/Users/monhe/OneDrive/Desktop"
-#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Desktop/videos/01 Brazilian traffic laws and signs. My Brazilian Friends driving in São Paulo City SP.mp4" --save "C:/Users/monhe/OneDrive/Desktop"
-#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4"
-#python test.py -mi 0 --video "C:/Users/monhe/OneDrive/Downloads/1.mp4" --save "C:/Users/monhe/OneDrive/Downloads/"
 #python test.py -mi 0 --video "C:/Users/monhe/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhe/Downloads"
-#python test.py -mi 0 --video "C:/Users/monhe/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhe/Downloads"
+#python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Desktop/mobilenetV2_ssdlite/test6.jpeg" --save "C:/Users/monhe/OneDrive/Desktop"

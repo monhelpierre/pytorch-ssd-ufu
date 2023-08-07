@@ -1,0 +1,39 @@
+20:00:59,401 root INFO =-------------------
+20:00:59,401 root INFO mobilenetV3Small_ssdlite
+20:00:59,402 root INFO =-------------------
+
+20:01:10,484 root INFO IMAGE : 000349@channelshuffle@channelshuffle.jpg
+20:01:10,484 root INFO 1 => 051-74%
+20:01:10,485 root INFO ------------
+20:01:21,341 root INFO IMAGE : 001400@noise@contrast.jpg
+20:01:21,341 root INFO 1 => 007-60%
+20:01:21,342 root INFO ------------
+20:01:24,988 root INFO IMAGE : 000235@contrast@invertimage.jpg
+20:01:24,988 root INFO 1 => 052-60%
+20:01:24,988 root INFO ------------
+20:01:25,991 root INFO IMAGE : 000078@contrast@noise.jpg
+20:01:25,991 root INFO 1 => 051-69%
+20:01:25,992 root INFO ------------
+20:01:27,427 root INFO IMAGE : 000045@invertimage@invertimage.jpg
+20:01:27,427 root INFO 1 => 052-62%
+20:01:27,427 root INFO ------------
+20:01:36,650 root INFO IMAGE : 000428@channelshuffle.jpg
+20:01:36,651 root INFO 1 => 052-64%
+20:01:36,651 root INFO ------------
+20:01:41,136 root INFO IMAGE : 001225@sigmoidcontrast@contrast.jpg
+20:01:41,136 root INFO 1 => 025-60%
+20:01:41,136 root INFO ------------
+20:01:53,215 root INFO IMAGE : 000407@channelshuffle.jpg
+20:01:53,215 root INFO 1 => 003-74%
+2 => 001-71%
+20:01:53,215 root INFO ------------
+20:01:53,484 root INFO IMAGE : 000000@channelshuffle@linearcontrast.jpg
+20:01:53,484 root INFO 1 => 001-60%
+20:01:53,484 root INFO ------------
+20:01:55,58 root INFO IMAGE : 000078@noise@contrast.jpg
+20:01:55,58 root INFO 1 => 051-66%
+20:01:55,59 root INFO ------------
+20:01:58,47 root INFO IMAGE : 000325.jpg
+20:01:58,47 root INFO 1 => 003-80%
+2 => 001-69%
+20:01:58,47 root INFO ------------
