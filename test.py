@@ -203,6 +203,8 @@ if __name__ == '__main__':
                     if os.path.exists(pth):
                         print('Loaded from pretrained model')
                         model.load_state_dict(torch.load(pth)['model_state_dict'])
+                    else:
+                        continue
                     
                     logging.info("=-------------------")
                     logging.info(model_name)
