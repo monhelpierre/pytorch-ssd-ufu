@@ -21,7 +21,7 @@ def build_model(cfg, input_size, class_names, device):
         device = device
     )
 
-def nms(boxes, scores, classes, score_thres=0.01, iou_thres=0.5, max_dets=200):
+def nms(boxes, scores, classes, score_thres=0.01, iou_thres=0.45, max_dets=200): #ious_thres=0.6
     bs = boxes.shape[0]
     nms_results = []
     for i in range(bs):

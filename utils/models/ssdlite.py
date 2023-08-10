@@ -223,7 +223,7 @@ class SSDLite(nn.Sequential):
         classes = torch.reshape(classes, [bs, num_anchors * num_classes])
         return boxes, scores, classes
     
-    def detect(self, image_name, image, label_names, logging, threshold=0.6, no_amp=True):
+    def detect(self, image_name, image, label_names, logging, threshold=0.5, no_amp=True):
         from utils.misc import nms
         nb_found = 0
         with torch.no_grad():
