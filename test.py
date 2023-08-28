@@ -151,8 +151,8 @@ if __name__ == '__main__':
         level=logging.INFO
     )
 
-    FROM_DEFAULT_SIZE = False
-    FROM_DEFAULT_BATCH = False
+    FROM_DEFAULT_SIZE = True
+    FROM_DEFAULT_BATCH = True
     input_sizes = [128, 256, 320, 512]
     batch_sizes = [8, 16, 32, 64]
               
@@ -167,7 +167,8 @@ if __name__ == '__main__':
                 if batch_size != int(args.batch_size):
                     continue
             print('BATCH SIZE : ' + str(batch_size))
-            results_path = f'results{batch_size}/'
+            #results_path = f'results{batch_size}/'
+            results_path = f'results/'
             
             for model_name in model_names:
                 if args.model:
