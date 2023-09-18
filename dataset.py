@@ -4,6 +4,7 @@ import shutil
 import datetime
 import imutils
 from PIL import Image
+import xml.etree.ElementTree as ET
 
 path = [
         'C:/Users/monhe/OneDrive/Documents/pytorch-ssd-ufu/',
@@ -74,3 +75,21 @@ if __name__ == '__main__':
             if not os.path.exists(target_ann):
                 shutil.copyfile(original_ann, target_ann)
         """
+        
+def count_objects(criteria='*', annotations_path='C:/Users/monhe/Downloads/datasets/annotations/'):
+    class_count = {
+        '000000':0, '000001':0, '000003':0, '000004':0, '000007':0, '000008':0, '000009':0, 
+        '000023':0, '000025':0, '000028':0, '000035':0, '000040':0, '000042':0, '000051':0, 
+        '000052':0, '000053':0, 'total' : 0
+    }  
+    for annotation_name in os.listdir(path):
+        if not annotation_name.__contains__(criteria):
+            for object in ET.parse(annotations_path + annotation_name).getroot().iter('object'):
+                label = object.find('name').text.strip()
+                class_count[label] = int(class_count[label]) + 1
+                class_count['total'] = int(class_count['total']) + 1
+    print('===================================')
+    print(class_count)
+    
+#count_objects()
+#count_objects('@')
