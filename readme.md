@@ -7,7 +7,7 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Evaluation: 02 val
 * Testing: 01 test
 
-(https://drive.google.com/drive/folders/19Ch4V5ApUGn-FMBh0kknPzgf20HagUPv?usp=sharing)
+(https://data.mendeley.com/datasets/jbpsr4fvg9/1)
 
 | Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                        |
 |----------------------------|:----------:|:-----------------:|----------------------------------------------------------------------|
@@ -78,4 +78,17 @@ python test.py -mi 0 --image "/path/to/image/" --save "/path/to/save/image/outpu
 To test from the test dataset where output images will be saved in logs folder:
 ```bash
 python test.py -mi 0 (mobilenetv2_ssdlite)
+```
+
+
+To cite this work:
+```
+@misc{monhel2023,
+  author = {Monhel, Maudoony Pierre},
+  title = {Recognition of Brazilian Traffic signs and lights using Single Shot Multi box Detector},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/monhelpierre/pytorch-ssd-ufu/}}
+}
 ```
