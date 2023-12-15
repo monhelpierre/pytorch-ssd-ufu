@@ -48,15 +48,15 @@ tensorboard --logdir <LOG_DIRECTORY>
 | Label      | English Description             | Portuguese Description                      |
 |------------|:--------------------------------|:--------------------------------------------|
 | 000        | Stop sign                       | Parada obrigatória                          |
-| 001        | Give away                       | Dê a preferência                            |
+| 001        | Give way                        | Dê a preferência                            |
 | 003        | No left turn                    | Proíbido virar à esquerda                   |
 | 004        | No right turn                   | Proíbido virar à direita                    |
 | 007        | No park                         | Proíbido estacionar                         |
 | 008        | Regular park                    | Estacionamento regularizdo                  |
 | 009        | No park and stop                | Proíbido parar e estacionar                 |
 | 023        | Speed limit                     | Limite de velocidade permitida              |
-| 025        | Road hump                       | Âlfandega                                   |
-| 028        | Sense of the way circulation    | Sentido de circulação da via                |
+| 025        | Road hump                       | Lombada                                   |
+| 028        | Direction of the way circulation| Sentido de circulação da via                |
 | 035        | Truck keep right                | Veículo pesados, mantenham-se à direita     |
 | 040        | Bus route                       | Fôaixa de ônibus                            |
 | 042        | Cycling                         | Bicycleta permitida                         |
