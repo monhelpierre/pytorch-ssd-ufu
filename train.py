@@ -31,7 +31,6 @@ label_names = [
 if args.model:
     if int(args.model) < 0 or int(args.model) > 2:
         raise ValueError("Model index should be 0, 1 or 2")
-
 class PrepareDataset():
     def __init__(self, dataset_path):
         self.root = dataset_path
