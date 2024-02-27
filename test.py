@@ -183,11 +183,6 @@ if __name__ == '__main__':
                     cfg = load_config(cfg)
                     pth = results_path + f'{input_size}/{model_name}/best.pth'
                     
-                    if input_size == 320:
-                        best = '_2'
-                    
-                    pth = results_path + f'{input_size}{best}/{model_name}/best.pth'
-                    
                     model = build_model(cfg, input_size, label_names, device)
                     model.to(device)
                     model.eval()
@@ -249,5 +244,5 @@ if __name__ == '__main__':
                     print(f"Please check if conf file and save path exist for {model_name}")
                 
 #python test.py -mi 0 -dataset "C:/datasets/"
-#python test.py -mi 0 --video "C:/Users/monhe/Downloads/Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhe/Downloads"
-#python test.py -mi 0 --image "C:/Users/monhe/OneDrive/Desktop/mobilenetV2_ssdlite/test6.jpeg" --save "C:/Users/monhe/OneDrive/Desktop"
+#python test.py -mi 0 --video "D://DATAS//Videos//Sao Paulo 4K - Driving Downtown - Brazil.mp4" --save "C:/Users/monhel/Downloads"
+#python test.py -mi 0 --image "C:/Users/monhel/OneDrive/Desktop/mobilenetV2_ssdlite/test6.jpeg" --save "C:/Users/monhel/OneDrive/Desktop"
