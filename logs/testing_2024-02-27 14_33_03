@@ -1,0 +1,19 @@
+14:33:04,258 root INFO =-------------------
+14:33:04,259 root INFO mobilenetV2_ssdlite
+14:33:04,260 root INFO =-------------------
+
+14:33:11,649 root INFO IMAGE : Video frame
+14:33:11,649 root INFO 1 => 028-51%
+14:33:11,649 root INFO ------------
+14:33:12,467 root INFO IMAGE : Video frame
+14:33:12,468 root INFO 1 => 053-63%
+14:33:12,468 root INFO ------------
+14:33:12,917 root INFO IMAGE : Video frame
+14:33:12,917 root INFO 1 => 053-68%
+14:33:12,917 root INFO ------------
+14:33:13,128 root INFO IMAGE : Video frame
+14:33:13,129 root INFO 1 => 053-82%
+14:33:13,129 root INFO ------------
+14:33:13,347 root INFO IMAGE : Video frame
+14:33:13,347 root INFO 1 => 053-91%
+14:33:13,347 root INFO ------------
