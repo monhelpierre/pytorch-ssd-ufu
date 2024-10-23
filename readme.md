@@ -7,7 +7,8 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 * Evaluation: 02 val
 * Testing: 01 test
 
-(https://data.mendeley.com/datasets/jbpsr4fvg9/1)
+Related dataset : (https://data.mendeley.com/datasets/jbpsr4fvg9/1)
+Related paper : (https://journals-sol.sbc.org.br/index.php/jbcs/article/view/3678)
 
 | Model                      | Input size | mAP<sub>0.5</sub> | Configuration                                                        |
 |----------------------------|:----------:|:-----------------:|----------------------------------------------------------------------|
