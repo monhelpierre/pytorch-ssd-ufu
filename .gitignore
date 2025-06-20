@@ -23,6 +23,8 @@ app.*.symbols
 *.png
 *.jpg
 *.jpeg
+*.webp
 .venv
 logs
 output
+*.pptx

@@ -25,7 +25,7 @@ ap.add_argument("-is", "--img_size", required=False, default=320)
 ap.add_argument("-bs", "--batch_size", required=False, default=32)
 ap.add_argument("-vp", "--video", required=False, help="Video path to make detection")
 ap.add_argument("-ip", "--image", required=False, help="Image path to make detection")
-ap.add_argument("-sp", "--save", required=True, help="Path to save detection")
+ap.add_argument("-sp", "--save", required=False, default=None, help="Path to save detection")
 ap.add_argument("-map", "--precision", required=False, help="Path to save detection")
 args = ap.parse_args()
        
@@ -63,21 +63,24 @@ def read_image(cfg, image_path=None, frame=None, input_size=320):
     return image
 
 def detect_from_video(cfg, video_path, save_path, model, logging, threshold, input_size, no_amp=True, fps = 300):
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
-    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    wait_time = int(1000 / (fps * 2))  # 2× speed → fps * 2
     
-    output_file = save_path + 'output.avi'
-    fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    video_writer = cv2.VideoWriter(output_file, fourcc, fps, (input_size, input_size))  
-    
+    if save_path:
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
+        video_writer = cv2.VideoWriter(save_path + 'output.avi', cv2.VideoWriter_fourcc(*'XVID'), fps, (input_size, input_size))  
+  
     count_name = 0
+    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  
+
     while cap.isOpened():
         ret, frame = cap.read()
+
         if not ret:
             break
+
         frame, nb_found, _ = model.detect('Video frame', read_image(cfg, frame=frame, input_size=input_size), label_names, logging, threshold, no_amp)
         frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
         
@@ -88,13 +91,22 @@ def detect_from_video(cfg, video_path, save_path, model, logging, threshold, inp
         if nb_found > 0:
             count_name += 1
             frame = cv2.convertScaleAbs(frame, alpha=(255.0)) 
-            video_writer.write(frame)
-            cv2.imwrite(save_path + str(count_name) + '.jpg', frame)
+
+            if save_path:
+                video_writer.write(frame)
+                cv2.imwrite(save_path + str(count_name) + '.jpg', frame)
         
-        cv2.imshow('Video', frame)
-        if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
+        cv2.imshow('Traffic Signs & Lights Detection', frame)
+
+        #if cv2.waitKey(int(1000 / fps) ) & 0xFF == ord('q'):
+            #break
+
+        if cv2.waitKey(wait_time) & 0xFF == ord('q'):
             break
-    video_writer.release()
+
+    if save_path:
+        video_writer.release()
+        
     cap.release()
     cv2.destroyAllWindows()
 
@@ -113,10 +125,19 @@ def process_image(cfg, image_path, save_path, label_names, logging, input_size, 
     image_name = image_path.split('/')[-1]
     image, nb_found, _ = model.detect(image_name, read_image(cfg, image_path=image_path, input_size=input_size), label_names, logging)        
     if nb_found > 0:
+
+        # Show image using matplotlib
+        if not save_path:
+            plt.imshow(image)
+            plt.axis("off")
+            plt.show()
+            return
+
         if not os.path.exists(save_path):
             os.makedirs(save_path)
         filename = save_path + f'result-{input_size}-{batch_size}-' + image_name.split('/')[-1]
         image = cv2.convertScaleAbs(image, alpha=(255.0))
+
         Image.fromarray(image).save(filename)
 
 #=========================================================================================================
@@ -208,12 +229,12 @@ if __name__ == '__main__':
                     print(model_name)
                     logging.info("=-------------------\n")
 
-                    save_path = args.save + '/' + model_name + '/'
+                    save_path = args.save + '/' + model_name + '/' if args.save else None
 
                     if args.video:
                         if os.path.exists(args.video):
                             print('Detection from video.')
-                            save_path = save_path.replace('/image/', '/video/')
+                            save_path = save_path.replace('/image/', '/video/') if save_path else None
                             detect_from_video(cfg, args.video, save_path, model, logging, threshold, input_size, no_amp)
                     elif args.image:
                         print('Detection from single image.')
