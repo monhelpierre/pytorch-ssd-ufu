@@ -8,7 +8,7 @@ from tqdm import tqdm
 from PIL import Image
 from torchvision import transforms
 import matplotlib.pyplot as plt
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 from utils.data.dataloader import create_dataloader
 from utils.misc import load_config, build_model, nms
 from utils.constants import COLOR
@@ -56,7 +56,7 @@ def read_image(cfg, image_path=None, frame=None, input_size=320):
         image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
         image = image.resize(size)
     else:
-        image = Image.open(image_path)
+        image = Image.open(image_path).convert("RGB")
         image = image.resize(size)  
     image = transforms.ToTensor()(image)
     image = image.unsqueeze(0).to(device)

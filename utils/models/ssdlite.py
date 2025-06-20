@@ -5,7 +5,7 @@ from numpy import mgrid
 from functools import partial
 from torch import nn
 from math import floor
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 from utils.models.ops import get_output_shapes, xavier_init
 from utils.models.layers import ConvBNReLU
 from utils.constants import BACKGROUND_INDEX, COLOR
@@ -227,7 +227,7 @@ class SSDLite(nn.Sequential):
         from utils.misc import nms
         nb_found = 0
         with torch.no_grad():
-            with autocast(enabled=(not no_amp)):
+            with autocast(enabled=(not no_amp), device_type="cpu"):
                 preds = self(image)
         
         det_boxes, det_scores, det_classes = nms(*self.decode(preds))

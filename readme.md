@@ -19,6 +19,16 @@ PyTorch implementation of [SSD: Single Shot MultiBox Detector](https://arxiv.org
 | MobileNetV3 Small SSDLite  | 128        | 11.2%             | [configs/mobilenetV3Small_ssdlite.yaml]                              |
 
 
+## Virtual Env
+```bash
+python3 -m venv .venv
+```
+
+## Activate Env
+```bash
+.venv\Scripts\activate
+```
+
 ## Requirements
 * Python ≥ 3.6
 * Install libraries: `pip install -r requirements.txt`
